@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Astrolab — Дерзкая типографика</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;900&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#f3f2ee; --ink:#131311; --muted:#6a675f; --accent:#ff3a1e; --line:#dcd9d0;
+    --ease:cubic-bezier(.22,1,.36,1);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{background:var(--bg); color:var(--ink); font-family:"Archivo",system-ui,sans-serif; min-height:100vh}
+  .wrap{max-width:1120px; margin:0 auto; padding:0 28px}
+  header{display:flex; justify-content:space-between; align-items:center; padding:26px 0; border-bottom:2px solid var(--ink)}
+  .brand{font-weight:900; font-size:24px; letter-spacing:-.02em; text-transform:uppercase}
+  .brand span{color:var(--accent)}
+  nav{display:flex; gap:22px; font-size:13px; font-weight:500; text-transform:uppercase; letter-spacing:.04em}
+  nav a{color:var(--ink); text-decoration:none} nav a:hover{color:var(--accent)}
+
+  .hero{padding:48px 0 30px; display:grid; grid-template-columns:1fr; gap:20px}
+  @media(min-width:860px){.hero{grid-template-columns:1.35fr .65fr; align-items:end}}
+  h1{font-weight:900; font-size:clamp(58px,13vw,168px); line-height:.86; letter-spacing:-.04em; margin:0; text-transform:uppercase}
+  h1 .o{-webkit-text-stroke:2px var(--ink); color:transparent}
+  h1 .a{color:var(--accent)}
+  .hero-side{padding-bottom:14px}
+  .hero-side p{font-family:"Newsreader"; font-style:italic; font-size:clamp(20px,2.4vw,27px); line-height:1.35; margin:0 0 18px}
+  .hero-side .go{font-weight:700; text-transform:uppercase; letter-spacing:.02em; font-size:15px; border-bottom:3px solid var(--accent); cursor:pointer}
+
+  .band{border-top:2px solid var(--ink); border-bottom:2px solid var(--ink); margin-top:34px; padding:10px 0; overflow:hidden; white-space:nowrap}
+  .band .t{font-weight:700; text-transform:uppercase; letter-spacing:.02em; font-size:15px; display:inline-block; animation:march 22s linear infinite}
+  .band .t span{color:var(--accent); margin:0 14px}
+  @keyframes march{to{transform:translateX(-50%)}}
+
+  .spot{display:grid; grid-template-columns:1fr; gap:40px; padding:56px 0}
+  @media(min-width:860px){.spot{grid-template-columns:1fr 1fr}}
+  .idx{font-weight:900; font-size:15px; color:var(--accent)}
+  .pn{font-weight:900; font-size:clamp(40px,6vw,74px); line-height:.92; letter-spacing:-.03em; text-transform:uppercase; margin:6px 0 18px}
+  .ps{font-family:"Newsreader"; font-style:italic; font-size:22px; line-height:1.4; max-width:34ch; color:var(--ink)}
+  .meta{margin-top:26px; display:flex; gap:32px; flex-wrap:wrap}
+  .meta .k{font-size:11px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); font-weight:600}
+  .meta .v{font-weight:900; font-size:24px}
+  .est{font-weight:700; font-size:10px; text-transform:uppercase; letter-spacing:.06em; color:#fff; background:var(--accent); padding:2px 7px; margin-left:6px; vertical-align:middle}
+
+  .bars .brow{display:grid; grid-template-columns:120px 1fr 40px; align-items:center; gap:14px; padding:9px 0; border-bottom:1px solid var(--line)}
+  .bars .bl{font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.02em}
+  .bars .bt{height:14px; background:#e3e0d7; position:relative}
+  .bars .bf{height:100%; background:var(--ink); transform-origin:left; transform:scaleX(0); animation:grow 1s .2s var(--ease) forwards}
+  .bars .bf.hi{background:var(--accent)}
+  .bars .bv{font-weight:900; font-size:13px; text-align:right}
+  @keyframes grow{to{transform:scaleX(1)}}
+  .barcap{margin-top:12px; font-family:"Newsreader"; font-style:italic; color:var(--muted); font-size:14px}
+
+  .foot{border-top:2px solid var(--ink); padding:20px 0 44px; font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:.04em; color:var(--muted)}
+  @media(prefers-reduced-motion:reduce){*{animation:none!important; transform:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">Astro<span>lab</span></div>
+    <nav><a>Профессии</a><a>Тест</a><a>Войти</a></nav>
+  </header>
+
+  <section class="hero">
+    <h1>КЕМ ТЫ<br><span class="o">СТА</span><span class="a">НЕШЬ?</span></h1>
+    <div class="hero-side">
+      <p>Не «кем модно». Не «куда друзья». Профессия под тебя настоящего — за 12 минут.</p>
+      <div class="go">Пройти тест →</div>
+    </div>
+  </section>
+
+  <div class="band"><span class="t">РАЗРАБОТЧИК <span>✦</span> ВРАЧ <span>✦</span> ДИЗАЙНЕР <span>✦</span> ИНЖЕНЕР <span>✦</span> ПСИХОЛОГ <span>✦</span> АНАЛИТИК <span>✦</span> ЖУРНАЛИСТ <span>✦</span> ПОВАР <span>✦</span> РАЗРАБОТЧИК <span>✦</span> ВРАЧ <span>✦</span> ДИЗАЙНЕР <span>✦</span> ИНЖЕНЕР <span>✦</span> ПСИХОЛОГ <span>✦</span> АНАЛИТИК <span>✦</span> ЖУРНАЛИСТ <span>✦</span> ПОВАР <span>✦</span></span></div>
+
+  <section class="spot">
+    <div>
+      <div class="idx">ПРОФЕССИЯ · 09</div>
+      <div class="pn">Аналитик<br>данных</div>
+      <p class="ps">«Превращает хаос цифр в решения, которые двигают компании».</p>
+      <div class="meta">
+        <div><div class="k">Зарплата</div><div class="v">90–250к<span class="est">оценка</span></div></div>
+        <div><div class="k">Спрос</div><div class="v">Высокий</div></div>
+        <div><div class="k">Учиться</div><div class="v">4 года</div></div>
+      </div>
+    </div>
+    <div class="bars">
+      <div class="brow"><span class="bl">Исследоват.</span><span class="bt"><span class="bf hi" style="width:80%"></span></span><span class="bv">80</span></div>
+      <div class="brow"><span class="bl">Организат.</span><span class="bt"><span class="bf hi" style="width:80%"></span></span><span class="bv">80</span></div>
+      <div class="brow"><span class="bl">Предприимч.</span><span class="bt"><span class="bf" style="width:40%"></span></span><span class="bv">40</span></div>
+      <div class="brow"><span class="bl">Практический</span><span class="bt"><span class="bf" style="width:30%"></span></span><span class="bv">30</span></div>
+      <div class="brow"><span class="bl">Социальный</span><span class="bt"><span class="bf" style="width:30%"></span></span><span class="bv">30</span></div>
+      <div class="brow"><span class="bl">Творческий</span><span class="bt"><span class="bf" style="width:20%"></span></span><span class="bv">20</span></div>
+      <div class="barcap">Профиль интересов RIASEC · оценка на основе модели, не диагноз.</div>
+    </div>
+  </section>
+
+  <div class="foot">Демо-направление «Дерзкая типографика» · Astrolab</div>
+</div>
+</body>
+</html>

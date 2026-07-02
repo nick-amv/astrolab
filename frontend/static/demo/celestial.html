@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Astrolab — Карта неба</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#070a17; --bg2:#0b1230; --ink:#eef1ff; --muted:#9aa3c7;
+    --gold:#f4d29a; --star:#cfe0ff; --line:rgba(150,170,230,.14);
+    --ease:cubic-bezier(.22,1,.36,1);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{
+    background:
+      radial-gradient(1200px 700px at 78% -8%, #1a2350 0%, rgba(7,10,23,0) 55%),
+      radial-gradient(900px 600px at 10% 110%, #12183a 0%, rgba(7,10,23,0) 50%),
+      var(--bg);
+    color:var(--ink); font-family:"Inter",system-ui,sans-serif;
+    min-height:100vh; overflow-x:hidden;
+  }
+  .stars{position:fixed; inset:0; z-index:0; pointer-events:none}
+  .wrap{position:relative; z-index:1; max-width:980px; margin:0 auto; padding:0 24px}
+  header{display:flex; justify-content:space-between; align-items:baseline; padding:30px 0}
+  .brand{font-family:"Fraunces"; font-weight:500; font-size:22px; letter-spacing:.02em}
+  .brand b{color:var(--gold); font-weight:600}
+  nav{font-size:13px; color:var(--muted); display:flex; gap:18px}
+  nav a{color:var(--muted); text-decoration:none}
+  nav a:hover{color:var(--ink)}
+
+  .hero{padding:70px 0 40px; position:relative}
+  .kick{font-size:13px; letter-spacing:.24em; text-transform:uppercase; color:var(--gold); opacity:.85}
+  h1{font-family:"Fraunces"; font-weight:500; font-size:clamp(44px,8vw,92px);
+     line-height:1.02; letter-spacing:-.02em; margin:16px 0 20px; max-width:16ch; text-wrap:balance}
+  h1 em{font-style:italic; color:var(--gold)}
+  .lead{font-size:19px; line-height:1.6; color:var(--muted); max-width:48ch}
+
+  .spotlight{display:grid; grid-template-columns:1fr; gap:44px; align-items:center;
+    padding:56px 0; border-top:1px solid var(--line); margin-top:40px}
+  @media(min-width:820px){.spotlight{grid-template-columns:1fr 1fr}}
+  .prof-name{font-family:"Fraunces"; font-weight:500; font-size:clamp(30px,4vw,44px); margin:0 0 12px; letter-spacing:-.01em}
+  .prof-sum{color:var(--muted); line-height:1.65; font-size:17px; max-width:44ch}
+  .prof-meta{margin-top:24px; display:flex; gap:26px; flex-wrap:wrap; font-size:14px}
+  .prof-meta .lbl{color:var(--muted); display:block; margin-bottom:4px; font-size:12px; letter-spacing:.06em; text-transform:uppercase}
+  .prof-meta b{font-weight:600}
+  .est{font-size:10px; letter-spacing:.08em; text-transform:uppercase; color:var(--gold);
+    border:1px solid rgba(244,210,154,.35); border-radius:99px; padding:2px 8px; margin-left:6px}
+
+  /* constellation radar */
+  .const{position:relative}
+  .const svg{width:100%; height:auto; overflow:visible}
+  .cap{margin-top:14px; font-size:12px; color:var(--muted); text-align:center}
+
+  .others{padding:20px 0 90px}
+  .others h2{font-family:"Fraunces"; font-weight:500; font-size:22px; color:var(--muted); margin:0 0 20px}
+  .row{display:flex; align-items:baseline; justify-content:space-between; padding:16px 0;
+    border-bottom:1px solid var(--line); cursor:pointer; transition:padding-left .3s var(--ease)}
+  .row:hover{padding-left:10px}
+  .row .n{font-family:"Fraunces"; font-size:20px}
+  .row:hover .n{color:var(--gold)}
+  .row .s{color:var(--muted); font-size:13px}
+  .foot{padding:26px 0 50px; color:var(--muted); font-size:12px; opacity:.7}
+  @media(prefers-reduced-motion:reduce){*{animation:none!important; transition:none!important}}
+</style>
+</head>
+<body>
+<canvas class="stars" id="stars"></canvas>
+<div class="wrap">
+  <header>
+    <div class="brand">Astro<b>lab</b></div>
+    <nav><a>Профессии</a><a>Как это работает</a><a>Войти</a></nav>
+  </header>
+
+  <section class="hero">
+    <div class="kick">Профориентация</div>
+    <h1>Найди свою <em>звезду</em> среди тысяч профессий</h1>
+    <p class="lead">Твои интересы складываются в личное созвездие. Мы покажем, к каким профессиям оно ближе всего — и как до них добраться.</p>
+  </section>
+
+  <section class="spotlight">
+    <div>
+      <div class="kick" style="opacity:.7">Профессия · пример</div>
+      <h3 class="prof-name">Аналитик данных</h3>
+      <p class="prof-sum">Превращает сырые данные в понятные выводы, на которых компании принимают решения. Много цифр, закономерностей и историй, спрятанных в таблицах.</p>
+      <div class="prof-meta">
+        <div><span class="lbl">Зарплата</span><b>90–250 тыс ₽</b><span class="est">оценка</span></div>
+        <div><span class="lbl">Спрос</span><b>Высокий</b></div>
+        <div><span class="lbl">Учиться</span><b>4 года</b></div>
+      </div>
+    </div>
+    <div class="const">
+      <svg id="radar" viewBox="0 0 320 320" aria-label="Профиль интересов RIASEC"></svg>
+      <div class="cap">Твоё созвездие интересов · модель RIASEC · оценка, не диагноз</div>
+    </div>
+  </section>
+
+  <section class="others">
+    <h2>Ещё в каталоге</h2>
+    <div class="row"><span class="n">Разработчик ПО</span><span class="s">Исследовательский · технологии</span></div>
+    <div class="row"><span class="n">Психолог</span><span class="s">Социальный · помощь людям</span></div>
+    <div class="row"><span class="n">Графический дизайнер</span><span class="s">Творческий · визуал</span></div>
+    <div class="row"><span class="n">Инженер-механик</span><span class="s">Практический · техника</span></div>
+  </section>
+
+  <div class="foot">Демо-направление «Карта неба» · Astrolab</div>
+</div>
+
+<script>
+  // starfield with gentle parallax + twinkle
+  const cv=document.getElementById('stars'), cx=cv.getContext('2d');
+  let W,H,stars=[];
+  function resize(){W=cv.width=innerWidth; H=cv.height=innerHeight;
+    stars=Array.from({length:Math.min(220,Math.floor(W*H/9000))},()=>({
+      x:Math.random()*W,y:Math.random()*H,z:Math.random()*.8+.2,r:Math.random()*1.3+.2,
+      t:Math.random()*6.28}));}
+  resize(); addEventListener('resize',resize);
+  let mx=0,my=0; addEventListener('mousemove',e=>{mx=(e.clientX/W-.5); my=(e.clientY/H-.5)});
+  let sc=0; addEventListener('scroll',()=>sc=scrollY);
+  const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  function frame(ts){
+    cx.clearRect(0,0,W,H);
+    for(const s of stars){
+      const px=s.x+ (mx*30*s.z) , py=s.y + (my*30*s.z) - sc*.15*s.z;
+      const tw=reduce?1:(.6+.4*Math.sin(ts/900+s.t));
+      cx.beginPath(); cx.arc(px,((py%H)+H)%H,s.r,0,6.28);
+      cx.fillStyle='rgba(207,224,255,'+(s.z*tw*.9)+')'; cx.fill();
+    }
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+
+  // RIASEC constellation radar
+  const V={R:.3,I:.8,A:.2,S:.3,E:.4,C:.8};
+  const AX=[['I','Исследоват.'],['A','Творческий'],['S','Социальный'],['E','Предприимч.'],['C','Организат.'],['R','Практический']];
+  const svg=document.getElementById('radar'); const CX=160,CY=160,RAD=118;
+  function pt(i,v){const a=-Math.PI/2 + i*Math.PI/3; return [CX+RAD*v*Math.cos(a), CY+RAD*v*Math.sin(a)];}
+  let g='';
+  // rings
+  for(let r=1;r<=4;r++){let p='';for(let i=0;i<6;i++){const a=-Math.PI/2+i*Math.PI/3;const R=RAD*r/4;p+=(i?'L':'M')+(CX+R*Math.cos(a)).toFixed(1)+' '+(CY+R*Math.sin(a)).toFixed(1)+' ';}
+    g+='<path d="'+p+'Z" fill="none" stroke="rgba(150,170,230,.10)"/>';}
+  // axes + labels
+  AX.forEach(([k,lbl],i)=>{const[a,b]=pt(i,1);g+='<line x1="160" y1="160" x2="'+a.toFixed(1)+'" y2="'+b.toFixed(1)+'" stroke="rgba(150,170,230,.12)"/>';
+    const[lx,ly]=pt(i,1.16);g+='<text x="'+lx.toFixed(1)+'" y="'+ly.toFixed(1)+'" fill="#9aa3c7" font-size="11" font-family="Inter" text-anchor="middle" dominant-baseline="middle">'+lbl+'</text>';});
+  // profile polygon
+  let poly='';AX.forEach(([k],i)=>{const[a,b]=pt(i,V[k]);poly+=a.toFixed(1)+','+b.toFixed(1)+' ';});
+  g+='<defs><radialGradient id="gg" cx="50%" cy="45%" r="60%"><stop offset="0%" stop-color="rgba(244,210,154,.42)"/><stop offset="100%" stop-color="rgba(120,150,255,.10)"/></radialGradient>'
+   +'<filter id="glow"><feGaussianBlur stdDeviation="3.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>';
+  g+='<polygon points="'+poly+'" fill="url(#gg)" stroke="#f4d29a" stroke-width="1.6" filter="url(#glow)" style="stroke-dasharray:600;stroke-dashoffset:600;animation:draw 1.4s .3s var(--ease,ease) forwards"/>';
+  // star nodes
+  AX.forEach(([k],i)=>{const[a,b]=pt(i,V[k]);g+='<circle cx="'+a.toFixed(1)+'" cy="'+b.toFixed(1)+'" r="'+(2.4+V[k]*2.4).toFixed(1)+'" fill="#fff" filter="url(#glow)"/>';});
+  svg.innerHTML=g;
+  const st=document.createElement('style');st.textContent='@keyframes draw{to{stroke-dashoffset:0}}';document.head.appendChild(st);
+</script>
+</body>
+</html>
