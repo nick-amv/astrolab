@@ -4,12 +4,13 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "compile": "paraglide-js compile --project ./project.inlang --outdir ./src/lib/paraglide",
     "dev": "vite dev",
     "build": "vite build",
     "preview": "node build/index.js",
-    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "check": "npm run compile && svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "lint": "eslint .",
-    "test": "vitest run"
+    "test": "npm run compile && vitest run"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.4",
