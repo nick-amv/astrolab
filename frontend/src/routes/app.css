@@ -44,7 +44,8 @@ body {
   padding: 0 24px;
 }
 
-header {
+/* Scope to the layout chrome so page-level <header>/<footer> don't inherit it. */
+.shell > header {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
@@ -96,7 +97,7 @@ main {
   align-items: center;
 }
 
-footer {
+.shell > footer {
   display: flex;
   gap: 10px;
   align-items: center;
@@ -106,13 +107,13 @@ footer {
   color: var(--muted);
 }
 
-footer a {
+.shell > footer a {
   color: var(--muted);
   text-decoration: none;
   transition: color var(--dur) var(--ease-out);
 }
 
-footer a:hover {
+.shell > footer a:hover {
   color: var(--ink);
 }
 
