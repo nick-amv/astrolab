@@ -59,7 +59,7 @@
 <style>
   .hero {
     padding: clamp(48px, 9vw, 104px) 0 40px;
-    max-width: 20ch;
+    max-width: 680px;
   }
   .chip.alt {
     color: var(--c2);

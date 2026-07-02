@@ -77,6 +77,36 @@
     grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
     gap: 14px;
   }
+  .grid li {
+    animation: rise 0.5s var(--ease) both;
+  }
+  .grid li:nth-child(2) {
+    animation-delay: 0.04s;
+  }
+  .grid li:nth-child(3) {
+    animation-delay: 0.08s;
+  }
+  .grid li:nth-child(4) {
+    animation-delay: 0.12s;
+  }
+  .grid li:nth-child(5) {
+    animation-delay: 0.16s;
+  }
+  .grid li:nth-child(6) {
+    animation-delay: 0.2s;
+  }
+  .grid li:nth-child(7) {
+    animation-delay: 0.24s;
+  }
+  .grid li:nth-child(n + 8) {
+    animation-delay: 0.28s;
+  }
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+  }
   .grid a {
     display: flex;
     align-items: center;
