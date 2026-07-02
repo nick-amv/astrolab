@@ -1,0 +1,137 @@
+[
+  {
+    "slug": "software-developer",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {"model": "reviewer-2", "verdict": "approve"},
+      {"model": "reviewer-1", "verdict": "approve"},
+      {"model": "reviewer-3", "verdict": "approve"},
+      {"model": "reviewer-6", "verdict": "approve"},
+      {"model": "reviewer-4", "verdict": "reject", "rationale": "ideological (state compliance) — non-factual, overruled"}
+    ]
+  },
+  {
+    "slug": "physician",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {"model": "reviewer-2", "verdict": "approve"},
+      {"model": "reviewer-1", "verdict": "approve"},
+      {"model": "reviewer-4", "verdict": "approve"},
+      {"model": "reviewer-7", "verdict": "approve"}
+    ]
+  },
+  {
+    "slug": "graphic-designer",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {"model": "reviewer-2", "verdict": "approve"},
+      {"model": "reviewer-1", "verdict": "approve"},
+      {"model": "reviewer-3", "verdict": "approve"},
+      {"model": "reviewer-7", "verdict": "reject", "rationale": "pure A narrow; draft already carries minor I/C — overruled by majority"}
+    ]
+  },
+  {
+    "slug": "teacher",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {"model": "reviewer-2", "verdict": "approve"},
+      {"model": "reviewer-1", "verdict": "approve"},
+      {"model": "reviewer-3", "verdict": "approve"},
+      {"model": "reviewer-4", "verdict": "reject", "rationale": "autonomy critique — non-factual, overruled"}
+    ]
+  },
+  {
+    "slug": "mechanical-engineer",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {"model": "reviewer-2", "verdict": "approve"},
+      {"model": "reviewer-1", "verdict": "approve"},
+      {"model": "reviewer-4", "verdict": "approve"},
+      {"model": "reviewer-3", "verdict": "approve"}
+    ]
+  },
+  {
+    "slug": "accountant",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {"model": "reviewer-2", "verdict": "approve"},
+      {"model": "reviewer-1", "verdict": "approve"},
+      {"model": "reviewer-3", "verdict": "approve"},
+      {"model": "reviewer-6", "verdict": "approve"}
+    ]
+  },
+  {
+    "slug": "lawyer",
+    "locale": "ru",
+    "verdict": "split",
+    "models": [
+      {"model": "reviewer-2", "verdict": "approve"},
+      {"model": "reviewer-1", "verdict": "approve"},
+      {"model": "reviewer-3", "verdict": "reject", "rationale": "RIASEC E0.8 too high; should be ~C0.8, E0.5"},
+      {"model": "reviewer-4", "verdict": "reject", "rationale": "E overstates independence; RU practice skews C/I"},
+      {"model": "reviewer-6", "verdict": "reject", "rationale": "Social/Enterprising prominence off"}
+    ],
+    "factual_flags": ["RIASEC interest profile disputed by 3 models: Enterprising over-weighted vs Conventional/Investigative — rework before publish"]
+  },
+  {
+    "slug": "nurse",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {"model": "reviewer-2", "verdict": "approve"},
+      {"model": "reviewer-1", "verdict": "approve"},
+      {"model": "reviewer-3", "verdict": "approve"},
+      {"model": "reviewer-4", "verdict": "approve"}
+    ]
+  },
+  {
+    "slug": "data-analyst",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {"model": "reviewer-2", "verdict": "approve"},
+      {"model": "reviewer-1", "verdict": "approve"},
+      {"model": "reviewer-3", "verdict": "approve"},
+      {"model": "reviewer-7", "verdict": "approve"}
+    ]
+  },
+  {
+    "slug": "journalist",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {"model": "reviewer-2", "verdict": "approve"},
+      {"model": "reviewer-1", "verdict": "approve"},
+      {"model": "reviewer-6", "verdict": "approve"},
+      {"model": "reviewer-4", "verdict": "reject", "rationale": "state-media editorializing — non-factual, overruled"}
+    ]
+  },
+  {
+    "slug": "chef",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {"model": "reviewer-2", "verdict": "approve"},
+      {"model": "reviewer-1", "verdict": "approve"},
+      {"model": "reviewer-3", "verdict": "approve"},
+      {"model": "reviewer-5", "verdict": "reject", "rationale": "suggested more S/E — minor, overruled by majority"}
+    ]
+  },
+  {
+    "slug": "psychologist",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {"model": "reviewer-2", "verdict": "approve"},
+      {"model": "reviewer-1", "verdict": "approve"},
+      {"model": "reviewer-3", "verdict": "approve"},
+      {"model": "reviewer-4", "verdict": "reject", "rationale": "licensing/stigma editorializing — non-factual, overruled"}
+    ]
+  }
+]

@@ -1,0 +1,305 @@
+[
+  {
+    "slug": "software-developer",
+    "onet_code": "15-1252.00",
+    "field_tag": "tech",
+    "edu_duration_band": "bachelor",
+    "riasec": {"R": 0.4, "I": 0.9, "A": 0.3, "S": 0.2, "E": 0.3, "C": 0.6},
+    "riasec_source": "llm",
+    "values": {"achievement": 0.8, "autonomy": 0.7, "recognition": 0.5, "relationships": 0.4, "stability": 0.6, "conditions": 0.6},
+    "subjects": {"math": 1.0, "cs": 1.0, "phys": 0.5, "eng": 0.6},
+    "i18n": {
+      "ru": {
+        "title": "Разработчик программного обеспечения",
+        "summary": "Проектирует, пишет и поддерживает программы: от мобильных приложений до серверных систем.",
+        "day_in_life": "Разбирает задачу, пишет и тестирует код, ревьюит чужой, обсуждает архитектуру с командой. Много решения логических головоломок и работы в редакторе кода.",
+        "who_fits": "Тем, кто любит разбираться, как всё устроено, доводить логику до конца и видеть результат своего труда в работающем продукте."
+      },
+      "en": {
+        "title": "Software Developer",
+        "summary": "Designs, writes, and maintains programs — from mobile apps to server systems.",
+        "day_in_life": "Breaks down a task, writes and tests code, reviews others' code, discusses architecture with the team. Lots of logical problem-solving in an editor.",
+        "who_fits": "People who like figuring out how things work, following logic to the end, and seeing their work run in a real product."
+      }
+    },
+    "facts": [{"country": "RU", "salary_low": 120000, "salary_high": 350000, "currency": "RUB", "demand_note": "Высокий спрос", "confidence": "estimate"}]
+  },
+  {
+    "slug": "physician",
+    "onet_code": "29-1210.00",
+    "field_tag": "health",
+    "edu_duration_band": "long",
+    "regulated": true,
+    "riasec": {"R": 0.3, "I": 0.9, "A": 0.2, "S": 0.8, "E": 0.3, "C": 0.4},
+    "riasec_source": "llm",
+    "values": {"achievement": 0.8, "autonomy": 0.5, "recognition": 0.7, "relationships": 0.8, "stability": 0.7, "conditions": 0.5},
+    "subjects": {"bio": 1.0, "chem": 1.0, "rus": 0.5},
+    "i18n": {
+      "ru": {
+        "title": "Врач",
+        "summary": "Диагностирует и лечит заболевания, наблюдает за здоровьем пациентов.",
+        "day_in_life": "Приём пациентов, осмотр, назначение обследований и лечения, ведение документации. Постоянное обучение и ответственность за жизнь людей.",
+        "who_fits": "Тем, кто хочет помогать людям, готов долго и глубоко учиться и держать ответственность."
+      },
+      "en": {
+        "title": "Physician",
+        "summary": "Diagnoses and treats illness and monitors patients' health.",
+        "day_in_life": "Sees patients, examines, orders tests, prescribes treatment, keeps records. Constant learning and responsibility for people's lives.",
+        "who_fits": "People who want to help others, are ready to study long and deeply, and can carry responsibility."
+      }
+    },
+    "facts": [{"country": "RU", "salary_low": 60000, "salary_high": 200000, "currency": "RUB", "demand_note": "Стабильный спрос", "confidence": "estimate"}]
+  },
+  {
+    "slug": "graphic-designer",
+    "onet_code": "27-1024.00",
+    "field_tag": "arts",
+    "edu_duration_band": "bachelor",
+    "riasec": {"R": 0.3, "I": 0.3, "A": 0.9, "S": 0.3, "E": 0.4, "C": 0.3},
+    "riasec_source": "llm",
+    "values": {"achievement": 0.6, "autonomy": 0.8, "recognition": 0.7, "relationships": 0.5, "stability": 0.4, "conditions": 0.6},
+    "subjects": {"art": 1.0, "cs": 0.5, "lit": 0.4},
+    "i18n": {
+      "ru": {
+        "title": "Графический дизайнер",
+        "summary": "Создаёт визуальные образы: логотипы, интерфейсы, плакаты, айдентику брендов.",
+        "day_in_life": "Обсуждает задачу с заказчиком, ищет идеи, рисует макеты в графических редакторах, дорабатывает по обратной связи.",
+        "who_fits": "Тем, у кого развит вкус, кто любит создавать новое и внимателен к деталям формы и цвета."
+      },
+      "en": {
+        "title": "Graphic Designer",
+        "summary": "Creates visual work: logos, interfaces, posters, brand identities.",
+        "day_in_life": "Discusses the brief, explores ideas, builds mockups in design tools, iterates on feedback.",
+        "who_fits": "People with a sense of taste who like making new things and care about form and colour."
+      }
+    },
+    "facts": [{"country": "RU", "salary_low": 60000, "salary_high": 180000, "currency": "RUB", "demand_note": "Средний спрос", "confidence": "estimate"}]
+  },
+  {
+    "slug": "teacher",
+    "onet_code": "25-2021.00",
+    "field_tag": "education",
+    "edu_duration_band": "bachelor",
+    "riasec": {"R": 0.2, "I": 0.4, "A": 0.4, "S": 0.9, "E": 0.5, "C": 0.4},
+    "riasec_source": "llm",
+    "values": {"achievement": 0.6, "autonomy": 0.5, "recognition": 0.5, "relationships": 0.9, "stability": 0.7, "conditions": 0.5},
+    "subjects": {"rus": 0.7, "lit": 0.6, "hist": 0.5, "soc": 0.6},
+    "i18n": {
+      "ru": {
+        "title": "Учитель",
+        "summary": "Обучает детей предмету, помогает им развиваться и находить свои сильные стороны.",
+        "day_in_life": "Готовит и проводит уроки, проверяет работы, общается с учениками и родителями, придумывает, как объяснить сложное просто.",
+        "who_fits": "Тем, кто любит объяснять, терпелив и получает энергию от общения с людьми."
+      },
+      "en": {
+        "title": "Teacher",
+        "summary": "Teaches a subject to children and helps them grow and find their strengths.",
+        "day_in_life": "Plans and runs lessons, grades work, talks with students and parents, finds ways to make hard things simple.",
+        "who_fits": "People who like explaining, are patient, and get energy from working with others."
+      }
+    },
+    "facts": [{"country": "RU", "salary_low": 35000, "salary_high": 90000, "currency": "RUB", "demand_note": "Стабильный спрос", "confidence": "estimate"}]
+  },
+  {
+    "slug": "mechanical-engineer",
+    "onet_code": "17-2141.00",
+    "field_tag": "engineering",
+    "edu_duration_band": "bachelor",
+    "riasec": {"R": 0.8, "I": 0.8, "A": 0.3, "S": 0.2, "E": 0.4, "C": 0.5},
+    "riasec_source": "llm",
+    "values": {"achievement": 0.8, "autonomy": 0.6, "recognition": 0.5, "relationships": 0.4, "stability": 0.7, "conditions": 0.5},
+    "subjects": {"math": 1.0, "phys": 1.0, "cs": 0.4},
+    "i18n": {
+      "ru": {
+        "title": "Инженер-механик",
+        "summary": "Проектирует машины, механизмы и оборудование, следит за их работой.",
+        "day_in_life": "Рассчитывает конструкции, готовит чертежи в CAD, испытывает прототипы, решает, почему что-то ломается.",
+        "who_fits": "Тем, кто любит технику, точность и понимать, как устроены механизмы."
+      },
+      "en": {
+        "title": "Mechanical Engineer",
+        "summary": "Designs machines, mechanisms, and equipment and oversees how they run.",
+        "day_in_life": "Calculates structures, prepares CAD drawings, tests prototypes, figures out why things break.",
+        "who_fits": "People who like machines, precision, and understanding how mechanisms work."
+      }
+    },
+    "facts": [{"country": "RU", "salary_low": 70000, "salary_high": 200000, "currency": "RUB", "demand_note": "Средний спрос", "confidence": "estimate"}]
+  },
+  {
+    "slug": "accountant",
+    "onet_code": "13-2011.00",
+    "field_tag": "business",
+    "edu_duration_band": "bachelor",
+    "riasec": {"R": 0.2, "I": 0.4, "A": 0.1, "S": 0.3, "E": 0.4, "C": 0.9},
+    "riasec_source": "llm",
+    "values": {"achievement": 0.5, "autonomy": 0.5, "recognition": 0.4, "relationships": 0.4, "stability": 0.9, "conditions": 0.7},
+    "subjects": {"math": 0.9, "soc": 0.5, "cs": 0.5},
+    "i18n": {
+      "ru": {
+        "title": "Бухгалтер",
+        "summary": "Ведёт учёт денег компании, готовит отчётность и следит за налогами.",
+        "day_in_life": "Проводит документы, сверяет цифры, готовит отчёты в срок, общается с налоговой и банками.",
+        "who_fits": "Тем, кто любит порядок, внимателен к цифрам и деталям и ценит стабильность."
+      },
+      "en": {
+        "title": "Accountant",
+        "summary": "Keeps a company's financial records, prepares reports, and tracks taxes.",
+        "day_in_life": "Posts documents, reconciles numbers, files reports on time, deals with tax authorities and banks.",
+        "who_fits": "People who like order, are careful with numbers and detail, and value stability."
+      }
+    },
+    "facts": [{"country": "RU", "salary_low": 50000, "salary_high": 150000, "currency": "RUB", "demand_note": "Стабильный спрос", "confidence": "estimate"}]
+  },
+  {
+    "slug": "lawyer",
+    "onet_code": "23-1011.00",
+    "field_tag": "law",
+    "edu_duration_band": "specialist",
+    "regulated": true,
+    "riasec": {"R": 0.1, "I": 0.6, "A": 0.3, "S": 0.5, "E": 0.8, "C": 0.6},
+    "riasec_source": "llm",
+    "values": {"achievement": 0.7, "autonomy": 0.6, "recognition": 0.7, "relationships": 0.5, "stability": 0.6, "conditions": 0.6},
+    "subjects": {"soc": 1.0, "hist": 0.7, "rus": 0.7, "lit": 0.5},
+    "i18n": {
+      "ru": {
+        "title": "Юрист",
+        "summary": "Помогает людям и компаниям решать вопросы в рамках закона, защищает их интересы.",
+        "day_in_life": "Изучает документы и законы, готовит договоры и иски, консультирует, представляет интересы в спорах.",
+        "who_fits": "Тем, кто умеет аргументировать, любит разбираться в правилах и отстаивать позицию."
+      },
+      "en": {
+        "title": "Lawyer",
+        "summary": "Helps people and companies resolve matters within the law and protects their interests.",
+        "day_in_life": "Studies documents and laws, drafts contracts and claims, advises clients, represents them in disputes.",
+        "who_fits": "People who can argue a case, like working through rules, and stand their ground."
+      }
+    },
+    "facts": [{"country": "RU", "salary_low": 60000, "salary_high": 250000, "currency": "RUB", "demand_note": "Средний спрос", "confidence": "estimate"}]
+  },
+  {
+    "slug": "nurse",
+    "onet_code": "29-1141.00",
+    "field_tag": "health",
+    "edu_duration_band": "vocational",
+    "regulated": true,
+    "riasec": {"R": 0.4, "I": 0.4, "A": 0.2, "S": 0.9, "E": 0.3, "C": 0.5},
+    "riasec_source": "llm",
+    "values": {"achievement": 0.5, "autonomy": 0.4, "recognition": 0.5, "relationships": 0.9, "stability": 0.7, "conditions": 0.4},
+    "subjects": {"bio": 0.9, "chem": 0.6, "rus": 0.4},
+    "i18n": {
+      "ru": {
+        "title": "Медицинская сестра",
+        "summary": "Ухаживает за пациентами, выполняет назначения врача и поддерживает людей в лечении.",
+        "day_in_life": "Ставит процедуры, следит за состоянием пациентов, ведёт документацию, поддерживает и объясняет.",
+        "who_fits": "Тем, кто заботлив, собран и хочет реально помогать людям каждый день."
+      },
+      "en": {
+        "title": "Nurse",
+        "summary": "Cares for patients, carries out doctors' orders, and supports people through treatment.",
+        "day_in_life": "Administers procedures, monitors patients, keeps records, reassures and explains.",
+        "who_fits": "People who are caring, organised, and want to genuinely help others every day."
+      }
+    },
+    "facts": [{"country": "RU", "salary_low": 40000, "salary_high": 100000, "currency": "RUB", "demand_note": "Высокий спрос", "confidence": "estimate"}]
+  },
+  {
+    "slug": "data-analyst",
+    "onet_code": "15-2051.00",
+    "field_tag": "tech",
+    "edu_duration_band": "bachelor",
+    "riasec": {"R": 0.3, "I": 0.8, "A": 0.2, "S": 0.3, "E": 0.4, "C": 0.8},
+    "riasec_source": "llm",
+    "values": {"achievement": 0.7, "autonomy": 0.6, "recognition": 0.5, "relationships": 0.4, "stability": 0.6, "conditions": 0.6},
+    "subjects": {"math": 1.0, "cs": 0.9, "soc": 0.5, "eng": 0.5},
+    "i18n": {
+      "ru": {
+        "title": "Аналитик данных",
+        "summary": "Превращает данные в понятные выводы, которые помогают принимать решения.",
+        "day_in_life": "Собирает и чистит данные, считает метрики, строит графики, ищет закономерности и рассказывает о находках.",
+        "who_fits": "Тем, кто любит цифры, замечает закономерности и умеет объяснять сложное просто."
+      },
+      "en": {
+        "title": "Data Analyst",
+        "summary": "Turns data into clear insights that help people make decisions.",
+        "day_in_life": "Collects and cleans data, computes metrics, builds charts, finds patterns, and tells the story.",
+        "who_fits": "People who like numbers, notice patterns, and can explain complex things simply."
+      }
+    },
+    "facts": [{"country": "RU", "salary_low": 90000, "salary_high": 250000, "currency": "RUB", "demand_note": "Высокий спрос", "confidence": "estimate"}]
+  },
+  {
+    "slug": "journalist",
+    "onet_code": "27-3023.00",
+    "field_tag": "media",
+    "edu_duration_band": "bachelor",
+    "riasec": {"R": 0.2, "I": 0.5, "A": 0.8, "S": 0.5, "E": 0.7, "C": 0.3},
+    "riasec_source": "llm",
+    "values": {"achievement": 0.6, "autonomy": 0.7, "recognition": 0.7, "relationships": 0.6, "stability": 0.4, "conditions": 0.4},
+    "subjects": {"rus": 1.0, "lit": 0.9, "hist": 0.6, "soc": 0.6, "eng": 0.5},
+    "i18n": {
+      "ru": {
+        "title": "Журналист",
+        "summary": "Находит важные истории, проверяет факты и рассказывает о них аудитории.",
+        "day_in_life": "Ищет темы, берёт интервью, проверяет информацию, пишет тексты в срок, работает с редактором.",
+        "who_fits": "Тем, кто любопытен, хорошо владеет словом и не боится задавать вопросы."
+      },
+      "en": {
+        "title": "Journalist",
+        "summary": "Finds stories that matter, checks the facts, and tells them to an audience.",
+        "day_in_life": "Chases topics, interviews people, verifies information, writes to deadline, works with an editor.",
+        "who_fits": "People who are curious, good with words, and unafraid to ask questions."
+      }
+    },
+    "facts": [{"country": "RU", "salary_low": 45000, "salary_high": 130000, "currency": "RUB", "demand_note": "Средний спрос", "confidence": "estimate"}]
+  },
+  {
+    "slug": "chef",
+    "onet_code": "35-1011.00",
+    "field_tag": "hospitality",
+    "edu_duration_band": "vocational",
+    "riasec": {"R": 0.8, "I": 0.3, "A": 0.7, "S": 0.4, "E": 0.5, "C": 0.4},
+    "riasec_source": "llm",
+    "values": {"achievement": 0.7, "autonomy": 0.6, "recognition": 0.6, "relationships": 0.5, "stability": 0.4, "conditions": 0.3},
+    "subjects": {"chem": 0.4, "bio": 0.4, "art": 0.5},
+    "i18n": {
+      "ru": {
+        "title": "Повар",
+        "summary": "Готовит блюда, придумывает рецепты и отвечает за вкус и качество на кухне.",
+        "day_in_life": "Готовит заготовки, стоит у плиты в час пик, придумывает новые блюда, следит за качеством и чистотой.",
+        "who_fits": "Тем, кто любит работать руками, чувствует вкус и держится в быстром ритме."
+      },
+      "en": {
+        "title": "Chef",
+        "summary": "Cooks dishes, invents recipes, and owns taste and quality in the kitchen.",
+        "day_in_life": "Preps ingredients, works the line at rush hour, creates new dishes, keeps quality and cleanliness up.",
+        "who_fits": "People who like working with their hands, have a sense of taste, and thrive at pace."
+      }
+    },
+    "facts": [{"country": "RU", "salary_low": 45000, "salary_high": 150000, "currency": "RUB", "demand_note": "Высокий спрос", "confidence": "estimate"}]
+  },
+  {
+    "slug": "psychologist",
+    "onet_code": "19-3031.00",
+    "field_tag": "health",
+    "edu_duration_band": "master",
+    "riasec": {"R": 0.1, "I": 0.7, "A": 0.4, "S": 0.9, "E": 0.4, "C": 0.3},
+    "riasec_source": "llm",
+    "values": {"achievement": 0.6, "autonomy": 0.6, "recognition": 0.5, "relationships": 0.9, "stability": 0.5, "conditions": 0.6},
+    "subjects": {"bio": 0.6, "soc": 0.8, "rus": 0.6, "lit": 0.5},
+    "i18n": {
+      "ru": {
+        "title": "Психолог",
+        "summary": "Помогает людям разобраться в себе, справиться с трудностями и наладить отношения.",
+        "day_in_life": "Проводит консультации, слушает и задаёт вопросы, ведёт заметки, постоянно учится и разбирает случаи.",
+        "who_fits": "Тем, кто умеет слушать, интересуется людьми и хочет помогать разбираться в сложном."
+      },
+      "en": {
+        "title": "Psychologist",
+        "summary": "Helps people understand themselves, cope with difficulties, and improve relationships.",
+        "day_in_life": "Runs sessions, listens and asks questions, keeps notes, keeps learning and reviewing cases.",
+        "who_fits": "People who can listen, are curious about others, and want to help untangle hard things."
+      }
+    },
+    "facts": [{"country": "RU", "salary_low": 50000, "salary_high": 180000, "currency": "RUB", "demand_note": "Растущий спрос", "confidence": "estimate"}]
+  }
+]

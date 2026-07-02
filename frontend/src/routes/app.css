@@ -68,6 +68,14 @@ nav a.active {
   color: var(--accent);
 }
 
+nav a.section {
+  color: var(--ink);
+}
+
+nav .sep {
+  color: var(--line);
+}
+
 main {
   flex: 1;
   display: flex;

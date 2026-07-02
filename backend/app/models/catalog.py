@@ -51,7 +51,10 @@ class Occupation(Base):
     edu_duration_band: Mapped[str | None] = mapped_column(String(16))
     regulated: Mapped[bool] = mapped_column(Boolean, default=False)
     slug: Mapped[str] = mapped_column(String(96), unique=True, index=True)
-    # Only human-reviewed rows go to the public catalog / SEO (Wave 2 gate).
+    # Coarse area (e.g. tech, health, arts) — used for dark-horse variety in
+    # matching and for catalog grouping.
+    field_tag: Mapped[str | None] = mapped_column(String(32), index=True)
+    # Only council-reviewed rows go to the public catalog / SEO (Wave 2 gate).
     published: Mapped[bool] = mapped_column(Boolean, default=False, index=True)
 
 
@@ -191,3 +194,21 @@ class Milestone(Base):
     education_stage: Mapped[str] = mapped_column(String(32))
     date_rule: Mapped[str] = mapped_column(String(64))  # e.g. "02-01" or "relative:-120d"
     title_key: Mapped[str] = mapped_column(String(96))
+
+
+class ContentReview(Base):
+    """Multi-model review verdict for an occupation's descriptive content
+    (DATA_SOURCES §6). Publication requires a passing verdict; the per-model
+    rationale is retained for audit."""
+
+    __tablename__ = "content_reviews"
+
+    id: Mapped[uuid.UUID] = uuid_pk()
+    occupation_id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("occupations.id", ondelete="CASCADE"), index=True
+    )
+    locale: Mapped[str] = mapped_column(String(8))
+    verdict: Mapped[str] = mapped_column(String(16))  # approved | rejected | split
+    models: Mapped[dict] = mapped_column(JSON)  # [{model, verdict, rationale}]
+    factual_flags: Mapped[dict | None] = mapped_column(JSON)
+    reviewed_at: Mapped[dt.datetime] = created_at_col()

@@ -9,6 +9,17 @@ without a recorded source and a human sign-off.
 > carry `source_id`, `confidence`, and `as_of_date`. LLM-derived values are
 > visually marked in the UI as **estimates**, never as verified facts.
 
+> **Review gate (Wave 2, updated 2026-07-02).** Publication review is done by a
+> **multi-model review panel** , not a
+> single human. The council vets **descriptive** content (title, summary,
+> day-in-life, who-fits, translation quality) for accuracy and hallucinations;
+> its verdict + per-model rationale are recorded in `content_reviews`. Only
+> content the council approves gets `published = true`.
+> **Hard facts are exempt from council "approval as fact":** model consensus is
+> not ground truth for RU salaries / EGE combinations / deadlines, so those
+> stay `confidence = estimate` with provenance and a UI "estimate" marker —
+> the council never launders a consensus number into a fact.
+
 ---
 
 ## 1. Source registry
@@ -39,17 +50,18 @@ RIASEC vector, we may fill it with an LLM estimate — recorded as
 ```
 ESCO subset
   → ESCO↔O*NET crosswalk (RIASEC, values)
-  → LLM translate to RU (haiku, batch)          [content_source='llm']
+  → LLM translate to RU (batch)                 [content_source='llm']
   → LLM enrich (day-in-life, who-fits)          [content_source='llm']
-  → HUMAN REVIEW  ───────────────┐              [content_source='human', reviewed_at set]
-  → publish (occupations.published = true)  ◄────┘  only reviewed rows
+  → MULTI-MODEL REVIEW ───────┐              [content_source='council', reviewed_at set]
+  → publish (occupations.published = true)  ◄────┘  only council-approved rows
 ```
 
-- MVP publishes **50 fully reviewed** occupations. The schema supports 300+; the
-  remaining rows stay `published = false` and are drained through the same
+- MVP publishes **50 council-reviewed** occupations. The schema supports 300+;
+  the remaining rows stay `published = false` and are drained through the same
   review workflow post-MVP.
 - Hallucinated content about children's futures is the top reputational risk, so
-  **human-in-the-loop is mandatory for everything published**, not just a sample.
+  **council review is mandatory for everything published**, not just a sample.
+  A council split (models disagree, or any flags a factual error) blocks publish.
 
 ## 4. Facts vs estimates in the UI
 
@@ -67,10 +79,17 @@ ESCO subset
 - ESCO / O*NET re-pulled on their release cadence; a re-pull is a reviewed change,
   not an automatic overwrite of curated fields.
 
-## 6. Reviewer workflow
+## 6. Reviewer workflow (review panel)
 
-- Reviewer sets `occupation_i18n.reviewed_at` + `content_source='human'` and, for
-  facts, `occupation_country.reviewed_by/reviewed_at`.
-- Only then may an admin flip `occupations.published = true`.
-- Open question for Nikita (DESIGN §16.4): who reviews the 50 MVP occupations
-  (and later the remaining 250+) — himself or an editor.
+- The ETL submits each occupation's descriptive content to a multi-model council
+  (`app/etl/review.py` → `ReviewProvider`). Each model returns approve/reject +
+  rationale + any factual flags.
+- Verdicts are written to `content_reviews` (occupation, models, verdict,
+  rationale, ts). Pass = all models approve and none raises a factual flag.
+- On pass the pipeline sets `occupation_i18n.reviewed_at` + `content_source =
+  'council'` and flips `occupations.published = true`. On a split it stays
+  unpublished with the disagreement recorded for a follow-up pass.
+- Facts (`occupation_country`, `edu_requirements`) are **not** "approved as fact"
+  by the council — they keep `confidence='estimate'` + provenance until a real
+  source backs them.
+- Decided 2026-07-02 (Nikita): no human reviewer — the council is the reviewer.

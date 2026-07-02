@@ -12,6 +12,7 @@ from app.models.assessment import (
 )
 from app.models.base import Base
 from app.models.catalog import (
+    ContentReview,
     DataSource,
     EduDomain,
     EduRequirement,
@@ -57,6 +58,7 @@ __all__ = [
     "EduRequirement",
     "OccupationEdu",
     "Milestone",
+    "ContentReview",
     # results
     "Match",
     "AiInterview",

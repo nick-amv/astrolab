@@ -11,6 +11,8 @@
   <header>
     <a class="brand" href={localizeHref("/")}>{m.app_name()}</a>
     <nav>
+      <a class="section" href={localizeHref("/professions")}>{m.nav_catalog()}</a>
+      <span class="sep" aria-hidden="true">·</span>
       <a class:active={locale === "ru"} href={localizeHref("/", { locale: "ru" })}>{m.nav_ru()}</a>
       <a class:active={locale === "en"} href={localizeHref("/", { locale: "en" })}>{m.nav_en()}</a>
     </nav>

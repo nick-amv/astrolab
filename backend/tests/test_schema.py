@@ -32,6 +32,7 @@ EXPECTED_TABLES = {
     "edu_requirements",
     "occupation_edu",
     "milestones",
+    "content_reviews",
     "matches",
     "ai_interviews",
     "llm_calls",
