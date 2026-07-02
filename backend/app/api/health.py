@@ -15,7 +15,12 @@ router = APIRouter(prefix="/api/health", tags=["health"])
 
 @router.get("")
 async def health() -> dict:
-    return {"status": "ok", "service": "astrolab-api", "env": settings.environment}
+    return {
+        "status": "ok",
+        "service": "astrolab-api",
+        "env": settings.environment,
+        "wave": 0,
+    }
 
 
 @router.get("/ready")
