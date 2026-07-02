@@ -15,12 +15,10 @@
   let enriching = $state(true);
   const result = $derived(enriched ?? data.result);
 
-  // Only call the (slow) LLM if this result hasn't been enriched yet — avoids
-  // re-running it on every reload/share.
-  const alreadyEnriched = data.result.buckets.core.some((o) => o.why);
-
   onMount(async () => {
-    if (alreadyEnriched) {
+    // Only call the (slow) LLM if this result hasn't been enriched yet — avoids
+    // re-running it on every reload/share.
+    if (data.result.buckets.core.some((o) => o.why)) {
       enriching = false;
       return;
     }
