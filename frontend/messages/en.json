@@ -30,5 +30,18 @@
   "riasec_a": "Artistic (A)",
   "riasec_s": "Social (S)",
   "riasec_e": "Enterprising (E)",
-  "riasec_c": "Conventional (C)"
+  "riasec_c": "Conventional (C)",
+  "riasec_r_short": "Realistic",
+  "riasec_i_short": "Investig.",
+  "riasec_a_short": "Artistic",
+  "riasec_s_short": "Social",
+  "riasec_e_short": "Enterpr.",
+  "riasec_c_short": "Convent.",
+  "riasec_caption": "Your interest profile · RIASEC model · an estimate, not a diagnosis",
+  "home_chip": "Your future is brighter than it looks",
+  "home_title": "Find work that lights you up",
+  "home_lead": "12 minutes and you see professions that fit the real you: what they do, who they suit, and how to get there.",
+  "home_cta": "Take the test, free",
+  "home_spot": "Profession · example",
+  "home_browse": "Browse professions"
 }

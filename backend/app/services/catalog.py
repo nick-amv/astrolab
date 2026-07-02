@@ -129,5 +129,5 @@ async def list_published(session: AsyncSession, locale: str) -> list[dict]:
             or title_by.get((str(o.id), "ru"))
             or o.slug
         )
-        out.append({"slug": o.slug, "title": title})
+        out.append({"slug": o.slug, "title": title, "field_tag": o.field_tag})
     return out

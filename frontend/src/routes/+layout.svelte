@@ -7,9 +7,13 @@
   const locale = getLocale();
 </script>
 
+<div class="aurora" aria-hidden="true"></div>
+
 <div class="shell">
   <header>
-    <a class="brand" href={localizeHref("/")}>{m.app_name()}</a>
+    <a class="brand" href={localizeHref("/")}>
+      <span class="mark"></span>{m.app_name()}
+    </a>
     <nav>
       <a class="section" href={localizeHref("/professions")}>{m.nav_catalog()}</a>
       <span class="sep" aria-hidden="true">·</span>
@@ -28,3 +32,9 @@
     <a href={localizeHref("/privacy")}>{m.privacy_link()}</a>
   </footer>
 </div>
+
+<style>
+  .section {
+    color: var(--ink) !important;
+  }
+</style>

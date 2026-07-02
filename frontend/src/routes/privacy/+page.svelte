@@ -30,7 +30,7 @@
   a {
     font-family: system-ui, sans-serif;
     font-size: 14px;
-    color: var(--accent);
+    color: var(--c3);
     text-decoration: none;
   }
 </style>

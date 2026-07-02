@@ -4,6 +4,20 @@
   import type { PageData } from "./$types";
 
   let { data }: { data: PageData } = $props();
+
+  // Field → gradient. Gives the grid real variety (not an identical card wall).
+  const FIELD: Record<string, string> = {
+    tech: "linear-gradient(135deg,#4f9dff,#8b5cf6)",
+    health: "linear-gradient(135deg,#ff5f8f,#ff9d6c)",
+    arts: "linear-gradient(135deg,#8b5cf6,#ff5f8f)",
+    education: "linear-gradient(135deg,#4f9dff,#43d6b5)",
+    engineering: "linear-gradient(135deg,#6d6790,#4f9dff)",
+    business: "linear-gradient(135deg,#ff9d6c,#ffd166)",
+    media: "linear-gradient(135deg,#ff5f8f,#8b5cf6)",
+    hospitality: "linear-gradient(135deg,#ff9d6c,#ff5f8f)",
+    law: "linear-gradient(135deg,#4f9dff,#6d6790)",
+  };
+  const dot = (f: string | null) => FIELD[f ?? ""] ?? "linear-gradient(135deg,#8b5cf6,#4f9dff)";
 </script>
 
 <svelte:head>
@@ -20,10 +34,11 @@
   {#if data.occupations.length === 0}
     <p class="empty">{m.catalog_empty()}</p>
   {:else}
-    <ul class="index">
+    <ul class="grid">
       {#each data.occupations as occ (occ.slug)}
         <li>
           <a href={localizeHref(`/professions/${occ.slug}`)}>
+            <span class="dot" style="background:{dot(occ.field_tag)}"></span>
             <span class="name">{occ.title}</span>
             <span class="arrow" aria-hidden="true">→</span>
           </a>
@@ -35,81 +50,79 @@
 
 <style>
   .catalog {
-    padding: 32px 0 64px;
+    padding: clamp(32px, 6vw, 60px) 0 60px;
     width: 100%;
   }
   .lede {
     max-width: 54ch;
-    margin-bottom: 44px;
+    margin-bottom: 40px;
   }
   h1 {
-    font-size: clamp(32px, 5vw, 52px);
-    font-weight: 500;
-    letter-spacing: -0.02em;
+    font-weight: 800;
+    font-size: clamp(34px, 5.5vw, 56px);
+    letter-spacing: -0.03em;
     margin: 0 0 14px;
   }
   .intro {
-    font-family: system-ui, sans-serif;
-    font-size: 16px;
+    font-size: 17px;
     color: var(--muted);
     line-height: 1.6;
     margin: 0;
   }
-
-  /* Editorial index, not a card wall: hairline rows, two columns on wide
-     screens. Reads like the contents page of a serious guide. */
-  .index {
+  .grid {
     list-style: none;
     padding: 0;
     margin: 0;
     display: grid;
-    grid-template-columns: 1fr;
-    column-gap: 48px;
-    border-top: 1px solid var(--line);
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 14px;
   }
-  @media (min-width: 700px) {
-    .index {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-  .index li {
-    border-bottom: 1px solid var(--line);
-  }
-  .index a {
+  .grid a {
     display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 16px;
-    padding: 17px 4px 17px 0;
+    align-items: center;
+    gap: 14px;
+    padding: 20px 22px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--r);
+    box-shadow: var(--shadow-sm);
     text-decoration: none;
     color: var(--ink);
+    transition:
+      transform var(--dur) var(--ease),
+      box-shadow var(--dur) var(--ease);
+  }
+  .grid a:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+  }
+  .dot {
+    width: 34px;
+    height: 34px;
+    border-radius: 11px;
+    flex: 0 0 auto;
+    box-shadow: var(--shadow-sm);
   }
   .name {
-    font-size: 19px;
-    transition: color var(--dur) var(--ease-out);
+    font-weight: 700;
+    font-size: 16px;
+    flex: 1;
   }
   .arrow {
-    font-family: system-ui, sans-serif;
     color: var(--muted);
-    transform: translateX(-4px);
     opacity: 0;
+    transform: translateX(-4px);
     transition:
-      transform var(--dur) var(--ease-out),
-      opacity var(--dur) var(--ease-out),
-      color var(--dur) var(--ease-out);
+      opacity var(--dur) var(--ease),
+      transform var(--dur) var(--ease),
+      color var(--dur) var(--ease);
   }
-  .index a:hover .name,
-  .index a:focus-visible .name {
-    color: var(--accent);
-  }
-  .index a:hover .arrow,
-  .index a:focus-visible .arrow {
-    transform: translateX(0);
+  .grid a:hover .arrow {
     opacity: 1;
-    color: var(--accent);
+    transform: translateX(0);
+    color: var(--c3);
   }
   .empty {
-    font-family: system-ui, sans-serif;
     color: var(--muted);
   }
 </style>

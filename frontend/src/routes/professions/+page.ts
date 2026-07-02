@@ -8,5 +8,7 @@ export const load: PageLoad = async ({ fetch }) => {
   const locale = getLocale();
   const res = await fetch(`/api/occupations?locale=${locale}`);
   const data = res.ok ? await res.json() : { count: 0, items: [] };
-  return { occupations: data.items as { slug: string; title: string }[] };
+  return {
+    occupations: data.items as { slug: string; title: string; field_tag: string | null }[],
+  };
 };

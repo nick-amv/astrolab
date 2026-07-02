@@ -1,4 +1,5 @@
 <script lang="ts">
+  import RiasecRadar from "$lib/RiasecRadar.svelte";
   import { m } from "$lib/paraglide/messages";
   import { localizeHref } from "$lib/paraglide/runtime";
   import type { PageData } from "./$types";
@@ -6,17 +7,15 @@
   let { data }: { data: PageData } = $props();
   const o = $derived(data.occupation);
 
-  const RIASEC = ["R", "I", "A", "S", "E", "C"] as const;
-  const riasecLabel: Record<string, () => string> = {
-    R: m.riasec_r,
-    I: m.riasec_i,
-    A: m.riasec_a,
-    S: m.riasec_s,
-    E: m.riasec_e,
-    C: m.riasec_c,
+  const shortLabels = {
+    R: m.riasec_r_short(),
+    I: m.riasec_i_short(),
+    A: m.riasec_a_short(),
+    S: m.riasec_s_short(),
+    E: m.riasec_e_short(),
+    C: m.riasec_c_short(),
   };
 
-  // schema.org Occupation for rich results / AI citation.
   const jsonLd = $derived(
     JSON.stringify({
       "@context": "https://schema.org",
@@ -53,84 +52,68 @@
     <div class="main">
       {#if o.day_in_life}
         <section>
-          <h2 class="h-editorial">{m.prof_day()}</h2>
+          <h2>{m.prof_day()}</h2>
           <p>{o.day_in_life}</p>
         </section>
       {/if}
       {#if o.who_fits}
         <section>
-          <h2 class="h-editorial">{m.prof_who()}</h2>
+          <h2>{m.prof_who()}</h2>
           <p>{o.who_fits}</p>
         </section>
       {/if}
+      <a class="cta" href={localizeHref("/")}>{m.prof_cta()} →</a>
     </div>
 
     <aside class="side">
-      <section class="riasec">
-        <h2 class="h-label">{m.prof_riasec()}</h2>
-        {#each RIASEC as axis (axis)}
-          <div class="bar-row">
-            <span class="bar-label">{riasecLabel[axis]()}</span>
-            <span class="bar-track">
-              <span class="bar-fill" style="width: {Math.round((o.riasec?.[axis] ?? 0) * 100)}%"
-              ></span>
-            </span>
-          </div>
-        {/each}
-        {#if o.riasec_source === "llm"}
-          <p class="note">{m.prof_estimate_note()}</p>
-        {/if}
-      </section>
+      <div class="card viz">
+        <RiasecRadar values={o.riasec ?? {}} labels={shortLabels} size={260} />
+        <p class="cap">{m.prof_estimate_note()}</p>
+      </div>
 
       {#if o.facts?.length}
-        <section class="facts">
-          <h2 class="h-label">{m.prof_salary()}</h2>
+        <div class="card">
+          <div class="k">{m.prof_salary()}</div>
           {#each o.facts as f (f.country)}
-            <p class="salary">
-              {#if f.salary_low}
-                {f.salary_low.toLocaleString()}–{f.salary_high?.toLocaleString()}
-                {f.currency}
-              {/if}
-              {#if f.confidence === "estimate"}
-                <span class="estimate">{m.prof_estimate()}</span>
-              {/if}
-            </p>
+            {#if f.salary_low}
+              <p class="salary">
+                {f.salary_low.toLocaleString()}–{f.salary_high?.toLocaleString()} {f.currency}
+                {#if f.confidence === "estimate"}<span class="est">{m.prof_estimate()}</span>{/if}
+              </p>
+            {/if}
             {#if f.demand_note}<p class="demand">{f.demand_note}</p>{/if}
           {/each}
-        </section>
+        </div>
       {/if}
     </aside>
   </div>
-
-  <a class="cta" href={localizeHref("/")}>{m.prof_cta()}</a>
 </article>
 
 <style>
   .prof {
-    padding: 32px 0 60px;
+    padding: 28px 0 60px;
     width: 100%;
   }
   .back {
-    font-family: system-ui, sans-serif;
-    font-size: 13px;
+    font-size: 14px;
+    font-weight: 600;
     color: var(--muted);
     text-decoration: none;
   }
   .back:hover {
-    color: var(--accent);
+    color: var(--c3);
   }
   h1 {
-    font-size: clamp(32px, 5.2vw, 50px);
-    font-weight: 500;
-    letter-spacing: -0.02em;
-    margin: 18px 0 14px;
+    font-weight: 800;
+    font-size: clamp(34px, 5.4vw, 54px);
+    letter-spacing: -0.03em;
+    margin: 16px 0 14px;
   }
   .summary {
-    font-family: system-ui, sans-serif;
-    font-size: 18px;
+    font-size: 19px;
     color: var(--ink);
-    max-width: 60ch;
     line-height: 1.55;
+    max-width: 56ch;
     margin: 0 0 40px;
   }
   .cols {
@@ -138,113 +121,65 @@
     grid-template-columns: 1fr;
     gap: 40px;
   }
-  @media (min-width: 720px) {
+  @media (min-width: 760px) {
     .cols {
-      grid-template-columns: 1.7fr 1fr;
-      gap: 56px;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 48px;
     }
   }
-  /* Main narrative: editorial serif headings. Side panels: small captions.
-     The contrast gives hierarchy without an uppercase eyebrow on every block. */
-  .h-editorial {
-    font-size: 22px;
-    font-weight: 500;
-    color: var(--ink);
-    margin: 0 0 12px;
-  }
-  .h-label {
-    font-size: 12px;
-    font-family: system-ui, sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: var(--muted);
-    margin: 0 0 14px;
+  .main h2 {
+    font-weight: 800;
+    font-size: 21px;
+    letter-spacing: -0.01em;
+    margin: 0 0 10px;
   }
   .main section {
-    margin-bottom: 34px;
+    margin-bottom: 30px;
   }
   .main p {
-    font-family: system-ui, sans-serif;
     font-size: 16px;
     line-height: 1.7;
-    color: var(--ink);
+    color: var(--muted);
     margin: 0;
-    max-width: 60ch;
+    max-width: 58ch;
   }
-  .side section {
-    background: var(--panel);
+  .main .cta {
+    margin-top: 8px;
+  }
+  .card {
+    background: var(--surface);
     border: 1px solid var(--line);
-    border-radius: 12px;
-    padding: 20px 22px;
+    border-radius: var(--r);
+    box-shadow: var(--shadow-sm);
+    padding: 22px;
     margin-bottom: 16px;
   }
-  .bar-row {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin: 8px 0;
-    font-family: system-ui, sans-serif;
-    font-size: 13px;
+  .viz {
+    padding-top: 26px;
   }
-  .bar-label {
-    flex: 0 0 42%;
-    color: var(--muted);
-  }
-  .bar-track {
-    flex: 1;
-    height: 6px;
-    background: var(--line);
-    border-radius: 3px;
-    overflow: hidden;
-  }
-  .bar-fill {
-    display: block;
-    height: 100%;
-    background: var(--accent);
-  }
-  .note,
-  .demand {
-    font-family: system-ui, sans-serif;
+  .cap {
+    text-align: center;
     font-size: 12px;
     color: var(--muted);
-    margin: 10px 0 0;
+    margin: 12px 0 0;
+    line-height: 1.5;
   }
-  .salary {
-    font-family: system-ui, sans-serif;
-    font-size: 17px;
-    color: var(--ink);
-    margin: 0;
-  }
-  .estimate {
-    font-size: 11px;
+  .k {
+    font-size: 12px;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.08em;
     color: var(--muted);
-    border: 1px solid var(--line);
-    border-radius: 4px;
-    padding: 1px 6px;
-    margin-left: 6px;
-    vertical-align: middle;
+    margin-bottom: 10px;
   }
-  .cta {
-    display: inline-block;
-    margin-top: 40px;
-    padding: 13px 24px;
-    border-radius: 8px;
-    background: var(--accent);
-    color: var(--accent-ink);
-    font-family: system-ui, sans-serif;
-    font-weight: 600;
-    text-decoration: none;
-    transition:
-      transform var(--dur) var(--ease-out),
-      filter var(--dur) var(--ease-out);
+  .salary {
+    font-weight: 800;
+    font-size: 20px;
+    margin: 0;
   }
-  .cta:hover {
-    transform: translateY(-1px);
-    filter: brightness(1.08);
-  }
-  .cta:active {
-    transform: translateY(0) scale(0.98);
+  .demand {
+    color: var(--muted);
+    font-size: 14px;
+    margin: 8px 0 0;
   }
 </style>
