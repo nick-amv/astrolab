@@ -90,13 +90,15 @@ async def rerank_and_explain(
     system, user = build_prompt(profile, occupations, locale)
     req = LLMRequest(
         feature="rerank",
+        # haiku: fast (~10s) and $0 on the Max plan; ample for 1-2 sentence
+        # "why you" text. sonnet took ~54s and grazed the timeout.
+        model="haiku",
         system_prompt=system,
         user_prompt=user,
-        model="sonnet",
         locale=locale,
         max_tokens=1400,
         temperature=0.4,
-        timeout_s=60,
+        timeout_s=90,
     )
     try:
         res = await provider.complete_json(req)
