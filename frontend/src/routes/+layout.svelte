@@ -1,10 +1,10 @@
 <script lang="ts">
+  import ThemeToggle from "$lib/ThemeToggle.svelte";
   import { m } from "$lib/paraglide/messages";
-  import { getLocale, localizeHref } from "$lib/paraglide/runtime";
+  import { localizeHref } from "$lib/paraglide/runtime";
   import "./app.css";
 
   let { children } = $props();
-  const locale = getLocale();
 </script>
 
 <div class="aurora" aria-hidden="true"></div>
@@ -16,9 +16,7 @@
     </a>
     <nav>
       <a class="section" href={localizeHref("/professions")}>{m.nav_catalog()}</a>
-      <span class="sep" aria-hidden="true">·</span>
-      <a class:active={locale === "ru"} href={localizeHref("/", { locale: "ru" })}>{m.nav_ru()}</a>
-      <a class:active={locale === "en"} href={localizeHref("/", { locale: "en" })}>{m.nav_en()}</a>
+      <ThemeToggle />
     </nav>
   </header>
 
