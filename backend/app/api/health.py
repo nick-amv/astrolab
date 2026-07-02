@@ -20,7 +20,6 @@ async def health() -> dict:
         "service": "astrolab-api",
         "env": settings.environment,
         "wave": 0,
-        "autodeploy": True,
     }
 
 
