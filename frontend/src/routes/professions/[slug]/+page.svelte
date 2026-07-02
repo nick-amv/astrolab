@@ -53,13 +53,13 @@
     <div class="main">
       {#if o.day_in_life}
         <section>
-          <h2>{m.prof_day()}</h2>
+          <h2 class="h-editorial">{m.prof_day()}</h2>
           <p>{o.day_in_life}</p>
         </section>
       {/if}
       {#if o.who_fits}
         <section>
-          <h2>{m.prof_who()}</h2>
+          <h2 class="h-editorial">{m.prof_who()}</h2>
           <p>{o.who_fits}</p>
         </section>
       {/if}
@@ -67,7 +67,7 @@
 
     <aside class="side">
       <section class="riasec">
-        <h2>{m.prof_riasec()}</h2>
+        <h2 class="h-label">{m.prof_riasec()}</h2>
         {#each RIASEC as axis (axis)}
           <div class="bar-row">
             <span class="bar-label">{riasecLabel[axis]()}</span>
@@ -84,7 +84,7 @@
 
       {#if o.facts?.length}
         <section class="facts">
-          <h2>{m.prof_salary()}</h2>
+          <h2 class="h-label">{m.prof_salary()}</h2>
           {#each o.facts as f (f.country)}
             <p class="salary">
               {#if f.salary_low}
@@ -120,9 +120,10 @@
     color: var(--accent);
   }
   h1 {
-    font-size: clamp(30px, 5vw, 46px);
+    font-size: clamp(32px, 5.2vw, 50px);
     font-weight: 500;
-    margin: 16px 0 12px;
+    letter-spacing: -0.02em;
+    margin: 18px 0 14px;
   }
   .summary {
     font-family: system-ui, sans-serif;
@@ -130,41 +131,51 @@
     color: var(--ink);
     max-width: 60ch;
     line-height: 1.55;
-    margin: 0 0 32px;
+    margin: 0 0 40px;
   }
   .cols {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 40px;
   }
   @media (min-width: 720px) {
     .cols {
-      grid-template-columns: 1.6fr 1fr;
+      grid-template-columns: 1.7fr 1fr;
+      gap: 56px;
     }
   }
-  h2 {
-    font-size: 14px;
+  /* Main narrative: editorial serif headings. Side panels: small captions.
+     The contrast gives hierarchy without an uppercase eyebrow on every block. */
+  .h-editorial {
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--ink);
+    margin: 0 0 12px;
+  }
+  .h-label {
+    font-size: 12px;
     font-family: system-ui, sans-serif;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.12em;
     color: var(--muted);
-    margin: 0 0 10px;
+    margin: 0 0 14px;
   }
   .main section {
-    margin-bottom: 26px;
+    margin-bottom: 34px;
   }
   .main p {
     font-family: system-ui, sans-serif;
-    line-height: 1.65;
+    font-size: 16px;
+    line-height: 1.7;
     color: var(--ink);
     margin: 0;
-    max-width: 56ch;
+    max-width: 60ch;
   }
   .side section {
     background: var(--panel);
     border: 1px solid var(--line);
-    border-radius: 10px;
-    padding: 18px 20px;
+    border-radius: 12px;
+    padding: 20px 22px;
     margin-bottom: 16px;
   }
   .bar-row {
@@ -217,13 +228,23 @@
   }
   .cta {
     display: inline-block;
-    margin-top: 36px;
-    padding: 13px 22px;
+    margin-top: 40px;
+    padding: 13px 24px;
     border-radius: 8px;
     background: var(--accent);
-    color: #08122a;
+    color: var(--accent-ink);
     font-family: system-ui, sans-serif;
     font-weight: 600;
     text-decoration: none;
+    transition:
+      transform var(--dur) var(--ease-out),
+      filter var(--dur) var(--ease-out);
+  }
+  .cta:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.08);
+  }
+  .cta:active {
+    transform: translateY(0) scale(0.98);
   }
 </style>

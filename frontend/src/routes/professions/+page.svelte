@@ -12,8 +12,7 @@
 </svelte:head>
 
 <section class="catalog">
-  <header>
-    <p class="eyebrow">{m.catalog_eyebrow()}</p>
+  <header class="lede">
     <h1>{m.catalog_title()}</h1>
     <p class="intro">{m.catalog_intro()}</p>
   </header>
@@ -21,7 +20,7 @@
   {#if data.occupations.length === 0}
     <p class="empty">{m.catalog_empty()}</p>
   {:else}
-    <ul class="grid">
+    <ul class="index">
       {#each data.occupations as occ (occ.slug)}
         <li>
           <a href={localizeHref(`/professions/${occ.slug}`)}>
@@ -36,57 +35,78 @@
 
 <style>
   .catalog {
-    padding: 40px 0 60px;
+    padding: 32px 0 64px;
     width: 100%;
   }
-  .eyebrow {
-    font-family: system-ui, sans-serif;
-    font-size: 12px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin: 0 0 16px;
+  .lede {
+    max-width: 54ch;
+    margin-bottom: 44px;
   }
   h1 {
-    font-size: clamp(30px, 5vw, 48px);
+    font-size: clamp(32px, 5vw, 52px);
     font-weight: 500;
-    margin: 0 0 16px;
+    letter-spacing: -0.02em;
+    margin: 0 0 14px;
   }
   .intro {
     font-family: system-ui, sans-serif;
+    font-size: 16px;
     color: var(--muted);
-    max-width: 52ch;
-    margin: 0 0 40px;
     line-height: 1.6;
+    margin: 0;
   }
-  .grid {
+
+  /* Editorial index, not a card wall: hairline rows, two columns on wide
+     screens. Reads like the contents page of a serious guide. */
+  .index {
     list-style: none;
     padding: 0;
     margin: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 12px;
+    grid-template-columns: 1fr;
+    column-gap: 48px;
+    border-top: 1px solid var(--line);
   }
-  .grid a {
+  @media (min-width: 700px) {
+    .index {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .index li {
+    border-bottom: 1px solid var(--line);
+  }
+  .index a {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: space-between;
-    padding: 18px 20px;
-    border: 1px solid var(--line);
-    border-radius: 10px;
-    background: var(--panel);
+    gap: 16px;
+    padding: 17px 4px 17px 0;
     text-decoration: none;
     color: var(--ink);
-    transition: border-color 0.15s ease;
-  }
-  .grid a:hover {
-    border-color: var(--accent);
   }
   .name {
-    font-size: 17px;
+    font-size: 19px;
+    transition: color var(--dur) var(--ease-out);
   }
   .arrow {
+    font-family: system-ui, sans-serif;
     color: var(--muted);
+    transform: translateX(-4px);
+    opacity: 0;
+    transition:
+      transform var(--dur) var(--ease-out),
+      opacity var(--dur) var(--ease-out),
+      color var(--dur) var(--ease-out);
+  }
+  .index a:hover .name,
+  .index a:focus-visible .name {
+    color: var(--accent);
+  }
+  .index a:hover .arrow,
+  .index a:focus-visible .arrow {
+    transform: translateX(0);
+    opacity: 1;
+    color: var(--accent);
   }
   .empty {
     font-family: system-ui, sans-serif;
