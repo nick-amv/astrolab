@@ -1,0 +1,78 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  cyrillic-lint:
+    name: No hardcoded Cyrillic in source
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python scripts/check_cyrillic.py
+
+  backend:
+    name: Backend (ruff / mypy / pytest + migration)
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: astrolab
+          POSTGRES_PASSWORD: astrolab
+          POSTGRES_DB: astrolab
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U astrolab"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    env:
+      ASTROLAB_DATABASE_URL: postgresql+psycopg://astrolab:astrolab@localhost:5432/astrolab
+      RUN_DB_TESTS: "1"
+    defaults:
+      run:
+        working-directory: backend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install --upgrade pip
+      - run: pip install -e ".[dev]"
+      - name: Ruff
+        run: ruff check .
+      - name: Mypy (non-blocking)
+        run: mypy app || true
+      - name: Alembic upgrade from zero
+        run: alembic upgrade head
+      - name: Pytest
+        run: pytest -q
+
+  frontend:
+    name: Frontend (lint / check / test / build)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm ci
+      - name: Lint
+        run: npm run lint
+      - name: Svelte check
+        run: npm run check
+      - name: Unit tests
+        run: npm test
+      - name: Build (SSR)
+        run: npm run build

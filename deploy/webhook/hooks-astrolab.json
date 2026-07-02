@@ -1,0 +1,24 @@
+{
+  "id": "astrolab-deploy",
+  "execute-command": "/usr/local/bin/astrolab-deploy.sh",
+  "command-working-directory": "/opt/astrolab",
+  "response-message": "Astrolab deploy queued.",
+  "trigger-rule": {
+    "and": [
+      {
+        "match": {
+          "type": "payload-hmac-sha256",
+          "secret": "__ASTROLAB_WEBHOOK_SECRET__",
+          "parameter": { "source": "header", "name": "X-Hub-Signature-256" }
+        }
+      },
+      {
+        "match": {
+          "type": "value",
+          "value": "refs/heads/main",
+          "parameter": { "source": "payload", "name": "ref" }
+        }
+      }
+    ]
+  }
+}

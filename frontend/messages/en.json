@@ -1,0 +1,16 @@
+{
+  "$schema": "https://inlang.com/schema/inlang-message-format",
+  "app_name": "Astrolab",
+  "tagline": "Find where you are — and where to go next",
+  "coming_soon": "Launching soon",
+  "intro": "Next-generation career guidance: an assessment, an occupation catalog, and a path to admission — for teenagers and adults.",
+  "nav_ru": "RU",
+  "nav_en": "EN",
+  "tos_link": "Terms of Service",
+  "privacy_link": "Privacy",
+  "tos_title": "Terms of Service",
+  "tos_body": "Draft. The full terms will be published before public launch.",
+  "privacy_title": "Privacy",
+  "privacy_body": "We collect the minimum. The assessment can be taken anonymously, without an account. Data is deleted on request. The full policy will be published before launch.",
+  "back_home": "Back to home"
+}

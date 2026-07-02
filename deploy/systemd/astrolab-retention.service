@@ -1,0 +1,11 @@
+[Unit]
+Description=Astrolab retention purge (anonymous sessions, expired tokens/reports)
+After=postgresql.service
+
+[Service]
+Type=oneshot
+User=astrolab
+Group=astrolab
+WorkingDirectory=/opt/astrolab/backend
+EnvironmentFile=/etc/astrolab/env
+ExecStart=/opt/astrolab/backend/.venv/bin/python -m scripts.retention_cleanup

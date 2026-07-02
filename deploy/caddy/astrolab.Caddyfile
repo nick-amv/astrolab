@@ -1,0 +1,27 @@
+# Astrolab site block — append to /etc/caddy/Caddyfile.
+# Public, no basic_auth (Nikita's decision 2026-07-02). API under /api/*,
+# everything else to the SvelteKit SSR node server.
+astrolab.nikam.dev {
+	encode gzip
+
+	handle /api/* {
+		reverse_proxy 127.0.0.1:8015
+	}
+
+	handle {
+		reverse_proxy 127.0.0.1:8016
+	}
+}
+
+# --- Deploy webhook route ---------------------------------------------------
+# Add this INSIDE the existing `hub.nikam.dev { ... }` block (next to the
+# hub-deploy / bridge-deploy / aibus-deploy routes). GitHub posts to
+# https://hub.nikam.dev/_astrolab_deploy; Caddy rewrites to the webhook path.
+#
+#   @astrolab_deploy {
+#       path /_astrolab_deploy /_astrolab_deploy/*
+#   }
+#   handle @astrolab_deploy {
+#       rewrite * /hooks/astrolab-deploy
+#       reverse_proxy 127.0.0.1:9099
+#   }

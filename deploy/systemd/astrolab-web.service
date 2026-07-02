@@ -1,0 +1,24 @@
+[Unit]
+Description=Astrolab web (SvelteKit SSR, adapter-node)
+After=network-online.target astrolab-api.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=astrolab
+Group=astrolab
+WorkingDirectory=/opt/astrolab/frontend
+EnvironmentFile=/etc/astrolab/env
+# adapter-node reads these. ORIGIN comes from /etc/astrolab/env.
+Environment=HOST=127.0.0.1
+Environment=PORT=8016
+Environment=PROTOCOL_HEADER=x-forwarded-proto
+Environment=HOST_HEADER=x-forwarded-host
+ExecStart=/usr/bin/node build/index.js
+Restart=always
+RestartSec=3
+NoNewPrivileges=true
+ProtectSystem=full
+
+[Install]
+WantedBy=multi-user.target

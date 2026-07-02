@@ -1,0 +1,20 @@
+[Unit]
+Description=Astrolab API (FastAPI / uvicorn)
+After=network-online.target postgresql.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=astrolab
+Group=astrolab
+WorkingDirectory=/opt/astrolab/backend
+EnvironmentFile=/etc/astrolab/env
+ExecStart=/opt/astrolab/backend/.venv/bin/uvicorn app.main:app --host 127.0.0.1 --port 8015
+Restart=always
+RestartSec=3
+# Hardening
+NoNewPrivileges=true
+ProtectSystem=full
+
+[Install]
+WantedBy=multi-user.target
