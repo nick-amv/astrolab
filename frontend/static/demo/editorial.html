@@ -48,8 +48,8 @@
 
   .bars .brow{display:grid; grid-template-columns:120px 1fr 40px; align-items:center; gap:14px; padding:9px 0; border-bottom:1px solid var(--line)}
   .bars .bl{font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.02em}
-  .bars .bt{height:14px; background:#e3e0d7; position:relative}
-  .bars .bf{height:100%; background:var(--ink); transform-origin:left; transform:scaleX(0); animation:grow 1s .2s var(--ease) forwards}
+  .bars .bt{display:block; height:14px; background:#e3e0d7; position:relative; overflow:hidden}
+  .bars .bf{display:block; height:100%; background:var(--ink); transform-origin:left; transform:scaleX(0); animation:grow 1s .2s var(--ease) forwards}
   .bars .bf.hi{background:var(--accent)}
   .bars .bv{font-weight:900; font-size:13px; text-align:right}
   @keyframes grow{to{transform:scaleX(1)}}
