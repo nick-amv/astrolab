@@ -17,23 +17,23 @@ from sqlalchemy import delete, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.assessment import AnswerItem, compute_scores
+from app.assessment.pipeline import compute_and_store_matches
+from app.assessment.read import result_payload
+from app.config import settings
 from app.db import get_session
-from app.matching import Profile, match
 from app.models import (
     Answer,
     AssessmentSession,
-    Occupation,
-    OccupationI18n,
     QuestionBank,
     QuestionI18n,
+    Report,
     ScoringConfig,
     TraitScore,
 )
 from app.models import (
     Profile as ProfileRow,
 )
-from app.security.tokens import new_token
-from app.services.catalog import load_published_vectors
+from app.security.tokens import hash_token, new_token
 
 router = APIRouter(prefix="/api/assessment", tags=["assessment"])
 
@@ -227,6 +227,8 @@ async def _compute_and_store(session: AsyncSession, ses: AssessmentSession) -> d
 async def score(session_id: str, session: AsyncSession = Depends(get_session)) -> dict:
     ses = await _get_session_or_404(session, session_id)
     scores = await _compute_and_store(session, ses)
+    # deterministic match → LLM re-rank/explain → store (degradable; runs once)
+    await compute_and_store_matches(session, ses)
     return {"scores": scores, "scoring_version": ses.scoring_version}
 
 
@@ -238,71 +240,34 @@ async def result(
     session_id: str, locale: str = "ru", session: AsyncSession = Depends(get_session)
 ) -> dict:
     ses = await _get_session_or_404(session, session_id)
-    profile_row = (
-        await session.execute(select(ProfileRow).where(ProfileRow.id == ses.profile_id))
-    ).scalars().first()
-
-    traits = (
-        await session.execute(select(TraitScore).where(TraitScore.session_id == ses.id))
-    ).scalars().all()
-    by_kind = {t.kind: t.vector for t in traits}
-    if not by_kind:
+    payload = await result_payload(session, ses, locale)
+    if payload is None:
         raise HTTPException(status_code=409, detail="not scored yet")
+    return payload
 
-    cfg = (
-        await session.execute(select(ScoringConfig).order_by(ScoringConfig.version.desc()))
-    ).scalars().first()
 
-    profile = Profile(
-        riasec=by_kind.get("riasec", {}),
-        values=by_kind.get("values", {}),
-        subjects=by_kind.get("subjects", {}),
-        age_band=profile_row.age_band if profile_row else "17-19",
+class ShareOut(BaseModel):
+    token: str
+
+
+@router.post("/{session_id}/share", response_model=ShareOut)
+async def create_share(
+    session_id: str, session: AsyncSession = Depends(get_session)
+) -> ShareOut:
+    """Create (or reuse) a persistent, hashed share link for a scored session.
+    The raw token is returned once and only its SHA-256 hash is stored."""
+    ses = await _get_session_or_404(session, session_id)
+    payload = await result_payload(session, ses, "ru")
+    if payload is None:
+        raise HTTPException(status_code=409, detail="not scored yet")
+    token = new_token()
+    session.add(
+        Report(
+            session_id=ses.id,
+            kind="teen",
+            token_hash=hash_token(token),
+            expires_at=dt.datetime.now(dt.UTC) + dt.timedelta(days=settings.report_ttl_days),
+        )
     )
-    vectors = await load_published_vectors(session)
-    scored = match(profile, vectors, cfg.weights if cfg else {})
-
-    # localize occupation titles for display
-    slugs = [s.occupation.slug for s in scored if s.bucket != "none"]
-    titles: dict[str, str] = {}
-    if slugs:
-        occ_rows = (
-            await session.execute(select(Occupation).where(Occupation.slug.in_(slugs)))
-        ).scalars().all()
-        occ_ids = {str(o.id): o.slug for o in occ_rows}
-        i18n = (
-            await session.execute(
-                select(OccupationI18n).where(
-                    OccupationI18n.occupation_id.in_([o.id for o in occ_rows])
-                )
-            )
-        ).scalars().all()
-        t = {(str(r.occupation_id), r.locale): r.title for r in i18n}
-        for oid, slug in occ_ids.items():
-            titles[slug] = t.get((oid, locale)) or t.get((oid, "ru")) or slug
-
-    def bucket(name: str) -> list[dict]:
-        return [
-            {
-                "slug": s.occupation.slug,
-                "title": titles.get(s.occupation.slug, s.occupation.slug),
-                "score": round(s.score, 3),
-            }
-            for s in scored
-            if s.bucket == name
-        ]
-
-    return {
-        "profile": {
-            "riasec": by_kind.get("riasec", {}),
-            "klimov": by_kind.get("klimov", {}),
-            "values": by_kind.get("values", {}),
-            "subjects": by_kind.get("subjects", {}),
-        },
-        "age_band": profile_row.age_band if profile_row else None,
-        "buckets": {
-            "core": bucket("core"),
-            "near": bucket("near"),
-            "dark_horse": bucket("dark_horse"),
-        },
-    }
+    await session.commit()
+    return ShareOut(token=token)

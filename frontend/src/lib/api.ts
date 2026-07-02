@@ -24,6 +24,25 @@ export interface Answer {
   value: number;
 }
 
+export interface OccItem {
+  slug: string;
+  title: string;
+  score: number;
+  why: string | null;
+}
+
+export interface Result {
+  profile: {
+    riasec: Record<string, number>;
+    klimov: Record<string, number>;
+    values: Record<string, number>;
+    subjects: Record<string, number>;
+  };
+  age_band: string | null;
+  buckets: { core: OccItem[]; near: OccItem[]; dark_horse: OccItem[] };
+  shared?: boolean;
+}
+
 export async function startAssessment(body: StartBody): Promise<{ session_id: string }> {
   const r = await fetch("/api/assessment/start", {
     method: "POST",
@@ -56,9 +75,30 @@ export async function scoreSession(sessionId: string): Promise<void> {
   await fetch(`/api/assessment/${sessionId}/score`, { method: "POST" });
 }
 
-export async function getResult(f: Fetch, sessionId: string, locale: string) {
+export async function getResult(
+  f: Fetch,
+  sessionId: string,
+  locale: string,
+): Promise<Result | null> {
   const r = await f(`/api/assessment/${sessionId}/result?locale=${locale}`);
   if (r.status === 409) return null;
   if (!r.ok) throw new Error("result failed");
   return r.json();
+}
+
+export async function getReport(
+  f: Fetch,
+  token: string,
+  locale: string,
+): Promise<Result | null> {
+  const r = await f(`/api/report/${token}?locale=${locale}`);
+  if (!r.ok) return null;
+  return r.json();
+}
+
+export async function createShare(sessionId: string): Promise<string | null> {
+  const r = await fetch(`/api/assessment/${sessionId}/share`, { method: "POST" });
+  if (!r.ok) return null;
+  const data = await r.json();
+  return data.token as string;
 }
