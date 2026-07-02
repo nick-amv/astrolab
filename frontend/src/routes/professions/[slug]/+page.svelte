@@ -1,11 +1,20 @@
 <script lang="ts">
   import RiasecRadar from "$lib/RiasecRadar.svelte";
   import { m } from "$lib/paraglide/messages";
-  import { localizeHref } from "$lib/paraglide/runtime";
+  import { getLocale, localizeHref } from "$lib/paraglide/runtime";
   import type { PageData } from "./$types";
 
   let { data }: { data: PageData } = $props();
   const o = $derived(data.occupation);
+  const edu = $derived(data.education);
+
+  // Localized short month from a "MM-DD" rule — no hardcoded month strings.
+  function monthLabel(rule: string): string {
+    const [mm, dd] = rule.split("-").map((n) => parseInt(n, 10));
+    if (!mm) return "";
+    const d = new Date(2000, mm - 1, dd || 1);
+    return new Intl.DateTimeFormat(getLocale(), { month: "short" }).format(d);
+  }
 
   const shortLabels = {
     R: m.riasec_r_short(),
@@ -87,6 +96,46 @@
       {/if}
     </aside>
   </div>
+
+  {#if edu}
+    <section class="howto">
+      <h2 class="howto-h">{m.prof_howto()}</h2>
+      {#if !edu.available || (edu.domains.length === 0 && edu.milestones.length === 0)}
+        <p class="edu-none">{m.edu_none()}</p>
+      {:else}
+        <div class="paths">
+          {#each edu.domains as d (d.code)}
+            <div class="path">
+              <div class="path-top">
+                <span class="path-title">{d.title}</span>
+                <span class="path-code">{d.code}{#if d.level} · {d.level}{/if}</span>
+              </div>
+              <div class="ege-label">{m.edu_ege()}</div>
+              <div class="ege">
+                {#each d.ege as e (e)}<span class="ege-chip">{e}</span>{/each}
+              </div>
+            </div>
+          {/each}
+        </div>
+
+        {#if edu.milestones.length}
+          <div class="timeline">
+            <div class="tl-label">{m.edu_deadlines()}</div>
+            <ol>
+              {#each edu.milestones as ms (ms.date_rule)}
+                <li>
+                  <span class="tl-when">{monthLabel(ms.date_rule)}</span>
+                  <span class="tl-title">{ms.title}</span>
+                </li>
+              {/each}
+            </ol>
+          </div>
+        {/if}
+
+        <p class="edu-disclaimer">{m.edu_disclaimer()}</p>
+      {/if}
+    </section>
+  {/if}
 </article>
 
 <style>
@@ -181,5 +230,107 @@
     color: var(--muted);
     font-size: 14px;
     margin: 8px 0 0;
+  }
+
+  /* How to get there */
+  .howto {
+    margin-top: 48px;
+    border-top: 1px solid var(--line);
+    padding-top: 36px;
+  }
+  .howto-h {
+    font-weight: 800;
+    font-size: clamp(24px, 3.4vw, 32px);
+    letter-spacing: -0.02em;
+    margin: 0 0 22px;
+  }
+  .paths {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  @media (min-width: 640px) {
+    .paths {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .path {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--r);
+    box-shadow: var(--shadow-sm);
+    padding: 20px 22px;
+  }
+  .path-top {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-bottom: 14px;
+  }
+  .path-title {
+    font-weight: 700;
+    font-size: 17px;
+  }
+  .path-code {
+    font-size: 13px;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+  }
+  .ege-label,
+  .tl-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+  .ege {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+  .ege-chip {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink);
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 6px 11px;
+  }
+  .timeline {
+    margin-top: 26px;
+  }
+  .timeline ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 10px;
+  }
+  .timeline li {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+  }
+  .tl-when {
+    flex: 0 0 44px;
+    font-weight: 800;
+    font-size: 13px;
+    color: var(--c3);
+    text-transform: lowercase;
+  }
+  .tl-title {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  .edu-disclaimer,
+  .edu-none {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.6;
+    max-width: 62ch;
+    margin-top: 22px;
   }
 </style>
