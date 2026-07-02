@@ -14,8 +14,17 @@ if [ "$LOCAL" = "$REMOTE" ]; then
 fi
 runuser -u astrolab -- git reset --hard origin/main --quiet
 
+# Self-update versioned host config (this script + systemd units) so infra
+# changes ship on push too. Takes effect from the next deploy.
+cp /opt/astrolab/deploy/webhook/astrolab-deploy.sh /usr/local/bin/astrolab-deploy.sh
+chmod +x /usr/local/bin/astrolab-deploy.sh /opt/astrolab/deploy/scripts/pg_backup.sh
+cp /opt/astrolab/deploy/systemd/*.service /opt/astrolab/deploy/systemd/*.timer /etc/systemd/system/
+systemctl daemon-reload
+
 echo "[deploy] backend: deps + migrate"
+# Source the env so alembic connects with the real DB URL (not the default).
 runuser -u astrolab -- bash -lc '
+  set -a && . /etc/astrolab/env && set +a &&
   cd /opt/astrolab/backend &&
   .venv/bin/pip install --quiet -e . &&
   .venv/bin/alembic upgrade head'
