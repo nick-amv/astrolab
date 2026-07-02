@@ -28,7 +28,7 @@
   <h1>{m.home_title()}</h1>
   <p class="lead">{m.home_lead()}</p>
   <div class="actions">
-    <a class="cta" href={localizeHref("/professions")}>{m.home_cta()} →</a>
+    <a class="cta" href={localizeHref("/test")}>{m.home_cta()} →</a>
     <a class="ghost" href={localizeHref("/professions")}>{m.home_browse()}</a>
   </div>
 </section>

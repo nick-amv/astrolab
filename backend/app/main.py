@@ -5,7 +5,7 @@ from __future__ import annotations
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.api import health, match, meta, occupations, privacy
+from app.api import assessment, health, match, meta, occupations, privacy
 from app.config import settings
 
 
@@ -28,6 +28,7 @@ def create_app() -> FastAPI:
     app.include_router(privacy.router)
     app.include_router(occupations.router)
     app.include_router(match.router)
+    app.include_router(assessment.router)
     return app
 
 

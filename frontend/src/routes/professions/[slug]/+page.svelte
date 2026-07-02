@@ -62,7 +62,7 @@
           <p>{o.who_fits}</p>
         </section>
       {/if}
-      <a class="cta" href={localizeHref("/")}>{m.prof_cta()} →</a>
+      <a class="cta" href={localizeHref("/test")}>{m.prof_cta()} →</a>
     </div>
 
     <aside class="side">
