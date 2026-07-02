@@ -17,7 +17,7 @@ from sqlalchemy import delete, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.assessment import AnswerItem, compute_scores
-from app.assessment.pipeline import compute_and_store_matches
+from app.assessment.pipeline import enrich_with_llm, store_deterministic
 from app.assessment.read import result_payload
 from app.config import settings
 from app.db import get_session
@@ -227,9 +227,25 @@ async def _compute_and_store(session: AsyncSession, ses: AssessmentSession) -> d
 async def score(session_id: str, session: AsyncSession = Depends(get_session)) -> dict:
     ses = await _get_session_or_404(session, session_id)
     scores = await _compute_and_store(session, ses)
-    # deterministic match → LLM re-rank/explain → store (degradable; runs once)
-    await compute_and_store_matches(session, ses)
+    # Deterministic match only — fast, never blocks on the LLM. The result page
+    # fires /enrich afterwards for the LLM re-rank + "why you" (DESIGN §4.4).
+    await store_deterministic(session, ses)
     return {"scores": scores, "scoring_version": ses.scoring_version}
+
+
+@router.post("/{session_id}/enrich")
+async def enrich(
+    session_id: str, locale: str = "ru", session: AsyncSession = Depends(get_session)
+) -> dict:
+    """Run the LLM re-rank/explain (degradable) and return the (possibly enriched)
+    result. Called by the result page after it shows the deterministic result, so
+    the user never waits on the shared LLM."""
+    ses = await _get_session_or_404(session, session_id)
+    await enrich_with_llm(session, ses)
+    payload = await result_payload(session, ses, locale)
+    if payload is None:
+        raise HTTPException(status_code=409, detail="not scored yet")
+    return payload
 
 
 # --------------------------------------------------------------------------- #

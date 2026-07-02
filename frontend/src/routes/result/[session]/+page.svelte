@@ -1,12 +1,25 @@
 <script lang="ts">
-  import { createShare } from "$lib/api";
+  import { onMount } from "svelte";
+  import { createShare, enrichResult, type Result } from "$lib/api";
   import ResultView from "$lib/ResultView.svelte";
   import { m } from "$lib/paraglide/messages";
-  import { localizeHref } from "$lib/paraglide/runtime";
+  import { getLocale, localizeHref } from "$lib/paraglide/runtime";
   import type { PageData } from "./$types";
 
   let { data }: { data: PageData } = $props();
   const sid = $derived(data.sessionId);
+
+  // Show the deterministic result instantly; the LLM "why you" + re-rank arrives
+  // asynchronously so the user never waits on the shared LLM (DESIGN §4.4).
+  let enriched = $state<Result | null>(null);
+  let enriching = $state(true);
+  const result = $derived(enriched ?? data.result);
+
+  onMount(async () => {
+    const r = await enrichResult(data.sessionId, getLocale());
+    if (r) enriched = r;
+    enriching = false;
+  });
 
   let copied = $state(false);
   let sharing = $state(false);
@@ -28,7 +41,8 @@
 
 <section class="result">
   <h1>{m.result_title()}</h1>
-  <ResultView result={data.result} />
+  {#if enriching}<p class="enriching">{m.result_enriching()}</p>{/if}
+  <ResultView {result} />
   <div class="actions">
     <button class="ghost" onclick={share} disabled={sharing}>
       {copied ? m.result_share_done() : m.result_share()}
@@ -46,7 +60,20 @@
     font-weight: 800;
     font-size: clamp(32px, 5vw, 52px);
     letter-spacing: -0.03em;
-    margin: 0 0 28px;
+    margin: 0 0 12px;
+  }
+  .enriching {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--chip-ink);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 99px;
+    padding: 6px 14px;
+    margin: 0 0 24px;
   }
   .actions {
     display: flex;

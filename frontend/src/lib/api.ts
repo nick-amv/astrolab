@@ -96,6 +96,17 @@ export async function getReport(
   return r.json();
 }
 
+export async function enrichResult(
+  sessionId: string,
+  locale: string,
+): Promise<Result | null> {
+  const r = await fetch(`/api/assessment/${sessionId}/enrich?locale=${locale}`, {
+    method: "POST",
+  });
+  if (!r.ok) return null;
+  return r.json();
+}
+
 export async function createShare(sessionId: string): Promise<string | null> {
   const r = await fetch(`/api/assessment/${sessionId}/share`, { method: "POST" });
   if (!r.ok) return null;

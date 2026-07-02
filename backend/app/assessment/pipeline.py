@@ -1,12 +1,17 @@
-"""Result pipeline: deterministic match → LLM re-rank/explain → store.
+"""Result pipeline, split so the LLM never blocks the result (DESIGN §4.4).
 
-Runs once (at /score), so /result reads cached `matches` rows instead of
-re-scoring or re-calling the LLM on every page load. The deterministic score and
-`rank_det` are computed here and never change; the LLM only writes `rank_llm` +
-`llm_reason`. Everything degrades cleanly if the LLM is unavailable.
+- store_deterministic(): fast (~1s). Deterministic match → store `matches` with
+  rank_det (= rank_final). Runs synchronously at /score.
+- enrich_with_llm(): the LLM re-rank + "why you". Runs via a separate /enrich
+  call the result page fires AFTER showing the deterministic result, so the user
+  never waits on the shared Max-subscription CLI (which can queue for tens of
+  seconds). Updates rank_llm / rank_final / llm_reason + writes the audit row.
+  Fully degradable: on any failure the deterministic result stands.
 """
 
 from __future__ import annotations
+
+import uuid
 
 from sqlalchemy import delete, select
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -25,25 +30,27 @@ from app.models import (
 from app.models import Profile as ProfileRow
 from app.services.catalog import load_published_vectors
 
-# How many bucketed candidates to hand the LLM (keeps the prompt small/fast).
 LLM_CANDIDATES = 15
 
 
-async def compute_and_store_matches(session: AsyncSession, ses: AssessmentSession) -> None:
-    profile_row = (
-        await session.execute(select(ProfileRow).where(ProfileRow.id == ses.profile_id))
-    ).scalars().first()
+async def _profile_from_traits(session: AsyncSession, ses: AssessmentSession):
     traits = (
         await session.execute(select(TraitScore).where(TraitScore.session_id == ses.id))
     ).scalars().all()
     by_kind = {t.kind: t.vector for t in traits}
+    profile_row = (
+        await session.execute(select(ProfileRow).where(ProfileRow.id == ses.profile_id))
+    ).scalars().first()
+    return by_kind, profile_row
+
+
+async def store_deterministic(session: AsyncSession, ses: AssessmentSession) -> None:
+    by_kind, profile_row = await _profile_from_traits(session, ses)
     if not by_kind:
         return
-
     cfg = (
         await session.execute(select(ScoringConfig).order_by(ScoringConfig.version.desc()))
     ).scalars().first()
-
     profile = Profile(
         riasec=by_kind.get("riasec", {}),
         values=by_kind.get("values", {}),
@@ -52,19 +59,45 @@ async def compute_and_store_matches(session: AsyncSession, ses: AssessmentSessio
     )
     vectors = await load_published_vectors(session)
     scored = match(profile, vectors, cfg.weights if cfg else {})
-
     bucketed = [s for s in scored if s.bucket != "none"]
-    if not bucketed:
-        await session.execute(delete(Match).where(Match.session_id == ses.id))
-        await session.commit()
-        return
 
-    # occupation titles (ru) for the LLM prompt
-    slugs = [s.occupation.slug for s in bucketed]
-    occ_rows = (
-        await session.execute(select(Occupation).where(Occupation.slug.in_(slugs)))
+    await session.execute(delete(Match).where(Match.session_id == ses.id))
+    for det_rank, s in enumerate(bucketed, start=1):
+        session.add(
+            Match(
+                session_id=ses.id,
+                occupation_id=uuid.UUID(s.occupation.id),
+                score=s.score,
+                bucket=s.bucket,
+                rank_det=det_rank,
+                rank_llm=None,
+                rank_final=det_rank,
+                llm_reason=None,
+            )
+        )
+    await session.commit()
+
+
+async def enrich_with_llm(session: AsyncSession, ses: AssessmentSession) -> bool:
+    """Run the LLM re-rank/explain over the stored matches. Returns True if it
+    applied. Idempotent-ish: re-running just re-writes the LLM fields."""
+    by_kind, profile_row = await _profile_from_traits(session, ses)
+    if not by_kind:
+        return False
+    matches = (
+        await session.execute(
+            select(Match).where(Match.session_id == ses.id).order_by(Match.rank_det)
+        )
     ).scalars().all()
-    id_by_slug = {o.slug: o.id for o in occ_rows}
+    if not matches:
+        return False
+
+    occ_rows = (
+        await session.execute(
+            select(Occupation).where(Occupation.id.in_([m.occupation_id for m in matches]))
+        )
+    ).scalars().all()
+    occ_by_id = {o.id: o for o in occ_rows}
     i18n = (
         await session.execute(
             select(OccupationI18n).where(
@@ -75,56 +108,49 @@ async def compute_and_store_matches(session: AsyncSession, ses: AssessmentSessio
     ).scalars().all()
     title_by = {str(r.occupation_id): r.title for r in i18n}
 
-    candidates = [
-        {
-            "slug": s.occupation.slug,
-            "title": title_by.get(str(id_by_slug.get(s.occupation.slug)), s.occupation.slug),
-            "riasec": s.occupation.riasec,
-        }
-        for s in bucketed[:LLM_CANDIDATES]
-    ]
+    candidates = []
+    slug_to_match = {}
+    for m in matches[:LLM_CANDIDATES]:
+        occ = occ_by_id.get(m.occupation_id)
+        if occ is None:
+            continue
+        candidates.append(
+            {
+                "slug": occ.slug,
+                "title": title_by.get(str(occ.id), occ.slug),
+                "riasec": occ.riasec,
+            }
+        )
+        slug_to_match[occ.slug] = (m, occ)
 
     locale = profile_row.locale if profile_row else "ru"
     ai = await rerank_and_explain(
-        {
-            "riasec": by_kind.get("riasec", {}),
-            "values": by_kind.get("values", {}),
-            "subjects": by_kind.get("subjects", {}),
-        },
-        candidates,
-        locale,
+        {k: by_kind.get(k, {}) for k in ("riasec", "values", "subjects")}, candidates, locale
     )
-    llm_order = {slug: i + 1 for i, slug in enumerate(ai["order"])} if ai else {}
-    why = ai["why"] if ai else {}
+    if not ai:
+        return False
 
-    await session.execute(delete(Match).where(Match.session_id == ses.id))
-    for det_rank, s in enumerate(bucketed, start=1):
-        rank_llm = llm_order.get(s.occupation.slug)
-        session.add(
-            Match(
-                session_id=ses.id,
-                occupation_id=id_by_slug[s.occupation.slug],
-                score=s.score,
-                bucket=s.bucket,
-                rank_det=det_rank,
-                rank_llm=rank_llm,
-                rank_final=rank_llm if rank_llm is not None else det_rank,
-                llm_reason=why.get(s.occupation.slug),
-            )
-        )
+    llm_order = {slug: i + 1 for i, slug in enumerate(ai["order"])}
+    why = ai["why"]
+    for slug, (m, _occ) in slug_to_match.items():
+        rank_llm = llm_order.get(slug)
+        if rank_llm is not None:
+            m.rank_llm = rank_llm
+            m.rank_final = rank_llm
+        m.llm_reason = why.get(slug)
 
-    if ai:
-        session.add(
-            LlmCall(
-                session_id=ses.id,
-                purpose="rerank",
-                backend=ai["audit"]["backend"],
-                model=ai["audit"]["model"],
-                prompt_hash=ai["audit"]["prompt_hash"],
-                config_version=ses.scoring_version,
-                output={"order": ai["order"], "why_count": len(why)},
-                tokens=ai["audit"]["tokens"],
-                latency_ms=ai["audit"]["latency_ms"],
-            )
+    session.add(
+        LlmCall(
+            session_id=ses.id,
+            purpose="rerank",
+            backend=ai["audit"]["backend"],
+            model=ai["audit"]["model"],
+            prompt_hash=ai["audit"]["prompt_hash"],
+            config_version=ses.scoring_version,
+            output={"order": ai["order"], "why_count": len(why)},
+            tokens=ai["audit"]["tokens"],
+            latency_ms=ai["audit"]["latency_ms"],
         )
+    )
     await session.commit()
+    return True
