@@ -4,6 +4,7 @@
   import CardDeck from "$lib/assessment/CardDeck.svelte";
   import CvStep from "$lib/assessment/CvStep.svelte";
   import SubjectGrid from "$lib/assessment/SubjectGrid.svelte";
+  import ValuePairs from "$lib/assessment/ValuePairs.svelte";
   import { m } from "$lib/paraglide/messages";
   import { localizeHref } from "$lib/paraglide/runtime";
   import type { PageData } from "./$types";
@@ -12,6 +13,17 @@
   const sid = $derived(data.sessionId);
   const blocks = $derived(data.questions.blocks);
   const adult = $derived(data.questions.adult);
+
+  // Values are forced-choice pairs (v2) when a C item's dimension is "a|b".
+  const valuesArePairs = $derived((blocks.C[0]?.dimension ?? "").includes("|"));
+  const valueAxes: Record<string, { name: string; desc: string }> = {
+    achievement: { name: m.val_achievement(), desc: m.val_achievement_desc() },
+    autonomy: { name: m.val_autonomy(), desc: m.val_autonomy_desc() },
+    recognition: { name: m.val_recognition(), desc: m.val_recognition_desc() },
+    relationships: { name: m.val_relationships(), desc: m.val_relationships_desc() },
+    stability: { name: m.val_stability(), desc: m.val_stability_desc() },
+    conditions: { name: m.val_conditions(), desc: m.val_conditions_desc() },
+  };
 
   // Teens:  A (interests) → B (subjects) → C (values) → scoring
   // Adults: A (interests) → CV (experience) → C (values) → scoring
@@ -91,13 +103,22 @@
   {:else if stage === "C"}
     <header class="block-head">
       <span class="chip">{m.block_c_title()}</span>
-      <p>{m.block_c_intro()}</p>
+      <p>{valuesArePairs ? m.block_c_pairs_intro() : m.block_c_intro()}</p>
     </header>
-    <CardDeck
-      items={blocks.C}
-      labels={{ no: m.val_no(), meh: m.val_meh(), yes: m.val_yes() }}
-      onDone={(a) => done(a, "scoring")}
-    />
+    {#if valuesArePairs}
+      <ValuePairs
+        items={blocks.C}
+        axes={valueAxes}
+        q={m.val_pair_q()}
+        onDone={(a) => done(a, "scoring")}
+      />
+    {:else}
+      <CardDeck
+        items={blocks.C}
+        labels={{ no: m.val_no(), meh: m.val_meh(), yes: m.val_yes() }}
+        onDone={(a) => done(a, "scoring")}
+      />
+    {/if}
   {:else}
     <div class="computing">
       <div class="spinner"></div>

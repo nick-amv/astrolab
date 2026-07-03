@@ -1,10 +1,11 @@
-"""Seed the question bank (version-pinned) from seed/questions_v1.json.
+"""Seed the question bank (version-pinned) from a seed JSON.
 
-    python -m scripts.seed_questions [--force]
+    python -m scripts.seed_questions [--file seed/questions_v2.json] [--force]
 
 Idempotent: skips if the version already exists. --force wipes that version
 (cascades to question_i18n) and re-inserts. Block A = RIASEC, B = subjects,
-C = values (see METHOD.md).
+C = values (see METHOD.md). Values may be Likert (v1) or forced-choice pairs
+(v2, dimension = "axisA|axisB").
 """
 
 from __future__ import annotations
@@ -18,11 +19,12 @@ from app.db import SessionLocal
 from app.models import QuestionBank, QuestionI18n
 from sqlalchemy import delete, select
 
-SEED = Path(__file__).resolve().parent.parent / "seed" / "questions_v1.json"
+SEED_DIR = Path(__file__).resolve().parent.parent / "seed"
+DEFAULT_SEED = SEED_DIR / "questions_v1.json"
 
 
-async def run(force: bool) -> None:
-    data = json.loads(SEED.read_text("utf-8"))
+async def run(force: bool, seed_path: Path) -> None:
+    data = json.loads(seed_path.read_text("utf-8"))
     version = int(data["version"])
 
     async with SessionLocal() as s:
@@ -63,8 +65,9 @@ async def run(force: bool) -> None:
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--force", action="store_true")
+    ap.add_argument("--file", default=str(DEFAULT_SEED))
     args = ap.parse_args()
-    asyncio.run(run(args.force))
+    asyncio.run(run(args.force, Path(args.file)))
 
 
 if __name__ == "__main__":

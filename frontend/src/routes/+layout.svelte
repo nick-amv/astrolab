@@ -15,6 +15,7 @@
       <span class="mark"></span>{m.app_name()}
     </a>
     <nav>
+      <a class="section" href={localizeHref("/method")}>{m.nav_method()}</a>
       <a class="section" href={localizeHref("/professions")}>{m.nav_catalog()}</a>
       <ThemeToggle />
     </nav>

@@ -51,6 +51,33 @@ def test_values_mean_per_axis() -> None:
     }
 
 
+def test_values_forced_choice_pairs() -> None:
+    # v2: dimension "a|b", value 1.0 = a wins, 0.0 = b wins. Win-rate per axis.
+    answers = [
+        AnswerItem("C", "autonomy|stability", 1.0),   # autonomy wins
+        AnswerItem("C", "autonomy|achievement", 1.0),  # autonomy wins
+        AnswerItem("C", "recognition|autonomy", 0.0),  # autonomy wins (b side)
+        AnswerItem("C", "stability|achievement", 1.0),  # stability wins
+    ]
+    s = compute_scores(answers)
+    # autonomy appeared in 3 pairs, won all 3
+    assert s["values"]["autonomy"] == 1.0
+    # stability: appeared twice (lost to autonomy, beat achievement) -> 0.5
+    assert s["values"]["stability"] == 0.5
+    # achievement: appeared twice, lost both -> 0.0
+    assert s["values"]["achievement"] == 0.0
+    # recognition: appeared once, lost -> 0.0; untouched axes -> 0.0
+    assert s["values"]["recognition"] == 0.0
+    assert set(s["values"]) == {
+        "achievement",
+        "autonomy",
+        "recognition",
+        "relationships",
+        "stability",
+        "conditions",
+    }
+
+
 def test_subjects_passthrough() -> None:
     answers = [
         AnswerItem("B", "math", 1.0),

@@ -1,0 +1,165 @@
+<script lang="ts">
+  import { m } from "$lib/paraglide/messages";
+  import { localizeHref } from "$lib/paraglide/runtime";
+
+  const basis = [
+    { t: m.method_riasec_t(), d: m.method_riasec_d() },
+    { t: m.method_klimov_t(), d: m.method_klimov_d() },
+    { t: m.method_values_t(), d: m.method_values_d() },
+    { t: m.method_subjects_t(), d: m.method_subjects_d() },
+  ];
+  const scoring = [
+    { t: m.method_det_t(), d: m.method_det_d() },
+    { t: m.method_age_t(), d: m.method_age_d() },
+    { t: m.method_ai_t(), d: m.method_ai_d() },
+  ];
+  const limits = [m.method_limit_1(), m.method_limit_2(), m.method_limit_3(), m.method_limit_4()];
+</script>
+
+<svelte:head>
+  <title>{m.method_title()} — {m.app_name()}</title>
+  <meta name="description" content={m.method_lede()} />
+</svelte:head>
+
+<article class="doc">
+  <header class="lede">
+    <span class="chip">{m.nav_method()}</span>
+    <h1>{m.method_title()}</h1>
+    <p class="sub">{m.method_lede()}</p>
+  </header>
+
+  <section>
+    <h2>{m.method_s1_t()}</h2>
+    <div class="cards">
+      {#each basis as item (item.t)}
+        <div class="card">
+          <h3>{item.t}</h3>
+          <p>{item.d}</p>
+        </div>
+      {/each}
+    </div>
+  </section>
+
+  <section>
+    <h2>{m.method_s2_t()}</h2>
+    <div class="cards">
+      {#each scoring as item (item.t)}
+        <div class="card">
+          <h3>{item.t}</h3>
+          <p>{item.d}</p>
+        </div>
+      {/each}
+    </div>
+  </section>
+
+  <section class="honest">
+    <h2>{m.method_s3_t()}</h2>
+    <ul>
+      {#each limits as line (line)}
+        <li>{line}</li>
+      {/each}
+    </ul>
+  </section>
+
+  <section class="data">
+    <h2>{m.method_s4_t()}</h2>
+    <p>
+      {m.method_s4_d()}
+      <a href={localizeHref("/privacy")}>{m.privacy_link()}</a>.
+    </p>
+  </section>
+
+  <div class="foot">
+    <a class="cta" href={localizeHref("/test")}>{m.method_cta()} →</a>
+  </div>
+</article>
+
+<style>
+  .doc {
+    padding: clamp(24px, 5vw, 44px) 0 64px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .lede {
+    margin-bottom: 40px;
+  }
+  .lede h1 {
+    font-size: clamp(30px, 6vw, 46px);
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    margin: 16px 0 14px;
+  }
+  .sub {
+    color: var(--muted);
+    font-size: clamp(16px, 2.2vw, 19px);
+    line-height: 1.55;
+    max-width: 60ch;
+  }
+  section {
+    margin: 34px 0;
+  }
+  h2 {
+    font-size: 22px;
+    letter-spacing: -0.01em;
+    margin: 0 0 18px;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  @media (min-width: 640px) {
+    .cards {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--r-lg);
+    box-shadow: var(--shadow-sm);
+    padding: 20px 22px;
+  }
+  .card h3 {
+    font-size: 16px;
+    font-weight: 800;
+    margin: 0 0 8px;
+  }
+  .card p {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0;
+  }
+  .honest {
+    background: var(--grad-soft, color-mix(in oklab, var(--c3) 8%, var(--surface)));
+    border: 1px solid var(--line);
+    border-radius: var(--r-lg);
+    padding: 24px 26px;
+  }
+  .honest h2 {
+    margin-bottom: 12px;
+  }
+  .honest ul {
+    margin: 0;
+    padding-left: 20px;
+  }
+  .honest li {
+    color: var(--ink);
+    font-size: 15px;
+    line-height: 1.55;
+    margin: 8px 0;
+  }
+  .data p {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.55;
+  }
+  .data a {
+    color: var(--chip-ink);
+    font-weight: 600;
+  }
+  .foot {
+    margin-top: 36px;
+  }
+</style>
