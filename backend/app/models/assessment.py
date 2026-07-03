@@ -72,7 +72,8 @@ class QuestionBank(Base):
 
     id: Mapped[uuid.UUID] = uuid_pk()
     block: Mapped[str] = mapped_column(String(8))  # A | B | C | D
-    dimension: Mapped[str] = mapped_column(String(24))  # R/I/A/S/E/C, value axis, subject...
+    # R/I/A/S/E/C, value axis, subject code, or a forced-choice pair "axisA|axisB"
+    dimension: Mapped[str] = mapped_column(String(48))
     klimov_tag: Mapped[str | None] = mapped_column(String(24))
     version: Mapped[int] = mapped_column(Integer, index=True)
     weight: Mapped[float] = mapped_column(Float, default=1.0)
