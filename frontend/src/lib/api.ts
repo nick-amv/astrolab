@@ -104,11 +104,14 @@ export async function getInterview(f: Fetch, sessionId: string): Promise<Questio
   return data.statements as Question[];
 }
 
-export async function saveInterview(sessionId: string, answers: Answer[]): Promise<void> {
+export async function saveInterview(
+  sessionId: string,
+  items: { text: string; value: number }[],
+): Promise<void> {
   await fetch(`/api/assessment/${sessionId}/interview`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ answers }),
+    body: JSON.stringify({ items }),
   });
 }
 

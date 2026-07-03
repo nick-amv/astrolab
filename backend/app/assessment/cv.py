@@ -44,7 +44,7 @@ async def extract_cv(text: str, locale: str) -> dict | None:
     )
     req = LLMRequest(
         feature="cv",
-        model="haiku",
+        model=None,  # backend default: openrouter=gpt-4o-mini / max_cli=haiku
         system_prompt=_SYSTEM,
         user_prompt=user,
         locale=locale,

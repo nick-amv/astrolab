@@ -13,8 +13,8 @@ import asyncio
 
 import pytest
 from app.llm import LLMRequest, get_provider
-from app.llm.base import LLMProvider, LLMResult, LLMUnavailable, RateGate
-from app.llm.registry import GatedProvider
+from app.llm.base import LLMBackendError, LLMProvider, LLMResult, LLMUnavailable, RateGate
+from app.llm.registry import FallbackProvider, GatedProvider
 
 
 class _StubProvider:
@@ -86,3 +86,38 @@ async def test_rate_gate_bounds_concurrency() -> None:
 
 def test_get_provider_returns_gated() -> None:
     assert isinstance(get_provider(), GatedProvider)
+
+
+async def test_fallback_uses_secondary_when_primary_fails() -> None:
+    class _Fail:
+        name = "primary"
+
+        async def healthy(self) -> bool:
+            return False
+
+        async def complete_json(self, req: LLMRequest) -> LLMResult:
+            raise LLMBackendError("primary down")
+
+    fb = FallbackProvider(_Fail(), _StubProvider())
+    res = await fb.complete_json(
+        LLMRequest(feature="t", system_prompt="s", user_prompt="u")
+    )
+    assert res.backend == "stub"  # fell through to the secondary
+    assert await fb.healthy() is True  # secondary is healthy
+
+
+async def test_fallback_all_fail_raises_unavailable() -> None:
+    class _Fail:
+        name = "x"
+
+        async def healthy(self) -> bool:
+            return False
+
+        async def complete_json(self, req: LLMRequest) -> LLMResult:
+            raise LLMBackendError("down")
+
+    fb = FallbackProvider(_Fail(), _Fail())
+    with pytest.raises(LLMUnavailable):
+        await fb.complete_json(
+            LLMRequest(feature="t", system_prompt="s", user_prompt="u")
+        )

@@ -9,10 +9,18 @@
   let { data }: { data: PageData } = $props();
   let saving = $state(false);
 
+  const textById = $derived(new Map(data.statements.map((s) => [s.id, s.text])));
+
   async function done(answers: Answer[]) {
     if (saving) return;
     saving = true;
-    await saveInterview(data.sessionId, answers);
+    // Echo the statement text back so the transcript works for LLM-generated
+    // statements (their ids aren't in any static table).
+    const items = answers.map((a) => ({
+      text: textById.get(a.question_id) ?? "",
+      value: a.value,
+    }));
+    await saveInterview(data.sessionId, items);
     await goto(localizeHref(`/result/${data.sessionId}`));
   }
 </script>

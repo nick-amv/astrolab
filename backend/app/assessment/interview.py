@@ -12,8 +12,87 @@ import json
 from functools import lru_cache
 from pathlib import Path
 
+import structlog
+
+from app.llm import LLMRequest, LLMUnavailable, get_provider
+
+_log = structlog.get_logger("astrolab.interview")
+
 _SEED = Path(__file__).resolve().parent.parent.parent / "seed" / "interview_v1.json"
 RIASEC_AXES = ("R", "I", "A", "S", "E", "C")
+
+_AXIS = {
+    "R": "Realistic",
+    "I": "Investigative",
+    "A": "Artistic",
+    "S": "Social",
+    "E": "Enterprising",
+    "C": "Conventional",
+}
+_LANG = {"ru": "Russian", "en": "English", "de": "German", "es": "Spanish"}
+
+_GEN_SYSTEM = (
+    "You are a warm, honest career-guidance mentor for teenagers and adults. "
+    "Given a person's interest profile (RIASEC model), work values and favourite "
+    "school subjects, write short FIRST-PERSON reflective statements the person "
+    "will rate on a 'that's me / partly / not me' scale. Purpose: sharpen their "
+    "sense of direction — surface tensions in the profile, test standout traits, "
+    "probe work-style. Rules: exactly 5-6 statements; each a single first-person "
+    "sentence; concrete and kind; NOT yes/no questions; no cliches. STRICT JSON only."
+)
+
+
+def _profile_digest(profile: dict) -> str:
+    riasec = profile.get("riasec", {})
+    top = ", ".join(
+        f"{_AXIS.get(k, k)} ({v:.2f})"
+        for k, v in sorted(riasec.items(), key=lambda kv: -kv[1])[:3]
+        if v > 0
+    )
+    values = profile.get("values", {})
+    tv = ", ".join(k for k, v in sorted(values.items(), key=lambda kv: -kv[1])[:3] if v > 0)
+    subjects = profile.get("subjects", {})
+    ts = ", ".join(k for k, v in sorted(subjects.items(), key=lambda kv: -kv[1])[:4] if v > 0)
+    return (
+        f"Strongest interests (RIASEC): {top or 'n/a'}. "
+        f"Top values: {tv or 'n/a'}. Favourite subjects: {ts or 'n/a'}."
+    )
+
+
+async def generate_statements(profile: dict, locale: str, limit: int = 6) -> list[dict] | None:
+    """LLM-personalised reflective statements for THIS profile. Degradable:
+    returns None on any failure so the caller falls back to the static set."""
+    lang = _LANG.get(locale, "English")
+    user = (
+        f"{_profile_digest(profile)}\n\n"
+        f"Write 5-6 reflective statements addressed to this specific person, in {lang}. "
+        'Reply strictly as JSON: {"statements": ["...", "..."]}'
+    )
+    req = LLMRequest(
+        feature="interview",
+        model=None,
+        system_prompt=_GEN_SYSTEM,
+        user_prompt=user,
+        locale=locale,
+        max_tokens=700,
+        temperature=0.5,
+        timeout_s=30,  # blocking page load; degrade to static set if slow
+    )
+    try:
+        res = await get_provider().complete_json(req)
+    except LLMUnavailable as exc:
+        _log.info("interview.gen.unavailable", error=str(exc))
+        return None
+    try:
+        data = json.loads(res.text)
+        items = [str(s).strip() for s in data.get("statements", []) if str(s).strip()]
+    except Exception as exc:  # noqa: BLE001 — bad output degrades to static set
+        _log.warning("interview.gen.bad_output", error=str(exc))
+        return None
+    items = items[:limit]
+    if len(items) < 3:
+        return None
+    return [{"id": f"g{i}", "text": t} for i, t in enumerate(items)]
 
 
 @lru_cache(maxsize=1)

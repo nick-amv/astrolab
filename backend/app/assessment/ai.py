@@ -140,9 +140,10 @@ async def rerank_and_explain(
     system, user = build_prompt(profile, occupations, locale, interview, cv)
     req = LLMRequest(
         feature="rerank",
-        # haiku: fast (~10s) and $0 on the Max plan; ample for 1-2 sentence
-        # "why you" text. sonnet took ~54s and grazed the timeout.
-        model="haiku",
+        # model=None → each backend's default: openrouter=gpt-4o-mini (fast paid,
+        # primary), max_cli=haiku (subscription, $0 fallback). Ample for the short
+        # "why you" text; no backend-specific alias leaks in.
+        model=None,
         system_prompt=system,
         user_prompt=user,
         locale=locale,

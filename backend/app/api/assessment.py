@@ -18,7 +18,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.assessment import AnswerItem, compute_scores
 from app.assessment.cv import extract_cv
-from app.assessment.interview import select_statements, text_for
+from app.assessment.interview import generate_statements, select_statements
 from app.assessment.pipeline import enrich_with_llm, store_deterministic
 from app.assessment.read import result_payload
 from app.config import settings
@@ -300,27 +300,50 @@ async def interview_questions(
     session_id: str, session: AsyncSession = Depends(get_session)
 ) -> dict:
     ses = await _get_session_or_404(session, session_id)
-    riasec = (
-        await session.execute(
-            select(TraitScore.vector).where(
-                TraitScore.session_id == ses.id, TraitScore.kind == "riasec"
-            )
-        )
-    ).scalar()
+    traits = (
+        await session.execute(select(TraitScore).where(TraitScore.session_id == ses.id))
+    ).scalars().all()
+    by_kind = {t.kind: t.vector for t in traits}
+    riasec = by_kind.get("riasec")
     if not riasec:
         raise HTTPException(status_code=409, detail="not scored yet")
-    return {"statements": select_statements(riasec)}
+    profile_row = (
+        await session.execute(select(ProfileRow).where(ProfileRow.id == ses.profile_id))
+    ).scalars().first()
+    locale = profile_row.locale if profile_row else "ru"
+    # LLM-personalised questions from THIS profile; degrade to the static set.
+    profile = {
+        "riasec": riasec,
+        "values": by_kind.get("values", {}),
+        "subjects": by_kind.get("subjects", {}),
+    }
+    stmts = await generate_statements(profile, locale)
+    personalized = stmts is not None
+    if stmts is None:
+        stmts = select_statements(riasec)
+    return {"statements": stmts, "personalized": personalized}
+
+
+class InterviewItemIn(BaseModel):
+    text: str
+    value: float
+
+
+class InterviewIn(BaseModel):
+    items: list[InterviewItemIn] = Field(default_factory=list)
 
 
 @router.post("/{session_id}/interview")
 async def submit_interview(
-    session_id: str, body: AnswersIn, session: AsyncSession = Depends(get_session)
+    session_id: str, body: InterviewIn, session: AsyncSession = Depends(get_session)
 ) -> dict:
     ses = await _get_session_or_404(session, session_id)
+    # The statement text is echoed back by the client (works for both the static
+    # and the LLM-generated set, whose ids aren't in any static table).
     transcript = [
-        {"text": text_for(a.question_id), "value": max(0.0, min(1.0, a.value))}
-        for a in body.answers
-        if text_for(a.question_id) is not None
+        {"text": it.text[:400], "value": max(0.0, min(1.0, it.value))}
+        for it in body.items
+        if it.text.strip()
     ]
     await session.execute(delete(AiInterview).where(AiInterview.session_id == ses.id))
     session.add(AiInterview(session_id=ses.id, transcript={"items": transcript}))
