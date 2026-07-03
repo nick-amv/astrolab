@@ -17,6 +17,7 @@ export interface Question {
 
 export interface QuestionSet {
   blocks: { A: Question[]; B: Question[]; C: Question[] };
+  adult: boolean;
 }
 
 export interface Answer {
@@ -109,6 +110,20 @@ export async function saveInterview(sessionId: string, answers: Answer[]): Promi
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ answers }),
   });
+}
+
+// Adult flow (Wave 5): paste a resume / experience; the backend extracts context
+// (degradable — returns {ok:false} if the LLM is unavailable, and the result
+// still works without it).
+export async function saveCv(sessionId: string, text: string): Promise<boolean> {
+  const r = await fetch(`/api/assessment/${sessionId}/cv`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ text }),
+  });
+  if (!r.ok) return false;
+  const data = await r.json();
+  return Boolean(data.ok);
 }
 
 export async function enrichResult(

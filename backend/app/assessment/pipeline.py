@@ -130,11 +130,13 @@ async def enrich_with_llm(session: AsyncSession, ses: AssessmentSession) -> bool
     interview = (interview_row.transcript or {}).get("items") if interview_row else None
 
     locale = profile_row.locale if profile_row else "ru"
+    cv = profile_row.cv if profile_row else None
     ai = await rerank_and_explain(
         {k: by_kind.get(k, {}) for k in ("riasec", "values", "subjects")},
         candidates,
         locale,
         interview,
+        cv,
     )
     if not ai:
         return False

@@ -108,6 +108,13 @@
   "lvl_mid": "OK",
   "lvl_high": "Easy",
 
+  "cv_title": "Your experience",
+  "cv_intro": "Paste your resume or briefly describe what you've done. The 'why you' notes will then account for your background and frame a transition, not a fresh start.",
+  "cv_placeholder": "For example: 6 years in B2B sales, led a team of five, lots of negotiation and CRM work. I'd like to move closer to analytics…",
+  "cv_submit": "Use my experience",
+  "cv_skip": "Skip",
+  "cv_note": "Optional. The text is used only for matching and is not stored as a resume.",
+
   "test_next": "Next",
   "test_finish": "Show my result",
   "test_computing": "Computing your profile…",

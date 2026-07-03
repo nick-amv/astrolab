@@ -44,6 +44,8 @@ class Profile(Base):
     country_live: Mapped[str | None] = mapped_column(String(2))
     country_study: Mapped[str | None] = mapped_column(String(2))
     education_stage: Mapped[str | None] = mapped_column(String(32))
+    # Adult flow (Wave 5): LLM-extracted CV context {summary, skills[], field}.
+    cv: Mapped[dict | None] = mapped_column(JSON)
     created_at: Mapped[dt.datetime] = created_at_col()
 
 

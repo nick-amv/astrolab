@@ -1,7 +1,8 @@
 <script lang="ts">
   import { goto } from "$app/navigation";
-  import { type Answer, saveAnswers, scoreSession } from "$lib/api";
+  import { type Answer, saveAnswers, saveCv, scoreSession } from "$lib/api";
   import CardDeck from "$lib/assessment/CardDeck.svelte";
+  import CvStep from "$lib/assessment/CvStep.svelte";
   import SubjectGrid from "$lib/assessment/SubjectGrid.svelte";
   import { m } from "$lib/paraglide/messages";
   import { localizeHref } from "$lib/paraglide/runtime";
@@ -10,11 +11,13 @@
   let { data }: { data: PageData } = $props();
   const sid = $derived(data.sessionId);
   const blocks = $derived(data.questions.blocks);
+  const adult = $derived(data.questions.adult);
 
-  // A (interests) → B (subjects) → C (values) → scoring
-  let stage = $state<"A" | "B" | "C" | "scoring">("A");
+  // Teens:  A (interests) → B (subjects) → C (values) → scoring
+  // Adults: A (interests) → CV (experience) → C (values) → scoring
+  let stage = $state<"A" | "B" | "cv" | "C" | "scoring">("A");
 
-  async function done(answers: Answer[], next: "B" | "C" | "scoring") {
+  async function done(answers: Answer[], next: "B" | "cv" | "C" | "scoring") {
     await saveAnswers(sid, answers);
     if (next === "scoring") {
       stage = "scoring";
@@ -24,6 +27,15 @@
       stage = next;
       window.scrollTo({ top: 0 });
     }
+  }
+
+  // CV extraction is a slow LLM call — fire it and move on. It finishes while
+  // the user answers the values block; the result page's /enrich picks it up
+  // (degradable: if it's not ready or fails, the result still works).
+  function cvDone(text: string) {
+    if (text) void saveCv(sid, text);
+    stage = "C";
+    window.scrollTo({ top: 0 });
   }
 </script>
 
@@ -38,7 +50,7 @@
     <CardDeck
       items={blocks.A}
       labels={{ no: m.ans_no(), meh: m.ans_meh(), yes: m.ans_yes() }}
-      onDone={(a) => done(a, "B")}
+      onDone={(a) => done(a, adult ? "cv" : "B")}
     />
   {:else if stage === "B"}
     <header class="block-head">
@@ -59,6 +71,22 @@
         next: m.test_next(),
       }}
       onDone={(a) => done(a, "C")}
+    />
+  {:else if stage === "cv"}
+    <header class="block-head">
+      <span class="chip">{m.cv_title()}</span>
+      <p>{m.cv_intro()}</p>
+    </header>
+    <CvStep
+      labels={{
+        title: m.cv_title(),
+        intro: m.cv_intro(),
+        placeholder: m.cv_placeholder(),
+        submit: m.cv_submit(),
+        skip: m.cv_skip(),
+        note: m.cv_note(),
+      }}
+      onDone={cvDone}
     />
   {:else if stage === "C"}
     <header class="block-head">

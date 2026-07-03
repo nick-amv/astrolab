@@ -17,6 +17,7 @@ from sqlalchemy import delete, select, update
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.assessment import AnswerItem, compute_scores
+from app.assessment.cv import extract_cv
 from app.assessment.interview import select_statements, text_for
 from app.assessment.pipeline import enrich_with_llm, store_deterministic
 from app.assessment.read import result_payload
@@ -154,7 +155,15 @@ async def questions(
             blocks[q.block].append(
                 {"id": str(q.id), "dimension": q.dimension, "text": txt(q.id)}
             )
-    return {"blocks": blocks}
+    profile_row = (
+        await session.execute(select(ProfileRow).where(ProfileRow.id == ses.profile_id))
+    ).scalars().first()
+    # Adults (working, or 24+) get the CV branch instead of the subjects grid.
+    adult = bool(
+        profile_row
+        and (profile_row.education_stage == "working" or profile_row.age_band == "24+")
+    )
+    return {"blocks": blocks, "adult": adult}
 
 
 # --------------------------------------------------------------------------- #
@@ -254,6 +263,35 @@ async def enrich(
 # --------------------------------------------------------------------------- #
 # result
 # --------------------------------------------------------------------------- #
+# --------------------------------------------------------------------------- #
+# adult CV (Wave 5)
+# --------------------------------------------------------------------------- #
+class CvIn(BaseModel):
+    text: str
+
+
+@router.post("/{session_id}/cv")
+async def submit_cv(
+    session_id: str, body: CvIn, session: AsyncSession = Depends(get_session)
+) -> dict:
+    ses = await _get_session_or_404(session, session_id)
+    profile_row = (
+        await session.execute(select(ProfileRow).where(ProfileRow.id == ses.profile_id))
+    ).scalars().first()
+    locale = profile_row.locale if profile_row else "ru"
+    cv = await extract_cv(body.text, locale)
+    if cv and profile_row:
+        profile_row.cv = cv
+        # re-enrich with the CV context on the next result load
+        await session.execute(
+            update(Match)
+            .where(Match.session_id == ses.id)
+            .values(llm_reason=None, rank_llm=None, rank_final=Match.rank_det)
+        )
+        await session.commit()
+    return {"ok": cv is not None}
+
+
 # --------------------------------------------------------------------------- #
 # optional mini-interview
 # --------------------------------------------------------------------------- #

@@ -75,8 +75,27 @@ def _interview_summary(interview: list[dict] | None) -> str:
     return "\nThe person also reflected on these statements:\n" + "\n".join(parts) + "\n"
 
 
+def _cv_summary(cv: dict | None) -> str:
+    if not cv:
+        return ""
+    parts = []
+    if cv.get("summary"):
+        parts.append(f"Current background: {cv['summary']}")
+    if cv.get("field"):
+        parts.append(f"Field: {cv['field']}")
+    if cv.get("skills"):
+        parts.append("Transferable skills: " + ", ".join(cv["skills"]))
+    if not parts:
+        return ""
+    return "\n" + ". ".join(parts) + ".\n"
+
+
 def build_prompt(
-    profile: dict, occupations: list[dict], locale: str, interview: list[dict] | None = None
+    profile: dict,
+    occupations: list[dict],
+    locale: str,
+    interview: list[dict] | None = None,
+    cv: dict | None = None,
 ) -> tuple[str, str]:
     lines = [
         f"- {o['slug']}: {o['title']} (RIASEC "
@@ -85,28 +104,40 @@ def build_prompt(
         for o in occupations
     ]
     lang = _LANG.get(locale, "English")
+    cv_hint = (
+        "The person is an adult with prior experience; frame each 'why' as a realistic "
+        "transition from their background, and hint at what would transfer. "
+        if cv
+        else ""
+    )
     user = (
         f"{_profile_summary(profile)}\n"
+        + _cv_summary(cv)
         + _interview_summary(interview)
         + "\nCandidate occupations (only from this list, do not add any):\n"
         + "\n".join(lines)
         + "\n\nSort them by how well they fit THIS specific person, and for each write "
         f'1-2 "why it fits you" sentences addressed to the person, in {lang}. '
-        "If the reflections above are present, let them shape the wording. "
+        + cv_hint
+        + "If the reflections above are present, let them shape the wording. "
         'Reply strictly as JSON: {"order": ["slug1", ...], "why": {"slug1": "text", ...}}'
     )
     return _SYSTEM, user
 
 
 async def rerank_and_explain(
-    profile: dict, occupations: list[dict], locale: str, interview: list[dict] | None = None
+    profile: dict,
+    occupations: list[dict],
+    locale: str,
+    interview: list[dict] | None = None,
+    cv: dict | None = None,
 ) -> dict | None:
     """Returns {"order": [slug...], "why": {slug: text}, "audit": {...}} or None
     if the LLM is unavailable / returned unusable output."""
     if not occupations:
         return None
     provider = get_provider()
-    system, user = build_prompt(profile, occupations, locale, interview)
+    system, user = build_prompt(profile, occupations, locale, interview, cv)
     req = LLMRequest(
         feature="rerank",
         # haiku: fast (~10s) and $0 on the Max plan; ample for 1-2 sentence
