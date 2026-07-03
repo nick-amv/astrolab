@@ -8,6 +8,17 @@
   const o = $derived(data.occupation);
   const edu = $derived(data.education);
 
+  // Link out to an external catalogue of universities/colleges for a field of
+  // study, keyed by its OKSO code (we deliberately don't keep our own vuz DB).
+  // SPO (college) codes are XX.01.* / XX.02.*; higher ed is XX.03/04/05.
+  function admissionUrl(code: string): string {
+    const mid = code.split(".")[1] ?? "";
+    const spo = mid === "01" || mid === "02";
+    return spo
+      ? `https://postupi.online/specialnost-spo/${code}/`
+      : `https://postupi.online/specialnost/${code}/vuzi/`;
+  }
+
   // Localized short month from a "MM-DD" rule — no hardcoded month strings.
   function monthLabel(rule: string): string {
     const [mm, dd] = rule.split("-").map((n) => parseInt(n, 10));
@@ -114,6 +125,14 @@
               <div class="ege">
                 {#each d.ege as e (e)}<span class="ege-chip">{e}</span>{/each}
               </div>
+              <a
+                class="path-vuz"
+                href={admissionUrl(d.code)}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {m.edu_where()} ↗
+              </a>
             </div>
           {/each}
         </div>
@@ -298,6 +317,17 @@
     border: 1px solid var(--line);
     border-radius: 8px;
     padding: 6px 11px;
+  }
+  .path-vuz {
+    display: inline-block;
+    margin-top: 14px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--chip-ink);
+    text-decoration: none;
+  }
+  .path-vuz:hover {
+    text-decoration: underline;
   }
   .timeline {
     margin-top: 26px;
