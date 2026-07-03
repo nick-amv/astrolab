@@ -3,10 +3,21 @@
   import { localizeHref } from "$lib/paraglide/runtime";
 
   const basis = [
-    { t: m.method_riasec_t(), d: m.method_riasec_d() },
-    { t: m.method_klimov_t(), d: m.method_klimov_d() },
-    { t: m.method_values_t(), d: m.method_values_d() },
-    { t: m.method_subjects_t(), d: m.method_subjects_d() },
+    {
+      t: m.method_riasec_t(),
+      d: m.method_riasec_d(),
+      links: [
+        { label: m.method_src_holland(), href: "https://en.wikipedia.org/wiki/Holland_Codes" },
+        { label: m.method_src_onet(), href: "https://www.onetonline.org/" },
+      ],
+    },
+    {
+      t: m.method_klimov_t(),
+      d: m.method_klimov_d(),
+      links: [{ label: m.method_src_klimov(), href: m.method_klimov_href() }],
+    },
+    { t: m.method_values_t(), d: m.method_values_d(), links: [] },
+    { t: m.method_subjects_t(), d: m.method_subjects_d(), links: [] },
   ];
   const scoring = [
     { t: m.method_det_t(), d: m.method_det_d() },
@@ -35,6 +46,13 @@
         <div class="card">
           <h3>{item.t}</h3>
           <p>{item.d}</p>
+          {#if item.links.length}
+            <div class="srcs">
+              {#each item.links as l (l.href)}
+                <a href={l.href} target="_blank" rel="noopener noreferrer">{l.label} ↗</a>
+              {/each}
+            </div>
+          {/if}
         </div>
       {/each}
     </div>
@@ -130,6 +148,21 @@
     font-size: 15px;
     line-height: 1.5;
     margin: 0;
+  }
+  .srcs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 16px;
+    margin-top: 14px;
+  }
+  .srcs a {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--chip-ink);
+    text-decoration: none;
+  }
+  .srcs a:hover {
+    text-decoration: underline;
   }
   .honest {
     background: var(--grad-soft, color-mix(in oklab, var(--c3) 8%, var(--surface)));
