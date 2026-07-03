@@ -38,7 +38,7 @@ class Settings(BaseSettings):
     # --- Email (magic-link delivery) ------------------------------------
     # "log" prints the link (dev / until SMTP is configured); "smtp" sends it.
     email_backend: str = "log"  # smtp | log
-    email_from: str = "Astrolab <no-reply@nikam.dev>"
+    email_from: str = "Astrolab <nick@nikam.dev>"
     smtp_host: str = ""
     smtp_port: int = 587
     smtp_user: str = ""

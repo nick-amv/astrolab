@@ -140,6 +140,72 @@ export async function enrichResult(
   return r.json();
 }
 
+// --- Accounts (magic-link) --------------------------------------------------
+export interface Me {
+  id: string;
+  email: string | null;
+}
+
+export interface SavedResult {
+  session_id: string;
+  finished_at: string | null;
+  age_band: string | null;
+  top: string[];
+}
+
+export async function requestMagicLink(email: string, locale: string): Promise<boolean> {
+  const r = await fetch("/api/auth/request", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ email, locale }),
+  });
+  return r.ok;
+}
+
+export async function verifyMagicLink(token: string): Promise<Me | null> {
+  const r = await fetch("/api/auth/verify", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ token }),
+  });
+  if (!r.ok) return null;
+  return (await r.json()).user as Me;
+}
+
+export async function getMe(f: Fetch): Promise<Me | null> {
+  const r = await f("/api/auth/me");
+  if (!r.ok) return null;
+  return (await r.json()).user as Me | null;
+}
+
+export async function logout(): Promise<void> {
+  await fetch("/api/auth/logout", { method: "POST" });
+}
+
+export async function claimSession(
+  sessionId: string,
+  parentalConsent = false,
+): Promise<{ ok: boolean; needsConsent: boolean }> {
+  const r = await fetch("/api/auth/claim", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ session_id: sessionId, parental_consent: parentalConsent }),
+  });
+  return { ok: r.ok, needsConsent: r.status === 422 };
+}
+
+export async function getMyResults(f: Fetch): Promise<SavedResult[] | null> {
+  const r = await f("/api/me/results");
+  if (r.status === 401) return null;
+  if (!r.ok) return [];
+  return (await r.json()).results as SavedResult[];
+}
+
+export async function deleteAccount(): Promise<boolean> {
+  const r = await fetch("/api/me/delete", { method: "POST" });
+  return r.ok;
+}
+
 export async function createShare(sessionId: string): Promise<string | null> {
   const r = await fetch(`/api/assessment/${sessionId}/share`, { method: "POST" });
   if (!r.ok) return null;

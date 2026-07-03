@@ -5,7 +5,7 @@
   import { afterNavigate } from "$app/navigation";
   import "./app.css";
 
-  let { children } = $props();
+  let { children, data } = $props();
 
   // GoatCounter: count.js records the initial page load; count client-side
   // route changes here so in-app navigation (test → result → professions)
@@ -29,6 +29,11 @@
     <nav>
       <a class="section" href={localizeHref("/method")}>{m.nav_method()}</a>
       <a class="section" href={localizeHref("/professions")}>{m.nav_catalog()}</a>
+      {#if data.user}
+        <a class="section" href={localizeHref("/me")}>{m.nav_account()}</a>
+      {:else}
+        <a class="section" href={localizeHref("/login")}>{m.nav_login()}</a>
+      {/if}
       <ThemeToggle />
     </nav>
   </header>

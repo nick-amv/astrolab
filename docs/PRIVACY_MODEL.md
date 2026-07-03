@@ -61,8 +61,10 @@ sessions, answers, trait_scores, matches, interviews, and reports.
 
 ## 6. Logging
 
-- No third-party analytics or pixels anywhere, and especially not on assessment
-  pages. Funnel analytics are first-party (`events` table).
+- Analytics is privacy-first: **GoatCounter** (cookieless, no PII, no
+  cross-site tracking, no ad pixels) for aggregate visit counts. No Google
+  Analytics / ad pixels. In-app funnel events may also be first-party
+  (`events` table).
 - LLM call logs (`llm_calls`) store prompt **hashes**, model, and structured
   output — **not** raw free-text answers in shared/aggregate logs.
 - Application logs must not contain raw tokens or raw answer text.

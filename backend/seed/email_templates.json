@@ -1,0 +1,12 @@
+{
+  "magic_link": {
+    "ru": {
+      "subject": "Вход в Astrolab",
+      "text": "Здравствуйте!\n\nВы запросили вход в Astrolab. Перейдите по ссылке, чтобы войти и сохранить свой результат (ссылка действует {ttl} минут):\n\n{link}\n\nЕсли вы не запрашивали вход, просто проигнорируйте это письмо — ничего не произойдёт.\n\n— Astrolab · nikam.dev"
+    },
+    "en": {
+      "subject": "Sign in to Astrolab",
+      "text": "Hello!\n\nYou asked to sign in to Astrolab. Follow the link to sign in and save your result (the link is valid for {ttl} minutes):\n\n{link}\n\nIf you didn't request this, just ignore this email — nothing will happen.\n\n— Astrolab · nikam.dev"
+    }
+  }
+}
