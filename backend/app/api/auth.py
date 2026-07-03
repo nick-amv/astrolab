@@ -15,6 +15,7 @@ import datetime as dt
 import re
 import uuid
 
+import structlog
 from fastapi import APIRouter, Depends, HTTPException, Request, Response
 from pydantic import BaseModel
 from sqlalchemy import delete, func, select
@@ -40,6 +41,7 @@ from app.security.session import (
 from app.security.tokens import hash_token, new_token
 
 router = APIRouter(prefix="/api/auth", tags=["auth"])
+_log = structlog.get_logger("astrolab.auth")
 
 _EMAIL_RE = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
 _MINOR_BANDS = {"14-16"}
@@ -114,7 +116,10 @@ async def request_link(
     await session.commit()
 
     link = f"{settings.app_base_url}/{locale}/auth/verify?token={raw}"
-    await send_magic_link(email, link, locale)
+    try:
+        await send_magic_link(email, link, locale)
+    except Exception as exc:  # noqa: BLE001 — a mail hiccup must not 500 the user
+        _log.warning("auth.mail.failed", error=str(exc))
     return {"ok": True}
 
 
