@@ -50,6 +50,7 @@
   {#if enriching}<p class="enriching">{m.result_enriching()}</p>{/if}
   <ResultView {result} />
   <div class="actions">
+    <a class="cta" href={localizeHref(`/test/${sid}/interview`)}>{m.result_interview_cta()} →</a>
     <button class="ghost" onclick={share} disabled={sharing}>
       {copied ? m.result_share_done() : m.result_share()}
     </button>
@@ -83,6 +84,7 @@
   }
   .actions {
     display: flex;
+    align-items: center;
     gap: 14px;
     flex-wrap: wrap;
   }

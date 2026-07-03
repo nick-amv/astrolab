@@ -19,6 +19,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.assessment.ai import rerank_and_explain
 from app.matching import Profile, match
 from app.models import (
+    AiInterview,
     AssessmentSession,
     LlmCall,
     Match,
@@ -123,9 +124,17 @@ async def enrich_with_llm(session: AsyncSession, ses: AssessmentSession) -> bool
         )
         slug_to_match[occ.slug] = (m, occ)
 
+    interview_row = (
+        await session.execute(select(AiInterview).where(AiInterview.session_id == ses.id))
+    ).scalars().first()
+    interview = (interview_row.transcript or {}).get("items") if interview_row else None
+
     locale = profile_row.locale if profile_row else "ru"
     ai = await rerank_and_explain(
-        {k: by_kind.get(k, {}) for k in ("riasec", "values", "subjects")}, candidates, locale
+        {k: by_kind.get(k, {}) for k in ("riasec", "values", "subjects")},
+        candidates,
+        locale,
+        interview,
     )
     if not ai:
         return False

@@ -13,17 +13,20 @@ import uuid
 
 from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel, Field
-from sqlalchemy import delete, select
+from sqlalchemy import delete, select, update
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.assessment import AnswerItem, compute_scores
+from app.assessment.interview import select_statements, text_for
 from app.assessment.pipeline import enrich_with_llm, store_deterministic
 from app.assessment.read import result_payload
 from app.config import settings
 from app.db import get_session
 from app.models import (
+    AiInterview,
     Answer,
     AssessmentSession,
+    Match,
     QuestionBank,
     QuestionI18n,
     Report,
@@ -251,6 +254,48 @@ async def enrich(
 # --------------------------------------------------------------------------- #
 # result
 # --------------------------------------------------------------------------- #
+# --------------------------------------------------------------------------- #
+# optional mini-interview
+# --------------------------------------------------------------------------- #
+@router.get("/{session_id}/interview")
+async def interview_questions(
+    session_id: str, session: AsyncSession = Depends(get_session)
+) -> dict:
+    ses = await _get_session_or_404(session, session_id)
+    riasec = (
+        await session.execute(
+            select(TraitScore.vector).where(
+                TraitScore.session_id == ses.id, TraitScore.kind == "riasec"
+            )
+        )
+    ).scalar()
+    if not riasec:
+        raise HTTPException(status_code=409, detail="not scored yet")
+    return {"statements": select_statements(riasec)}
+
+
+@router.post("/{session_id}/interview")
+async def submit_interview(
+    session_id: str, body: AnswersIn, session: AsyncSession = Depends(get_session)
+) -> dict:
+    ses = await _get_session_or_404(session, session_id)
+    transcript = [
+        {"text": text_for(a.question_id), "value": max(0.0, min(1.0, a.value))}
+        for a in body.answers
+        if text_for(a.question_id) is not None
+    ]
+    await session.execute(delete(AiInterview).where(AiInterview.session_id == ses.id))
+    session.add(AiInterview(session_id=ses.id, transcript={"items": transcript}))
+    # Mark the LLM enrichment stale so the result re-runs it WITH the interview.
+    await session.execute(
+        update(Match)
+        .where(Match.session_id == ses.id)
+        .values(llm_reason=None, rank_llm=None, rank_final=Match.rank_det)
+    )
+    await session.commit()
+    return {"saved": len(transcript)}
+
+
 @router.get("/{session_id}/result")
 async def result(
     session_id: str, locale: str = "ru", session: AsyncSession = Depends(get_session)

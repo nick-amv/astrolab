@@ -60,7 +60,24 @@ def _profile_summary(profile: dict) -> str:
     )
 
 
-def build_prompt(profile: dict, occupations: list[dict], locale: str) -> tuple[str, str]:
+def _interview_summary(interview: list[dict] | None) -> str:
+    if not interview:
+        return ""
+    parts = []
+    for it in interview:
+        text = it.get("text")
+        v = it.get("value", 0)
+        stance = "agrees" if v >= 0.75 else ("neutral" if v >= 0.4 else "disagrees")
+        if text:
+            parts.append(f'"{text}" — {stance}')
+    if not parts:
+        return ""
+    return "\nThe person also reflected on these statements:\n" + "\n".join(parts) + "\n"
+
+
+def build_prompt(
+    profile: dict, occupations: list[dict], locale: str, interview: list[dict] | None = None
+) -> tuple[str, str]:
     lines = [
         f"- {o['slug']}: {o['title']} (RIASEC "
         + ", ".join(f"{k}{v:.1f}" for k, v in (o.get("riasec") or {}).items())
@@ -69,25 +86,27 @@ def build_prompt(profile: dict, occupations: list[dict], locale: str) -> tuple[s
     ]
     lang = _LANG.get(locale, "English")
     user = (
-        f"{_profile_summary(profile)}\n\n"
-        "Candidate occupations (only from this list, do not add any):\n"
+        f"{_profile_summary(profile)}\n"
+        + _interview_summary(interview)
+        + "\nCandidate occupations (only from this list, do not add any):\n"
         + "\n".join(lines)
         + "\n\nSort them by how well they fit THIS specific person, and for each write "
         f'1-2 "why it fits you" sentences addressed to the person, in {lang}. '
+        "If the reflections above are present, let them shape the wording. "
         'Reply strictly as JSON: {"order": ["slug1", ...], "why": {"slug1": "text", ...}}'
     )
     return _SYSTEM, user
 
 
 async def rerank_and_explain(
-    profile: dict, occupations: list[dict], locale: str
+    profile: dict, occupations: list[dict], locale: str, interview: list[dict] | None = None
 ) -> dict | None:
     """Returns {"order": [slug...], "why": {slug: text}, "audit": {...}} or None
     if the LLM is unavailable / returned unusable output."""
     if not occupations:
         return None
     provider = get_provider()
-    system, user = build_prompt(profile, occupations, locale)
+    system, user = build_prompt(profile, occupations, locale, interview)
     req = LLMRequest(
         feature="rerank",
         # haiku: fast (~10s) and $0 on the Max plan; ample for 1-2 sentence

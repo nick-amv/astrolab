@@ -96,6 +96,21 @@ export async function getReport(
   return r.json();
 }
 
+export async function getInterview(f: Fetch, sessionId: string): Promise<Question[]> {
+  const r = await f(`/api/assessment/${sessionId}/interview`);
+  if (!r.ok) return [];
+  const data = await r.json();
+  return data.statements as Question[];
+}
+
+export async function saveInterview(sessionId: string, answers: Answer[]): Promise<void> {
+  await fetch(`/api/assessment/${sessionId}/interview`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ answers }),
+  });
+}
+
 export async function enrichResult(
   sessionId: string,
   locale: string,
