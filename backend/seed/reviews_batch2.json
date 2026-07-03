@@ -1,0 +1,1333 @@
+[
+  {
+    "slug": "ux-ui-designer",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-4",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-6",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-7",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-8",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "slug": "product-manager",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-4",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-6",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-7",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-8",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "slug": "devops-engineer",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-4",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-6",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-7",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-8",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "slug": "cybersecurity-specialist",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-4",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-6",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-7",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-8",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "slug": "qa-engineer",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-4",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-6",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-7",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-8",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "slug": "data-scientist",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-4",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-6",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-7",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-8",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "slug": "systems-administrator",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-4",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-6",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-7",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-8",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "slug": "game-developer",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-4",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-6",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-7",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-8",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "slug": "civil-engineer",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-4",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-6",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-7",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-8",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "slug": "electrical-engineer",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-4",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-6",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-7",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-8",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "slug": "architect",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-4",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-6",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-7",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-8",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "slug": "biologist",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-4",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-6",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-7",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-8",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "slug": "chemist",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-4",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-6",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-7",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-8",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "slug": "environmental-scientist",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-4",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-6",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-7",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-8",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "slug": "dentist",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-4",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-6",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-7",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-8",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "slug": "pharmacist",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-4",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-6",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-7",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-8",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "slug": "veterinarian",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-4",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-6",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-7",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-8",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "slug": "physical-therapist",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "reject",
+        "rationale": "physiotherapist is arguably a regulated health role in RU; regulated flag omitted — minor, overruled 6:1"
+      },
+      {
+        "model": "reviewer-4",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-6",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-7",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-8",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "slug": "paramedic",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-4",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-6",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-7",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-8",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "slug": "financial-analyst",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-4",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-6",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-7",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-8",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "slug": "economist",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-4",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-6",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-7",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-8",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "slug": "marketing-manager",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-4",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-6",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-7",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-8",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "slug": "sales-manager",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-4",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-6",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-7",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-8",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "slug": "hr-specialist",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-4",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-6",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-7",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-8",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "slug": "project-manager",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-4",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-6",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-7",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-8",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "slug": "photographer",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-4",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-6",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-7",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-8",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "slug": "video-editor",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-4",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-6",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-7",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-8",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "slug": "animator",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-4",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-6",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-7",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-8",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "slug": "musician",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-4",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-6",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-7",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-8",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "slug": "actor",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-4",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-6",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-7",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-8",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "slug": "writer",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-4",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-6",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-7",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-8",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "slug": "interior-designer",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-4",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-6",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-7",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-8",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "slug": "electrician",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-4",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-6",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-7",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-8",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "slug": "automotive-technician",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-4",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-6",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-7",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-8",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "slug": "welder",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-4",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-6",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-7",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-8",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "slug": "social-worker",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-4",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-6",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-7",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-8",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "slug": "translator",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-4",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-6",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-7",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-8",
+        "verdict": "approve"
+      }
+    ]
+  },
+  {
+    "slug": "fitness-trainer",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-4",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-6",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-7",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-8",
+        "verdict": "approve"
+      }
+    ]
+  }
+]
