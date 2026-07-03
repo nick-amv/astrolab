@@ -67,6 +67,8 @@ class Settings(BaseSettings):
 
     # --- Admin ----------------------------------------------------------
     admin_tg_ids: str = ""  # comma-separated tg ids for /admin gate (Wave 5+)
+    # Shared secret for the read-only admin stats endpoint. Empty = disabled.
+    admin_token: str = ""
 
     @property
     def cors_origin_list(self) -> list[str]:
