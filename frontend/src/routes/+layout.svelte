@@ -2,9 +2,21 @@
   import ThemeToggle from "$lib/ThemeToggle.svelte";
   import { m } from "$lib/paraglide/messages";
   import { localizeHref } from "$lib/paraglide/runtime";
+  import { afterNavigate } from "$app/navigation";
   import "./app.css";
 
   let { children } = $props();
+
+  // GoatCounter: count.js records the initial page load; count client-side
+  // route changes here so in-app navigation (test → result → professions)
+  // is tracked too. Skip the initial "enter" to avoid double-counting.
+  afterNavigate((nav) => {
+    if (nav.type === "enter") return;
+    const gc = (window as any).goatcounter;
+    if (gc && typeof gc.count === "function") {
+      gc.count({ path: location.pathname + location.search });
+    }
+  });
 </script>
 
 <div class="aurora" aria-hidden="true"></div>
