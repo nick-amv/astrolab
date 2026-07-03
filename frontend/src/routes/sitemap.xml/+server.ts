@@ -1,22 +1,24 @@
 import type { RequestHandler } from "./$types";
 
-// SEO sitemap: static pages + every published occupation, in both locales.
+// SEO sitemap: content pages + every published occupation. RU-only for now
+// (the UI is Russian-only; EN routes exist but aren't linked/promoted).
 export const GET: RequestHandler = async ({ fetch, url }) => {
   const origin = url.origin;
-  const locales = ["ru", "en"];
+  const loc = "ru";
 
   const res = await fetch("/api/occupations?locale=ru");
   const data = res.ok ? await res.json() : { items: [] };
   const slugs: string[] = data.items.map((i: { slug: string }) => i.slug);
 
-  const urls: string[] = [];
-  for (const loc of locales) {
-    urls.push(`${origin}/${loc}`);
-    urls.push(`${origin}/${loc}/professions`);
-    for (const slug of slugs) {
-      urls.push(`${origin}/${loc}/professions/${slug}`);
-    }
-  }
+  const urls: string[] = [
+    `${origin}/${loc}`,
+    `${origin}/${loc}/method`,
+    `${origin}/${loc}/professions`,
+    `${origin}/${loc}/test`,
+    `${origin}/${loc}/tos`,
+    `${origin}/${loc}/privacy`,
+    ...slugs.map((slug) => `${origin}/${loc}/professions/${slug}`),
+  ];
 
   const body =
     `<?xml version="1.0" encoding="UTF-8"?>\n` +
