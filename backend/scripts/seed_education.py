@@ -1,14 +1,16 @@
-"""Seed RU education paths from seed/education_ru.json (idempotent).
+"""Seed education paths for one country from a seed JSON (idempotent).
 
-    python -m scripts.seed_education
+    python -m scripts.seed_education [--file seed/education_us.json]
 
-Populates edu_domains (fields of study, OKSO codes), edu_requirements (typical
-exam combos), occupation_edu (occupation -> domain), and milestones (admission
-deadlines). Re-running wipes the country's rows and re-inserts.
+Populates edu_domains (fields of study, OKSO/CIP codes), edu_requirements
+(typical exam combos / what-to-take), occupation_edu (occupation -> domain), and
+milestones (admission deadlines). The country comes from the file; re-running
+wipes only THAT country's rows and re-inserts (so seeding US never touches RU).
 """
 
 from __future__ import annotations
 
+import argparse
 import asyncio
 import json
 from pathlib import Path
@@ -17,11 +19,12 @@ from app.db import SessionLocal
 from app.models import EduDomain, EduRequirement, Milestone, Occupation, OccupationEdu
 from sqlalchemy import delete, select
 
-SEED = Path(__file__).resolve().parent.parent / "seed" / "education_ru.json"
+SEED_DIR = Path(__file__).resolve().parent.parent / "seed"
+DEFAULT_SEED = SEED_DIR / "education_ru.json"
 
 
-async def run() -> None:
-    data = json.loads(SEED.read_text("utf-8"))
+async def run(seed_path: Path) -> None:
+    data = json.loads(seed_path.read_text("utf-8"))
     country = data["country"]
 
     async with SessionLocal() as s:
@@ -73,5 +76,12 @@ async def run() -> None:
         print(f"[seed_education] {country}: {n_dom} domains, {n_map} maps, {n_ms} milestones")
 
 
+def main() -> None:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--file", default=str(DEFAULT_SEED))
+    args = ap.parse_args()
+    asyncio.run(run(Path(args.file)))
+
+
 if __name__ == "__main__":
-    asyncio.run(run())
+    main()

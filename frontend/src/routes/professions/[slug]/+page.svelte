@@ -24,14 +24,15 @@
     (o.facts as Fact[] | undefined)?.find((f) => f.country === userCountry) ?? null,
   );
 
-  // The vuz link-out (postupi.online) is Russia-only; US admission comes in
-  // EN-2. Gate it on the RU locale until then.
-  const showVuzLink = $derived(getLocale() === "ru");
-
-  // Link out to an external catalogue of universities/colleges for a field of
-  // study, keyed by its OKSO code (we deliberately don't keep our own vuz DB).
-  // SPO (college) codes are XX.01.* / XX.02.*; higher ed is XX.03/04/05.
+  // Link out to an external catalogue of programs for a field of study (we
+  // deliberately don't keep our own school DB). RU -> postupi.online by OKSO
+  // code (SPO/college codes are XX.01.* / XX.02.*, higher ed is XX.03/04/05).
+  // US -> College Scorecard's official Fields of Study search (its SPA has no
+  // verifiable per-major deep link, so we point at the field-of-study search).
   function admissionUrl(code: string): string {
+    if (getLocale() === "en") {
+      return "https://collegescorecard.ed.gov/search/fos-landing/";
+    }
     const mid = code.split(".")[1] ?? "";
     const spo = mid === "01" || mid === "02";
     return spo
@@ -146,16 +147,14 @@
               <div class="ege">
                 {#each d.ege as e (e)}<span class="ege-chip">{e}</span>{/each}
               </div>
-              {#if showVuzLink}
-                <a
-                  class="path-vuz"
-                  href={admissionUrl(d.code)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {m.edu_where()} ↗
-                </a>
-              {/if}
+              <a
+                class="path-vuz"
+                href={admissionUrl(d.code)}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {m.edu_where()} ↗
+              </a>
             </div>
           {/each}
         </div>

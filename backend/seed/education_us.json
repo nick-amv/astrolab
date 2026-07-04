@@ -1,0 +1,677 @@
+{
+  "country": "US",
+  "as_of": "2026",
+  "note": "Approximate US pathways using CIP-2020 major codes. Test policies, prerequisites, and deadlines vary by state and school - always verify on the college's or program's official site.",
+  "domains": [
+    {
+      "code": "11.0701",
+      "title": "Computer Science",
+      "level": "Bachelor's degree",
+      "ege": [
+        "High school diploma",
+        "SAT or ACT (many colleges are test-optional)",
+        "Math through pre-calculus or calculus recommended",
+        "Common App essay + recommendation letters"
+      ],
+      "occupations": [
+        "software-developer",
+        "qa-engineer",
+        "game-developer",
+        "devops-engineer"
+      ]
+    },
+    {
+      "code": "14.0903",
+      "title": "Software Engineering",
+      "level": "Bachelor's degree",
+      "ege": [
+        "High school diploma",
+        "SAT or ACT (often test-optional)",
+        "Strong math (calculus recommended)",
+        "Common App essay"
+      ],
+      "occupations": [
+        "software-developer",
+        "qa-engineer"
+      ]
+    },
+    {
+      "code": "30.7001",
+      "title": "Data Science",
+      "level": "Bachelor's degree",
+      "ege": [
+        "High school diploma",
+        "SAT or ACT (often test-optional)",
+        "Strong math and statistics recommended",
+        "Common App essay"
+      ],
+      "occupations": [
+        "data-scientist",
+        "data-analyst"
+      ]
+    },
+    {
+      "code": "27.0501",
+      "title": "Statistics",
+      "level": "Bachelor's degree",
+      "ege": [
+        "High school diploma",
+        "SAT or ACT (often test-optional)",
+        "Math through calculus recommended",
+        "Common App essay"
+      ],
+      "occupations": [
+        "data-analyst"
+      ]
+    },
+    {
+      "code": "11.1003",
+      "title": "Cybersecurity",
+      "level": "Bachelor's degree",
+      "ege": [
+        "High school diploma",
+        "SAT or ACT (often test-optional)",
+        "Math and computer science recommended",
+        "Certifications (CompTIA Security+) help with hiring"
+      ],
+      "occupations": [
+        "cybersecurity-specialist"
+      ]
+    },
+    {
+      "code": "11.1001",
+      "title": "Network & System Administration",
+      "level": "Associate or Bachelor's degree",
+      "ege": [
+        "High school diploma or GED",
+        "SAT or ACT for 4-year programs (often test-optional)",
+        "Community-college programs are open enrollment",
+        "IT certifications (CompTIA A+/Network+) help"
+      ],
+      "occupations": [
+        "systems-administrator"
+      ]
+    },
+    {
+      "code": "50.0409",
+      "title": "Graphic Design",
+      "level": "Bachelor's degree",
+      "ege": [
+        "High school diploma",
+        "Portfolio of creative work (often required)",
+        "SAT or ACT (many art programs are test-optional)",
+        "Common App essay"
+      ],
+      "occupations": [
+        "graphic-designer",
+        "ux-ui-designer"
+      ]
+    },
+    {
+      "code": "50.0408",
+      "title": "Interior Design",
+      "level": "Bachelor's degree",
+      "ege": [
+        "High school diploma",
+        "Portfolio may be required",
+        "SAT or ACT (often test-optional)",
+        "Common App essay"
+      ],
+      "occupations": [
+        "interior-designer"
+      ]
+    },
+    {
+      "code": "10.0304",
+      "title": "Animation & Visual Effects",
+      "level": "Bachelor's degree",
+      "ege": [
+        "High school diploma",
+        "Portfolio or demo reel (often required)",
+        "SAT or ACT (often test-optional)",
+        "Common App essay"
+      ],
+      "occupations": [
+        "animator"
+      ]
+    },
+    {
+      "code": "50.0411",
+      "title": "Game & Interactive Media Design",
+      "level": "Bachelor's degree",
+      "ege": [
+        "High school diploma",
+        "Portfolio or a playable project helps",
+        "SAT or ACT (often test-optional)",
+        "Common App essay"
+      ],
+      "occupations": [
+        "game-developer"
+      ]
+    },
+    {
+      "code": "13.0101",
+      "title": "Education (Teaching)",
+      "level": "Bachelor's degree + state teaching license",
+      "ege": [
+        "High school diploma",
+        "SAT or ACT (often test-optional)",
+        "Common App essay",
+        "State licensure exam (e.g. Praxis) after graduation"
+      ],
+      "occupations": [
+        "teacher"
+      ]
+    },
+    {
+      "code": "14.1901",
+      "title": "Mechanical Engineering",
+      "level": "Bachelor's degree",
+      "ege": [
+        "High school diploma",
+        "SAT or ACT (many schools are test-optional)",
+        "4 years of math (through calculus) and physics recommended",
+        "Common App essay"
+      ],
+      "occupations": [
+        "mechanical-engineer"
+      ]
+    },
+    {
+      "code": "14.0801",
+      "title": "Civil Engineering",
+      "level": "Bachelor's degree",
+      "ege": [
+        "High school diploma",
+        "SAT or ACT (often test-optional)",
+        "Calculus and physics recommended",
+        "Common App essay"
+      ],
+      "occupations": [
+        "civil-engineer"
+      ]
+    },
+    {
+      "code": "14.1001",
+      "title": "Electrical Engineering",
+      "level": "Bachelor's degree",
+      "ege": [
+        "High school diploma",
+        "SAT or ACT (often test-optional)",
+        "Calculus and physics recommended",
+        "Common App essay"
+      ],
+      "occupations": [
+        "electrical-engineer"
+      ]
+    },
+    {
+      "code": "04.0201",
+      "title": "Architecture (B.Arch)",
+      "level": "Professional Bachelor's or Master's of Architecture",
+      "ege": [
+        "High school diploma",
+        "Portfolio often required",
+        "SAT or ACT (often test-optional)",
+        "NAAB-accredited program + licensure exam (ARE) later"
+      ],
+      "occupations": [
+        "architect"
+      ]
+    },
+    {
+      "code": "52.0301",
+      "title": "Accounting",
+      "level": "Bachelor's degree",
+      "ege": [
+        "High school diploma",
+        "SAT or ACT (often test-optional)",
+        "Strong math recommended",
+        "Common App essay"
+      ],
+      "occupations": [
+        "accountant"
+      ]
+    },
+    {
+      "code": "52.0801",
+      "title": "Finance",
+      "level": "Bachelor's degree",
+      "ege": [
+        "High school diploma",
+        "SAT or ACT (often test-optional)",
+        "Strong math recommended",
+        "Common App essay"
+      ],
+      "occupations": [
+        "financial-analyst"
+      ]
+    },
+    {
+      "code": "45.0601",
+      "title": "Economics",
+      "level": "Bachelor's degree",
+      "ege": [
+        "High school diploma",
+        "SAT or ACT (often test-optional)",
+        "Math through calculus recommended",
+        "Common App essay"
+      ],
+      "occupations": [
+        "economist"
+      ]
+    },
+    {
+      "code": "52.0201",
+      "title": "Business Administration & Management",
+      "level": "Bachelor's degree",
+      "ege": [
+        "High school diploma",
+        "SAT or ACT (often test-optional)",
+        "Common App essay",
+        "Internships strengthen the path"
+      ],
+      "occupations": [
+        "product-manager",
+        "project-manager"
+      ]
+    },
+    {
+      "code": "52.1401",
+      "title": "Marketing",
+      "level": "Bachelor's degree",
+      "ege": [
+        "High school diploma",
+        "SAT or ACT (often test-optional)",
+        "Common App essay",
+        "Internships strengthen the path"
+      ],
+      "occupations": [
+        "marketing-manager",
+        "sales-manager"
+      ]
+    },
+    {
+      "code": "52.1001",
+      "title": "Human Resources Management",
+      "level": "Bachelor's degree",
+      "ege": [
+        "High school diploma",
+        "SAT or ACT (often test-optional)",
+        "Common App essay",
+        "Business or psychology coursework helps"
+      ],
+      "occupations": [
+        "hr-specialist"
+      ]
+    },
+    {
+      "code": "09.0401",
+      "title": "Journalism",
+      "level": "Bachelor's degree",
+      "ege": [
+        "High school diploma",
+        "SAT or ACT (often test-optional)",
+        "Writing samples help",
+        "Common App essay"
+      ],
+      "occupations": [
+        "journalist"
+      ]
+    },
+    {
+      "code": "42.0101",
+      "title": "Psychology",
+      "level": "Bachelor's, then doctorate (PhD/PsyD) + state license to practice",
+      "ege": [
+        "High school diploma",
+        "SAT or ACT (often test-optional)",
+        "Common App essay",
+        "A licensed psychologist needs a doctorate (PhD/PsyD); a bachelor's alone leads to assistant/technician roles"
+      ],
+      "occupations": [
+        "psychologist"
+      ]
+    },
+    {
+      "code": "26.0101",
+      "title": "Biology",
+      "level": "Bachelor's degree",
+      "ege": [
+        "High school diploma",
+        "SAT or ACT (often test-optional)",
+        "Biology and chemistry recommended",
+        "Common App essay"
+      ],
+      "occupations": [
+        "biologist"
+      ]
+    },
+    {
+      "code": "40.0501",
+      "title": "Chemistry",
+      "level": "Bachelor's degree",
+      "ege": [
+        "High school diploma",
+        "SAT or ACT (often test-optional)",
+        "Chemistry and calculus recommended",
+        "Common App essay"
+      ],
+      "occupations": [
+        "chemist"
+      ]
+    },
+    {
+      "code": "03.0104",
+      "title": "Environmental Science",
+      "level": "Bachelor's degree",
+      "ege": [
+        "High school diploma",
+        "SAT or ACT (often test-optional)",
+        "Biology, chemistry, and earth science recommended",
+        "Common App essay"
+      ],
+      "occupations": [
+        "environmental-scientist"
+      ]
+    },
+    {
+      "code": "51.1201",
+      "title": "Medicine (MD/DO)",
+      "level": "Bachelor's (pre-med) then MD/DO (professional)",
+      "ege": [
+        "Bachelor's degree with pre-med courses (biology, chemistry, physics)",
+        "MCAT exam for medical school",
+        "Strong GPA + clinical/volunteer experience",
+        "Residency after the MD/DO"
+      ],
+      "occupations": [
+        "physician"
+      ]
+    },
+    {
+      "code": "51.3801",
+      "title": "Registered Nursing (BSN/ADN)",
+      "level": "Associate or Bachelor's degree",
+      "ege": [
+        "High school diploma or GED",
+        "Biology and chemistry recommended",
+        "NCLEX-RN licensing exam after graduation",
+        "ADN (2-yr) or BSN (4-yr) both lead to RN licensure"
+      ],
+      "occupations": [
+        "nurse"
+      ]
+    },
+    {
+      "code": "51.0401",
+      "title": "Dentistry (DDS/DMD)",
+      "level": "Bachelor's (pre-dent) then DDS/DMD (professional)",
+      "ege": [
+        "Bachelor's degree with pre-dental courses (biology, chemistry)",
+        "DAT (Dental Admission Test)",
+        "Strong GPA + shadowing experience",
+        "State licensure after the DDS/DMD"
+      ],
+      "occupations": [
+        "dentist"
+      ]
+    },
+    {
+      "code": "51.2001",
+      "title": "Pharmacy (PharmD)",
+      "level": "PharmD (professional doctorate)",
+      "ege": [
+        "Pre-pharmacy coursework (biology, chemistry, some in college)",
+        "PCAT may be required by some schools",
+        "4-year PharmD program",
+        "NAPLEX licensing exam after graduation"
+      ],
+      "occupations": [
+        "pharmacist"
+      ]
+    },
+    {
+      "code": "51.2401",
+      "title": "Veterinary Medicine (DVM)",
+      "level": "Bachelor's (pre-vet) then DVM (professional)",
+      "ege": [
+        "Bachelor's degree with pre-vet courses (biology, chemistry)",
+        "GRE may be required",
+        "Animal/clinical experience strongly recommended",
+        "NAVLE licensing exam after the DVM"
+      ],
+      "occupations": [
+        "veterinarian"
+      ]
+    },
+    {
+      "code": "51.2308",
+      "title": "Physical Therapy (DPT)",
+      "level": "Bachelor's then DPT (doctoral)",
+      "ege": [
+        "Bachelor's degree with prerequisite science courses",
+        "GRE may be required",
+        "Observation hours in a PT clinic",
+        "NPTE licensing exam after the DPT"
+      ],
+      "occupations": [
+        "physical-therapist"
+      ]
+    },
+    {
+      "code": "51.0904",
+      "title": "Emergency Medical Services (Paramedic)",
+      "level": "Certificate or Associate degree",
+      "ege": [
+        "High school diploma or GED",
+        "No SAT/ACT required",
+        "EMT certification first, then paramedic program",
+        "NREMT certification + state license"
+      ],
+      "occupations": [
+        "paramedic"
+      ]
+    },
+    {
+      "code": "12.0503",
+      "title": "Culinary Arts",
+      "level": "Certificate or Associate degree",
+      "ege": [
+        "High school diploma or GED",
+        "No SAT/ACT required",
+        "Rolling admissions - apply year-round",
+        "Many chefs learn on the job or via apprenticeship"
+      ],
+      "occupations": [
+        "chef"
+      ]
+    },
+    {
+      "code": "50.0605",
+      "title": "Photography",
+      "level": "Certificate, Associate, or Bachelor's degree",
+      "ege": [
+        "High school diploma or GED",
+        "Portfolio helps for degree programs",
+        "SAT/ACT only for 4-year programs (often test-optional)",
+        "Many photographers are self-taught + build a portfolio"
+      ],
+      "occupations": [
+        "photographer"
+      ]
+    },
+    {
+      "code": "50.0602",
+      "title": "Film & Video Production",
+      "level": "Bachelor's degree",
+      "ege": [
+        "High school diploma",
+        "Portfolio or reel helps",
+        "SAT or ACT (often test-optional)",
+        "Common App essay"
+      ],
+      "occupations": [
+        "video-editor"
+      ]
+    },
+    {
+      "code": "50.0901",
+      "title": "Music",
+      "level": "Bachelor's degree",
+      "ege": [
+        "High school diploma",
+        "Audition required by most programs",
+        "SAT or ACT (often test-optional)",
+        "Common App essay"
+      ],
+      "occupations": [
+        "musician"
+      ]
+    },
+    {
+      "code": "50.0501",
+      "title": "Drama & Theatre Arts (Acting)",
+      "level": "Bachelor's degree",
+      "ege": [
+        "High school diploma",
+        "Audition required by most programs",
+        "SAT or ACT (often test-optional)",
+        "Common App essay"
+      ],
+      "occupations": [
+        "actor"
+      ]
+    },
+    {
+      "code": "23.1302",
+      "title": "Creative Writing / English",
+      "level": "Bachelor's degree",
+      "ege": [
+        "High school diploma",
+        "Writing sample helps",
+        "SAT or ACT (often test-optional)",
+        "Common App essay"
+      ],
+      "occupations": [
+        "writer"
+      ]
+    },
+    {
+      "code": "16.0103",
+      "title": "Language Interpretation & Translation",
+      "level": "Bachelor's degree",
+      "ege": [
+        "High school diploma",
+        "Fluency in a second language",
+        "SAT or ACT (often test-optional)",
+        "Common App essay"
+      ],
+      "occupations": [
+        "translator"
+      ]
+    },
+    {
+      "code": "44.0701",
+      "title": "Social Work (BSW)",
+      "level": "Bachelor's degree (MSW for clinical roles)",
+      "ege": [
+        "High school diploma",
+        "SAT or ACT (often test-optional)",
+        "Common App essay",
+        "Clinical/licensed roles require an MSW"
+      ],
+      "occupations": [
+        "social-worker"
+      ]
+    },
+    {
+      "code": "31.0505",
+      "title": "Kinesiology & Exercise Science",
+      "level": "Certification or Bachelor's degree",
+      "ege": [
+        "High school diploma or GED",
+        "Personal-trainer certification (NASM/ACE) is enough to start",
+        "Bachelor's for advanced or clinical roles",
+        "No SAT/ACT required for certification"
+      ],
+      "occupations": [
+        "fitness-trainer"
+      ]
+    },
+    {
+      "code": "46.0302",
+      "title": "Electrician (Apprenticeship)",
+      "level": "Apprenticeship or trade certificate",
+      "ege": [
+        "High school diploma or GED",
+        "No SAT/ACT required",
+        "Paid apprenticeship (earn while you learn)",
+        "State journeyman license after apprenticeship"
+      ],
+      "occupations": [
+        "electrician"
+      ]
+    },
+    {
+      "code": "47.0604",
+      "title": "Automotive Technology",
+      "level": "Certificate or Associate degree",
+      "ege": [
+        "High school diploma or GED",
+        "No SAT/ACT required",
+        "Rolling admissions - apply year-round",
+        "ASE certification boosts pay"
+      ],
+      "occupations": [
+        "automotive-technician"
+      ]
+    },
+    {
+      "code": "48.0508",
+      "title": "Welding Technology",
+      "level": "Certificate or apprenticeship",
+      "ege": [
+        "High school diploma or GED",
+        "No SAT/ACT required",
+        "Paid apprenticeship or short certificate program",
+        "AWS welder certification boosts pay"
+      ],
+      "occupations": [
+        "welder"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "stage": "school",
+      "date_rule": "08-01",
+      "title": "Build your college list and start your essays (summer before senior year)"
+    },
+    {
+      "stage": "school",
+      "date_rule": "10-01",
+      "title": "FAFSA opens (typically Oct 1) - apply for federal financial aid"
+    },
+    {
+      "stage": "school",
+      "date_rule": "11-01",
+      "title": "Early Action / Early Decision deadlines (many schools)"
+    },
+    {
+      "stage": "school",
+      "date_rule": "01-01",
+      "title": "Regular Decision deadlines (often Jan 1-15)"
+    },
+    {
+      "stage": "school",
+      "date_rule": "03-15",
+      "title": "Admission decisions arrive (mid-March to early April)"
+    },
+    {
+      "stage": "school",
+      "date_rule": "05-01",
+      "title": "National College Decision Day - commit and pay your deposit"
+    }
+  ]
+}

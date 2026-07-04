@@ -14,8 +14,9 @@ from app.models import (
 )
 
 # Honest fallback for countries we haven't curated: point at official sources,
-# do NOT LLM-generate admission paths (design rule P5).
-_SUPPORTED = {"RU"}
+# do NOT LLM-generate admission paths (design rule P5). US = CIP majors + College
+# Scorecard link-out (EN-2).
+_SUPPORTED = {"RU", "US"}
 
 
 async def get_education(session: AsyncSession, slug: str, country: str) -> dict:
