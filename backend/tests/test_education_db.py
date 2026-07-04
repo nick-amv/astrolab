@@ -9,7 +9,7 @@ from app.config import settings
 from app.education.service import get_education
 from app.etl.ingest import upsert_draft
 from app.etl.schema import OccupationDraft
-from app.models import EduDomain, EduRequirement, Occupation, OccupationEdu
+from app.models import EduDomain, EduRequirement, Milestone, Occupation, OccupationEdu
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_async_engine
 
@@ -53,10 +53,15 @@ async def test_education_is_country_scoped() -> None:
                 OccupationEdu(occupation_id=occ.id, domain_id=us.id, weight=1.0),
             ]
         )
+        # scrambled insertion order; the US senior-year cycle starts in Aug
+        for rule in ("01-01", "05-01", "08-01"):
+            s.add(Milestone(country="US", education_stage="school", date_rule=rule, title_key=rule))
         await s.commit()
 
         us_edu = await get_education(s, "edu-country-test", "US")
         assert {d["code"] for d in us_edu["domains"]} == {"11.0701"}  # RU must NOT leak
+        # Aug -> Jan -> May, not the calendar 01/05/08 a plain MM-DD sort gives.
+        assert [m["date_rule"] for m in us_edu["milestones"]] == ["08-01", "01-01", "05-01"]
 
         ru_edu = await get_education(s, "edu-country-test", "RU")
         assert {d["code"] for d in ru_edu["domains"]} == {"09.03.01"}  # US must NOT leak

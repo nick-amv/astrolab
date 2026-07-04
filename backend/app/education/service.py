@@ -18,6 +18,21 @@ from app.models import (
 # Scorecard link-out (EN-2).
 _SUPPORTED = {"RU", "US"}
 
+# First month of the admission cycle per country. The US senior year runs
+# Aug -> May, so a plain MM-DD sort would show January deadlines before the
+# August "build your college list" step. RU's cycle sits inside one calendar
+# year (Feb -> Aug), so it defaults to January.
+_CYCLE_START = {"US": 8}
+
+
+def _cycle_key(date_rule: str, start_month: int) -> tuple[int, int]:
+    """Sort key that orders MM-DD milestones within a country's own cycle."""
+    try:
+        mm, dd = (int(x) for x in date_rule.split("-")[:2])
+    except ValueError:
+        return (99, 0)  # relative:/unknown rules sort last
+    return ((mm - start_month) % 12, dd)
+
 
 async def get_education(session: AsyncSession, slug: str, country: str) -> dict:
     country = (country or "RU").upper()
@@ -79,9 +94,10 @@ async def get_education(session: AsyncSession, slug: str, country: str) -> dict:
             )
         )
     ).scalars().all()
+    start_month = _CYCLE_START.get(country, 1)
     milestones = [
         {"date_rule": m.date_rule, "title": m.title_key}
-        for m in sorted(ms_rows, key=lambda m: m.date_rule)
+        for m in sorted(ms_rows, key=lambda m: _cycle_key(m.date_rule, start_month))
     ]
 
     return {
