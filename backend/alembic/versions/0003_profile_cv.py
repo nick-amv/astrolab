@@ -19,7 +19,12 @@ depends_on: str | Sequence[str] | None = None
 
 
 def upgrade() -> None:
-    op.add_column("profiles", sa.Column("cv", sa.JSON(), nullable=True))
+    # Guard: 0001_initial's create_all already adds `cv` on a fresh DB (CI), so
+    # only add it on databases created before this revision (keeps CI green
+    # without re-running on prod, which is already past this migration).
+    insp = sa.inspect(op.get_bind())
+    if "cv" not in {c["name"] for c in insp.get_columns("profiles")}:
+        op.add_column("profiles", sa.Column("cv", sa.JSON(), nullable=True))
 
 
 def downgrade() -> None:

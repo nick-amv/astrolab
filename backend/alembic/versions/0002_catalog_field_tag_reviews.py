@@ -23,8 +23,19 @@ depends_on: str | Sequence[str] | None = None
 
 
 def upgrade() -> None:
-    op.add_column("occupations", sa.Column("field_tag", sa.String(length=32), nullable=True))
-    op.create_index("ix_occupations_field_tag", "occupations", ["field_tag"])
+    # 0001_initial runs Base.metadata.create_all, which on a fresh DB (e.g. CI)
+    # already builds today's schema, field_tag and content_reviews included.
+    # Guard each step so this incremental migration is a no-op there and only
+    # does real work on databases created before this revision (e.g. prod).
+    bind = op.get_bind()
+    insp = sa.inspect(bind)
+    occ_cols = {c["name"] for c in insp.get_columns("occupations")}
+    if "field_tag" not in occ_cols:
+        op.add_column("occupations", sa.Column("field_tag", sa.String(length=32), nullable=True))
+        op.create_index("ix_occupations_field_tag", "occupations", ["field_tag"])
+
+    if "content_reviews" in insp.get_table_names():
+        return
 
     op.create_table(
         "content_reviews",
