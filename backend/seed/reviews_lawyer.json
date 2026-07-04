@@ -1,0 +1,22 @@
+[
+  {
+    "slug": "lawyer",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      }
+    ],
+    "factual_flags": []
+  }
+]

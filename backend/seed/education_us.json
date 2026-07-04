@@ -17,7 +17,10 @@
         "software-developer",
         "qa-engineer",
         "game-developer",
-        "devops-engineer"
+        "devops-engineer",
+        "data-engineer",
+        "machine-learning-engineer",
+        "database-administrator"
       ]
     },
     {
@@ -47,7 +50,9 @@
       ],
       "occupations": [
         "data-scientist",
-        "data-analyst"
+        "data-analyst",
+        "data-engineer",
+        "machine-learning-engineer"
       ]
     },
     {
@@ -61,7 +66,8 @@
         "Common App essay"
       ],
       "occupations": [
-        "data-analyst"
+        "data-analyst",
+        "statistician"
       ]
     },
     {
@@ -89,7 +95,9 @@
         "IT certifications (CompTIA A+/Network+) help"
       ],
       "occupations": [
-        "systems-administrator"
+        "systems-administrator",
+        "network-engineer",
+        "it-support-specialist"
       ]
     },
     {
@@ -104,7 +112,8 @@
       ],
       "occupations": [
         "graphic-designer",
-        "ux-ui-designer"
+        "ux-ui-designer",
+        "art-director"
       ]
     },
     {
@@ -244,7 +253,8 @@
         "Common App essay"
       ],
       "occupations": [
-        "financial-analyst"
+        "financial-analyst",
+        "financial-advisor"
       ]
     },
     {
@@ -273,7 +283,10 @@
       ],
       "occupations": [
         "product-manager",
-        "project-manager"
+        "project-manager",
+        "management-consultant",
+        "operations-manager",
+        "logistician"
       ]
     },
     {
@@ -639,6 +652,413 @@
       ],
       "occupations": [
         "welder"
+      ]
+    },
+    {
+      "code": "46.0503",
+      "title": "Plumbing Technology",
+      "level": "Apprenticeship or trade certificate",
+      "ege": [
+        "High school diploma or GED",
+        "No SAT/ACT required",
+        "Paid apprenticeship (earn while you learn)",
+        "State journeyman/master plumber license after training"
+      ],
+      "occupations": [
+        "plumber"
+      ]
+    },
+    {
+      "code": "47.0201",
+      "title": "HVAC/R Technology",
+      "level": "Certificate or Associate degree",
+      "ege": [
+        "High school diploma or GED",
+        "No SAT/ACT required",
+        "Trade certificate, associate degree, or paid apprenticeship",
+        "EPA Section 608 certification + state license where required"
+      ],
+      "occupations": [
+        "hvac-technician"
+      ]
+    },
+    {
+      "code": "46.0201",
+      "title": "Carpentry",
+      "level": "Apprenticeship or trade certificate",
+      "ege": [
+        "High school diploma or GED",
+        "No SAT/ACT required",
+        "Paid apprenticeship (earn while you learn)",
+        "OSHA safety certification helps"
+      ],
+      "occupations": [
+        "carpenter"
+      ]
+    },
+    {
+      "code": "48.0501",
+      "title": "Machine Tool Technology / CNC Machining",
+      "level": "Certificate or Associate degree",
+      "ege": [
+        "High school diploma or GED",
+        "No SAT/ACT required",
+        "Trade certificate, associate degree, or apprenticeship",
+        "NIMS certification boosts pay"
+      ],
+      "occupations": [
+        "machinist",
+        "cnc-machinist"
+      ]
+    },
+    {
+      "code": "49.0202",
+      "title": "Construction / Heavy Equipment Operation",
+      "level": "Certificate or apprenticeship",
+      "ege": [
+        "High school diploma or GED",
+        "No SAT/ACT required",
+        "Paid apprenticeship or short certificate program",
+        "CDL and equipment endorsements often required"
+      ],
+      "occupations": [
+        "heavy-equipment-operator"
+      ]
+    },
+    {
+      "code": "47.0607",
+      "title": "Airframe & Powerplant (Aircraft Maintenance)",
+      "level": "Certificate or Associate degree",
+      "ege": [
+        "High school diploma or GED",
+        "No SAT/ACT required",
+        "FAA-approved (Part 147) A&P program",
+        "FAA Airframe & Powerplant (A&P) certificate exams"
+      ],
+      "occupations": [
+        "aircraft-mechanic"
+      ]
+    },
+    {
+      "code": "46.0303",
+      "title": "Electrical Lineworker",
+      "level": "Certificate or apprenticeship",
+      "ege": [
+        "High school diploma or GED",
+        "No SAT/ACT required",
+        "Line school certificate or paid apprenticeship (earn while you learn)",
+        "CDL and safety certifications required"
+      ],
+      "occupations": [
+        "lineworker"
+      ]
+    },
+    {
+      "code": "51.0602",
+      "title": "Dental Hygiene",
+      "level": "Associate degree",
+      "ege": [
+        "High school diploma or GED",
+        "Prerequisite science courses (biology, chemistry, anatomy)",
+        "CODA-accredited dental hygiene program",
+        "National + state/regional board exams for licensure"
+      ],
+      "occupations": [
+        "dental-hygienist"
+      ]
+    },
+    {
+      "code": "51.0801",
+      "title": "Medical Assisting",
+      "level": "Certificate or Associate degree",
+      "ege": [
+        "High school diploma or GED",
+        "Prerequisite courses (biology, anatomy)",
+        "Accredited program (CAAHEP/ABHES)",
+        "CMA or RMA certification exam"
+      ],
+      "occupations": [
+        "medical-assistant"
+      ]
+    },
+    {
+      "code": "51.0911",
+      "title": "Radiologic Technology",
+      "level": "Associate degree",
+      "ege": [
+        "High school diploma or GED",
+        "Prerequisite science courses (biology, physics, anatomy)",
+        "JRCERT-accredited program",
+        "ARRT certification + state license"
+      ],
+      "occupations": [
+        "radiologic-technologist"
+      ]
+    },
+    {
+      "code": "51.0908",
+      "title": "Respiratory Care",
+      "level": "Associate degree",
+      "ege": [
+        "High school diploma or GED",
+        "Prerequisite science courses (biology, chemistry, anatomy)",
+        "CoARC-accredited program",
+        "NBRC (RRT) credential + state license"
+      ],
+      "occupations": [
+        "respiratory-therapist"
+      ]
+    },
+    {
+      "code": "51.2306",
+      "title": "Occupational Therapy",
+      "level": "Master's degree",
+      "ege": [
+        "Bachelor's degree with prerequisite courses (anatomy, psychology)",
+        "GRE may be required",
+        "ACOTE-accredited master's or doctoral (OTD) program",
+        "NBCOT exam + state license after graduation"
+      ],
+      "occupations": [
+        "occupational-therapist"
+      ]
+    },
+    {
+      "code": "51.0203",
+      "title": "Speech-Language Pathology",
+      "level": "Master's degree",
+      "ege": [
+        "Bachelor's degree (often in communication sciences)",
+        "GRE may be required",
+        "ASHA-accredited master's program + clinical fellowship",
+        "Praxis exam + state license after graduation"
+      ],
+      "occupations": [
+        "speech-language-pathologist"
+      ]
+    },
+    {
+      "code": "51.3101",
+      "title": "Dietetics & Nutrition",
+      "level": "Master's degree",
+      "ege": [
+        "Bachelor's degree with ACEND-accredited coursework",
+        "Master's degree now required to sit for the exam (as of 2024)",
+        "Supervised dietetic internship",
+        "CDR registration exam (RDN) + state license where required"
+      ],
+      "occupations": [
+        "dietitian"
+      ]
+    },
+    {
+      "code": "51.0909",
+      "title": "Surgical Technology",
+      "level": "Certificate or Associate degree",
+      "ege": [
+        "High school diploma or GED",
+        "Prerequisite science courses (biology, anatomy)",
+        "CAAHEP/ABHES-accredited program",
+        "CST certification exam"
+      ],
+      "occupations": [
+        "surgical-technologist"
+      ]
+    },
+    {
+      "code": "51.1701",
+      "title": "Optometry (OD)",
+      "level": "Doctoral degree",
+      "ege": [
+        "Bachelor's degree with pre-optometry courses (biology, chemistry, physics)",
+        "OAT (Optometry Admission Test)",
+        "4-year ACOE-accredited OD program",
+        "National (NBEO) boards + state license after graduation"
+      ],
+      "occupations": [
+        "optometrist"
+      ]
+    },
+    {
+      "code": "51.1009",
+      "title": "Phlebotomy",
+      "level": "Certificate or apprenticeship",
+      "ege": [
+        "High school diploma or GED",
+        "No SAT/ACT required",
+        "Short certificate program (a few months) + clinical hours",
+        "National certification (NHA/ASCP); state license where required"
+      ],
+      "occupations": [
+        "phlebotomist"
+      ]
+    },
+    {
+      "code": "52.1304",
+      "title": "Actuarial Science",
+      "level": "Bachelor's degree",
+      "ege": [
+        "High school diploma",
+        "SAT or ACT (often test-optional)",
+        "Strong math and statistics (calculus, probability)",
+        "Professional actuarial exams (SOA/CAS) begin in college"
+      ],
+      "occupations": [
+        "actuary"
+      ]
+    },
+    {
+      "code": "52.1501",
+      "title": "Real Estate",
+      "level": "Certificate or Associate degree",
+      "ege": [
+        "High school diploma or GED",
+        "No SAT/ACT required",
+        "State-approved pre-licensing course",
+        "State real estate license exam"
+      ],
+      "occupations": [
+        "real-estate-agent"
+      ]
+    },
+    {
+      "code": "52.1701",
+      "title": "Insurance",
+      "level": "Certificate or Associate degree",
+      "ege": [
+        "High school diploma or GED",
+        "No SAT/ACT required",
+        "State-approved pre-licensing course",
+        "State insurance license exam (line-specific)"
+      ],
+      "occupations": [
+        "insurance-agent"
+      ]
+    },
+    {
+      "code": "50.0404",
+      "title": "Industrial & Product Design",
+      "level": "Bachelor's degree",
+      "ege": [
+        "High school diploma",
+        "Portfolio of creative work (often required)",
+        "SAT or ACT (many design programs are test-optional)",
+        "Common App essay"
+      ],
+      "occupations": [
+        "industrial-designer"
+      ]
+    },
+    {
+      "code": "10.0203",
+      "title": "Audio & Recording Arts",
+      "level": "Certificate or Associate degree",
+      "ege": [
+        "High school diploma or GED",
+        "Portfolio or demo of your work helps",
+        "Certificate, associate, or bachelor's program",
+        "Many engineers build skills through internships and studio work"
+      ],
+      "occupations": [
+        "sound-engineer"
+      ]
+    },
+    {
+      "code": "43.0107",
+      "title": "Criminal Justice / Police Science",
+      "level": "Associate degree",
+      "ege": [
+        "High school diploma or GED (associate/bachelor's helps advancement)",
+        "No SAT/ACT required for the academy",
+        "Police academy training (POST-certified)",
+        "Background check, physical & written exams"
+      ],
+      "occupations": [
+        "police-officer"
+      ]
+    },
+    {
+      "code": "43.0203",
+      "title": "Fire Science",
+      "level": "Certificate or Associate degree",
+      "ege": [
+        "High school diploma or GED",
+        "No SAT/ACT required",
+        "Fire academy training + EMT certification",
+        "Physical (CPAT) & written exams"
+      ],
+      "occupations": [
+        "firefighter"
+      ]
+    },
+    {
+      "code": "04.0301",
+      "title": "Urban & Regional Planning",
+      "level": "Master's degree",
+      "ege": [
+        "Bachelor's degree (any field; planning/geography helps)",
+        "GRE may be required",
+        "PAB-accredited master's (MUP/MURP) program",
+        "AICP certification for advancement"
+      ],
+      "occupations": [
+        "urban-planner"
+      ]
+    },
+    {
+      "code": "49.0102",
+      "title": "Professional Pilot / Aviation",
+      "level": "Bachelor's degree",
+      "ege": [
+        "High school diploma",
+        "SAT or ACT for degree programs (often test-optional)",
+        "FAA flight training (Private, then Commercial, then ATP)",
+        "FAA medical certificate + ratings and flight hours"
+      ],
+      "occupations": [
+        "airline-pilot"
+      ]
+    },
+    {
+      "code": "13.1101",
+      "title": "School Counseling",
+      "level": "Master's degree",
+      "ege": [
+        "Bachelor's degree (education or psychology helps)",
+        "GRE may be required",
+        "CACREP-accredited master's program",
+        "State school-counselor certification/license"
+      ],
+      "occupations": [
+        "school-counselor"
+      ]
+    },
+    {
+      "code": "25.0101",
+      "title": "Library & Information Science (MLIS)",
+      "level": "Master's degree",
+      "ege": [
+        "Bachelor's degree (any field)",
+        "GRE may be required by some programs",
+        "ALA-accredited master's (MLIS/MLS)",
+        "State certification for school/public librarians where required"
+      ],
+      "occupations": [
+        "librarian"
+      ]
+    },
+    {
+      "code": "22.0101",
+      "title": "Law (JD)",
+      "level": "Professional degree (JD)",
+      "ege": [
+        "Bachelor's degree (any major)",
+        "LSAT",
+        "ABA-accredited law school (JD)",
+        "State bar exam after graduation"
+      ],
+      "occupations": [
+        "lawyer"
       ]
     }
   ],
