@@ -22,8 +22,10 @@ pytestmark = requires_db
 
 
 def _client() -> httpx.AsyncClient:
+    # https so httpx sends the Secure session cookie back (session_cookie_secure
+    # defaults True); over http:// the cookie is dropped and /me sees no session.
     return httpx.AsyncClient(
-        transport=httpx.ASGITransport(app=app), base_url="http://test"
+        transport=httpx.ASGITransport(app=app), base_url="https://test"
     )
 
 
