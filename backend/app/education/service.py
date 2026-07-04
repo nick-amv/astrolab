@@ -44,8 +44,14 @@ async def get_education(session: AsyncSession, slug: str, country: str) -> dict:
     domains: list[dict] = []
     note = None
     if domain_ids:
+        # An occupation maps to domains in several countries; keep only this
+        # country's (otherwise RU OKSO majors leak onto a US page and vice versa).
         doms = (
-            await session.execute(select(EduDomain).where(EduDomain.id.in_(domain_ids)))
+            await session.execute(
+                select(EduDomain).where(
+                    EduDomain.id.in_(domain_ids), EduDomain.country == country
+                )
+            )
         ).scalars().all()
         reqs = (
             await session.execute(
