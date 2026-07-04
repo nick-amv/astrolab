@@ -27,6 +27,13 @@ async def run(seed_path: Path) -> None:
     data = json.loads(seed_path.read_text("utf-8"))
     country = data["country"]
 
+    # Validate BEFORE the wipe: title_key is varchar(96). Catching an overlong
+    # title here (rather than mid-insert) avoids emptying a country's education
+    # and then failing, which is what a 97-char RU title once did.
+    too_long = [d["code"] for d in data["domains"] if len(d["title"]) > 96]
+    if too_long:
+        raise SystemExit(f"[seed_education] title >96 chars for domains: {too_long}")
+
     async with SessionLocal() as s:
         # wipe this country (edu_domains cascade to requirements + occupation_edu)
         await s.execute(delete(EduDomain).where(EduDomain.country == country))
