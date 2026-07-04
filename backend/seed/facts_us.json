@@ -16,6 +16,42 @@
       "as_of": "2024"
     },
     {
+      "slug": "actuary",
+      "soc": "15-2011",
+      "bls_title": "Actuaries",
+      "salary_low": 90970,
+      "salary_high": 206430,
+      "median": 125770,
+      "currency": "USD",
+      "period": "year",
+      "demand_note": "~28k jobs in the US (BLS OEWS, May 2024)",
+      "as_of": "2024"
+    },
+    {
+      "slug": "aircraft-mechanic",
+      "soc": "49-3011",
+      "bls_title": "Aircraft Mechanics and Service Technicians",
+      "salary_low": 61920,
+      "salary_high": 120080,
+      "median": 78680,
+      "currency": "USD",
+      "period": "year",
+      "demand_note": "~136k jobs in the US (BLS OEWS, May 2024)",
+      "as_of": "2024"
+    },
+    {
+      "slug": "airline-pilot",
+      "soc": "53-2011",
+      "bls_title": "Airline Pilots, Copilots, and Flight Engineers",
+      "salary_low": 154360,
+      "salary_high": 239200,
+      "median": 226600,
+      "currency": "USD",
+      "period": "year",
+      "demand_note": "~99k jobs in the US (BLS OEWS, May 2024)",
+      "as_of": "2024"
+    },
+    {
       "slug": "animator",
       "soc": "27-1014",
       "bls_title": "Special Effects Artists and Animators",
@@ -40,6 +76,18 @@
       "as_of": "2024"
     },
     {
+      "slug": "art-director",
+      "soc": "27-1011",
+      "bls_title": "Art Directors",
+      "salary_low": 80130,
+      "salary_high": 211410,
+      "median": 111040,
+      "currency": "USD",
+      "period": "year",
+      "demand_note": "~50k jobs in the US (BLS OEWS, May 2024)",
+      "as_of": "2024"
+    },
+    {
       "slug": "automotive-technician",
       "soc": "49-3023",
       "bls_title": "Automotive Service Technicians and Mechanics",
@@ -61,6 +109,18 @@
       "currency": "USD",
       "period": "year",
       "demand_note": "~60k jobs in the US (BLS OEWS, May 2024)",
+      "as_of": "2024"
+    },
+    {
+      "slug": "carpenter",
+      "soc": "47-2031",
+      "bls_title": "Carpenters",
+      "salary_low": 47550,
+      "salary_high": 98370,
+      "median": 59310,
+      "currency": "USD",
+      "period": "year",
+      "demand_note": "~698k jobs in the US (BLS OEWS, May 2024)",
       "as_of": "2024"
     },
     {
@@ -100,6 +160,18 @@
       "as_of": "2024"
     },
     {
+      "slug": "cnc-machinist",
+      "soc": "51-9161",
+      "bls_title": "Computer Numerically Controlled Tool Operators",
+      "salary_low": 42710,
+      "salary_high": 71160,
+      "median": 49970,
+      "currency": "USD",
+      "period": "year",
+      "demand_note": "~177k jobs in the US (BLS OEWS, May 2024)",
+      "as_of": "2024"
+    },
+    {
       "slug": "cybersecurity-specialist",
       "soc": "15-1212",
       "bls_title": "Information Security Analysts",
@@ -124,6 +196,18 @@
       "as_of": "2024"
     },
     {
+      "slug": "data-engineer",
+      "soc": "15-1299",
+      "bls_title": "Computer Occupations, All Other",
+      "salary_low": 76360,
+      "salary_high": 176800,
+      "median": 108970,
+      "currency": "USD",
+      "period": "year",
+      "demand_note": "~439k jobs in the US (BLS OEWS, May 2024)",
+      "as_of": "2024"
+    },
+    {
       "slug": "data-scientist",
       "soc": "15-2051",
       "bls_title": "Data Scientists",
@@ -136,6 +220,30 @@
       "as_of": "2024"
     },
     {
+      "slug": "database-administrator",
+      "soc": "15-1242",
+      "bls_title": "Database Administrators",
+      "salary_low": 76100,
+      "salary_high": 160890,
+      "median": 104620,
+      "currency": "USD",
+      "period": "year",
+      "demand_note": "~73k jobs in the US (BLS OEWS, May 2024)",
+      "as_of": "2024"
+    },
+    {
+      "slug": "dental-hygienist",
+      "soc": "29-1292",
+      "bls_title": "Dental Hygienists",
+      "salary_low": 80060,
+      "salary_high": 120060,
+      "median": 94260,
+      "currency": "USD",
+      "period": "year",
+      "demand_note": "~219k jobs in the US (BLS OEWS, May 2024)",
+      "as_of": "2024"
+    },
+    {
       "slug": "dentist",
       "soc": "29-1021",
       "bls_title": "Dentists, General",
@@ -145,6 +253,18 @@
       "currency": "USD",
       "period": "year",
       "demand_note": "~113k jobs in the US (BLS OEWS, May 2024)",
+      "as_of": "2024"
+    },
+    {
+      "slug": "dietitian",
+      "soc": "29-1031",
+      "bls_title": "Dietitians and Nutritionists",
+      "salary_low": 61260,
+      "salary_high": 101760,
+      "median": 73850,
+      "currency": "USD",
+      "period": "year",
+      "demand_note": "~77k jobs in the US (BLS OEWS, May 2024)",
       "as_of": "2024"
     },
     {
@@ -196,6 +316,18 @@
       "as_of": "2024"
     },
     {
+      "slug": "financial-advisor",
+      "soc": "13-2052",
+      "bls_title": "Personal Financial Advisors",
+      "salary_low": 70620,
+      "salary_high": 239200,
+      "median": 102140,
+      "currency": "USD",
+      "period": "year",
+      "demand_note": "~270k jobs in the US (BLS OEWS, May 2024)",
+      "as_of": "2024"
+    },
+    {
       "slug": "financial-analyst",
       "soc": "13-2051",
       "bls_title": "Financial and Investment Analysts",
@@ -205,6 +337,18 @@
       "currency": "USD",
       "period": "year",
       "demand_note": "~341k jobs in the US (BLS OEWS, May 2024)",
+      "as_of": "2024"
+    },
+    {
+      "slug": "firefighter",
+      "soc": "33-2011",
+      "bls_title": "Firefighters",
+      "salary_low": 44180,
+      "salary_high": 101330,
+      "median": 59530,
+      "currency": "USD",
+      "period": "year",
+      "demand_note": "~332k jobs in the US (BLS OEWS, May 2024)",
       "as_of": "2024"
     },
     {
@@ -244,6 +388,18 @@
       "as_of": "2024"
     },
     {
+      "slug": "heavy-equipment-operator",
+      "soc": "47-2073",
+      "bls_title": "Operating Engineers and Other Construction Equipment Operators",
+      "salary_low": 47780,
+      "salary_high": 100690,
+      "median": 58710,
+      "currency": "USD",
+      "period": "year",
+      "demand_note": "~469k jobs in the US (BLS OEWS, May 2024)",
+      "as_of": "2024"
+    },
+    {
       "slug": "hr-specialist",
       "soc": "13-1071",
       "bls_title": "Human Resources Specialists",
@@ -256,6 +412,42 @@
       "as_of": "2024"
     },
     {
+      "slug": "hvac-technician",
+      "soc": "49-9021",
+      "bls_title": "Heating, Air Conditioning, and Refrigeration Mechanics and Installers",
+      "salary_low": 47850,
+      "salary_high": 91020,
+      "median": 59810,
+      "currency": "USD",
+      "period": "year",
+      "demand_note": "~397k jobs in the US (BLS OEWS, May 2024)",
+      "as_of": "2024"
+    },
+    {
+      "slug": "industrial-designer",
+      "soc": "27-1021",
+      "bls_title": "Commercial and Industrial Designers",
+      "salary_low": 62040,
+      "salary_high": 134840,
+      "median": 79450,
+      "currency": "USD",
+      "period": "year",
+      "demand_note": "~30k jobs in the US (BLS OEWS, May 2024)",
+      "as_of": "2024"
+    },
+    {
+      "slug": "insurance-agent",
+      "soc": "41-3021",
+      "bls_title": "Insurance Sales Agents",
+      "salary_low": 45520,
+      "salary_high": 135660,
+      "median": 60370,
+      "currency": "USD",
+      "period": "year",
+      "demand_note": "~469k jobs in the US (BLS OEWS, May 2024)",
+      "as_of": "2024"
+    },
+    {
       "slug": "interior-designer",
       "soc": "27-1025",
       "bls_title": "Interior Designers",
@@ -265,6 +457,18 @@
       "currency": "USD",
       "period": "year",
       "demand_note": "~70k jobs in the US (BLS OEWS, May 2024)",
+      "as_of": "2024"
+    },
+    {
+      "slug": "it-support-specialist",
+      "soc": "15-1232",
+      "bls_title": "Computer User Support Specialists",
+      "salary_low": 47580,
+      "salary_high": 98010,
+      "median": 60340,
+      "currency": "USD",
+      "period": "year",
+      "demand_note": "~697k jobs in the US (BLS OEWS, May 2024)",
       "as_of": "2024"
     },
     {
@@ -292,6 +496,78 @@
       "as_of": "2024"
     },
     {
+      "slug": "librarian",
+      "soc": "25-4022",
+      "bls_title": "Librarians and Media Collections Specialists",
+      "salary_low": 50920,
+      "salary_high": 100880,
+      "median": 64320,
+      "currency": "USD",
+      "period": "year",
+      "demand_note": "~132k jobs in the US (BLS OEWS, May 2024)",
+      "as_of": "2024"
+    },
+    {
+      "slug": "lineworker",
+      "soc": "49-9051",
+      "bls_title": "Electrical Power-Line Installers and Repairers",
+      "salary_low": 65740,
+      "salary_high": 126610,
+      "median": 92560,
+      "currency": "USD",
+      "period": "year",
+      "demand_note": "~124k jobs in the US (BLS OEWS, May 2024)",
+      "as_of": "2024"
+    },
+    {
+      "slug": "logistician",
+      "soc": "13-1081",
+      "bls_title": "Logisticians",
+      "salary_low": 62920,
+      "salary_high": 132110,
+      "median": 80880,
+      "currency": "USD",
+      "period": "year",
+      "demand_note": "~236k jobs in the US (BLS OEWS, May 2024)",
+      "as_of": "2024"
+    },
+    {
+      "slug": "machine-learning-engineer",
+      "soc": "15-2051",
+      "bls_title": "Data Scientists",
+      "salary_low": 82630,
+      "salary_high": 194410,
+      "median": 112590,
+      "currency": "USD",
+      "period": "year",
+      "demand_note": "~233k jobs in the US (BLS OEWS, May 2024)",
+      "as_of": "2024"
+    },
+    {
+      "slug": "machinist",
+      "soc": "51-4041",
+      "bls_title": "Machinists",
+      "salary_low": 46250,
+      "salary_high": 78760,
+      "median": 56150,
+      "currency": "USD",
+      "period": "year",
+      "demand_note": "~299k jobs in the US (BLS OEWS, May 2024)",
+      "as_of": "2024"
+    },
+    {
+      "slug": "management-consultant",
+      "soc": "13-1111",
+      "bls_title": "Management Analysts",
+      "salary_low": 76770,
+      "salary_high": 174140,
+      "median": 101190,
+      "currency": "USD",
+      "period": "year",
+      "demand_note": "~894k jobs in the US (BLS OEWS, May 2024)",
+      "as_of": "2024"
+    },
+    {
       "slug": "marketing-manager",
       "soc": "11-2021",
       "bls_title": "Marketing Managers",
@@ -316,6 +592,30 @@
       "as_of": "2024"
     },
     {
+      "slug": "medical-assistant",
+      "soc": "31-9092",
+      "bls_title": "Medical Assistants",
+      "salary_low": 37610,
+      "salary_high": 57830,
+      "median": 44200,
+      "currency": "USD",
+      "period": "year",
+      "demand_note": "~793k jobs in the US (BLS OEWS, May 2024)",
+      "as_of": "2024"
+    },
+    {
+      "slug": "network-engineer",
+      "soc": "15-1241",
+      "bls_title": "Computer Network Architects",
+      "salary_low": 102120,
+      "salary_high": 198030,
+      "median": 130390,
+      "currency": "USD",
+      "period": "year",
+      "demand_note": "~177k jobs in the US (BLS OEWS, May 2024)",
+      "as_of": "2024"
+    },
+    {
       "slug": "nurse",
       "soc": "29-1141",
       "bls_title": "Registered Nurses",
@@ -325,6 +625,42 @@
       "currency": "USD",
       "period": "year",
       "demand_note": "~3.28M jobs in the US (BLS OEWS, May 2024)",
+      "as_of": "2024"
+    },
+    {
+      "slug": "occupational-therapist",
+      "soc": "29-1122",
+      "bls_title": "Occupational Therapists",
+      "salary_low": 80490,
+      "salary_high": 129830,
+      "median": 98340,
+      "currency": "USD",
+      "period": "year",
+      "demand_note": "~152k jobs in the US (BLS OEWS, May 2024)",
+      "as_of": "2024"
+    },
+    {
+      "slug": "operations-manager",
+      "soc": "11-1021",
+      "bls_title": "General and Operations Managers",
+      "salary_low": 67160,
+      "salary_high": 239200,
+      "median": 102950,
+      "currency": "USD",
+      "period": "year",
+      "demand_note": "~3.58M jobs in the US (BLS OEWS, May 2024)",
+      "as_of": "2024"
+    },
+    {
+      "slug": "optometrist",
+      "soc": "29-1041",
+      "bls_title": "Optometrists",
+      "salary_low": 103310,
+      "salary_high": 203210,
+      "median": 134830,
+      "currency": "USD",
+      "period": "year",
+      "demand_note": "~42k jobs in the US (BLS OEWS, May 2024)",
       "as_of": "2024"
     },
     {
@@ -349,6 +685,18 @@
       "currency": "USD",
       "period": "year",
       "demand_note": "~329k jobs in the US (BLS OEWS, May 2024)",
+      "as_of": "2024"
+    },
+    {
+      "slug": "phlebotomist",
+      "soc": "31-9097",
+      "bls_title": "Phlebotomists",
+      "salary_low": 37540,
+      "salary_high": 57750,
+      "median": 43660,
+      "currency": "USD",
+      "period": "year",
+      "demand_note": "~139k jobs in the US (BLS OEWS, May 2024)",
       "as_of": "2024"
     },
     {
@@ -388,6 +736,30 @@
       "as_of": "2024"
     },
     {
+      "slug": "plumber",
+      "soc": "47-2152",
+      "bls_title": "Plumbers, Pipefitters, and Steamfitters",
+      "salary_low": 48860,
+      "salary_high": 105150,
+      "median": 62970,
+      "currency": "USD",
+      "period": "year",
+      "demand_note": "~456k jobs in the US (BLS OEWS, May 2024)",
+      "as_of": "2024"
+    },
+    {
+      "slug": "police-officer",
+      "soc": "33-3051",
+      "bls_title": "Police and Sheriff's Patrol Officers",
+      "salary_low": 58980,
+      "salary_high": 115280,
+      "median": 76290,
+      "currency": "USD",
+      "period": "year",
+      "demand_note": "~667k jobs in the US (BLS OEWS, May 2024)",
+      "as_of": "2024"
+    },
+    {
       "slug": "project-manager",
       "soc": "13-1082",
       "bls_title": "Project Management Specialists",
@@ -424,6 +796,42 @@
       "as_of": "2024"
     },
     {
+      "slug": "radiologic-technologist",
+      "soc": "29-2034",
+      "bls_title": "Radiologic Technologists and Technicians",
+      "salary_low": 62910,
+      "salary_high": 106990,
+      "median": 77660,
+      "currency": "USD",
+      "period": "year",
+      "demand_note": "~223k jobs in the US (BLS OEWS, May 2024)",
+      "as_of": "2024"
+    },
+    {
+      "slug": "real-estate-agent",
+      "soc": "41-9022",
+      "bls_title": "Real Estate Sales Agents",
+      "salary_low": 38940,
+      "salary_high": 125140,
+      "median": 56320,
+      "currency": "USD",
+      "period": "year",
+      "demand_note": "~191k jobs in the US (BLS OEWS, May 2024)",
+      "as_of": "2024"
+    },
+    {
+      "slug": "respiratory-therapist",
+      "soc": "29-1126",
+      "bls_title": "Respiratory Therapists",
+      "salary_low": 68410,
+      "salary_high": 108820,
+      "median": 80450,
+      "currency": "USD",
+      "period": "year",
+      "demand_note": "~136k jobs in the US (BLS OEWS, May 2024)",
+      "as_of": "2024"
+    },
+    {
       "slug": "sales-manager",
       "soc": "11-2022",
       "bls_title": "Sales Managers",
@@ -433,6 +841,18 @@
       "currency": "USD",
       "period": "year",
       "demand_note": "~604k jobs in the US (BLS OEWS, May 2024)",
+      "as_of": "2024"
+    },
+    {
+      "slug": "school-counselor",
+      "soc": "21-1012",
+      "bls_title": "Educational, Guidance, and Career Counselors and Advisors",
+      "salary_low": 51690,
+      "salary_high": 105870,
+      "median": 65140,
+      "currency": "USD",
+      "period": "year",
+      "demand_note": "~342k jobs in the US (BLS OEWS, May 2024)",
       "as_of": "2024"
     },
     {
@@ -457,6 +877,54 @@
       "currency": "USD",
       "period": "year",
       "demand_note": "~1.65M jobs in the US (BLS OEWS, May 2024)",
+      "as_of": "2024"
+    },
+    {
+      "slug": "sound-engineer",
+      "soc": "27-4014",
+      "bls_title": "Sound Engineering Technicians",
+      "salary_low": 47680,
+      "salary_high": 134980,
+      "median": 66430,
+      "currency": "USD",
+      "period": "year",
+      "demand_note": "~13k jobs in the US (BLS OEWS, May 2024)",
+      "as_of": "2024"
+    },
+    {
+      "slug": "speech-language-pathologist",
+      "soc": "29-1127",
+      "bls_title": "Speech-Language Pathologists",
+      "salary_low": 75310,
+      "salary_high": 132850,
+      "median": 95410,
+      "currency": "USD",
+      "period": "year",
+      "demand_note": "~179k jobs in the US (BLS OEWS, May 2024)",
+      "as_of": "2024"
+    },
+    {
+      "slug": "statistician",
+      "soc": "15-2041",
+      "bls_title": "Statisticians",
+      "salary_low": 79210,
+      "salary_high": 170700,
+      "median": 103300,
+      "currency": "USD",
+      "period": "year",
+      "demand_note": "~30k jobs in the US (BLS OEWS, May 2024)",
+      "as_of": "2024"
+    },
+    {
+      "slug": "surgical-technologist",
+      "soc": "29-2055",
+      "bls_title": "Surgical Technologists",
+      "salary_low": 51740,
+      "salary_high": 90700,
+      "median": 62830,
+      "currency": "USD",
+      "period": "year",
+      "demand_note": "~114k jobs in the US (BLS OEWS, May 2024)",
       "as_of": "2024"
     },
     {
@@ -493,6 +961,18 @@
       "currency": "USD",
       "period": "year",
       "demand_note": "~53k jobs in the US (BLS OEWS, May 2024)",
+      "as_of": "2024"
+    },
+    {
+      "slug": "urban-planner",
+      "soc": "19-3051",
+      "bls_title": "Urban and Regional Planners",
+      "salary_low": 66210,
+      "salary_high": 128550,
+      "median": 83720,
+      "currency": "USD",
+      "period": "year",
+      "demand_note": "~43k jobs in the US (BLS OEWS, May 2024)",
       "as_of": "2024"
     },
     {

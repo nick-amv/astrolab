@@ -1,0 +1,2106 @@
+[
+  {
+    "slug": "plumber",
+    "onet_code": "47-2152.00",
+    "field_tag": "trades",
+    "edu_duration_band": "vocational",
+    "regulated": true,
+    "riasec": {
+      "R": 0.9,
+      "I": 0.4,
+      "A": 0.2,
+      "S": 0.4,
+      "E": 0.3,
+      "C": 0.4
+    },
+    "riasec_source": "llm",
+    "values": {
+      "achievement": 0.5,
+      "autonomy": 0.7,
+      "recognition": 0.4,
+      "relationships": 0.5,
+      "stability": 0.7,
+      "conditions": 0.8
+    },
+    "subjects": {
+      "tech": 1.0,
+      "phys": 0.6,
+      "math": 0.4
+    },
+    "i18n": {
+      "ru": {
+        "title": "Сантехник",
+        "summary": "Монтирует и ремонтирует водопровод, отопление, канализацию и сантехнику в домах и зданиях.",
+        "day_in_life": "Прокладывает и соединяет трубы, ставит раковины и унитазы, ищет протечки, устраняет засоры.",
+        "who_fits": "Тот, кто любит чинить руками, не теряется в грязной работе и делает всё аккуратно."
+      },
+      "en": {
+        "title": "Plumber",
+        "summary": "Installs and repairs water, heating, and drainage pipes and fixtures in homes and buildings.",
+        "day_in_life": "Fits and connects pipes, installs sinks and toilets, finds leaks, and clears blockages.",
+        "who_fits": "People who like fixing things with their hands, stay calm in a mess, and take care to do it right."
+      }
+    },
+    "facts": [
+      {
+        "country": "RU",
+        "salary_low": 50000,
+        "salary_high": 120000,
+        "currency": "RUB",
+        "demand_note": "Стабильный спрос",
+        "confidence": "estimate"
+      }
+    ]
+  },
+  {
+    "slug": "hvac-technician",
+    "onet_code": "49-9021.00",
+    "field_tag": "trades",
+    "edu_duration_band": "vocational",
+    "regulated": true,
+    "riasec": {
+      "R": 0.9,
+      "I": 0.5,
+      "A": 0.2,
+      "S": 0.4,
+      "E": 0.3,
+      "C": 0.5
+    },
+    "riasec_source": "llm",
+    "values": {
+      "achievement": 0.6,
+      "autonomy": 0.6,
+      "recognition": 0.4,
+      "relationships": 0.5,
+      "stability": 0.7,
+      "conditions": 0.8
+    },
+    "subjects": {
+      "tech": 1.0,
+      "phys": 0.8,
+      "math": 0.5
+    },
+    "i18n": {
+      "ru": {
+        "title": "Специалист по вентиляции и кондиционированию",
+        "summary": "Устанавливает и обслуживает системы отопления, вентиляции и кондиционирования.",
+        "day_in_life": "Монтирует установки, подключает воздуховоды и трассы хладагента, проверяет давление, устраняет неисправности.",
+        "who_fits": "Тот, кто любит технику, аккуратен с инструментом и любит докопаться, почему что-то не работает."
+      },
+      "en": {
+        "title": "HVAC Technician",
+        "summary": "Installs and services heating, ventilation, and air conditioning systems.",
+        "day_in_life": "Mounts units, connects ducts and refrigerant lines, checks pressures, and fixes faults.",
+        "who_fits": "People who like machines and comfort, are careful with tools, and enjoy tracking down why something isn't working."
+      }
+    },
+    "facts": [
+      {
+        "country": "RU",
+        "salary_low": 60000,
+        "salary_high": 140000,
+        "currency": "RUB",
+        "demand_note": "Растущий спрос",
+        "confidence": "estimate"
+      }
+    ]
+  },
+  {
+    "slug": "carpenter",
+    "onet_code": "47-2031.00",
+    "field_tag": "trades",
+    "edu_duration_band": "vocational",
+    "regulated": false,
+    "riasec": {
+      "R": 0.9,
+      "I": 0.3,
+      "A": 0.4,
+      "S": 0.3,
+      "E": 0.3,
+      "C": 0.3
+    },
+    "riasec_source": "llm",
+    "values": {
+      "achievement": 0.6,
+      "autonomy": 0.7,
+      "recognition": 0.5,
+      "relationships": 0.4,
+      "stability": 0.6,
+      "conditions": 0.8
+    },
+    "subjects": {
+      "tech": 1.0,
+      "math": 0.6,
+      "phys": 0.4
+    },
+    "i18n": {
+      "ru": {
+        "title": "Плотник",
+        "summary": "Строит и ремонтирует конструкции и изделия из дерева и других материалов.",
+        "day_in_life": "Размечает и режет материал, собирает каркасы и изделия, ставит двери и лестницы, доводит поверхности.",
+        "who_fits": "Тот, кто любит делать прочные вещи руками, семь раз отмерит и гордится ровной работой."
+      },
+      "en": {
+        "title": "Carpenter",
+        "summary": "Builds and repairs structures and fittings out of wood and other materials.",
+        "day_in_life": "Measures and cuts material, assembles frames and fittings, hangs doors and stairs, and finishes surfaces.",
+        "who_fits": "People who like making solid things by hand, measure twice, and take pride in a clean finish."
+      }
+    },
+    "facts": [
+      {
+        "country": "RU",
+        "salary_low": 55000,
+        "salary_high": 130000,
+        "currency": "RUB",
+        "demand_note": "Стабильный спрос",
+        "confidence": "estimate"
+      }
+    ]
+  },
+  {
+    "slug": "machinist",
+    "onet_code": "51-4041.00",
+    "field_tag": "trades",
+    "edu_duration_band": "vocational",
+    "regulated": false,
+    "riasec": {
+      "R": 0.9,
+      "I": 0.4,
+      "A": 0.2,
+      "S": 0.2,
+      "E": 0.2,
+      "C": 0.6
+    },
+    "riasec_source": "llm",
+    "values": {
+      "achievement": 0.6,
+      "autonomy": 0.5,
+      "recognition": 0.4,
+      "relationships": 0.3,
+      "stability": 0.7,
+      "conditions": 0.7
+    },
+    "subjects": {
+      "tech": 1.0,
+      "math": 0.7,
+      "phys": 0.5
+    },
+    "i18n": {
+      "ru": {
+        "title": "Станочник (токарь-фрезеровщик)",
+        "summary": "Изготавливает металлические детали точных размеров на токарных, фрезерных и шлифовальных станках.",
+        "day_in_life": "Читает чертежи, настраивает станок, вытачивает деталь и сверяет её с жёсткими допусками.",
+        "who_fits": "Тот, кто любит точную ручную работу, следит за десятыми долями миллиметра и любит превращать металл в готовую деталь."
+      },
+      "en": {
+        "title": "Machinist",
+        "summary": "Shapes metal parts to exact sizes on lathes, mills, and grinders.",
+        "day_in_life": "Reads drawings, sets up the machine, cuts the part, and measures it against tight tolerances.",
+        "who_fits": "People who like precise hands-on work, care about tenths of a millimetre, and enjoy turning metal into exact parts."
+      }
+    },
+    "facts": [
+      {
+        "country": "RU",
+        "salary_low": 60000,
+        "salary_high": 150000,
+        "currency": "RUB",
+        "demand_note": "Высокий спрос",
+        "confidence": "estimate"
+      }
+    ]
+  },
+  {
+    "slug": "cnc-machinist",
+    "onet_code": "51-9161.00",
+    "field_tag": "trades",
+    "edu_duration_band": "vocational",
+    "regulated": false,
+    "riasec": {
+      "R": 0.8,
+      "I": 0.5,
+      "A": 0.2,
+      "S": 0.2,
+      "E": 0.2,
+      "C": 0.6
+    },
+    "riasec_source": "llm",
+    "values": {
+      "achievement": 0.6,
+      "autonomy": 0.5,
+      "recognition": 0.4,
+      "relationships": 0.3,
+      "stability": 0.7,
+      "conditions": 0.6
+    },
+    "subjects": {
+      "tech": 1.0,
+      "math": 0.7,
+      "cs": 0.5
+    },
+    "i18n": {
+      "ru": {
+        "title": "Оператор станков с ЧПУ",
+        "summary": "Программирует и обслуживает станки с числовым управлением, которые вытачивают детали из металла и пластика.",
+        "day_in_life": "Загружает программу, ставит инструмент и заготовку, запускает станок, проверяет первую деталь и правит код.",
+        "who_fits": "Тот, кто любит и технику, и логику, аккуратен и любит настроить процесс так, чтобы каждая деталь выходила точной."
+      },
+      "en": {
+        "title": "CNC Machinist",
+        "summary": "Programs and runs computer-controlled machines that cut metal and plastic parts.",
+        "day_in_life": "Loads a program, sets tools and material, starts the run, checks the first part, and adjusts the code.",
+        "who_fits": "People who like both machines and logic, are careful, and enjoy dialling in a process until every part comes out right."
+      }
+    },
+    "facts": [
+      {
+        "country": "RU",
+        "salary_low": 70000,
+        "salary_high": 160000,
+        "currency": "RUB",
+        "demand_note": "Высокий спрос",
+        "confidence": "estimate"
+      }
+    ]
+  },
+  {
+    "slug": "heavy-equipment-operator",
+    "onet_code": "47-2073.00",
+    "field_tag": "trades",
+    "edu_duration_band": "short",
+    "regulated": true,
+    "riasec": {
+      "R": 0.95,
+      "I": 0.2,
+      "A": 0.1,
+      "S": 0.2,
+      "E": 0.2,
+      "C": 0.3
+    },
+    "riasec_source": "llm",
+    "values": {
+      "achievement": 0.4,
+      "autonomy": 0.6,
+      "recognition": 0.3,
+      "relationships": 0.3,
+      "stability": 0.7,
+      "conditions": 0.9
+    },
+    "subjects": {
+      "tech": 1.0,
+      "phys": 0.4
+    },
+    "i18n": {
+      "ru": {
+        "title": "Машинист спецтехники",
+        "summary": "Управляет экскаваторами, погрузчиками, бульдозерами и кранами на стройках и в карьерах.",
+        "day_in_life": "Осматривает машину, перемещает грунт и материалы, копает и планирует площадку, работает по плану в любую погоду.",
+        "who_fits": "Тот, кто любит мощную технику, спокоен за рычагами и не боится долгих смен на открытом воздухе."
+      },
+      "en": {
+        "title": "Heavy Equipment Operator",
+        "summary": "Operates excavators, loaders, bulldozers, and cranes on construction and mining sites.",
+        "day_in_life": "Checks the machine, moves earth and materials, digs and grades, and works to the site plan in any weather.",
+        "who_fits": "People who like powerful machines, feel calm at the controls, and don't mind long days outdoors."
+      }
+    },
+    "facts": [
+      {
+        "country": "RU",
+        "salary_low": 70000,
+        "salary_high": 160000,
+        "currency": "RUB",
+        "demand_note": "Высокий спрос",
+        "confidence": "estimate"
+      }
+    ]
+  },
+  {
+    "slug": "aircraft-mechanic",
+    "onet_code": "49-3011.00",
+    "field_tag": "trades",
+    "edu_duration_band": "vocational",
+    "regulated": true,
+    "riasec": {
+      "R": 0.85,
+      "I": 0.65,
+      "A": 0.2,
+      "S": 0.3,
+      "E": 0.2,
+      "C": 0.6
+    },
+    "riasec_source": "llm",
+    "values": {
+      "achievement": 0.7,
+      "autonomy": 0.4,
+      "recognition": 0.5,
+      "relationships": 0.4,
+      "stability": 0.7,
+      "conditions": 0.7
+    },
+    "subjects": {
+      "phys": 0.9,
+      "tech": 1.0,
+      "math": 0.6
+    },
+    "i18n": {
+      "ru": {
+        "title": "Авиатехник",
+        "summary": "Осматривает, ремонтирует и обслуживает двигатели, системы и планер самолёта.",
+        "day_in_life": "Проводит проверки по регламенту, находит и устраняет неисправности, меняет узлы и подтверждает, что самолёт исправен.",
+        "who_fits": "Тот, кто дотошен, любит разбираться в технике и понимает, что ошибка здесь недопустима."
+      },
+      "en": {
+        "title": "Aircraft Mechanic",
+        "summary": "Inspects, repairs, and maintains aircraft engines, systems, and airframes.",
+        "day_in_life": "Runs checks by the manual, finds and fixes faults, replaces parts, and signs off that the aircraft is safe.",
+        "who_fits": "People who are meticulous, like solving technical puzzles, and understand that a mistake here is not an option."
+      }
+    },
+    "facts": [
+      {
+        "country": "RU",
+        "salary_low": 80000,
+        "salary_high": 180000,
+        "currency": "RUB",
+        "demand_note": "Стабильный спрос",
+        "confidence": "estimate"
+      }
+    ]
+  },
+  {
+    "slug": "lineworker",
+    "onet_code": "49-9051.00",
+    "field_tag": "trades",
+    "edu_duration_band": "vocational",
+    "regulated": true,
+    "riasec": {
+      "R": 0.9,
+      "I": 0.4,
+      "A": 0.1,
+      "S": 0.3,
+      "E": 0.3,
+      "C": 0.4
+    },
+    "riasec_source": "llm",
+    "values": {
+      "achievement": 0.6,
+      "autonomy": 0.5,
+      "recognition": 0.5,
+      "relationships": 0.5,
+      "stability": 0.7,
+      "conditions": 0.9
+    },
+    "subjects": {
+      "phys": 0.8,
+      "tech": 1.0,
+      "math": 0.4
+    },
+    "i18n": {
+      "ru": {
+        "title": "Электромонтёр линий электропередачи",
+        "summary": "Строит и ремонтирует линии электропередачи и оборудование, по которым ток идёт в дома и на предприятия.",
+        "day_in_life": "Поднимается на опоры или работает с люльки, тянет и подключает провода, меняет оборудование, восстанавливает питание после аварий.",
+        "who_fits": "Тот, кто не боится высоты и непогоды, аккуратно работает в команде и знает, что ток — не игрушка."
+      },
+      "en": {
+        "title": "Lineworker",
+        "summary": "Builds and repairs the power lines and equipment that carry electricity to homes and businesses.",
+        "day_in_life": "Climbs poles or works from a bucket, strings and connects cables, replaces gear, and restores power after faults.",
+        "who_fits": "People who aren't afraid of heights or rough weather, work carefully as a team, and know electricity isn't to be trifled with."
+      }
+    },
+    "facts": [
+      {
+        "country": "RU",
+        "salary_low": 60000,
+        "salary_high": 140000,
+        "currency": "RUB",
+        "demand_note": "Стабильный спрос",
+        "confidence": "estimate"
+      }
+    ]
+  },
+  {
+    "slug": "dental-hygienist",
+    "onet_code": "29-1292.00",
+    "field_tag": "health",
+    "edu_duration_band": "vocational",
+    "regulated": true,
+    "riasec": {
+      "R": 0.6,
+      "I": 0.5,
+      "A": 0.2,
+      "S": 0.8,
+      "E": 0.2,
+      "C": 0.5
+    },
+    "riasec_source": "llm",
+    "values": {
+      "achievement": 0.5,
+      "autonomy": 0.5,
+      "recognition": 0.4,
+      "relationships": 0.8,
+      "stability": 0.7,
+      "conditions": 0.5
+    },
+    "subjects": {
+      "bio": 0.9,
+      "chem": 0.6
+    },
+    "i18n": {
+      "ru": {
+        "title": "Стоматологический гигиенист",
+        "summary": "Чистит зубы профессионально, снимает налёт и камень и учит пациентов ухаживать за полостью рта.",
+        "day_in_life": "Осматривает зубы и дёсны, проводит чистку, делает снимки, объясняет пациенту, как правильно ухаживать за зубами.",
+        "who_fits": "Тот, кто аккуратен, работает руками и хочет спокойно помогать людям сохранять здоровье."
+      },
+      "en": {
+        "title": "Dental Hygienist",
+        "summary": "Cleans teeth professionally, removes plaque and tartar, and teaches patients how to care for their mouths.",
+        "day_in_life": "Examines teeth and gums, performs cleanings, takes x-rays, and shows patients how to look after their teeth.",
+        "who_fits": "People who are precise, good with their hands, and want to quietly help others stay healthy."
+      }
+    },
+    "facts": [
+      {
+        "country": "RU",
+        "salary_low": 45000,
+        "salary_high": 100000,
+        "currency": "RUB",
+        "demand_note": "Стабильный спрос",
+        "confidence": "estimate"
+      }
+    ]
+  },
+  {
+    "slug": "medical-assistant",
+    "onet_code": "31-9092.00",
+    "field_tag": "health",
+    "edu_duration_band": "short",
+    "regulated": false,
+    "riasec": {
+      "R": 0.5,
+      "I": 0.4,
+      "A": 0.2,
+      "S": 0.8,
+      "E": 0.3,
+      "C": 0.6
+    },
+    "riasec_source": "llm",
+    "values": {
+      "achievement": 0.4,
+      "autonomy": 0.3,
+      "recognition": 0.3,
+      "relationships": 0.8,
+      "stability": 0.7,
+      "conditions": 0.5
+    },
+    "subjects": {
+      "bio": 0.8,
+      "chem": 0.4
+    },
+    "i18n": {
+      "ru": {
+        "title": "Медицинский ассистент",
+        "summary": "Помогает врачу на приёме: измеряет показатели, готовит пациентов и ведёт записи.",
+        "day_in_life": "Встречает пациентов, измеряет давление и температуру, готовит кабинет, заполняет карты и помогает врачу.",
+        "who_fits": "Тот, кто собран, дружелюбен и любит поддерживать порядок и помогать людям."
+      },
+      "en": {
+        "title": "Medical Assistant",
+        "summary": "Supports a doctor during visits by taking vitals, preparing patients, and keeping records.",
+        "day_in_life": "Greets patients, measures blood pressure and temperature, preps the room, updates charts, and assists the doctor.",
+        "who_fits": "People who are organised, friendly, and like keeping things in order while helping others."
+      }
+    },
+    "facts": [
+      {
+        "country": "RU",
+        "salary_low": 40000,
+        "salary_high": 80000,
+        "currency": "RUB",
+        "demand_note": "Высокий спрос",
+        "confidence": "estimate"
+      }
+    ]
+  },
+  {
+    "slug": "radiologic-technologist",
+    "onet_code": "29-2034.00",
+    "field_tag": "health",
+    "edu_duration_band": "vocational",
+    "regulated": true,
+    "riasec": {
+      "R": 0.8,
+      "I": 0.6,
+      "A": 0.2,
+      "S": 0.5,
+      "E": 0.2,
+      "C": 0.6
+    },
+    "riasec_source": "llm",
+    "values": {
+      "achievement": 0.5,
+      "autonomy": 0.4,
+      "recognition": 0.4,
+      "relationships": 0.5,
+      "stability": 0.7,
+      "conditions": 0.5
+    },
+    "subjects": {
+      "bio": 0.8,
+      "phys": 0.7,
+      "math": 0.4
+    },
+    "i18n": {
+      "ru": {
+        "title": "Рентгенолаборант",
+        "summary": "Делает рентгеновские и другие снимки, которые помогают врачам поставить диагноз.",
+        "day_in_life": "Настраивает аппарат, правильно укладывает пациента, делает снимки, следит за безопасностью и передаёт результаты врачу.",
+        "who_fits": "Тот, кто любит технику, внимателен к деталям и спокойно работает с людьми."
+      },
+      "en": {
+        "title": "Radiologic Technologist",
+        "summary": "Takes x-rays and other medical images that help doctors make a diagnosis.",
+        "day_in_life": "Sets up the machine, positions the patient correctly, captures images, watches over safety, and passes results to the doctor.",
+        "who_fits": "People who like technology, pay attention to detail, and are calm working with patients."
+      }
+    },
+    "facts": [
+      {
+        "country": "RU",
+        "salary_low": 50000,
+        "salary_high": 100000,
+        "currency": "RUB",
+        "demand_note": "Стабильный спрос",
+        "confidence": "estimate"
+      }
+    ]
+  },
+  {
+    "slug": "respiratory-therapist",
+    "onet_code": "29-1126.00",
+    "field_tag": "health",
+    "edu_duration_band": "vocational",
+    "regulated": true,
+    "riasec": {
+      "R": 0.5,
+      "I": 0.7,
+      "A": 0.2,
+      "S": 0.8,
+      "E": 0.2,
+      "C": 0.5
+    },
+    "riasec_source": "llm",
+    "values": {
+      "achievement": 0.6,
+      "autonomy": 0.4,
+      "recognition": 0.4,
+      "relationships": 0.8,
+      "stability": 0.7,
+      "conditions": 0.4
+    },
+    "subjects": {
+      "bio": 0.9,
+      "chem": 0.7,
+      "phys": 0.4
+    },
+    "i18n": {
+      "ru": {
+        "title": "Респираторный терапевт",
+        "summary": "Помогает пациентам с проблемами дыхания: настраивает аппараты и облегчает их состояние.",
+        "day_in_life": "Осматривает пациентов, подбирает кислород и ингаляции, следит за дыханием, работает с аппаратами ИВЛ и объясняет, как дышать легче.",
+        "who_fits": "Тот, кто хочет помогать в трудные моменты, разбирается в технике и сохраняет спокойствие."
+      },
+      "en": {
+        "title": "Respiratory Therapist",
+        "summary": "Helps patients with breathing problems by setting up equipment and easing their condition.",
+        "day_in_life": "Assesses patients, adjusts oxygen and inhalers, monitors breathing, works with ventilators, and shows people how to breathe easier.",
+        "who_fits": "People who want to help in hard moments, understand equipment, and stay calm under pressure."
+      }
+    },
+    "facts": [
+      {
+        "country": "RU",
+        "salary_low": 50000,
+        "salary_high": 110000,
+        "currency": "RUB",
+        "demand_note": "Растущий спрос",
+        "confidence": "estimate"
+      }
+    ]
+  },
+  {
+    "slug": "occupational-therapist",
+    "onet_code": "29-1122.00",
+    "field_tag": "health",
+    "edu_duration_band": "master",
+    "regulated": true,
+    "riasec": {
+      "R": 0.4,
+      "I": 0.6,
+      "A": 0.4,
+      "S": 0.9,
+      "E": 0.3,
+      "C": 0.4
+    },
+    "riasec_source": "llm",
+    "values": {
+      "achievement": 0.6,
+      "autonomy": 0.6,
+      "recognition": 0.5,
+      "relationships": 0.9,
+      "stability": 0.6,
+      "conditions": 0.6
+    },
+    "subjects": {
+      "bio": 0.8,
+      "soc": 0.6,
+      "chem": 0.4
+    },
+    "i18n": {
+      "ru": {
+        "title": "Эрготерапевт",
+        "summary": "Помогает людям после травм и болезней вернуться к обычной жизни и повседневным делам.",
+        "day_in_life": "Оценивает возможности пациента, подбирает упражнения и приспособления, тренирует бытовые навыки и радуется маленьким победам вместе с человеком.",
+        "who_fits": "Тот, кто терпелив, изобретателен и хочет помогать людям снова стать самостоятельными."
+      },
+      "en": {
+        "title": "Occupational Therapist",
+        "summary": "Helps people recover after injury or illness so they can return to everyday life and activities.",
+        "day_in_life": "Assesses what a patient can do, chooses exercises and aids, practises daily-living skills, and celebrates small wins together.",
+        "who_fits": "People who are patient, inventive, and want to help others become independent again."
+      }
+    },
+    "facts": [
+      {
+        "country": "RU",
+        "salary_low": 50000,
+        "salary_high": 120000,
+        "currency": "RUB",
+        "demand_note": "Растущий спрос",
+        "confidence": "estimate"
+      }
+    ]
+  },
+  {
+    "slug": "speech-language-pathologist",
+    "onet_code": "29-1127.00",
+    "field_tag": "health",
+    "edu_duration_band": "master",
+    "regulated": true,
+    "riasec": {
+      "R": 0.2,
+      "I": 0.7,
+      "A": 0.4,
+      "S": 0.9,
+      "E": 0.3,
+      "C": 0.4
+    },
+    "riasec_source": "llm",
+    "values": {
+      "achievement": 0.6,
+      "autonomy": 0.6,
+      "recognition": 0.5,
+      "relationships": 0.9,
+      "stability": 0.6,
+      "conditions": 0.6
+    },
+    "subjects": {
+      "bio": 0.7,
+      "rus": 0.6,
+      "soc": 0.5
+    },
+    "i18n": {
+      "ru": {
+        "title": "Логопед",
+        "summary": "Помогает детям и взрослым научиться говорить чётко и справиться с нарушениями речи.",
+        "day_in_life": "Проводит занятия, играет и делает упражнения на звуки, оценивает прогресс и советует, как заниматься дома.",
+        "who_fits": "Тот, кто терпелив, любит общение и радуется, когда у человека получается заговорить."
+      },
+      "en": {
+        "title": "Speech-Language Pathologist",
+        "summary": "Helps children and adults learn to speak clearly and overcome speech and language difficulties.",
+        "day_in_life": "Runs sessions, plays sound games and exercises, tracks progress, and advises families on practice at home.",
+        "who_fits": "People who are patient, love communication, and light up when someone finds their voice."
+      }
+    },
+    "facts": [
+      {
+        "country": "RU",
+        "salary_low": 40000,
+        "salary_high": 110000,
+        "currency": "RUB",
+        "demand_note": "Высокий спрос",
+        "confidence": "estimate"
+      }
+    ]
+  },
+  {
+    "slug": "dietitian",
+    "onet_code": "29-1031.00",
+    "field_tag": "health",
+    "edu_duration_band": "bachelor",
+    "regulated": true,
+    "riasec": {
+      "R": 0.3,
+      "I": 0.7,
+      "A": 0.3,
+      "S": 0.8,
+      "E": 0.3,
+      "C": 0.5
+    },
+    "riasec_source": "llm",
+    "values": {
+      "achievement": 0.6,
+      "autonomy": 0.6,
+      "recognition": 0.5,
+      "relationships": 0.8,
+      "stability": 0.6,
+      "conditions": 0.6
+    },
+    "subjects": {
+      "bio": 0.8,
+      "chem": 0.8
+    },
+    "i18n": {
+      "ru": {
+        "title": "Диетолог",
+        "summary": "Составляет питание под здоровье и цели человека и помогает выстроить полезные привычки.",
+        "day_in_life": "Беседует с человеком о питании и здоровье, рассчитывает рацион, объясняет выбор продуктов и следит за результатом.",
+        "who_fits": "Тот, кто интересуется здоровьем и питанием и любит помогать людям меняться к лучшему."
+      },
+      "en": {
+        "title": "Dietitian",
+        "summary": "Builds eating plans around a person's health and goals and helps them form better habits.",
+        "day_in_life": "Talks with people about food and health, plans their diet, explains food choices, and follows their progress.",
+        "who_fits": "People who care about health and nutrition and enjoy helping others change for the better."
+      }
+    },
+    "facts": [
+      {
+        "country": "RU",
+        "salary_low": 50000,
+        "salary_high": 120000,
+        "currency": "RUB",
+        "demand_note": "Растущий спрос",
+        "confidence": "estimate"
+      }
+    ]
+  },
+  {
+    "slug": "surgical-technologist",
+    "onet_code": "29-2055.00",
+    "field_tag": "health",
+    "edu_duration_band": "vocational",
+    "regulated": true,
+    "riasec": {
+      "R": 0.8,
+      "I": 0.4,
+      "A": 0.2,
+      "S": 0.5,
+      "E": 0.2,
+      "C": 0.6
+    },
+    "riasec_source": "llm",
+    "values": {
+      "achievement": 0.5,
+      "autonomy": 0.3,
+      "recognition": 0.4,
+      "relationships": 0.5,
+      "stability": 0.7,
+      "conditions": 0.4
+    },
+    "subjects": {
+      "bio": 0.8,
+      "chem": 0.5
+    },
+    "i18n": {
+      "ru": {
+        "title": "Операционный техник",
+        "summary": "Готовит операционную и инструменты и помогает хирургу во время операции.",
+        "day_in_life": "Стерилизует и раскладывает инструменты, готовит операционную, подаёт нужное хирургу и следит за стерильностью.",
+        "who_fits": "Тот, кто собран, работает руками и сохраняет спокойствие в ответственные моменты."
+      },
+      "en": {
+        "title": "Surgical Technologist",
+        "summary": "Prepares the operating room and instruments and assists the surgeon during operations.",
+        "day_in_life": "Sterilises and lays out instruments, sets up the operating room, hands tools to the surgeon, and keeps everything sterile.",
+        "who_fits": "People who are focused, good with their hands, and stay calm in high-stakes moments."
+      }
+    },
+    "facts": [
+      {
+        "country": "RU",
+        "salary_low": 45000,
+        "salary_high": 100000,
+        "currency": "RUB",
+        "demand_note": "Стабильный спрос",
+        "confidence": "estimate"
+      }
+    ]
+  },
+  {
+    "slug": "optometrist",
+    "onet_code": "29-1041.00",
+    "field_tag": "health",
+    "edu_duration_band": "doctoral",
+    "regulated": true,
+    "riasec": {
+      "R": 0.4,
+      "I": 0.8,
+      "A": 0.2,
+      "S": 0.6,
+      "E": 0.3,
+      "C": 0.5
+    },
+    "riasec_source": "llm",
+    "values": {
+      "achievement": 0.7,
+      "autonomy": 0.7,
+      "recognition": 0.5,
+      "relationships": 0.6,
+      "stability": 0.7,
+      "conditions": 0.6
+    },
+    "subjects": {
+      "bio": 0.9,
+      "phys": 0.6,
+      "chem": 0.4
+    },
+    "i18n": {
+      "ru": {
+        "title": "Оптометрист",
+        "summary": "Проверяет зрение, подбирает очки и линзы и находит болезни глаз на ранней стадии.",
+        "day_in_life": "Проверяет зрение на приборах, подбирает коррекцию, осматривает глаза и объясняет пациенту, как беречь зрение.",
+        "who_fits": "Тот, кто внимателен, любит разбираться в деталях и хочет помогать людям хорошо видеть."
+      },
+      "en": {
+        "title": "Optometrist",
+        "summary": "Tests eyesight, prescribes glasses and lenses, and catches eye diseases early.",
+        "day_in_life": "Checks vision with instruments, fits corrections, examines the eyes, and explains how to protect eyesight.",
+        "who_fits": "People who are attentive, like working through detail, and want to help others see well."
+      }
+    },
+    "facts": [
+      {
+        "country": "RU",
+        "salary_low": 60000,
+        "salary_high": 160000,
+        "currency": "RUB",
+        "demand_note": "Стабильный спрос",
+        "confidence": "estimate"
+      }
+    ]
+  },
+  {
+    "slug": "phlebotomist",
+    "onet_code": "31-9097.00",
+    "field_tag": "health",
+    "edu_duration_band": "short",
+    "regulated": false,
+    "riasec": {
+      "R": 0.8,
+      "I": 0.3,
+      "A": 0.1,
+      "S": 0.5,
+      "E": 0.2,
+      "C": 0.7
+    },
+    "riasec_source": "llm",
+    "values": {
+      "achievement": 0.4,
+      "autonomy": 0.3,
+      "recognition": 0.3,
+      "relationships": 0.6,
+      "stability": 0.7,
+      "conditions": 0.4
+    },
+    "subjects": {
+      "bio": 0.8,
+      "chem": 0.4
+    },
+    "i18n": {
+      "ru": {
+        "title": "Флеботомист",
+        "summary": "Берёт кровь на анализы аккуратно и безопасно и правильно оформляет пробы.",
+        "day_in_life": "Встречает пациентов, берёт кровь из вены, подписывает пробирки, ведёт записи и успокаивает тех, кто боится.",
+        "who_fits": "Тот, кто аккуратен, спокоен и умеет расположить к себе людей."
+      },
+      "en": {
+        "title": "Phlebotomist",
+        "summary": "Draws blood for tests carefully and safely and labels the samples correctly.",
+        "day_in_life": "Greets patients, draws blood from a vein, labels tubes, keeps records, and reassures those who are nervous.",
+        "who_fits": "People who are precise, calm, and can put nervous patients at ease."
+      }
+    },
+    "facts": [
+      {
+        "country": "RU",
+        "salary_low": 35000,
+        "salary_high": 70000,
+        "currency": "RUB",
+        "confidence": "estimate",
+        "demand_note": "Высокий спрос"
+      }
+    ]
+  },
+  {
+    "slug": "data-engineer",
+    "onet_code": "15-1299.00",
+    "field_tag": "tech",
+    "edu_duration_band": "bachelor",
+    "regulated": false,
+    "riasec": {
+      "R": 0.4,
+      "I": 0.9,
+      "A": 0.2,
+      "S": 0.2,
+      "E": 0.3,
+      "C": 0.8
+    },
+    "riasec_source": "llm",
+    "values": {
+      "achievement": 0.8,
+      "autonomy": 0.7,
+      "recognition": 0.4,
+      "relationships": 0.4,
+      "stability": 0.6,
+      "conditions": 0.6
+    },
+    "subjects": {
+      "cs": 1.0,
+      "math": 0.9,
+      "eng": 0.5
+    },
+    "i18n": {
+      "ru": {
+        "title": "Инженер данных",
+        "summary": "Строит и поддерживает системы, которые собирают, хранят и передают большие объёмы данных.",
+        "day_in_life": "Пишет пайплайны загрузки данных, чистит и связывает таблицы, следит за нагрузкой хранилищ, чинит сбои и настраивает потоки для аналитиков.",
+        "who_fits": "Тот, кто любит порядок в данных, аккуратен с деталями и умеет доводить сложные потоки до стабильной работы."
+      },
+      "en": {
+        "title": "Data Engineer",
+        "summary": "Builds and maintains systems that collect, store, and move large amounts of data.",
+        "day_in_life": "Writes data pipelines, cleans and joins tables, watches storage load, fixes failures, and sets up flows for analysts.",
+        "who_fits": "People who like order in data, are careful with detail, and can turn messy flows into stable systems."
+      }
+    },
+    "facts": [
+      {
+        "country": "RU",
+        "salary_low": 150000,
+        "salary_high": 350000,
+        "currency": "RUB",
+        "demand_note": "Высокий спрос",
+        "confidence": "estimate"
+      }
+    ]
+  },
+  {
+    "slug": "machine-learning-engineer",
+    "onet_code": "15-2051.00",
+    "field_tag": "tech",
+    "edu_duration_band": "master",
+    "regulated": false,
+    "riasec": {
+      "R": 0.4,
+      "I": 0.9,
+      "A": 0.3,
+      "S": 0.2,
+      "E": 0.3,
+      "C": 0.7
+    },
+    "riasec_source": "llm",
+    "values": {
+      "achievement": 0.8,
+      "autonomy": 0.7,
+      "recognition": 0.6,
+      "relationships": 0.3,
+      "stability": 0.5,
+      "conditions": 0.6
+    },
+    "subjects": {
+      "math": 1.0,
+      "cs": 1.0,
+      "phys": 0.4
+    },
+    "i18n": {
+      "ru": {
+        "title": "Инженер по машинному обучению",
+        "summary": "Создаёт и обучает модели, которые распознают образы, прогнозируют и принимают решения по данным.",
+        "day_in_life": "Готовит данные, обучает и проверяет модели, подбирает параметры, выводит рабочие модели в продукт и следит за их качеством.",
+        "who_fits": "Тот, кто любит математику и эксперименты, готов долго разбираться и терпелив к неудачным попыткам."
+      },
+      "en": {
+        "title": "Machine Learning Engineer",
+        "summary": "Builds and trains models that recognise patterns, make predictions, and decide from data.",
+        "day_in_life": "Prepares data, trains and tests models, tunes parameters, ships working models into products, and watches their quality.",
+        "who_fits": "People who like maths and experiments, are ready to dig deep, and stay patient with failed attempts."
+      }
+    },
+    "facts": [
+      {
+        "country": "RU",
+        "salary_low": 200000,
+        "salary_high": 350000,
+        "currency": "RUB",
+        "demand_note": "Высокий спрос, конкуренция за сильных специалистов",
+        "confidence": "estimate"
+      }
+    ]
+  },
+  {
+    "slug": "it-support-specialist",
+    "onet_code": "15-1232.00",
+    "field_tag": "tech",
+    "edu_duration_band": "vocational",
+    "regulated": false,
+    "riasec": {
+      "R": 0.6,
+      "I": 0.5,
+      "A": 0.2,
+      "S": 0.8,
+      "E": 0.3,
+      "C": 0.7
+    },
+    "riasec_source": "llm",
+    "values": {
+      "achievement": 0.5,
+      "autonomy": 0.4,
+      "recognition": 0.4,
+      "relationships": 0.7,
+      "stability": 0.7,
+      "conditions": 0.6
+    },
+    "subjects": {
+      "cs": 0.9,
+      "math": 0.5,
+      "eng": 0.5
+    },
+    "i18n": {
+      "ru": {
+        "title": "Специалист технической поддержки",
+        "summary": "Помогает пользователям решать проблемы с компьютерами, программами и сетью.",
+        "day_in_life": "Принимает обращения, разбирается в причине сбоя, настраивает технику и программы, объясняет решение простыми словами и ведёт заявки.",
+        "who_fits": "Тот, кто спокойно объясняет, любит помогать людям и не теряется, когда что-то ломается."
+      },
+      "en": {
+        "title": "IT Support Specialist",
+        "summary": "Helps users solve problems with computers, software, and the network.",
+        "day_in_life": "Takes requests, works out the cause of a fault, sets up devices and programs, explains the fix in plain words, and tracks tickets.",
+        "who_fits": "People who stay calm explaining things, like helping others, and don't panic when something breaks."
+      }
+    },
+    "facts": [
+      {
+        "country": "RU",
+        "salary_low": 60000,
+        "salary_high": 140000,
+        "currency": "RUB",
+        "demand_note": "Стабильный спрос, хороший вход в ИТ",
+        "confidence": "estimate"
+      }
+    ]
+  },
+  {
+    "slug": "network-engineer",
+    "onet_code": "15-1241.00",
+    "field_tag": "tech",
+    "edu_duration_band": "bachelor",
+    "regulated": false,
+    "riasec": {
+      "R": 0.8,
+      "I": 0.7,
+      "A": 0.2,
+      "S": 0.3,
+      "E": 0.3,
+      "C": 0.7
+    },
+    "riasec_source": "llm",
+    "values": {
+      "achievement": 0.7,
+      "autonomy": 0.6,
+      "recognition": 0.4,
+      "relationships": 0.4,
+      "stability": 0.7,
+      "conditions": 0.6
+    },
+    "subjects": {
+      "cs": 1.0,
+      "math": 0.6,
+      "phys": 0.5
+    },
+    "i18n": {
+      "ru": {
+        "title": "Сетевой инженер",
+        "summary": "Проектирует, настраивает и поддерживает компьютерные сети, чтобы связь работала быстро и надёжно.",
+        "day_in_life": "Настраивает оборудование и маршруты, следит за нагрузкой сети, ищет и устраняет обрывы связи, планирует расширение и защиту сети.",
+        "who_fits": "Тот, кто любит технику, точность и умеет спокойно искать причину неполадки шаг за шагом."
+      },
+      "en": {
+        "title": "Network Engineer",
+        "summary": "Designs, sets up, and maintains computer networks so connections stay fast and reliable.",
+        "day_in_life": "Configures hardware and routes, watches network load, finds and fixes outages, and plans network growth and security.",
+        "who_fits": "People who like hardware and precision and can calmly trace a fault step by step."
+      }
+    },
+    "facts": [
+      {
+        "country": "RU",
+        "salary_low": 120000,
+        "salary_high": 250000,
+        "currency": "RUB",
+        "demand_note": "Стабильный спрос",
+        "confidence": "estimate"
+      }
+    ]
+  },
+  {
+    "slug": "database-administrator",
+    "onet_code": "15-1242.00",
+    "field_tag": "tech",
+    "edu_duration_band": "bachelor",
+    "regulated": false,
+    "riasec": {
+      "R": 0.4,
+      "I": 0.7,
+      "A": 0.2,
+      "S": 0.2,
+      "E": 0.3,
+      "C": 0.9
+    },
+    "riasec_source": "llm",
+    "values": {
+      "achievement": 0.7,
+      "autonomy": 0.6,
+      "recognition": 0.4,
+      "relationships": 0.4,
+      "stability": 0.8,
+      "conditions": 0.6
+    },
+    "subjects": {
+      "cs": 1.0,
+      "math": 0.7
+    },
+    "i18n": {
+      "ru": {
+        "title": "Администратор баз данных",
+        "summary": "Отвечает за хранение данных компании: их сохранность, скорость доступа и резервные копии.",
+        "day_in_life": "Настраивает и оптимизирует базы, делает резервные копии, следит за доступами и производительностью, восстанавливает данные после сбоев.",
+        "who_fits": "Тот, кто любит порядок и надёжность, внимателен к деталям и ценит стабильность."
+      },
+      "en": {
+        "title": "Database Administrator",
+        "summary": "Looks after a company's data: keeping it safe, fast to access, and backed up.",
+        "day_in_life": "Sets up and tunes databases, runs backups, manages access and performance, and restores data after failures.",
+        "who_fits": "People who like order and reliability, are careful with detail, and value stability."
+      }
+    },
+    "facts": [
+      {
+        "country": "RU",
+        "salary_low": 130000,
+        "salary_high": 280000,
+        "currency": "RUB",
+        "demand_note": "Стабильный спрос",
+        "confidence": "estimate"
+      }
+    ]
+  },
+  {
+    "slug": "financial-advisor",
+    "onet_code": "13-2052.00",
+    "field_tag": "finance",
+    "edu_duration_band": "bachelor",
+    "regulated": true,
+    "riasec": {
+      "R": 0.2,
+      "I": 0.5,
+      "A": 0.2,
+      "S": 0.7,
+      "E": 0.8,
+      "C": 0.6
+    },
+    "riasec_source": "llm",
+    "values": {
+      "achievement": 0.7,
+      "autonomy": 0.6,
+      "recognition": 0.6,
+      "relationships": 0.7,
+      "stability": 0.5,
+      "conditions": 0.6
+    },
+    "subjects": {
+      "math": 0.8,
+      "soc": 0.7,
+      "eng": 0.4
+    },
+    "i18n": {
+      "ru": {
+        "title": "Финансовый консультант",
+        "summary": "Помогает людям планировать деньги: сбережения, инвестиции, пенсию и защиту от рисков.",
+        "day_in_life": "Встречается с клиентами, разбирает их цели и доходы, предлагает план вложений и страховки, объясняет риски и следит за результатом.",
+        "who_fits": "Тот, кто хорошо считает, умеет объяснять и заслуживать доверие людей."
+      },
+      "en": {
+        "title": "Financial Advisor",
+        "summary": "Helps people plan their money: savings, investments, retirement, and protection from risk.",
+        "day_in_life": "Meets clients, reviews their goals and income, proposes an investment and insurance plan, explains risks, and tracks results.",
+        "who_fits": "People who are good with numbers, can explain clearly, and earn others' trust."
+      }
+    },
+    "facts": [
+      {
+        "country": "RU",
+        "salary_low": 80000,
+        "salary_high": 250000,
+        "currency": "RUB",
+        "demand_note": "Спрос зависит от клиентской базы, часть дохода от процента",
+        "confidence": "estimate"
+      }
+    ]
+  },
+  {
+    "slug": "actuary",
+    "onet_code": "15-2011.00",
+    "field_tag": "finance",
+    "edu_duration_band": "bachelor",
+    "regulated": true,
+    "riasec": {
+      "R": 0.2,
+      "I": 0.9,
+      "A": 0.2,
+      "S": 0.2,
+      "E": 0.4,
+      "C": 0.9
+    },
+    "riasec_source": "llm",
+    "values": {
+      "achievement": 0.8,
+      "autonomy": 0.6,
+      "recognition": 0.5,
+      "relationships": 0.3,
+      "stability": 0.8,
+      "conditions": 0.6
+    },
+    "subjects": {
+      "math": 1.0,
+      "soc": 0.6,
+      "cs": 0.5
+    },
+    "i18n": {
+      "ru": {
+        "title": "Актуарий",
+        "summary": "Считает вероятность рисков и убытков, чтобы страховые и пенсионные компании назначали верные цены.",
+        "day_in_life": "Собирает статистику, строит математические модели, рассчитывает тарифы и резервы, готовит отчёты и объясняет выводы руководству.",
+        "who_fits": "Тот, кто любит математику и статистику, усидчив и ценит точность в расчётах."
+      },
+      "en": {
+        "title": "Actuary",
+        "summary": "Measures the odds of risk and loss so insurance and pension firms can set correct prices.",
+        "day_in_life": "Gathers statistics, builds mathematical models, calculates rates and reserves, prepares reports, and explains findings to managers.",
+        "who_fits": "People who love maths and statistics, can sit with detail, and value precise numbers."
+      }
+    },
+    "facts": [
+      {
+        "country": "RU",
+        "salary_low": 120000,
+        "salary_high": 300000,
+        "currency": "RUB",
+        "demand_note": "Узкая, но востребованная профессия, требует экзаменов",
+        "confidence": "estimate"
+      }
+    ]
+  },
+  {
+    "slug": "management-consultant",
+    "onet_code": "13-1111.00",
+    "field_tag": "business",
+    "edu_duration_band": "master",
+    "regulated": false,
+    "riasec": {
+      "R": 0.2,
+      "I": 0.7,
+      "A": 0.3,
+      "S": 0.6,
+      "E": 0.8,
+      "C": 0.5
+    },
+    "riasec_source": "llm",
+    "values": {
+      "achievement": 0.8,
+      "autonomy": 0.6,
+      "recognition": 0.7,
+      "relationships": 0.6,
+      "stability": 0.4,
+      "conditions": 0.5
+    },
+    "subjects": {
+      "soc": 0.8,
+      "math": 0.7,
+      "eng": 0.5
+    },
+    "i18n": {
+      "ru": {
+        "title": "Консультант по управлению",
+        "summary": "Помогает компаниям находить проблемы в работе и предлагает, как работать лучше и зарабатывать больше.",
+        "day_in_life": "Изучает данные компании, беседует с сотрудниками, ищет узкие места, готовит презентации с решениями и защищает их перед руководством.",
+        "who_fits": "Тот, кто быстро разбирается в новом, любит анализировать и убедительно доносит идеи."
+      },
+      "en": {
+        "title": "Management Consultant",
+        "summary": "Helps companies find problems in how they work and advises how to work better and earn more.",
+        "day_in_life": "Studies company data, talks with staff, finds bottlenecks, builds presentations with solutions, and defends them to leaders.",
+        "who_fits": "People who pick up new fields fast, like analysis, and can present ideas convincingly."
+      }
+    },
+    "facts": [
+      {
+        "country": "RU",
+        "salary_low": 120000,
+        "salary_high": 300000,
+        "currency": "RUB",
+        "demand_note": "Средний спрос, выше в крупных городах",
+        "confidence": "estimate"
+      }
+    ]
+  },
+  {
+    "slug": "operations-manager",
+    "onet_code": "11-1021.00",
+    "field_tag": "business",
+    "edu_duration_band": "bachelor",
+    "regulated": false,
+    "riasec": {
+      "R": 0.3,
+      "I": 0.4,
+      "A": 0.2,
+      "S": 0.5,
+      "E": 0.8,
+      "C": 0.7
+    },
+    "riasec_source": "llm",
+    "values": {
+      "achievement": 0.8,
+      "autonomy": 0.6,
+      "recognition": 0.6,
+      "relationships": 0.6,
+      "stability": 0.6,
+      "conditions": 0.5
+    },
+    "subjects": {
+      "soc": 0.8,
+      "math": 0.6
+    },
+    "i18n": {
+      "ru": {
+        "title": "Операционный менеджер",
+        "summary": "Руководит ежедневной работой компании или отдела, чтобы всё шло по плану и в срок.",
+        "day_in_life": "Ставит задачи команде, контролирует сроки и бюджеты, решает возникающие проблемы, налаживает процессы и отчитывается о результатах.",
+        "who_fits": "Тот, кто умеет организовывать людей, держит много дел в голове и берёт ответственность за результат."
+      },
+      "en": {
+        "title": "Operations Manager",
+        "summary": "Runs the day-to-day work of a company or department so everything stays on plan and on time.",
+        "day_in_life": "Assigns tasks to the team, watches deadlines and budgets, solves problems as they come, improves processes, and reports on results.",
+        "who_fits": "People who can organise others, keep many things in mind, and take responsibility for the outcome."
+      }
+    },
+    "facts": [
+      {
+        "country": "RU",
+        "salary_low": 100000,
+        "salary_high": 250000,
+        "currency": "RUB",
+        "demand_note": "Стабильный спрос",
+        "confidence": "estimate"
+      }
+    ]
+  },
+  {
+    "slug": "logistician",
+    "onet_code": "13-1081.00",
+    "field_tag": "business",
+    "edu_duration_band": "bachelor",
+    "regulated": false,
+    "riasec": {
+      "R": 0.4,
+      "I": 0.5,
+      "A": 0.2,
+      "S": 0.3,
+      "E": 0.6,
+      "C": 0.8
+    },
+    "riasec_source": "llm",
+    "values": {
+      "achievement": 0.7,
+      "autonomy": 0.5,
+      "recognition": 0.4,
+      "relationships": 0.5,
+      "stability": 0.6,
+      "conditions": 0.5
+    },
+    "subjects": {
+      "math": 0.7,
+      "soc": 0.7,
+      "geo": 0.4
+    },
+    "i18n": {
+      "ru": {
+        "title": "Логист",
+        "summary": "Планирует движение товаров и грузов, чтобы всё доставлялось вовремя и без лишних затрат.",
+        "day_in_life": "Составляет маршруты, договаривается с перевозчиками, следит за складом и сроками поставок, ищет способы возить дешевле и быстрее.",
+        "who_fits": "Тот, кто любит порядок, хорошо считает и умеет держать под контролем много деталей сразу."
+      },
+      "en": {
+        "title": "Logistician",
+        "summary": "Plans the movement of goods and cargo so everything arrives on time and without extra cost.",
+        "day_in_life": "Plans routes, negotiates with carriers, tracks warehouse stock and delivery dates, and finds ways to ship cheaper and faster.",
+        "who_fits": "People who like order, are good with numbers, and can keep many details under control at once."
+      }
+    },
+    "facts": [
+      {
+        "country": "RU",
+        "salary_low": 80000,
+        "salary_high": 180000,
+        "currency": "RUB",
+        "demand_note": "Стабильный спрос",
+        "confidence": "estimate"
+      }
+    ]
+  },
+  {
+    "slug": "real-estate-agent",
+    "onet_code": "41-9022.00",
+    "field_tag": "business",
+    "edu_duration_band": "vocational",
+    "regulated": true,
+    "riasec": {
+      "R": 0.2,
+      "I": 0.2,
+      "A": 0.3,
+      "S": 0.7,
+      "E": 0.9,
+      "C": 0.4
+    },
+    "riasec_source": "llm",
+    "values": {
+      "achievement": 0.7,
+      "autonomy": 0.8,
+      "recognition": 0.6,
+      "relationships": 0.7,
+      "stability": 0.3,
+      "conditions": 0.5
+    },
+    "subjects": {
+      "soc": 0.8,
+      "math": 0.5
+    },
+    "i18n": {
+      "ru": {
+        "title": "Агент по недвижимости",
+        "summary": "Помогает людям покупать, продавать и снимать жильё, сводя вместе продавцов и покупателей.",
+        "day_in_life": "Ищет объекты и клиентов, показывает квартиры, ведёт переговоры о цене, готовит документы и сопровождает сделку до подписания.",
+        "who_fits": "Тот, кто общительный, настойчивый и готов к доходу, который зависит от числа сделок."
+      },
+      "en": {
+        "title": "Real Estate Agent",
+        "summary": "Helps people buy, sell, and rent property by bringing sellers and buyers together.",
+        "day_in_life": "Finds listings and clients, shows homes, negotiates price, prepares documents, and guides the deal through to signing.",
+        "who_fits": "People who are outgoing, persistent, and comfortable with income that depends on the number of deals."
+      }
+    },
+    "facts": [
+      {
+        "country": "RU",
+        "salary_low": 50000,
+        "salary_high": 250000,
+        "currency": "RUB",
+        "demand_note": "Доход от процента со сделок, сильно зависит от активности",
+        "confidence": "estimate"
+      }
+    ]
+  },
+  {
+    "slug": "insurance-agent",
+    "onet_code": "41-3021.00",
+    "field_tag": "business",
+    "edu_duration_band": "vocational",
+    "regulated": true,
+    "riasec": {
+      "R": 0.2,
+      "I": 0.3,
+      "A": 0.2,
+      "S": 0.7,
+      "E": 0.9,
+      "C": 0.5
+    },
+    "riasec_source": "llm",
+    "values": {
+      "achievement": 0.7,
+      "autonomy": 0.7,
+      "recognition": 0.6,
+      "relationships": 0.7,
+      "stability": 0.4,
+      "conditions": 0.5
+    },
+    "subjects": {
+      "soc": 0.8,
+      "math": 0.6
+    },
+    "i18n": {
+      "ru": {
+        "title": "Страховой агент",
+        "summary": "Продаёт страховки и помогает клиентам выбрать защиту для жизни, здоровья, машины или имущества.",
+        "day_in_life": "Ищет клиентов, выясняет их риски, подбирает подходящие полисы, оформляет договоры и помогает при наступлении страхового случая.",
+        "who_fits": "Тот, кто общительный, убедительный и готов к доходу, который зависит от числа проданных полисов."
+      },
+      "en": {
+        "title": "Insurance Agent",
+        "summary": "Sells insurance and helps clients choose cover for life, health, cars, or property.",
+        "day_in_life": "Finds clients, works out their risks, matches suitable policies, signs contracts, and helps when a claim happens.",
+        "who_fits": "People who are outgoing, persuasive, and comfortable with income that depends on policies sold."
+      }
+    },
+    "facts": [
+      {
+        "country": "RU",
+        "salary_low": 40000,
+        "salary_high": 150000,
+        "currency": "RUB",
+        "demand_note": "Доход во многом от процента с продаж",
+        "confidence": "estimate"
+      }
+    ]
+  },
+  {
+    "slug": "art-director",
+    "onet_code": "27-1011.00",
+    "field_tag": "arts",
+    "edu_duration_band": "bachelor",
+    "riasec": {
+      "R": 0.2,
+      "I": 0.4,
+      "A": 0.9,
+      "S": 0.3,
+      "E": 0.7,
+      "C": 0.4
+    },
+    "riasec_source": "llm",
+    "values": {
+      "achievement": 0.7,
+      "autonomy": 0.7,
+      "recognition": 0.8,
+      "relationships": 0.6,
+      "stability": 0.4,
+      "conditions": 0.6
+    },
+    "subjects": {
+      "art": 1.0,
+      "lit": 0.5,
+      "soc": 0.4
+    },
+    "i18n": {
+      "ru": {
+        "title": "Арт-директор",
+        "summary": "Отвечает за визуальный стиль проекта и ведёт команду дизайнеров к единому образу.",
+        "day_in_life": "Задаёт творческое направление, смотрит макеты команды, даёт правки, защищает концепции перед заказчиком и следит за единым стилем.",
+        "who_fits": "Тот, кто обладает вкусом, видит образ целиком и любит вести за собой команду."
+      },
+      "en": {
+        "title": "Art Director",
+        "summary": "Leads the visual style of a project and directs a team of designers toward one look.",
+        "day_in_life": "Sets the creative direction, reviews the team's layouts, gives feedback, presents concepts to clients, and keeps everything on brand.",
+        "who_fits": "People who have strong taste, can picture the whole look, and enjoy guiding others toward it."
+      }
+    },
+    "facts": [
+      {
+        "country": "RU",
+        "salary_low": 100000,
+        "salary_high": 350000,
+        "currency": "RUB",
+        "demand_note": "Средний спрос",
+        "confidence": "estimate"
+      }
+    ]
+  },
+  {
+    "slug": "industrial-designer",
+    "onet_code": "27-1021.00",
+    "field_tag": "arts",
+    "edu_duration_band": "bachelor",
+    "riasec": {
+      "R": 0.6,
+      "I": 0.6,
+      "A": 0.9,
+      "S": 0.2,
+      "E": 0.4,
+      "C": 0.4
+    },
+    "riasec_source": "llm",
+    "values": {
+      "achievement": 0.7,
+      "autonomy": 0.7,
+      "recognition": 0.6,
+      "relationships": 0.4,
+      "stability": 0.5,
+      "conditions": 0.6
+    },
+    "subjects": {
+      "art": 1.0,
+      "tech": 0.6,
+      "phys": 0.5
+    },
+    "i18n": {
+      "ru": {
+        "title": "Промышленный дизайнер",
+        "summary": "Придумывает форму и удобство физических вещей — мебели, техники, инструментов, — чтобы они были и красивыми, и удобными.",
+        "day_in_life": "Рисует идеи, строит 3D-модели и прототипы, проверяет, как предмет лежит в руке, и дорабатывает его вместе с инженерами.",
+        "who_fits": "Тот, кто любит и рисовать, и понимать, как всё устроено, и думает об удобстве вещей."
+      },
+      "en": {
+        "title": "Industrial Designer",
+        "summary": "Designs the shape and feel of physical products like furniture, gadgets, and tools so they work well and look good.",
+        "day_in_life": "Sketches ideas, builds 3D models and prototypes, tests how a thing feels in the hand, and refines it with engineers.",
+        "who_fits": "People who love both drawing and how things are built, and care how objects feel to use."
+      }
+    },
+    "facts": [
+      {
+        "country": "RU",
+        "salary_low": 80000,
+        "salary_high": 220000,
+        "currency": "RUB",
+        "demand_note": "Умеренный спрос",
+        "confidence": "estimate"
+      }
+    ]
+  },
+  {
+    "slug": "sound-engineer",
+    "onet_code": "27-4014.00",
+    "field_tag": "media",
+    "edu_duration_band": "vocational",
+    "riasec": {
+      "R": 0.8,
+      "I": 0.4,
+      "A": 0.7,
+      "S": 0.2,
+      "E": 0.3,
+      "C": 0.4
+    },
+    "riasec_source": "llm",
+    "values": {
+      "achievement": 0.6,
+      "autonomy": 0.6,
+      "recognition": 0.5,
+      "relationships": 0.4,
+      "stability": 0.4,
+      "conditions": 0.5
+    },
+    "subjects": {
+      "music": 1.0,
+      "phys": 0.6,
+      "cs": 0.4
+    },
+    "i18n": {
+      "ru": {
+        "title": "Звукорежиссёр",
+        "summary": "Записывает, сводит и выстраивает звук для музыки, кино, концертов и эфиров.",
+        "day_in_life": "Ставит микрофоны и аппаратуру, записывает дубли, крутит уровни и эффекты за пультом и чистит финальную дорожку.",
+        "who_fits": "Тот, кто хорошо слышит нюансы звука, любит работать с техникой и терпелив к мелочам."
+      },
+      "en": {
+        "title": "Sound Engineer",
+        "summary": "Records, mixes, and balances sound for music, film, concerts, and broadcasts.",
+        "day_in_life": "Sets up microphones and gear, records takes, adjusts levels and effects at the mixing desk, and cleans up the final track.",
+        "who_fits": "People who have a good ear, like working with equipment, and are patient with fine detail."
+      }
+    },
+    "facts": [
+      {
+        "country": "RU",
+        "salary_low": 50000,
+        "salary_high": 150000,
+        "currency": "RUB",
+        "demand_note": "Умеренный спрос",
+        "confidence": "estimate"
+      }
+    ]
+  },
+  {
+    "slug": "police-officer",
+    "onet_code": "33-3051.00",
+    "field_tag": "social",
+    "edu_duration_band": "vocational",
+    "regulated": true,
+    "riasec": {
+      "R": 0.8,
+      "I": 0.3,
+      "A": 0.1,
+      "S": 0.6,
+      "E": 0.5,
+      "C": 0.5
+    },
+    "riasec_source": "llm",
+    "values": {
+      "achievement": 0.5,
+      "autonomy": 0.4,
+      "recognition": 0.5,
+      "relationships": 0.6,
+      "stability": 0.8,
+      "conditions": 0.3
+    },
+    "subjects": {
+      "pe": 0.8,
+      "soc": 0.7,
+      "rus": 0.4
+    },
+    "i18n": {
+      "ru": {
+        "title": "Полицейский",
+        "summary": "Поддерживает порядок, выезжает на вызовы и защищает людей и имущество по закону.",
+        "day_in_life": "Патрулирует участок, выезжает на происшествия, опрашивает людей и свидетелей, оформляет протоколы и помогает тем, кто попал в беду.",
+        "who_fits": "Тот, кто сохраняет спокойствие под давлением, хочет защищать людей и умеет действовать решительно."
+      },
+      "en": {
+        "title": "Police Officer",
+        "summary": "Keeps public order, responds to calls, and protects people and property under the law.",
+        "day_in_life": "Patrols an area, responds to incidents, questions people and witnesses, writes reports, and helps citizens in trouble.",
+        "who_fits": "People who stay calm under pressure, want to protect others, and can act decisively."
+      }
+    },
+    "facts": [
+      {
+        "country": "RU",
+        "salary_low": 45000,
+        "salary_high": 120000,
+        "currency": "RUB",
+        "demand_note": "Стабильный спрос",
+        "confidence": "estimate"
+      }
+    ]
+  },
+  {
+    "slug": "firefighter",
+    "onet_code": "33-2011.00",
+    "field_tag": "social",
+    "edu_duration_band": "vocational",
+    "regulated": true,
+    "riasec": {
+      "R": 0.9,
+      "I": 0.3,
+      "A": 0.1,
+      "S": 0.6,
+      "E": 0.3,
+      "C": 0.3
+    },
+    "riasec_source": "llm",
+    "values": {
+      "achievement": 0.6,
+      "autonomy": 0.3,
+      "recognition": 0.6,
+      "relationships": 0.7,
+      "stability": 0.7,
+      "conditions": 0.3
+    },
+    "subjects": {
+      "pe": 1.0,
+      "phys": 0.5,
+      "soc": 0.4
+    },
+    "i18n": {
+      "ru": {
+        "title": "Пожарный",
+        "summary": "Тушит пожары, спасает людей в чрезвычайных ситуациях и выезжает на аварии и бедствия.",
+        "day_in_life": "Тренируется и проверяет снаряжение, дежурит на смене, а по тревоге мчится на пожары и аварии, тушит огонь и выводит людей в безопасность.",
+        "who_fits": "Тот, кто смел, физически крепок, умеет работать в команде и хочет помогать в беде."
+      },
+      "en": {
+        "title": "Firefighter",
+        "summary": "Puts out fires, rescues people in emergencies, and responds to accidents and disasters.",
+        "day_in_life": "Trains and checks equipment, waits on shift, then races to fires and accidents to put out flames and pull people to safety.",
+        "who_fits": "People who are brave, fit, work well in a team, and want to help in a crisis."
+      }
+    },
+    "facts": [
+      {
+        "country": "RU",
+        "salary_low": 40000,
+        "salary_high": 90000,
+        "currency": "RUB",
+        "demand_note": "Стабильный спрос",
+        "confidence": "estimate"
+      }
+    ]
+  },
+  {
+    "slug": "urban-planner",
+    "onet_code": "19-3051.00",
+    "field_tag": "science",
+    "edu_duration_band": "master",
+    "riasec": {
+      "R": 0.3,
+      "I": 0.8,
+      "A": 0.6,
+      "S": 0.5,
+      "E": 0.5,
+      "C": 0.5
+    },
+    "riasec_source": "llm",
+    "values": {
+      "achievement": 0.7,
+      "autonomy": 0.6,
+      "recognition": 0.5,
+      "relationships": 0.6,
+      "stability": 0.7,
+      "conditions": 0.6
+    },
+    "subjects": {
+      "geo": 0.9,
+      "soc": 0.8,
+      "math": 0.4
+    },
+    "i18n": {
+      "ru": {
+        "title": "Градостроитель",
+        "summary": "Планирует, как растут города и районы: где разместить жильё, дороги, парки и услуги.",
+        "day_in_life": "Изучает карты и данные, готовит планы застройки и зонирования, встречается с жителями и чиновниками и взвешивает, как проект повлияет на район.",
+        "who_fits": "Тот, кто думает о том, как устроен город, умеет учитывать много интересов и заботится об общественных пространствах."
+      },
+      "en": {
+        "title": "Urban Planner",
+        "summary": "Plans how cities and neighbourhoods grow, deciding where housing, roads, parks, and services should go.",
+        "day_in_life": "Studies maps and data, draws up zoning and development plans, meets residents and officials, and weighs how a project affects a district.",
+        "who_fits": "People who think about how cities work, like balancing many needs, and care about public spaces."
+      }
+    },
+    "facts": [
+      {
+        "country": "RU",
+        "salary_low": 70000,
+        "salary_high": 180000,
+        "currency": "RUB",
+        "demand_note": "Умеренный спрос",
+        "confidence": "estimate"
+      }
+    ]
+  },
+  {
+    "slug": "airline-pilot",
+    "onet_code": "53-2011.00",
+    "field_tag": "engineering",
+    "edu_duration_band": "bachelor",
+    "regulated": true,
+    "riasec": {
+      "R": 0.9,
+      "I": 0.6,
+      "A": 0.1,
+      "S": 0.3,
+      "E": 0.4,
+      "C": 0.5
+    },
+    "riasec_source": "llm",
+    "values": {
+      "achievement": 0.7,
+      "autonomy": 0.5,
+      "recognition": 0.7,
+      "relationships": 0.4,
+      "stability": 0.7,
+      "conditions": 0.5
+    },
+    "subjects": {
+      "phys": 0.9,
+      "math": 0.9,
+      "eng": 0.5
+    },
+    "i18n": {
+      "ru": {
+        "title": "Пилот гражданской авиации",
+        "summary": "Безопасно управляет пассажирскими или грузовыми самолётами между аэропортами по расписанию.",
+        "day_in_life": "Проверяет погоду и план полёта, осматривает самолёт, ведёт маршрут вместе с экипажем и по строгим правилам выполняет взлёт, полёт и посадку.",
+        "who_fits": "Тот, кто любит точность, сохраняет спокойствие в напряжённые моменты и умеет безупречно соблюдать правила."
+      },
+      "en": {
+        "title": "Airline Pilot",
+        "summary": "Flies passenger or cargo aircraft safely between airports on a schedule.",
+        "day_in_life": "Checks the weather and flight plan, inspects the aircraft, flies the route with the crew, and handles takeoff, cruise, and landing by strict procedure.",
+        "who_fits": "People who love precision, stay calm in tense moments, and can follow strict rules without fail."
+      }
+    },
+    "facts": [
+      {
+        "country": "RU",
+        "salary_low": 250000,
+        "salary_high": 700000,
+        "currency": "RUB",
+        "demand_note": "Стабильный спрос",
+        "confidence": "estimate"
+      }
+    ]
+  },
+  {
+    "slug": "statistician",
+    "onet_code": "15-2041.00",
+    "field_tag": "science",
+    "edu_duration_band": "master",
+    "riasec": {
+      "R": 0.2,
+      "I": 0.9,
+      "A": 0.2,
+      "S": 0.3,
+      "E": 0.3,
+      "C": 0.7
+    },
+    "riasec_source": "llm",
+    "values": {
+      "achievement": 0.7,
+      "autonomy": 0.6,
+      "recognition": 0.5,
+      "relationships": 0.4,
+      "stability": 0.7,
+      "conditions": 0.7
+    },
+    "subjects": {
+      "math": 1.0,
+      "cs": 0.7,
+      "soc": 0.4
+    },
+    "i18n": {
+      "ru": {
+        "title": "Статистик",
+        "summary": "Планирует исследования и с помощью математики находит в данных надёжные закономерности и ответы.",
+        "day_in_life": "Продумывает, как собрать данные, строит статистические модели, проводит расчёты, проверяет надёжность результатов и объясняет, что они значат.",
+        "who_fits": "Тот, кто любит математику, аккуратен с доказательствами и умеет делать выводы из чисел."
+      },
+      "en": {
+        "title": "Statistician",
+        "summary": "Designs studies and uses math to find reliable patterns and answers in data.",
+        "day_in_life": "Plans how to collect data, builds statistical models, runs analyses, checks that the results hold up, and explains what they mean.",
+        "who_fits": "People who love math, are careful with evidence, and like drawing solid conclusions from numbers."
+      }
+    },
+    "facts": [
+      {
+        "country": "RU",
+        "salary_low": 90000,
+        "salary_high": 250000,
+        "currency": "RUB",
+        "demand_note": "Растущий спрос",
+        "confidence": "estimate"
+      }
+    ]
+  },
+  {
+    "slug": "school-counselor",
+    "onet_code": "21-1012.00",
+    "field_tag": "education",
+    "edu_duration_band": "master",
+    "regulated": true,
+    "riasec": {
+      "R": 0.1,
+      "I": 0.5,
+      "A": 0.4,
+      "S": 0.9,
+      "E": 0.4,
+      "C": 0.4
+    },
+    "riasec_source": "llm",
+    "values": {
+      "achievement": 0.5,
+      "autonomy": 0.5,
+      "recognition": 0.4,
+      "relationships": 0.9,
+      "stability": 0.7,
+      "conditions": 0.6
+    },
+    "subjects": {
+      "soc": 0.8,
+      "bio": 0.5,
+      "rus": 0.5
+    },
+    "i18n": {
+      "ru": {
+        "title": "Школьный психолог-консультант",
+        "summary": "Помогает ученикам с учёбой, переживаниями и выбором будущего прямо в школе.",
+        "day_in_life": "Встречается с учениками наедине, ведёт групповые занятия, помогает с выбором предметов и профессии, замечает тех, кому трудно, и общается с учителями и родителями.",
+        "who_fits": "Тот, кто искренне переживает за подростков, умеет слушать и хочет помочь им найти свой путь."
+      },
+      "en": {
+        "title": "School Counselor",
+        "summary": "Helps students with their studies, feelings, and choices about the future at school.",
+        "day_in_life": "Meets students one on one, runs group sessions, helps with course and career choices, spots kids in trouble, and talks with teachers and parents.",
+        "who_fits": "People who care deeply about young people, listen well, and want to help them find their way."
+      }
+    },
+    "facts": [
+      {
+        "country": "RU",
+        "salary_low": 40000,
+        "salary_high": 100000,
+        "currency": "RUB",
+        "demand_note": "Растущий спрос",
+        "confidence": "estimate"
+      }
+    ]
+  },
+  {
+    "slug": "librarian",
+    "onet_code": "25-4022.00",
+    "field_tag": "education",
+    "edu_duration_band": "master",
+    "riasec": {
+      "R": 0.2,
+      "I": 0.6,
+      "A": 0.3,
+      "S": 0.6,
+      "E": 0.2,
+      "C": 0.8
+    },
+    "riasec_source": "llm",
+    "values": {
+      "achievement": 0.4,
+      "autonomy": 0.5,
+      "recognition": 0.4,
+      "relationships": 0.6,
+      "stability": 0.8,
+      "conditions": 0.7
+    },
+    "subjects": {
+      "lit": 0.9,
+      "soc": 0.6,
+      "hist": 0.5
+    },
+    "i18n": {
+      "ru": {
+        "title": "Библиотекарь",
+        "summary": "Организует книги и информацию и помогает людям находить и использовать нужное.",
+        "day_in_life": "Разбирает и каталогизирует материалы, помогает посетителям искать и выбирать, проводит читательские мероприятия и поддерживает порядок в фонде и электронных ресурсах.",
+        "who_fits": "Тот, кто любит книги и порядок, любит тихо помогать людям и делать знания доступными."
+      },
+      "en": {
+        "title": "Librarian",
+        "summary": "Organises books and information and helps people find and use what they need.",
+        "day_in_life": "Sorts and catalogues materials, helps visitors search and choose, runs reading events, and keeps the collection and digital resources in order.",
+        "who_fits": "People who love books and order, enjoy helping quietly, and like making knowledge easy to find."
+      }
+    },
+    "facts": [
+      {
+        "country": "RU",
+        "salary_low": 30000,
+        "salary_high": 70000,
+        "currency": "RUB",
+        "demand_note": "Стабильный спрос",
+        "confidence": "estimate"
+      }
+    ]
+  }
+]

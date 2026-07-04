@@ -1,0 +1,802 @@
+[
+  {
+    "slug": "plumber",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      }
+    ],
+    "factual_flags": []
+  },
+  {
+    "slug": "hvac-technician",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      }
+    ],
+    "factual_flags": []
+  },
+  {
+    "slug": "carpenter",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      }
+    ],
+    "factual_flags": []
+  },
+  {
+    "slug": "machinist",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      }
+    ],
+    "factual_flags": []
+  },
+  {
+    "slug": "cnc-machinist",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      }
+    ],
+    "factual_flags": []
+  },
+  {
+    "slug": "heavy-equipment-operator",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      }
+    ],
+    "factual_flags": []
+  },
+  {
+    "slug": "aircraft-mechanic",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      }
+    ],
+    "factual_flags": []
+  },
+  {
+    "slug": "lineworker",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      }
+    ],
+    "factual_flags": []
+  },
+  {
+    "slug": "dental-hygienist",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      }
+    ],
+    "factual_flags": []
+  },
+  {
+    "slug": "medical-assistant",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      }
+    ],
+    "factual_flags": []
+  },
+  {
+    "slug": "radiologic-technologist",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      }
+    ],
+    "factual_flags": []
+  },
+  {
+    "slug": "respiratory-therapist",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      }
+    ],
+    "factual_flags": []
+  },
+  {
+    "slug": "occupational-therapist",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      }
+    ],
+    "factual_flags": []
+  },
+  {
+    "slug": "speech-language-pathologist",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      }
+    ],
+    "factual_flags": []
+  },
+  {
+    "slug": "dietitian",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      }
+    ],
+    "factual_flags": []
+  },
+  {
+    "slug": "surgical-technologist",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      }
+    ],
+    "factual_flags": []
+  },
+  {
+    "slug": "optometrist",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      }
+    ],
+    "factual_flags": []
+  },
+  {
+    "slug": "phlebotomist",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      }
+    ],
+    "factual_flags": []
+  },
+  {
+    "slug": "data-engineer",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      }
+    ],
+    "factual_flags": []
+  },
+  {
+    "slug": "machine-learning-engineer",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      }
+    ],
+    "factual_flags": []
+  },
+  {
+    "slug": "it-support-specialist",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      }
+    ],
+    "factual_flags": []
+  },
+  {
+    "slug": "network-engineer",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      }
+    ],
+    "factual_flags": []
+  },
+  {
+    "slug": "database-administrator",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      }
+    ],
+    "factual_flags": []
+  },
+  {
+    "slug": "financial-advisor",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      }
+    ],
+    "factual_flags": []
+  },
+  {
+    "slug": "actuary",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      }
+    ],
+    "factual_flags": []
+  },
+  {
+    "slug": "management-consultant",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      }
+    ],
+    "factual_flags": []
+  },
+  {
+    "slug": "operations-manager",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      }
+    ],
+    "factual_flags": []
+  },
+  {
+    "slug": "logistician",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      }
+    ],
+    "factual_flags": []
+  },
+  {
+    "slug": "real-estate-agent",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      }
+    ],
+    "factual_flags": []
+  },
+  {
+    "slug": "insurance-agent",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      }
+    ],
+    "factual_flags": []
+  },
+  {
+    "slug": "art-director",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      }
+    ],
+    "factual_flags": []
+  },
+  {
+    "slug": "industrial-designer",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      }
+    ],
+    "factual_flags": []
+  },
+  {
+    "slug": "sound-engineer",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      }
+    ],
+    "factual_flags": []
+  },
+  {
+    "slug": "police-officer",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      }
+    ],
+    "factual_flags": []
+  },
+  {
+    "slug": "firefighter",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      }
+    ],
+    "factual_flags": []
+  },
+  {
+    "slug": "urban-planner",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      }
+    ],
+    "factual_flags": []
+  },
+  {
+    "slug": "airline-pilot",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      }
+    ],
+    "factual_flags": []
+  },
+  {
+    "slug": "statistician",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      }
+    ],
+    "factual_flags": []
+  },
+  {
+    "slug": "school-counselor",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      }
+    ],
+    "factual_flags": []
+  },
+  {
+    "slug": "librarian",
+    "locale": "ru",
+    "verdict": "approved",
+    "models": [
+      {
+        "model": "reviewer-2",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-1",
+        "verdict": "approve"
+      },
+      {
+        "model": "reviewer-3",
+        "verdict": "approve"
+      }
+    ],
+    "factual_flags": []
+  }
+]

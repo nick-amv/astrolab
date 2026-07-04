@@ -26,7 +26,7 @@ from pathlib import Path
 import openpyxl
 
 SEED_DIR = Path(__file__).resolve().parent.parent / "seed"
-BATCHES = ["occupations_batch1.json", "occupations_batch2.json"]
+BATCHES = ["occupations_batch1.json", "occupations_batch2.json", "occupations_batch3.json"]
 AS_OF = "2024"  # OEWS reference: May 2024
 BLS_CAP = 239200  # BLS "#" = annual wage >= $239,200
 
