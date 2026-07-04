@@ -512,7 +512,7 @@
         "title": "Medical Assistant",
         "summary": "Supports a doctor during visits by taking vitals, preparing patients, and keeping records.",
         "day_in_life": "Greets patients, measures blood pressure and temperature, preps the room, updates charts, and assists the doctor.",
-        "who_fits": "People who are organised, friendly, and like keeping things in order while helping others."
+        "who_fits": "People who are organized, friendly, and like keeping things in order while helping others."
       }
     },
     "facts": [
@@ -670,7 +670,7 @@
       "en": {
         "title": "Occupational Therapist",
         "summary": "Helps people recover after injury or illness so they can return to everyday life and activities.",
-        "day_in_life": "Assesses what a patient can do, chooses exercises and aids, practises daily-living skills, and celebrates small wins together.",
+        "day_in_life": "Assesses what a patient can do, chooses exercises and aids, practices daily-living skills, and celebrates small wins together.",
         "who_fits": "People who are patient, inventive, and want to help others become independent again."
       }
     },
@@ -1037,9 +1037,9 @@
       },
       "en": {
         "title": "Machine Learning Engineer",
-        "summary": "Builds and trains models that recognise patterns, make predictions, and decide from data.",
+        "summary": "Builds and trains models that recognize patterns, make predictions, and decide from data.",
         "day_in_life": "Prepares data, trains and tests models, tunes parameters, ships working models into products, and watches their quality.",
-        "who_fits": "People who like maths and experiments, are ready to dig deep, and stay patient with failed attempts."
+        "who_fits": "People who like math and experiments, are ready to dig deep, and stay patient with failed attempts."
       }
     },
     "facts": [
@@ -1303,7 +1303,7 @@
         "title": "Actuary",
         "summary": "Measures the odds of risk and loss so insurance and pension firms can set correct prices.",
         "day_in_life": "Gathers statistics, builds mathematical models, calculates rates and reserves, prepares reports, and explains findings to managers.",
-        "who_fits": "People who love maths and statistics, can sit with detail, and value precise numbers."
+        "who_fits": "People who love math and statistics, can sit with detail, and value precise numbers."
       }
     },
     "facts": [
@@ -1408,7 +1408,7 @@
         "title": "Operations Manager",
         "summary": "Runs the day-to-day work of a company or department so everything stays on plan and on time.",
         "day_in_life": "Assigns tasks to the team, watches deadlines and budgets, solves problems as they come, improves processes, and reports on results.",
-        "who_fits": "People who can organise others, keep many things in mind, and take responsibility for the outcome."
+        "who_fits": "People who can organize others, keep many things in mind, and take responsibility for the outcome."
       }
     },
     "facts": [
@@ -1983,7 +1983,7 @@
       "en": {
         "title": "Statistician",
         "summary": "Designs studies and uses math to find reliable patterns and answers in data.",
-        "day_in_life": "Plans how to collect data, builds statistical models, runs analyses, checks that the results hold up, and explains what they mean.",
+        "day_in_life": "Plans how to collect data, builds statistical models, runs analyzes, checks that the results hold up, and explains what they mean.",
         "who_fits": "People who love math, are careful with evidence, and like drawing solid conclusions from numbers."
       }
     },
@@ -2087,7 +2087,7 @@
       },
       "en": {
         "title": "Librarian",
-        "summary": "Organises books and information and helps people find and use what they need.",
+        "summary": "Organizes books and information and helps people find and use what they need.",
         "day_in_life": "Sorts and catalogues materials, helps visitors search and choose, runs reading events, and keeps the collection and digital resources in order.",
         "who_fits": "People who love books and order, enjoy helping quietly, and like making knowledge easy to find."
       }

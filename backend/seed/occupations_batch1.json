@@ -70,7 +70,7 @@
         "title": "Graphic Designer",
         "summary": "Creates visual work: logos, interfaces, posters, brand identities.",
         "day_in_life": "Discusses the brief, explores ideas, builds mockups in design tools, iterates on feedback.",
-        "who_fits": "People with a sense of taste who like making new things and care about form and colour."
+        "who_fits": "People with a sense of taste who like making new things and care about form and color."
       }
     },
     "facts": [{"country": "RU", "salary_low": 60000, "salary_high": 180000, "currency": "RUB", "demand_note": "Средний спрос", "confidence": "estimate"}]
@@ -197,7 +197,7 @@
         "title": "Nurse",
         "summary": "Cares for patients, carries out doctors' orders, and supports people through treatment.",
         "day_in_life": "Administers procedures, monitors patients, keeps records, reassures and explains.",
-        "who_fits": "People who are caring, organised, and want to genuinely help others every day."
+        "who_fits": "People who are caring, organized, and want to genuinely help others every day."
       }
     },
     "facts": [{"country": "RU", "salary_low": 40000, "salary_high": 100000, "currency": "RUB", "demand_note": "Высокий спрос", "confidence": "estimate"}]

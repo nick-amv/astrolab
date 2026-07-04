@@ -142,7 +142,7 @@
         "title": "Data Scientist",
         "summary": "Builds models on data that predict outcomes and help a company decide.",
         "day_in_life": "Gathers and explores data, forms hypotheses, trains and validates models, and explains results to the team.",
-        "who_fits": "People strong in maths who like to investigate and don't mind wrestling with messy problems."
+        "who_fits": "People strong in math who like to investigate and don't mind wrestling with messy problems."
       }
     },
     "facts": [{"country": "RU", "salary_low": 130000, "salary_high": 400000, "currency": "RUB", "demand_note": "Высокий спрос", "confidence": "estimate"}]
@@ -190,7 +190,7 @@
       },
       "en": {
         "title": "Game Developer",
-        "summary": "Programs computer and mobile games — mechanics, physics, character behaviour.",
+        "summary": "Programs computer and mobile games — mechanics, physics, character behavior.",
         "day_in_life": "Writes and debugs game code, assembles levels in an engine, hunts down slowdowns, and playtests.",
         "who_fits": "People who love games not just to play but to understand from the inside, and will polish details for a long time."
       }
@@ -291,7 +291,7 @@
       "en": {
         "title": "Biologist",
         "summary": "Studies living organisms — from cells to whole ecosystems — and how life works.",
-        "day_in_life": "Runs experiments in the lab or field, observes and records, analyses data, reads and writes research.",
+        "day_in_life": "Runs experiments in the lab or field, observes and records, analyzes data, reads and writes research.",
         "who_fits": "People curious about nature, attentive, and ready for painstaking research work."
       }
     },
@@ -316,7 +316,7 @@
       "en": {
         "title": "Chemist",
         "summary": "Investigates substances and reactions, creates new materials, and tests their properties.",
-        "day_in_life": "Runs lab experiments, measures and records precisely, analyses data, and follows safety rules.",
+        "day_in_life": "Runs lab experiments, measures and records precisely, analyzes data, and follows safety rules.",
         "who_fits": "People who are careful, love experiments, and want to understand what the world is made of."
       }
     },
@@ -341,7 +341,7 @@
       "en": {
         "title": "Environmental Scientist",
         "summary": "Studies the state of nature and human impact on it, and looks for ways to reduce harm.",
-        "day_in_life": "Samples water, air, and soil, analyses data, prepares reports and recommendations, and assesses projects.",
+        "day_in_life": "Samples water, air, and soil, analyzes data, prepares reports and recommendations, and assesses projects.",
         "who_fits": "People who care about what happens to nature and can work both in the field and with data."
       }
     },
@@ -494,7 +494,7 @@
       },
       "en": {
         "title": "Financial Analyst",
-        "summary": "Analyses finances and markets to help a company or investors make money decisions.",
+        "summary": "Analyzes finances and markets to help a company or investors make money decisions.",
         "day_in_life": "Gathers data, builds financial models, assesses risk and return, and prepares reports and recommendations.",
         "who_fits": "People at home with numbers, attentive to detail, and who like weighing options ahead."
       }
@@ -520,7 +520,7 @@
       "en": {
         "title": "Economist",
         "summary": "Studies how money, markets, and the economy work, and explains what's behind it.",
-        "day_in_life": "Collects and analyses statistics, builds forecasts, prepares calculations and briefs, and tracks trends.",
+        "day_in_life": "Collects and analyzes statistics, builds forecasts, prepares calculations and briefs, and tracks trends.",
         "who_fits": "People who like logic, numbers, and figuring out why the economy behaves as it does."
       }
     },
@@ -545,7 +545,7 @@
       "en": {
         "title": "Marketing Manager",
         "summary": "Promotes a product — studies the audience and creates and runs campaigns.",
-        "day_in_life": "Researches the market and customers, plans campaigns, works with the team and vendors, and analyses results to adjust strategy.",
+        "day_in_life": "Researches the market and customers, plans campaigns, works with the team and vendors, and analyzes results to adjust strategy.",
         "who_fits": "People who blend creativity and analysis, like understanding people, and enjoy trying new things."
       }
     },
@@ -621,7 +621,7 @@
         "title": "Project Manager",
         "summary": "Leads projects from idea to result — plans, coordinates people, and watches deadlines.",
         "day_in_life": "Builds the plan, assigns tasks, runs meetings, clears blockers, and keeps the team informed.",
-        "who_fits": "People who are organised, can negotiate, and like seeing things through."
+        "who_fits": "People who are organized, can negotiate, and like seeing things through."
       }
     },
     "facts": [{"country": "RU", "salary_low": 100000, "salary_high": 300000, "currency": "RUB", "demand_note": "Высокий спрос", "confidence": "estimate"}]
@@ -670,7 +670,7 @@
       "en": {
         "title": "Video Editor",
         "summary": "Turns raw footage into finished video — clips, films, social content.",
-        "day_in_life": "Reviews footage, cuts scenes, adds sound, titles, and colour, and revises to client notes.",
+        "day_in_life": "Reviews footage, cuts scenes, adds sound, titles, and color, and revises to client notes.",
         "who_fits": "People who are patient, feel rhythm and pace, and like building a story from pieces."
       }
     },
@@ -945,7 +945,7 @@
       "en": {
         "title": "Fitness Trainer",
         "summary": "Helps people train correctly and reach their goals safely.",
-        "day_in_life": "Builds workout programmes, runs sessions, watches technique, and motivates and supports clients.",
+        "day_in_life": "Builds workout programs, runs sessions, watches technique, and motivates and supports clients.",
         "who_fits": "People who love sport, can explain well, and energise others."
       }
     },
