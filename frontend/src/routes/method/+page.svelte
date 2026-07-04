@@ -48,8 +48,12 @@
           <p>{item.d}</p>
           {#if item.links.length}
             <div class="srcs">
-              {#each item.links as l (l.href)}
-                <a href={l.href} target="_blank" rel="noopener noreferrer">{l.label} ↗</a>
+              {#each item.links as l (l.label)}
+                {#if l.href}
+                  <a href={l.href} target="_blank" rel="noopener noreferrer">{l.label} ↗</a>
+                {:else}
+                  <span class="src-plain">{l.label}</span>
+                {/if}
               {/each}
             </div>
           {/if}
@@ -163,6 +167,11 @@
   }
   .srcs a:hover {
     text-decoration: underline;
+  }
+  .src-plain {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--muted);
   }
   .honest {
     background: var(--grad-soft, color-mix(in oklab, var(--c3) 8%, var(--surface)));
