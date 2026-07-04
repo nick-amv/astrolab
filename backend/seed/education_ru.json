@@ -55,7 +55,12 @@
         "Поступление в колледж по среднему баллу аттестата, без ЕГЭ"
       ],
       "occupations": [
-        "nurse"
+        "nurse",
+        "medical-assistant",
+        "surgical-technologist",
+        "respiratory-therapist",
+        "occupational-therapist",
+        "dietitian"
       ]
     },
     {
@@ -594,21 +599,6 @@
       ],
       "occupations": [
         "dental-hygienist"
-      ]
-    },
-    {
-      "code": "34.02.01",
-      "title": "Сестринское дело",
-      "level": "СПО (колледж)",
-      "ege": [
-        "Поступление в колледж по среднему баллу аттестата, без ЕГЭ"
-      ],
-      "occupations": [
-        "medical-assistant",
-        "surgical-technologist",
-        "respiratory-therapist",
-        "occupational-therapist",
-        "dietitian"
       ]
     },
     {
