@@ -320,7 +320,7 @@ async def interview_questions(
     stmts = await generate_statements(profile, locale)
     personalized = stmts is not None
     if stmts is None:
-        stmts = select_statements(riasec)
+        stmts = select_statements(riasec, locale=locale)
     return {"statements": stmts, "personalized": personalized}
 
 

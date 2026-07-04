@@ -25,10 +25,13 @@
     if (!age || busy) return;
     busy = true;
     try {
+      const country = getLocale() === "en" ? "US" : "RU";
       const { session_id } = await startAssessment({
         age_band: age,
         locale: getLocale(),
         education_stage: stage || undefined,
+        country_live: country,
+        country_study: country,
       });
       await goto(localizeHref(`/test/${session_id}`));
     } catch {

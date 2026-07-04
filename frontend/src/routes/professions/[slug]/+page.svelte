@@ -8,6 +8,26 @@
   const o = $derived(data.occupation);
   const edu = $derived(data.education);
 
+  // Salary/demand facts are per-country. Show the fact for the user's country
+  // (en→US, ru→RU) and nothing otherwise — never show RUB to a US visitor.
+  // US facts land in EN-3, so EN currently has no fact and the block hides.
+  type Fact = {
+    country: string;
+    salary_low: number | null;
+    salary_high: number | null;
+    currency: string;
+    confidence: string | null;
+    demand_note: string | null;
+  };
+  const userCountry = $derived(getLocale() === "en" ? "US" : "RU");
+  const fact = $derived(
+    (o.facts as Fact[] | undefined)?.find((f) => f.country === userCountry) ?? null,
+  );
+
+  // The vuz link-out (postupi.online) is Russia-only; US admission comes in
+  // EN-2. Gate it on the RU locale until then.
+  const showVuzLink = $derived(getLocale() === "ru");
+
   // Link out to an external catalogue of universities/colleges for a field of
   // study, keyed by its OKSO code (we deliberately don't keep our own vuz DB).
   // SPO (college) codes are XX.01.* / XX.02.*; higher ed is XX.03/04/05.
@@ -42,14 +62,17 @@
       "@type": "Occupation",
       name: o.title,
       description: o.summary ?? undefined,
-      occupationLocation: { "@type": "Country", name: "Russia" },
-      ...(o.facts?.[0]?.salary_low
+      occupationLocation: {
+        "@type": "Country",
+        name: userCountry === "US" ? "United States" : "Russia",
+      },
+      ...(fact?.salary_low
         ? {
             estimatedSalary: {
               "@type": "MonetaryAmountDistribution",
-              currency: o.facts[0].currency,
-              minValue: o.facts[0].salary_low,
-              maxValue: o.facts[0].salary_high,
+              currency: fact.currency,
+              minValue: fact.salary_low,
+              maxValue: fact.salary_high,
             },
           }
         : {}),
@@ -91,18 +114,16 @@
         <p class="cap">{m.prof_estimate_note()}</p>
       </div>
 
-      {#if o.facts?.length}
+      {#if fact && (fact.salary_low || fact.demand_note)}
         <div class="card">
           <div class="k">{m.prof_salary()}</div>
-          {#each o.facts as f (f.country)}
-            {#if f.salary_low}
-              <p class="salary">
-                {f.salary_low.toLocaleString()}–{f.salary_high?.toLocaleString()} {f.currency}
-                {#if f.confidence === "estimate"}<span class="est">{m.prof_estimate()}</span>{/if}
-              </p>
-            {/if}
-            {#if f.demand_note}<p class="demand">{f.demand_note}</p>{/if}
-          {/each}
+          {#if fact.salary_low}
+            <p class="salary">
+              {fact.salary_low.toLocaleString()}–{fact.salary_high?.toLocaleString()} {fact.currency}
+              {#if fact.confidence === "estimate"}<span class="est">{m.prof_estimate()}</span>{/if}
+            </p>
+          {/if}
+          {#if fact.demand_note}<p class="demand">{fact.demand_note}</p>{/if}
         </div>
       {/if}
     </aside>
@@ -125,14 +146,16 @@
               <div class="ege">
                 {#each d.ege as e (e)}<span class="ege-chip">{e}</span>{/each}
               </div>
-              <a
-                class="path-vuz"
-                href={admissionUrl(d.code)}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {m.edu_where()} ↗
-              </a>
+              {#if showVuzLink}
+                <a
+                  class="path-vuz"
+                  href={admissionUrl(d.code)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {m.edu_where()} ↗
+                </a>
+              {/if}
             </div>
           {/each}
         </div>

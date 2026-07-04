@@ -1,11 +1,16 @@
 <script lang="ts">
   import ThemeToggle from "$lib/ThemeToggle.svelte";
   import { m } from "$lib/paraglide/messages";
-  import { localizeHref } from "$lib/paraglide/runtime";
+  import { localizeHref, deLocalizeHref, getLocale, locales } from "$lib/paraglide/runtime";
   import { afterNavigate } from "$app/navigation";
+  import { page } from "$app/stores";
   import "./app.css";
 
   let { children, data } = $props();
+
+  // Same page, other language: strip the locale prefix, then re-localize.
+  const barePath = $derived(deLocalizeHref($page.url.pathname));
+  const langLabel = (loc: string) => (loc === "ru" ? m.nav_ru() : m.nav_en());
 
   // GoatCounter: count.js records the initial page load; count client-side
   // route changes here so in-app navigation (test → result → professions)
@@ -18,6 +23,13 @@
     }
   });
 </script>
+
+<svelte:head>
+  {#each locales as loc (loc)}
+    <link rel="alternate" hreflang={loc} href={$page.url.origin + localizeHref(barePath, { locale: loc })} />
+  {/each}
+  <link rel="alternate" hreflang="x-default" href={$page.url.origin + localizeHref(barePath, { locale: "ru" })} />
+</svelte:head>
 
 <div class="aurora" aria-hidden="true"></div>
 
@@ -34,6 +46,18 @@
       {:else}
         <a class="section" href={localizeHref("/login")}>{m.nav_login()}</a>
       {/if}
+      <span class="lang" aria-label="Language">
+        {#each locales as loc (loc)}
+          <a
+            class="lang-opt"
+            class:on={getLocale() === loc}
+            href={localizeHref(barePath, { locale: loc })}
+            hreflang={loc}
+            aria-current={getLocale() === loc ? "true" : undefined}
+            data-sveltekit-reload>{langLabel(loc)}</a
+          >
+        {/each}
+      </span>
       <ThemeToggle />
     </nav>
   </header>
@@ -56,6 +80,34 @@
 <style>
   .section {
     color: var(--ink) !important;
+  }
+  .lang {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    padding: 2px;
+    border: 1px solid var(--hair, rgba(0, 0, 0, 0.12));
+    border-radius: 999px;
+  }
+  .lang-opt {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 9px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    color: var(--muted);
+    border-radius: 999px;
+    text-decoration: none;
+    transition: color 0.15s ease, background-color 0.15s ease;
+  }
+  .lang-opt:hover {
+    color: var(--ink);
+  }
+  .lang-opt.on {
+    color: var(--chip-ink, #fff);
+    background: var(--accent, #ff5f8f);
   }
   .by {
     margin-left: auto;

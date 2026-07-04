@@ -1,27 +1,27 @@
 {
   "version": 1,
   "statements": [
-    { "axis": "R", "ru": "Мне приятнее, когда результат работы можно потрогать руками" },
-    { "axis": "R", "ru": "Я лучше понимаю вещи, когда разбираю их и собираю сам" },
+    { "axis": "R", "ru": "Мне приятнее, когда результат работы можно потрогать руками", "en": "I like it better when I can physically touch the result of my work" },
+    { "axis": "R", "ru": "Я лучше понимаю вещи, когда разбираю их и собираю сам", "en": "I understand things better when I take them apart and put them back together myself" },
 
-    { "axis": "I", "ru": "Я могу надолго залипнуть, разбираясь, почему что-то работает именно так" },
-    { "axis": "I", "ru": "Мне важнее понять суть, чем быстро получить готовый ответ" },
+    { "axis": "I", "ru": "Я могу надолго залипнуть, разбираясь, почему что-то работает именно так", "en": "I can get absorbed for a long time figuring out why something works the way it does" },
+    { "axis": "I", "ru": "Мне важнее понять суть, чем быстро получить готовый ответ", "en": "Getting to the heart of something matters more to me than getting a quick answer" },
 
-    { "axis": "A", "ru": "Мне тесно там, где нет места придумать что-то своё" },
-    { "axis": "A", "ru": "Я замечаю красоту и детали там, где другие проходят мимо" },
+    { "axis": "A", "ru": "Мне тесно там, где нет места придумать что-то своё", "en": "I feel boxed in when there's no room to make something of my own" },
+    { "axis": "A", "ru": "Я замечаю красоту и детали там, где другие проходят мимо", "en": "I notice beauty and details where others walk right past" },
 
-    { "axis": "S", "ru": "Я заряжаюсь, когда вижу, что реально помог человеку" },
-    { "axis": "S", "ru": "Мне легко почувствовать, что происходит с другим человеком" },
+    { "axis": "S", "ru": "Я заряжаюсь, когда вижу, что реально помог человеку", "en": "I get energized when I see I've really helped someone" },
+    { "axis": "S", "ru": "Мне легко почувствовать, что происходит с другим человеком", "en": "It's easy for me to sense what another person is going through" },
 
-    { "axis": "E", "ru": "Мне заходит убеждать людей и вести их за собой" },
-    { "axis": "E", "ru": "Я скорее рискну и попробую, чем буду ждать идеального момента" },
+    { "axis": "E", "ru": "Мне заходит убеждать людей и вести их за собой", "en": "I like persuading people and taking the lead" },
+    { "axis": "E", "ru": "Я скорее рискну и попробую, чем буду ждать идеального момента", "en": "I'd rather take a risk and try than wait for the perfect moment" },
 
-    { "axis": "C", "ru": "Меня успокаивает, когда всё разложено по местам и по плану" },
-    { "axis": "C", "ru": "Я замечаю ошибку или неточность там, где другие не видят" },
+    { "axis": "C", "ru": "Меня успокаивает, когда всё разложено по местам и по плану", "en": "It calms me when everything is in its place and goes to plan" },
+    { "axis": "C", "ru": "Я замечаю ошибку или неточность там, где другие не видят", "en": "I catch a mistake or inaccuracy where others don't" },
 
-    { "axis": "universal", "ru": "Я скорее доведу одну вещь до идеала, чем попробую много всего" },
-    { "axis": "universal", "ru": "Мне важнее свобода делать по-своему, чем стабильность и гарантии" },
-    { "axis": "universal", "ru": "Я лучше работаю в команде, чем в одиночку" },
-    { "axis": "universal", "ru": "Мне важно, чтобы в работе был живой контакт с людьми" }
+    { "axis": "universal", "ru": "Я скорее доведу одну вещь до идеала, чем попробую много всего", "en": "I'd rather bring one thing to perfection than try a lot of things" },
+    { "axis": "universal", "ru": "Мне важнее свобода делать по-своему, чем стабильность и гарантии", "en": "Freedom to do things my own way matters more to me than stability and guarantees" },
+    { "axis": "universal", "ru": "Я лучше работаю в команде, чем в одиночку", "en": "I work better on a team than alone" },
+    { "axis": "universal", "ru": "Мне важно, чтобы в работе был живой контакт с людьми", "en": "It matters to me that my work involves real, face-to-face contact with people" }
   ]
 }

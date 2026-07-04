@@ -7,6 +7,8 @@ export interface StartBody {
   age_band: string;
   locale: string;
   education_stage?: string;
+  country_live?: string;
+  country_study?: string;
 }
 
 export interface Question {

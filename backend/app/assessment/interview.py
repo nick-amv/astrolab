@@ -106,7 +106,12 @@ def interview_version() -> int:
     return int(json.loads(_SEED.read_text("utf-8")).get("version", 1))
 
 
-def select_statements(riasec: dict, limit: int = 6) -> list[dict]:
+def _localized(statement: dict, locale: str) -> str:
+    """Statement text in the requested locale, falling back to Russian."""
+    return str(statement.get(locale) or statement["ru"])
+
+
+def select_statements(riasec: dict, limit: int = 6, locale: str = "ru") -> list[dict]:
     """Two statements for each of the top-2 axes + universal probes, up to limit."""
     stmts = _statements()
     top2 = [a for a, _ in sorted(riasec.items(), key=lambda kv: -kv[1])[:2] if a in RIASEC_AXES]
@@ -120,11 +125,11 @@ def select_statements(riasec: dict, limit: int = 6) -> list[dict]:
             break
         picked.append(s)
     picked = picked[:limit]
-    return [{"id": s["id"], "text": s["ru"]} for s in picked]
+    return [{"id": s["id"], "text": _localized(s, locale)} for s in picked]
 
 
-def text_for(statement_id: str) -> str | None:
+def text_for(statement_id: str, locale: str = "ru") -> str | None:
     for s in _statements():
         if s["id"] == statement_id:
-            return str(s["ru"])
+            return _localized(s, locale)
     return None
