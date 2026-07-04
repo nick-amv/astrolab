@@ -19,5 +19,13 @@ export const load: PageLoad = async ({ fetch, params }) => {
     throw error(502, "catalog unavailable");
   }
   const education = eduRes.ok ? await eduRes.json() : null;
-  return { occupation: await res.json(), education };
+  const occupation = await res.json();
+  // Ship only the user-country fact — never send RUB down to a US page, even
+  // in the hydration payload (the component also guards this at render time).
+  if (Array.isArray(occupation.facts)) {
+    occupation.facts = occupation.facts.filter(
+      (f: { country?: string }) => f.country === country,
+    );
+  }
+  return { occupation, education };
 };
