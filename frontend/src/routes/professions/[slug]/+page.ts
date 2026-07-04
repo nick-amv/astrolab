@@ -9,7 +9,9 @@ export const load: PageLoad = async ({ fetch, params }) => {
   // lands in EN-2). RU users get the Russian system.
   const country = locale === "en" ? "US" : "RU";
   const [res, eduRes] = await Promise.all([
-    fetch(`/api/occupations/${params.slug}?locale=${locale}`),
+    // country-scoped so the page (and its cached fetch payload) only ever
+    // carries the user's country facts — no RUB on a US page.
+    fetch(`/api/occupations/${params.slug}?locale=${locale}&country=${country}`),
     fetch(`/api/occupations/${params.slug}/education?country=${country}`),
   ]);
   if (res.status === 404) {
@@ -19,13 +21,5 @@ export const load: PageLoad = async ({ fetch, params }) => {
     throw error(502, "catalog unavailable");
   }
   const education = eduRes.ok ? await eduRes.json() : null;
-  const occupation = await res.json();
-  // Ship only the user-country fact — never send RUB down to a US page, even
-  // in the hydration payload (the component also guards this at render time).
-  if (Array.isArray(occupation.facts)) {
-    occupation.facts = occupation.facts.filter(
-      (f: { country?: string }) => f.country === country,
-    );
-  }
-  return { occupation, education };
+  return { occupation: await res.json(), education };
 };

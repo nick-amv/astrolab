@@ -54,8 +54,13 @@ def _band_to_years(band: str | None) -> float | None:
     }.get(band or "")
 
 
-async def get_occupation_detail(session: AsyncSession, slug: str, locale: str) -> dict | None:
-    """Full public detail for one published occupation, localized with fallback."""
+async def get_occupation_detail(
+    session: AsyncSession, slug: str, locale: str, country: str | None = None
+) -> dict | None:
+    """Full public detail for one published occupation, localized with fallback.
+
+    When ``country`` is given, only that country's facts are returned — so an EN
+    (US) page never carries RU/RUB facts, not even in the client fetch cache."""
     occ = (
         await session.execute(
             select(Occupation).where(
@@ -79,6 +84,8 @@ async def get_occupation_detail(session: AsyncSession, slug: str, locale: str) -
             select(OccupationCountry).where(OccupationCountry.occupation_id == occ.id)
         )
     ).scalars().all()
+    if country:
+        countries = [c for c in countries if c.country == country]
 
     return {
         "slug": occ.slug,

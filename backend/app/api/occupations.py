@@ -25,9 +25,10 @@ async def list_occupations(
 async def occupation_detail(
     slug: str,
     locale: str = Query("ru"),
+    country: str | None = Query(None),
     session: AsyncSession = Depends(get_session),
 ) -> dict:
-    detail = await get_occupation_detail(session, slug, locale)
+    detail = await get_occupation_detail(session, slug, locale, country)
     if detail is None:
         raise HTTPException(status_code=404, detail="occupation not found")
     return detail
