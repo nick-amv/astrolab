@@ -16,6 +16,7 @@
     salary_low: number | null;
     salary_high: number | null;
     currency: string;
+    period: string | null;
     confidence: string | null;
     demand_note: string | null;
   };
@@ -72,6 +73,7 @@
             estimatedSalary: {
               "@type": "MonetaryAmountDistribution",
               currency: fact.currency,
+              duration: fact.period === "year" ? "P1Y" : "P1M",
               minValue: fact.salary_low,
               maxValue: fact.salary_high,
             },
@@ -120,7 +122,7 @@
           <div class="k">{m.prof_salary()}</div>
           {#if fact.salary_low}
             <p class="salary">
-              {fact.salary_low.toLocaleString()}–{fact.salary_high?.toLocaleString()} {fact.currency}
+              {fact.salary_low.toLocaleString()}–{fact.salary_high?.toLocaleString()} {fact.currency}{#if fact.period === "year"}{m.salary_per_year()}{/if}
               {#if fact.confidence === "estimate"}<span class="est">{m.prof_estimate()}</span>{/if}
             </p>
           {/if}

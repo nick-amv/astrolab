@@ -103,6 +103,9 @@ async def get_occupation_detail(
                 "salary_low": c.salary_low,
                 "salary_high": c.salary_high,
                 "currency": c.currency,
+                # US OEWS wages are annual; RU figures are monthly. Surfacing the
+                # period stops a US visitor reading an annual number as monthly.
+                "period": "year" if c.currency == "USD" else "month",
                 "demand_note": c.demand_note,
                 "confidence": c.confidence,  # 'estimate' → UI marks as estimate
                 "as_of_date": c.as_of_date.isoformat() if c.as_of_date else None,

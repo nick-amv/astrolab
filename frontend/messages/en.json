@@ -66,6 +66,7 @@
   "prof_estimate_note": "The interest profile is a preliminary estimate based on the RIASEC model, not a diagnosis.",
   "prof_salary": "Salary",
   "prof_estimate": "estimate",
+  "salary_per_year": "/yr",
   "prof_cta": "Check if it fits me",
   "prof_howto": "How to get there",
   "edu_ege": "What to take",
