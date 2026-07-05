@@ -1,0 +1,889 @@
+{
+  "country": "RU",
+  "source_key": "rosstat-ozpp",
+  "source_name": "Rosstat occupational wage survey (Oct 2023), scaled to 2025 wage growth",
+  "source_url": "https://rosstat.gov.ru/compendium/document/60671",
+  "as_of_date": "2025-01-01",
+  "facts": [
+    {
+      "slug": "software-developer",
+      "okz_group": "Разработчики и аналитики программного обеспечения и приложений",
+      "salary_low": 161000,
+      "salary_high": 290000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Высокий спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "data-analyst",
+      "okz_group": "Разработчики и аналитики программного обеспечения и приложений",
+      "salary_low": 161000,
+      "salary_high": 290000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Высокий спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "data-scientist",
+      "okz_group": "Разработчики и аналитики программного обеспечения и приложений",
+      "salary_low": 161000,
+      "salary_high": 290000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Высокий спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "qa-engineer",
+      "okz_group": "Разработчики и аналитики программного обеспечения и приложений",
+      "salary_low": 161000,
+      "salary_high": 290000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Средний спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "devops-engineer",
+      "okz_group": "Разработчики и аналитики программного обеспечения и приложений",
+      "salary_low": 161000,
+      "salary_high": 290000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Высокий спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "game-developer",
+      "okz_group": "Разработчики и аналитики программного обеспечения и приложений",
+      "salary_low": 161000,
+      "salary_high": 290000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Средний спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "data-engineer",
+      "okz_group": "Разработчики и аналитики программного обеспечения и приложений",
+      "salary_low": 161000,
+      "salary_high": 290000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Высокий спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "machine-learning-engineer",
+      "okz_group": "Разработчики и аналитики программного обеспечения и приложений",
+      "salary_low": 161000,
+      "salary_high": 290000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Высокий спрос, конкуренция за сильных специалистов",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "systems-administrator",
+      "okz_group": "Специалисты по базам данных и сетям",
+      "salary_low": 133000,
+      "salary_high": 239000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Стабильный спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "network-engineer",
+      "okz_group": "Специалисты по базам данных и сетям",
+      "salary_low": 133000,
+      "salary_high": 239000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Стабильный спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "database-administrator",
+      "okz_group": "Специалисты по базам данных и сетям",
+      "salary_low": 133000,
+      "salary_high": 239000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Стабильный спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "cybersecurity-specialist",
+      "okz_group": "Специалисты по базам данных и сетям",
+      "salary_low": 133000,
+      "salary_high": 239000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Высокий спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "it-support-specialist",
+      "okz_group": "Специалисты-техники по эксплуатации ИКТ и по поддержке пользователей ИКТ",
+      "salary_low": 84000,
+      "salary_high": 152000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Стабильный спрос, хороший вход в ИТ",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "physician",
+      "okz_group": "Врачи",
+      "salary_low": 101000,
+      "salary_high": 181000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Стабильный спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "dentist",
+      "okz_group": "Врачи",
+      "salary_low": 101000,
+      "salary_high": 181000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Высокий спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "nurse",
+      "okz_group": "Средний медицинский персонал по уходу и акушерству",
+      "salary_low": 54000,
+      "salary_high": 98000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Высокий спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "medical-assistant",
+      "okz_group": "Средний медицинский персонал по уходу и акушерству",
+      "salary_low": 54000,
+      "salary_high": 98000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Высокий спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "dental-hygienist",
+      "okz_group": "Средний медицинский персонал по уходу и акушерству",
+      "salary_low": 54000,
+      "salary_high": 98000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Стабильный спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "pharmacist",
+      "okz_group": "Фельдшеры, техники по обслуживанию медицинского оборудования и фармацевты",
+      "salary_low": 56000,
+      "salary_high": 101000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Стабильный спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "radiologic-technologist",
+      "okz_group": "Фельдшеры, техники по обслуживанию медицинского оборудования и фармацевты",
+      "salary_low": 56000,
+      "salary_high": 101000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Стабильный спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "veterinarian",
+      "okz_group": "Ветеринарные врачи",
+      "salary_low": 53000,
+      "salary_high": 95000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Растущий спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "physical-therapist",
+      "okz_group": "Другие специалисты в области здравоохранения",
+      "salary_low": 70000,
+      "salary_high": 125000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Растущий спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "occupational-therapist",
+      "okz_group": "Другие специалисты в области здравоохранения",
+      "salary_low": 70000,
+      "salary_high": 125000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Растущий спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "optometrist",
+      "okz_group": "Другие специалисты в области здравоохранения",
+      "salary_low": 70000,
+      "salary_high": 125000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Стабильный спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "dietitian",
+      "okz_group": "Другие специалисты в области здравоохранения",
+      "salary_low": 70000,
+      "salary_high": 125000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Растущий спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "paramedic",
+      "okz_group": "Врачи скорой медицинской помощи и парамедики",
+      "salary_low": 119000,
+      "salary_high": 213000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Высокий спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "respiratory-therapist",
+      "okz_group": "Прочий средний медицинский персонал здравоохранения",
+      "salary_low": 52000,
+      "salary_high": 93000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Растущий спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "surgical-technologist",
+      "okz_group": "Прочий средний медицинский персонал здравоохранения",
+      "salary_low": 52000,
+      "salary_high": 93000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Стабильный спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "phlebotomist",
+      "okz_group": "Прочий средний медицинский персонал здравоохранения",
+      "salary_low": 52000,
+      "salary_high": 93000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Высокий спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "psychologist",
+      "okz_group": "Специалисты гуманитарной сферы и религии",
+      "salary_low": 76000,
+      "salary_high": 137000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Растущий спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "accountant",
+      "okz_group": "Специалисты по финансовой деятельности",
+      "salary_low": 81000,
+      "salary_high": 146000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Стабильный спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "financial-analyst",
+      "okz_group": "Специалисты по финансовой деятельности",
+      "salary_low": 81000,
+      "salary_high": 146000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Средний спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "economist",
+      "okz_group": "Специалисты по финансовой деятельности",
+      "salary_low": 81000,
+      "salary_high": 146000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Стабильный спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "financial-advisor",
+      "okz_group": "Специалисты по финансовой деятельности",
+      "salary_low": 81000,
+      "salary_high": 146000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Спрос зависит от клиентской базы, часть дохода от процента",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "teacher",
+      "okz_group": "Педагогические работники в средней школе",
+      "salary_low": 57000,
+      "salary_high": 103000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Стабильный спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "speech-language-pathologist",
+      "okz_group": "Другие специалисты в области образования",
+      "salary_low": 57000,
+      "salary_high": 102000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Высокий спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "school-counselor",
+      "okz_group": "Другие специалисты в области образования",
+      "salary_low": 57000,
+      "salary_high": 102000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Растущий спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "mechanical-engineer",
+      "okz_group": "Специалисты в области техники, исключая электротехников",
+      "salary_low": 93000,
+      "salary_high": 167000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Средний спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "civil-engineer",
+      "okz_group": "Специалисты в области техники, исключая электротехников",
+      "salary_low": 93000,
+      "salary_high": 167000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Стабильный спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "electrical-engineer",
+      "okz_group": "Инженеры-электротехники",
+      "salary_low": 100000,
+      "salary_high": 181000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Средний спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "architect",
+      "okz_group": "Архитекторы, проектировщики, топографы и дизайнеры",
+      "salary_low": 116000,
+      "salary_high": 208000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Средний спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "graphic-designer",
+      "okz_group": "Архитекторы, проектировщики, топографы и дизайнеры",
+      "salary_low": 116000,
+      "salary_high": 208000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Средний спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "ux-ui-designer",
+      "okz_group": "Архитекторы, проектировщики, топографы и дизайнеры",
+      "salary_low": 116000,
+      "salary_high": 208000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Высокий спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "interior-designer",
+      "okz_group": "Архитекторы, проектировщики, топографы и дизайнеры",
+      "salary_low": 116000,
+      "salary_high": 208000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Средний спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "art-director",
+      "okz_group": "Архитекторы, проектировщики, топографы и дизайнеры",
+      "salary_low": 116000,
+      "salary_high": 208000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Средний спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "industrial-designer",
+      "okz_group": "Архитекторы, проектировщики, топографы и дизайнеры",
+      "salary_low": 116000,
+      "salary_high": 208000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Умеренный спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "urban-planner",
+      "okz_group": "Архитекторы, проектировщики, топографы и дизайнеры",
+      "salary_low": 116000,
+      "salary_high": 208000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Умеренный спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "biologist",
+      "okz_group": "Специалисты в области наук о жизни",
+      "salary_low": 71000,
+      "salary_high": 128000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Средний спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "environmental-scientist",
+      "okz_group": "Специалисты в области наук о жизни",
+      "salary_low": 71000,
+      "salary_high": 128000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Растущий спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "chemist",
+      "okz_group": "Физики, химики и специалисты родственных занятий",
+      "salary_low": 108000,
+      "salary_high": 194000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Средний спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "animator",
+      "okz_group": "Художники и артисты",
+      "salary_low": 60000,
+      "salary_high": 108000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Средний спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "photographer",
+      "okz_group": "Художники и артисты",
+      "salary_low": 60000,
+      "salary_high": 108000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Средний спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "video-editor",
+      "okz_group": "Художники и артисты",
+      "salary_low": 60000,
+      "salary_high": 108000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Растущий спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "musician",
+      "okz_group": "Художники и артисты",
+      "salary_low": 60000,
+      "salary_high": 108000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Высокая конкуренция",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "actor",
+      "okz_group": "Художники и артисты",
+      "salary_low": 60000,
+      "salary_high": 108000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Высокая конкуренция",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "journalist",
+      "okz_group": "Писатели, журналисты и лингвисты",
+      "salary_low": 80000,
+      "salary_high": 144000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Средний спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "writer",
+      "okz_group": "Писатели, журналисты и лингвисты",
+      "salary_low": 80000,
+      "salary_high": 144000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Высокая конкуренция",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "translator",
+      "okz_group": "Писатели, журналисты и лингвисты",
+      "salary_low": 80000,
+      "salary_high": 144000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Средний спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "chef",
+      "okz_group": "Повара",
+      "salary_low": 37000,
+      "salary_high": 67000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Высокий спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "marketing-manager",
+      "okz_group": "Специалисты по сбыту и маркетингу продукции и услуг и связям с общественностью",
+      "salary_low": 103000,
+      "salary_high": 186000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Высокий спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "sales-manager",
+      "okz_group": "Специалисты по сбыту и маркетингу продукции и услуг и связям с общественностью",
+      "salary_low": 103000,
+      "salary_high": 186000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Высокий спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "product-manager",
+      "okz_group": "Специалисты по сбыту и маркетингу продукции и услуг и связям с общественностью",
+      "salary_low": 103000,
+      "salary_high": 186000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Высокий спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "project-manager",
+      "okz_group": "Специалисты в области администрирования",
+      "salary_low": 80000,
+      "salary_high": 144000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Высокий спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "hr-specialist",
+      "okz_group": "Специалисты в области администрирования",
+      "salary_low": 80000,
+      "salary_high": 144000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Средний спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "management-consultant",
+      "okz_group": "Специалисты в области администрирования",
+      "salary_low": 80000,
+      "salary_high": 144000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Средний спрос, выше в крупных городах",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "logistician",
+      "okz_group": "Специалисты в области администрирования",
+      "salary_low": 80000,
+      "salary_high": 144000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Стабильный спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "operations-manager",
+      "okz_group": "Управляющие финансово-экономической и административной деятельностью",
+      "salary_low": 128000,
+      "salary_high": 231000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Стабильный спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "social-worker",
+      "okz_group": "Средний специальный персонал по юридическим, социальным услугам и религии",
+      "salary_low": 45000,
+      "salary_high": 81000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Стабильный спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "lawyer",
+      "okz_group": "Специалисты в области права",
+      "salary_low": 88000,
+      "salary_high": 159000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Средний спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "librarian",
+      "okz_group": "Специалисты архивов, музеев и библиотек",
+      "salary_low": 47000,
+      "salary_high": 85000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Стабильный спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "actuary",
+      "okz_group": "Математики (включая актуариев) и статистики",
+      "salary_low": 156000,
+      "salary_high": 281000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Узкая, но востребованная профессия, требует экзаменов",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "statistician",
+      "okz_group": "Математики (включая актуариев) и статистики",
+      "salary_low": 156000,
+      "salary_high": 281000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Растущий спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "plumber",
+      "okz_group": "Рабочие строительных и родственных занятий",
+      "salary_low": 75000,
+      "salary_high": 135000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Стабильный спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "hvac-technician",
+      "okz_group": "Механики и ремонтники транспортных средств, сельскохозяйственного и производственного оборудования и рабочие родственных занятий",
+      "salary_low": 71000,
+      "salary_high": 128000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Растущий спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "aircraft-mechanic",
+      "okz_group": "Механики и ремонтники транспортных средств, сельскохозяйственного и производственного оборудования и рабочие родственных занятий",
+      "salary_low": 71000,
+      "salary_high": 128000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Стабильный спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "automotive-technician",
+      "okz_group": "Механики и ремонтники транспортных средств, сельскохозяйственного и производственного оборудования и рабочие родственных занятий",
+      "salary_low": 71000,
+      "salary_high": 128000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Высокий спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "carpenter",
+      "okz_group": "Деревообработчики, краснодеревщики и рабочие родственных занятий",
+      "salary_low": 61000,
+      "salary_high": 109000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Стабильный спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "machinist",
+      "okz_group": "Кузнецы, слесари-инструментальщики, станочники, наладчики и рабочие родственных занятий",
+      "salary_low": 85000,
+      "salary_high": 153000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Высокий спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "cnc-machinist",
+      "okz_group": "Кузнецы, слесари-инструментальщики, станочники, наладчики и рабочие родственных занятий",
+      "salary_low": 85000,
+      "salary_high": 153000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Высокий спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "heavy-equipment-operator",
+      "okz_group": "Операторы подвижного оборудования",
+      "salary_low": 80000,
+      "salary_high": 143000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Высокий спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "lineworker",
+      "okz_group": "Электромонтажники и ремонтники электрического оборудования",
+      "salary_low": 68000,
+      "salary_high": 122000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Стабильный спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "electrician",
+      "okz_group": "Электромонтажники и ремонтники электрического оборудования",
+      "salary_low": 68000,
+      "salary_high": 122000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Высокий спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "welder",
+      "okz_group": "Формовщики, сварщики, вальцовщики, подготовители конструкционного металла и рабочие родственных занятий",
+      "salary_low": 82000,
+      "salary_high": 148000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Высокий спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "real-estate-agent",
+      "okz_group": "Агенты по коммерческим услугам",
+      "salary_low": 61000,
+      "salary_high": 110000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Доход от процента со сделок, сильно зависит от активности",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "insurance-agent",
+      "okz_group": "Агенты по коммерческим услугам",
+      "salary_low": 61000,
+      "salary_high": 110000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Доход во многом от процента с продаж",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "sound-engineer",
+      "okz_group": "Специалисты-техники по телекоммуникациям и радиовещанию",
+      "salary_low": 75000,
+      "salary_high": 135000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Умеренный спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "police-officer",
+      "okz_group": "Работники служб, осуществляющих охрану граждан и собственности",
+      "salary_low": 50000,
+      "salary_high": 91000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Стабильный спрос",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "firefighter",
+      "okz_group": "Работники служб, осуществляющих охрану граждан и собственности",
+      "salary_low": 50000,
+      "salary_high": 91000,
+      "currency": "RUB",
+      "period": "month",
+      "demand_note": "Стабильный спрос",
+      "confidence": "estimate"
+    }
+  ]
+}

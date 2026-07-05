@@ -1,7 +1,11 @@
 {
   "country": "US",
   "source": "BLS OEWS national, May 2024 (bls.gov/oes)",
+  "source_key": "bls-oews",
+  "source_name": "BLS OEWS national, May 2024 (public domain, U.S. Government work)",
+  "source_url": "https://www.bls.gov/oes/",
   "as_of": "2024",
+  "as_of_date": "2024-05-01",
   "facts": [
     {
       "slug": "accountant",

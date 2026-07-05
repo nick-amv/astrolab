@@ -22,25 +22,29 @@ from app.models import DataSource, Occupation, OccupationCountry
 from sqlalchemy import select
 
 DEFAULT_SEED = Path(__file__).resolve().parent.parent / "seed" / "facts_us.json"
-AS_OF_DATE = dt.date(2024, 5, 1)  # OEWS May 2024 reference period
 
 
 async def run(seed_path: Path) -> None:
     data = json.loads(seed_path.read_text("utf-8"))
     country = data["country"]
+    # Provenance + reference date come from the file (US=BLS OEWS, RU=Rosstat),
+    # with BLS defaults for backward compatibility.
+    src_key = data.get("source_key", "bls-oews")
+    src_name = data.get("source_name", "Public domain (U.S. Government work)")
+    src_url = data.get("source_url", "https://www.bls.gov/oes/")
+    as_of = dt.date.fromisoformat(data.get("as_of_date", "2024-05-01"))
 
     async with SessionLocal() as s:
         src = (
-            await s.execute(select(DataSource).where(DataSource.name == "bls-oews"))
+            await s.execute(select(DataSource).where(DataSource.name == src_key))
         ).scalars().first()
         if src is None:
-            src = DataSource(
-                name="bls-oews",
-                license="Public domain (U.S. Government work)",
-                url="https://www.bls.gov/oes/",
-            )
+            src = DataSource(name=src_key, license=src_name[:128], url=src_url)
             s.add(src)
             await s.flush()
+        else:
+            src.license = src_name[:128]
+            src.url = src_url
 
         occ_by_slug = {
             o.slug: o.id for o in (await s.execute(select(Occupation))).scalars().all()
@@ -70,7 +74,7 @@ async def run(seed_path: Path) -> None:
             row.demand_note = fact.get("demand_note")
             row.confidence = "estimate"
             row.source_id = src.id
-            row.as_of_date = AS_OF_DATE
+            row.as_of_date = as_of
             n_up += 1
 
         await s.commit()
