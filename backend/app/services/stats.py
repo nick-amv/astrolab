@@ -17,10 +17,17 @@ from app.models import (
     Answer,
     AssessmentSession,
     Match,
+    MatchFeedback,
     Profile,
     QuestionBank,
     Report,
 )
+
+
+def _fit_rate(d: dict[str, int]) -> float | None:
+    """Match-quality score for a bucket: 'partly' counts half. None if no votes."""
+    total = d["fits"] + d["partial"] + d["not_me"]
+    return round((d["fits"] + 0.5 * d["partial"]) / total, 3) if total else None
 
 
 async def _scalar(session: AsyncSession, stmt) -> int:
@@ -116,6 +123,31 @@ async def compute_funnel(session: AsyncSession) -> dict:
         .where(adult_pred, S.status == "completed"),
     )
 
+    # match feedback: verdict counts + fit-rate per bucket (N2, our quality signal)
+    MF = MatchFeedback
+    fb_rows = (
+        await session.execute(
+            select(Match.bucket, MF.verdict, func.count())
+            .join(
+                Match,
+                (Match.session_id == MF.session_id)
+                & (Match.occupation_id == MF.occupation_id),
+            )
+            .group_by(Match.bucket, MF.verdict)
+        )
+    ).all()
+    fb_by_verdict: dict[str, int] = {}
+    fb_by_bucket: dict[str, dict[str, int]] = {}
+    for bucket, verdict, c in fb_rows:
+        fb_by_verdict[str(verdict)] = fb_by_verdict.get(str(verdict), 0) + int(c)
+        b = fb_by_bucket.setdefault(str(bucket), {"fits": 0, "partial": 0, "not_me": 0})
+        b[str(verdict)] = int(c)
+    feedback = {
+        "total": sum(fb_by_verdict.values()),
+        "by_verdict": fb_by_verdict,
+        "by_bucket": {b: {**v, "fit_rate": _fit_rate(v)} for b, v in fb_by_bucket.items()},
+    }
+
     def _recent(days: int, col) -> object:
         return select(func.count()).select_from(S).where(col >= now - dt.timedelta(days=days))
 
@@ -143,6 +175,7 @@ async def compute_funnel(session: AsyncSession) -> dict:
             "saved_to_account": saved_to_account,
         },
         "by_age_band": by_age_band,
+        "feedback": feedback,
         "adults_vs_teens": {
             "adult": {"started": adult_started, "completed": adult_completed},
             "teen": {

@@ -142,6 +142,21 @@ export async function enrichResult(
   return r.json();
 }
 
+// N2: the user's reaction to a matched occupation ("that's me / partly / not me").
+export type Verdict = "fits" | "partial" | "not_me";
+export async function submitFeedback(
+  sessionId: string,
+  slug: string,
+  verdict: Verdict,
+): Promise<boolean> {
+  const r = await fetch(`/api/assessment/${sessionId}/feedback`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ slug, verdict }),
+  });
+  return r.ok;
+}
+
 // --- Accounts (magic-link) --------------------------------------------------
 export interface Me {
   id: string;

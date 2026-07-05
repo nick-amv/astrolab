@@ -19,6 +19,7 @@ from sqlalchemy import (
     ForeignKey,
     Integer,
     String,
+    UniqueConstraint,
 )
 from sqlalchemy.orm import Mapped, mapped_column
 
@@ -41,6 +42,27 @@ class Match(Base):
     rank_llm: Mapped[int | None] = mapped_column(Integer)  # after LLM re-rank, if any
     rank_final: Mapped[int] = mapped_column(Integer)  # backend-computed display rank
     llm_reason: Mapped[str | None] = mapped_column(String)  # "why you" text, if generated
+
+
+class MatchFeedback(Base):
+    """The user's honest reaction to a matched occupation ('that's me / partly /
+    not me'). Our only signal on match quality (N2); one row per (session, occ)."""
+
+    __tablename__ = "match_feedback"
+
+    id: Mapped[uuid.UUID] = uuid_pk()
+    session_id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("assessment_sessions.id", ondelete="CASCADE"), index=True
+    )
+    occupation_id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("occupations.id", ondelete="CASCADE")
+    )
+    verdict: Mapped[str] = mapped_column(String(8))  # fits | partial | not_me
+    created_at: Mapped[dt.datetime] = created_at_col()
+
+    __table_args__ = (
+        UniqueConstraint("session_id", "occupation_id", name="uq_feedback_session_occ"),
+    )
 
 
 class AiInterview(Base):

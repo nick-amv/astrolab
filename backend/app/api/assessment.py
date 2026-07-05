@@ -28,6 +28,8 @@ from app.models import (
     Answer,
     AssessmentSession,
     Match,
+    MatchFeedback,
+    Occupation,
     QuestionBank,
     QuestionI18n,
     Report,
@@ -366,6 +368,47 @@ async def result(
     if payload is None:
         raise HTTPException(status_code=409, detail="not scored yet")
     return payload
+
+
+class FeedbackIn(BaseModel):
+    slug: str
+    verdict: str  # fits | partial | not_me
+
+
+@router.post("/{session_id}/feedback")
+async def submit_feedback(
+    session_id: str, body: FeedbackIn, session: AsyncSession = Depends(get_session)
+) -> dict:
+    """Record the user's 'that's me / partly / not me' reaction to one of THIS
+    session's matched occupations. Upsert (a re-click overwrites). Our only
+    signal on match quality (N2)."""
+    ses = await _get_session_or_404(session, session_id)
+    if body.verdict not in ("fits", "partial", "not_me"):
+        raise HTTPException(status_code=422, detail="bad verdict")
+    # only an occupation this session was actually matched to can be rated
+    occ_id = (
+        await session.execute(
+            select(Match.occupation_id)
+            .join(Occupation, Occupation.id == Match.occupation_id)
+            .where(Match.session_id == ses.id, Occupation.slug == body.slug)
+        )
+    ).scalars().first()
+    if occ_id is None:
+        raise HTTPException(status_code=404, detail="occupation not in this result")
+    row = (
+        await session.execute(
+            select(MatchFeedback).where(
+                MatchFeedback.session_id == ses.id,
+                MatchFeedback.occupation_id == occ_id,
+            )
+        )
+    ).scalars().first()
+    if row is None:
+        row = MatchFeedback(session_id=ses.id, occupation_id=occ_id)
+        session.add(row)
+    row.verdict = body.verdict
+    await session.commit()
+    return {"ok": True, "verdict": body.verdict}
 
 
 class ShareOut(BaseModel):
