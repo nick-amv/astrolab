@@ -1,6 +1,7 @@
 <script lang="ts">
   import { m } from "$lib/paraglide/messages";
   import { localizeHref } from "$lib/paraglide/runtime";
+  import type { CatalogItem } from "./+page";
   import type { PageData } from "./$types";
 
   let { data }: { data: PageData } = $props();
@@ -18,6 +19,72 @@
     law: "linear-gradient(135deg,#4f9dff,#6d6790)",
   };
   const dot = (f: string | null) => FIELD[f ?? ""] ?? "linear-gradient(135deg,#8b5cf6,#4f9dff)";
+
+  const FIELD_LABEL: Record<string, () => string> = {
+    tech: m.field_tech, health: m.field_health, arts: m.field_arts, business: m.field_business,
+    engineering: m.field_engineering, science: m.field_science, trades: m.field_trades,
+    media: m.field_media, finance: m.field_finance, education: m.field_education, law: m.field_law,
+    hospitality: m.field_hospitality, marketing: m.field_marketing, social: m.field_social,
+    language: m.field_language, sports: m.field_sports,
+  };
+  const fieldLabel = (t: string) => FIELD_LABEL[t]?.() ?? t;
+
+  const items = $derived(data.occupations as CatalogItem[]);
+
+  // field chips: only tags actually present, most common first
+  const fields = $derived.by(() => {
+    const c = new Map<string, number>();
+    for (const o of items) if (o.field_tag) c.set(o.field_tag, (c.get(o.field_tag) ?? 0) + 1);
+    return [...c.entries()].sort((a, b) => b[1] - a[1]).map(([t]) => t);
+  });
+
+  // salary brackets depend on currency (US annual USD vs RU monthly RUB)
+  const isUsd = $derived(items.find((o) => o.currency)?.currency === "USD");
+  const salBands = $derived(
+    isUsd
+      ? [
+          { key: "lo", label: "≤ $60k", lo: 0, hi: 60000 },
+          { key: "mid", label: "$60–100k", lo: 60000, hi: 100000 },
+          { key: "hi", label: "$100k+", lo: 100000, hi: Infinity },
+        ]
+      : [
+          { key: "lo", label: "≤ 70k ₽", lo: 0, hi: 70000 },
+          { key: "mid", label: "70–120k ₽", lo: 70000, hi: 120000 },
+          { key: "hi", label: "120k+ ₽", lo: 120000, hi: Infinity },
+        ],
+  );
+
+  let field = $state<string | null>(null);
+  let noUni = $state(false);
+  let salBand = $state<string | null>(null);
+  let q = $state("");
+
+  const NO_UNI = new Set(["short", "vocational"]);
+  const midpoint = (o: CatalogItem) =>
+    o.salary_low != null && o.salary_high != null ? (o.salary_low + o.salary_high) / 2 : null;
+
+  const filtered = $derived.by(() => {
+    const needle = q.trim().toLowerCase();
+    const band = salBands.find((b) => b.key === salBand);
+    return items.filter((o) => {
+      if (field && o.field_tag !== field) return false;
+      if (noUni && !NO_UNI.has(o.edu_duration_band ?? "")) return false;
+      if (band) {
+        const mp = midpoint(o);
+        if (mp == null || mp < band.lo || mp >= band.hi) return false;
+      }
+      if (needle && !o.title.toLowerCase().includes(needle)) return false;
+      return true;
+    });
+  });
+
+  const active = $derived(field !== null || noUni || salBand !== null || q.trim() !== "");
+  function clearAll() {
+    field = null;
+    noUni = false;
+    salBand = null;
+    q = "";
+  }
 </script>
 
 <svelte:head>
@@ -31,11 +98,38 @@
     <p class="intro">{m.catalog_intro()}</p>
   </header>
 
-  {#if data.occupations.length === 0}
+  <div class="filters">
+    <input class="search" type="search" placeholder={m.catalog_search_ph()} bind:value={q} />
+    <div class="chips">
+      <button class="chip strong" class:on={noUni} onclick={() => (noUni = !noUni)}
+        >{m.catalog_no_uni()}</button
+      >
+      {#each salBands as b (b.key)}
+        <button class="chip" class:on={salBand === b.key}
+          onclick={() => (salBand = salBand === b.key ? null : b.key)}>{b.label}</button
+        >
+      {/each}
+    </div>
+    <div class="chips">
+      {#each fields as f (f)}
+        <button class="chip" class:on={field === f}
+          onclick={() => (field = field === f ? null : f)}>{fieldLabel(f)}</button
+        >
+      {/each}
+    </div>
+    <div class="meta">
+      <span class="count">{m.catalog_count({ shown: filtered.length, total: items.length })}</span>
+      {#if active}<button class="clear" onclick={clearAll}>{m.catalog_clear()}</button>{/if}
+    </div>
+  </div>
+
+  {#if items.length === 0}
     <p class="empty">{m.catalog_empty()}</p>
+  {:else if filtered.length === 0}
+    <p class="empty">{m.catalog_none()}</p>
   {:else}
     <ul class="grid">
-      {#each data.occupations as occ (occ.slug)}
+      {#each filtered as occ (occ.slug)}
         <li>
           <a href={localizeHref(`/professions/${occ.slug}`)}>
             <span class="dot" style="background:{dot(occ.field_tag)}"></span>
@@ -55,7 +149,7 @@
   }
   .lede {
     max-width: 54ch;
-    margin-bottom: 40px;
+    margin-bottom: 24px;
   }
   h1 {
     font-weight: 800;
@@ -69,6 +163,94 @@
     line-height: 1.6;
     margin: 0;
   }
+  .filters {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 26px;
+  }
+  .search {
+    font-family: inherit;
+    font-size: 15px;
+    color: var(--ink);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 11px 16px;
+    max-width: 340px;
+  }
+  .search:focus {
+    outline: none;
+    border-color: var(--c3);
+  }
+  .chips {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  @media (max-width: 620px) {
+    .chips {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      padding-bottom: 4px;
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+  .chip {
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+    color: var(--muted);
+    background: transparent;
+    border: 1px solid var(--line);
+    border-radius: 99px;
+    padding: 6px 13px;
+    cursor: pointer;
+    transition:
+      color var(--dur) var(--ease),
+      background var(--dur) var(--ease),
+      border-color var(--dur) var(--ease);
+  }
+  .chip:hover {
+    color: var(--ink);
+    border-color: var(--c3);
+  }
+  .chip.on {
+    color: var(--chip-ink, #fff);
+    background: var(--c3);
+    border-color: var(--c3);
+  }
+  .chip.strong {
+    color: var(--ink);
+  }
+  .chip.strong.on {
+    color: var(--chip-ink, #fff);
+  }
+  .meta {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 2px;
+  }
+  .count {
+    font-size: 13px;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+  }
+  .clear {
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--c3);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+  .clear:hover {
+    text-decoration: underline;
+  }
   .grid {
     list-style: none;
     padding: 0;
@@ -76,36 +258,6 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
     gap: 14px;
-  }
-  .grid li {
-    animation: rise 0.5s var(--ease) both;
-  }
-  .grid li:nth-child(2) {
-    animation-delay: 0.04s;
-  }
-  .grid li:nth-child(3) {
-    animation-delay: 0.08s;
-  }
-  .grid li:nth-child(4) {
-    animation-delay: 0.12s;
-  }
-  .grid li:nth-child(5) {
-    animation-delay: 0.16s;
-  }
-  .grid li:nth-child(6) {
-    animation-delay: 0.2s;
-  }
-  .grid li:nth-child(7) {
-    animation-delay: 0.24s;
-  }
-  .grid li:nth-child(n + 8) {
-    animation-delay: 0.28s;
-  }
-  @keyframes rise {
-    from {
-      opacity: 0;
-      transform: translateY(10px);
-    }
   }
   .grid a {
     display: flex;

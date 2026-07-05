@@ -115,7 +115,9 @@ async def get_occupation_detail(
     }
 
 
-async def list_published(session: AsyncSession, locale: str) -> list[dict]:
+async def list_published(
+    session: AsyncSession, locale: str, country: str | None = None
+) -> list[dict]:
     occs = (
         await session.execute(
             select(Occupation).where(Occupation.published.is_(True)).order_by(Occupation.slug)
@@ -123,14 +125,36 @@ async def list_published(session: AsyncSession, locale: str) -> list[dict]:
     ).scalars().all()
     if not occs:
         return []
+    occ_ids = [o.id for o in occs]
     i18n_rows = (
         await session.execute(
-            select(OccupationI18n).where(
-                OccupationI18n.occupation_id.in_([o.id for o in occs])
-            )
+            select(OccupationI18n).where(OccupationI18n.occupation_id.in_(occ_ids))
         )
     ).scalars().all()
     title_by = {(str(r.occupation_id), r.locale): r.title for r in i18n_rows}
+
+    # salary for the user's country (for the catalog salary filter). None when
+    # a country has no fact (e.g. US actors) — the filter just skips it.
+    fact_by: dict[str, dict] = {}
+    if country:
+        facts = (
+            await session.execute(
+                select(OccupationCountry).where(
+                    OccupationCountry.occupation_id.in_(occ_ids),
+                    OccupationCountry.country == country,
+                )
+            )
+        ).scalars().all()
+        fact_by = {
+            str(c.occupation_id): {
+                "salary_low": c.salary_low,
+                "salary_high": c.salary_high,
+                "currency": c.currency,
+                "period": "year" if c.currency == "USD" else "month",
+            }
+            for c in facts
+        }
+
     out = []
     for o in occs:
         title = (
@@ -139,5 +163,12 @@ async def list_published(session: AsyncSession, locale: str) -> list[dict]:
             or title_by.get((str(o.id), "ru"))
             or o.slug
         )
-        out.append({"slug": o.slug, "title": title, "field_tag": o.field_tag})
+        item = {
+            "slug": o.slug,
+            "title": title,
+            "field_tag": o.field_tag,
+            "edu_duration_band": o.edu_duration_band,
+        }
+        item.update(fact_by.get(str(o.id), {}))
+        out.append(item)
     return out

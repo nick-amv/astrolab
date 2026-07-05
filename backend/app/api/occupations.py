@@ -15,9 +15,10 @@ router = APIRouter(prefix="/api/occupations", tags=["occupations"])
 @router.get("")
 async def list_occupations(
     locale: str = Query("ru"),
+    country: str | None = Query(None),
     session: AsyncSession = Depends(get_session),
 ) -> dict:
-    items = await list_published(session, locale)
+    items = await list_published(session, locale, country)
     return {"count": len(items), "items": items}
 
 
