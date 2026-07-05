@@ -1,7 +1,7 @@
 <script lang="ts">
   import { goto, invalidateAll } from "$app/navigation";
   import { page } from "$app/stores";
-  import { deleteAccount, logout } from "$lib/api";
+  import { deleteAccount, logout, togglePlanStep, type PlanGroup } from "$lib/api";
   import { m } from "$lib/paraglide/messages";
   import { getLocale, localizeHref } from "$lib/paraglide/runtime";
   import type { PageData } from "./$types";
@@ -9,6 +9,16 @@
   let { data }: { data: PageData } = $props();
   const email = $derived(($page.data.user?.email as string | undefined) ?? "");
   let busy = $state(false);
+
+  // N4: saved 'try it this week' plans, checkboxes toggle done (optimistic).
+  let plans = $state<PlanGroup[]>(data.plans ?? []);
+  async function toggle(g: PlanGroup, idx: number) {
+    const step = g.steps.find((s) => s.idx === idx);
+    if (!step) return;
+    step.done = !step.done;
+    const res = await togglePlanStep(g.slug, idx, g.audience);
+    if (res !== null) step.done = res;
+  }
 
   function fmt(iso: string | null): string {
     if (!iso) return "";
@@ -68,6 +78,36 @@
         </li>
       {/each}
     </ul>
+  {/if}
+
+  {#if plans.length}
+    <section class="plan">
+      <h2>{m.me_plan_title()}</h2>
+      {#each plans as g (g.slug)}
+        <div class="plan-group">
+          <a class="plan-occ" href={localizeHref(`/professions/${g.slug}`)}>{g.title}</a>
+          <ul>
+            {#each g.steps as st (st.idx)}
+              <li>
+                <label>
+                  <input type="checkbox" checked={st.done} onchange={() => toggle(g, st.idx)} />
+                  <span class:done={st.done}>{st.text}</span>
+                </label>
+                {#if st.url}
+                  <a
+                    class="plan-link"
+                    href={st.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={st.text}>↗</a
+                  >
+                {/if}
+              </li>
+            {/each}
+          </ul>
+        </div>
+      {/each}
+    </section>
   {/if}
 
   <button class="danger" onclick={doDelete} disabled={busy}>{m.me_delete()}</button>
@@ -157,6 +197,70 @@
   .ghost:hover {
     border-color: var(--c3);
     color: var(--c3);
+  }
+  .plan {
+    margin: 0 0 32px;
+  }
+  .plan h2 {
+    font-size: 20px;
+    letter-spacing: -0.01em;
+    margin: 0 0 16px;
+  }
+  .plan-group {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--r);
+    box-shadow: var(--shadow-sm);
+    padding: 16px 20px;
+    margin-bottom: 12px;
+  }
+  .plan-occ {
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .plan-occ:hover {
+    color: var(--c3);
+  }
+  .plan-group ul {
+    list-style: none;
+    margin: 12px 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .plan-group li {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .plan-group label {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--muted);
+    cursor: pointer;
+  }
+  .plan-group input {
+    accent-color: var(--c3);
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+    flex: none;
+  }
+  .plan-group .done {
+    text-decoration: line-through;
+    opacity: 0.7;
+  }
+  .plan-link {
+    flex: none;
+    color: var(--c3);
+    font-weight: 700;
+    text-decoration: none;
   }
   .danger {
     font-family: inherit;

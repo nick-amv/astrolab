@@ -7,6 +7,11 @@
   let { data }: { data: PageData } = $props();
   const o = $derived(data.occupation);
   const edu = $derived(data.education);
+  // N4 'try it in a week' steps (curated per field; adult-neutral set on this
+  // public page — the result page shows the audience-correct set).
+  const steps = $derived(
+    (o.next_steps ?? []) as { idx: number; text: string; url: string | null }[],
+  );
 
   // Salary/demand facts are per-country. Show the fact for the user's country
   // (en→US, ru→RU) and nothing otherwise — never show RUB to a US visitor.
@@ -118,6 +123,23 @@
         <section>
           <h2>{m.prof_who()}</h2>
           <p>{o.who_fits}</p>
+        </section>
+      {/if}
+      {#if steps.length}
+        <section class="try">
+          <h2>{m.next_title()}</h2>
+          <ol class="try-steps">
+            {#each steps as st (st.idx)}
+              <li>
+                <span class="try-text">{st.text}</span>
+                {#if st.url}
+                  <a href={st.url} target="_blank" rel="noopener noreferrer" aria-label={st.text}
+                    >↗</a
+                  >
+                {/if}
+              </li>
+            {/each}
+          </ol>
         </section>
       {/if}
       <a class="cta" href={localizeHref("/test")}>{m.prof_cta()} →</a>
@@ -250,6 +272,36 @@
   }
   .main .cta {
     margin-top: 8px;
+  }
+  .try-steps {
+    margin: 0;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .try-steps li {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--muted);
+    max-width: 58ch;
+  }
+  .try-steps li::marker {
+    color: var(--c3);
+    font-weight: 700;
+  }
+  .try-text {
+    color: var(--ink);
+  }
+  .try-steps a {
+    margin-left: 6px;
+    color: var(--c3);
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .try-steps a:hover {
+    text-decoration: underline;
   }
   .card {
     background: var(--surface);

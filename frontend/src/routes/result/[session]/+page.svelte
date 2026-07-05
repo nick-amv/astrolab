@@ -75,7 +75,7 @@
 <section class="result">
   <h1>{m.result_title()}</h1>
   {#if enriching}<p class="enriching">{m.result_enriching()}</p>{/if}
-  <ResultView {result} {sid} />
+  <ResultView {result} {sid} loggedIn={!!user} />
 
   <div class="save">
     {#if saved}

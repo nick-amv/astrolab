@@ -28,7 +28,14 @@ from app.models.catalog import (
 )
 from app.models.commerce import Event, Payment, Subscription
 from app.models.identity import AuthToken, ConsentRecord, DeletionLog, User
-from app.models.results import AiInterview, LlmCall, Match, MatchFeedback, Report
+from app.models.results import (
+    AiInterview,
+    LlmCall,
+    Match,
+    MatchFeedback,
+    PlanItem,
+    Report,
+)
 
 __all__ = [
     "Base",
@@ -62,6 +69,7 @@ __all__ = [
     # results
     "Match",
     "MatchFeedback",
+    "PlanItem",
     "AiInterview",
     "LlmCall",
     "Report",

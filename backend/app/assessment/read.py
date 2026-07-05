@@ -17,12 +17,15 @@ from app.models import (
     TraitScore,
 )
 from app.models import Profile as ProfileRow
+from app.services.next_steps import audience_for, resolve_steps
 
 
-async def _buckets(session: AsyncSession, session_id: uuid.UUID, locale: str) -> dict[str, list]:
+async def _buckets(
+    session: AsyncSession, session_id: uuid.UUID, locale: str, audience: str
+) -> dict[str, list]:
     rows = (
         await session.execute(
-            select(Match, Occupation.slug)
+            select(Match, Occupation.slug, Occupation.field_tag)
             .join(Occupation, Occupation.id == Match.occupation_id)
             .where(Match.session_id == session_id)
             .order_by(Match.rank_final)
@@ -31,19 +34,26 @@ async def _buckets(session: AsyncSession, session_id: uuid.UUID, locale: str) ->
     out: dict[str, list] = {"core": [], "near": [], "dark_horse": []}
     if not rows:
         return out
-    occ_ids = [m.occupation_id for (m, _s) in rows]
+    occ_ids = [m.occupation_id for (m, _s, _f) in rows]
     i18n = (
         await session.execute(
             select(OccupationI18n).where(OccupationI18n.occupation_id.in_(occ_ids))
         )
     ).scalars().all()
     t = {(str(r.occupation_id), r.locale): r.title for r in i18n}
-    for m, slug in rows:
+    for m, slug, field_tag in rows:
         if m.bucket not in out:
             continue
         title = t.get((str(m.occupation_id), locale)) or t.get((str(m.occupation_id), "ru")) or slug
         out[m.bucket].append(
-            {"slug": slug, "title": title, "score": round(m.score, 3), "why": m.llm_reason}
+            {
+                "slug": slug,
+                "title": title,
+                "score": round(m.score, 3),
+                "why": m.llm_reason,
+                # N4 'what next' steps, resolved for this session's audience.
+                "next_steps": resolve_steps(field_tag, audience, locale, title),
+            }
         )
     return out
 
@@ -61,6 +71,7 @@ async def result_payload(
     profile_row = (
         await session.execute(select(ProfileRow).where(ProfileRow.id == ses.profile_id))
     ).scalars().first()
+    age_band = profile_row.age_band if profile_row else None
     return {
         "profile": {
             "riasec": by_kind.get("riasec", {}),
@@ -68,6 +79,6 @@ async def result_payload(
             "values": by_kind.get("values", {}),
             "subjects": by_kind.get("subjects", {}),
         },
-        "age_band": profile_row.age_band if profile_row else None,
-        "buckets": await _buckets(session, ses.id, locale),
+        "age_band": age_band,
+        "buckets": await _buckets(session, ses.id, locale, audience_for(age_band)),
     }

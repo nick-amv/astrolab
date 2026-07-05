@@ -14,6 +14,7 @@ from app.models import (
     OccupationI18n,
     OccupationSubject,
 )
+from app.services.next_steps import resolve_steps
 
 
 async def load_published_vectors(session: AsyncSession) -> list[OccupationVec]:
@@ -98,16 +99,21 @@ async def get_occupation_detail(
         ).scalars().all()
         src_by_id = {s.id: s.name for s in srcs}
 
+    title = chosen.title if chosen else occ.slug
     return {
         "slug": occ.slug,
         "riasec": occ.riasec or {},
         "riasec_source": occ.riasec_source,
         "regulated": occ.regulated,
-        "title": chosen.title if chosen else occ.slug,
+        "title": title,
         "summary": chosen.summary if chosen else None,
         "day_in_life": chosen.day_in_life if chosen else None,
         "who_fits": chosen.who_fits if chosen else None,
         "content_source": chosen.content_source if chosen else None,
+        # 'Try it in a week' steps (N4). The public page has no session, so it
+        # shows the audience-neutral 'adult' set; the result page resolves the
+        # real audience from the session (see assessment/read.py).
+        "next_steps": resolve_steps(occ.field_tag, "adult", locale, title),
         "facts": [
             {
                 "country": c.country,

@@ -14,6 +14,7 @@ import uuid
 
 from sqlalchemy import (
     JSON,
+    Boolean,
     DateTime,
     Float,
     ForeignKey,
@@ -62,6 +63,32 @@ class MatchFeedback(Base):
 
     __table_args__ = (
         UniqueConstraint("session_id", "occupation_id", name="uq_feedback_session_occ"),
+    )
+
+
+class PlanItem(Base):
+    """A saved 'try it this week' step the user is working through (N4 retention).
+
+    One row per (user, occupation, step); `done` toggles as they check it off.
+    `audience` is stored so the step text can be re-resolved later (teen/adult
+    step sets differ)."""
+
+    __tablename__ = "plan_items"
+
+    id: Mapped[uuid.UUID] = uuid_pk()
+    user_id: Mapped[uuid.UUID] = mapped_column(
+        ForeignKey("users.id", ondelete="CASCADE"), index=True
+    )
+    occupation_slug: Mapped[str] = mapped_column(String(80))
+    step_idx: Mapped[int] = mapped_column(Integer)
+    audience: Mapped[str] = mapped_column(String(8))  # teen | adult
+    done: Mapped[bool] = mapped_column(Boolean, default=False)
+    created_at: Mapped[dt.datetime] = created_at_col()
+
+    __table_args__ = (
+        UniqueConstraint(
+            "user_id", "occupation_slug", "step_idx", name="uq_plan_user_occ_step"
+        ),
     )
 
 

@@ -27,11 +27,19 @@ export interface Answer {
   value: number;
 }
 
+// N4: one curated 'try it this week' step. url is a search link (may be null).
+export interface NextStep {
+  idx: number;
+  text: string;
+  url: string | null;
+}
+
 export interface OccItem {
   slug: string;
   title: string;
   score: number;
   why: string | null;
+  next_steps?: NextStep[];
 }
 
 export interface Result {
@@ -221,6 +229,35 @@ export async function getMyResults(f: Fetch): Promise<SavedResult[] | null> {
 export async function deleteAccount(): Promise<boolean> {
   const r = await fetch("/api/me/delete", { method: "POST" });
   return r.ok;
+}
+
+// N4: save/toggle a 'try it this week' step (logged-in only). Returns the new
+// done state, or null if not signed in / failed.
+export async function togglePlanStep(
+  slug: string,
+  stepIdx: number,
+  audience: string,
+): Promise<boolean | null> {
+  const r = await fetch("/api/me/plan/toggle", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ slug, step_idx: stepIdx, audience }),
+  });
+  if (!r.ok) return null;
+  return Boolean((await r.json()).done);
+}
+
+export interface PlanGroup {
+  slug: string;
+  title: string;
+  audience: string;
+  steps: (NextStep & { done: boolean })[];
+}
+
+export async function getPlan(f: Fetch, locale: string): Promise<PlanGroup[]> {
+  const r = await f(`/api/me/plan?locale=${locale}`);
+  if (!r.ok) return [];
+  return (await r.json()).plans as PlanGroup[];
 }
 
 export async function createShare(sessionId: string): Promise<string | null> {
