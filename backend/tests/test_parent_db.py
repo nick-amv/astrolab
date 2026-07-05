@@ -4,6 +4,7 @@ token does not resolve on the parent endpoint."""
 
 from __future__ import annotations
 
+import json
 import uuid
 
 import pytest
@@ -49,7 +50,9 @@ async def _make_session(age_band: str) -> tuple[str, uuid.UUID]:
         s.add(
             Match(
                 session_id=ses.id, occupation_id=occ.id, score=0.9, bucket="core",
-                rank_det=1, rank_final=1, llm_reason="because you like to dig in",
+                rank_det=1, rank_final=1,
+                # simulates a rerank reason shaped by the teen's private interview/CV
+                llm_reason="SENSITIVE_INTERVIEW_DERIVED text about the teen",
             )
         )
         await s.commit()
@@ -77,8 +80,11 @@ async def test_parent_gate_and_payload() -> None:
         assert len(view["strengths"]) >= 3
         assert len(view["support"]) == 3
         assert view["professions"] and view["professions"][0]["title"] == "T"
-        # no raw answers / full list ever leak
+        # 'why' is curated who_fits ('w'), NEVER the interview/CV-derived llm_reason
+        assert view["professions"][0]["why"] == "w"
+        # no raw answers / full list / LLM-derived personal content ever leak
         assert "answers" not in view and "buckets" not in view
+        assert "SENSITIVE_INTERVIEW_DERIVED" not in json.dumps(view, ensure_ascii=False)
 
         # a bogus token 404s
         with pytest.raises(HTTPException) as ei:

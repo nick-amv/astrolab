@@ -64,15 +64,21 @@ async def build_parent_view(
             select(OccupationI18n).where(OccupationI18n.occupation_id.in_(occ_ids))
         )
     ).scalars().all()
-    t = {(str(r.occupation_id), r.locale): r.title for r in i18n}
-    professions = [
-        {
-            "slug": slug,
-            "title": t.get((str(m.occupation_id), locale))
-            or t.get((str(m.occupation_id), "ru"))
-            or slug,
-            "why": m.llm_reason,
-        }
-        for m, slug in rows
-    ]
+    by = {(str(r.occupation_id), r.locale): r for r in i18n}
+
+    # 'why' MUST be curated catalog copy, never Match.llm_reason: the rerank
+    # reason is shaped by the teen's private mini-interview / CV answers, so
+    # surfacing it to a parent would leak derived personal content and break the
+    # 'no raw answers' boundary this report promises. who_fits / summary are
+    # generic, reviewed content that is safe to share.
+    professions = []
+    for m, slug in rows:
+        row = by.get((str(m.occupation_id), locale)) or by.get((str(m.occupation_id), "ru"))
+        professions.append(
+            {
+                "slug": slug,
+                "title": row.title if row else slug,
+                "why": (row.who_fits or row.summary) if row else None,
+            }
+        )
     return {"axes": axes, "strengths": strengths, "support": support, "professions": professions}
