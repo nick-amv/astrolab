@@ -24,8 +24,15 @@ router = APIRouter(prefix="/api/report", tags=["report"])
 async def read_report(
     token: str, locale: str = "ru", session: AsyncSession = Depends(get_session)
 ) -> dict:
+    # kind guard: a parent token must NEVER resolve to the full result — the
+    # parent report deliberately hides raw buckets / llm_reason, and swapping
+    # /p/<token> for /r/<token> would bypass that boundary otherwise.
     report = (
-        await session.execute(select(Report).where(Report.token_hash == hash_token(token)))
+        await session.execute(
+            select(Report).where(
+                Report.token_hash == hash_token(token), Report.kind != "parent"
+            )
+        )
     ).scalars().first()
     if report is None or report.expires_at < dt.datetime.now(dt.UTC):
         raise HTTPException(status_code=404, detail="not found")

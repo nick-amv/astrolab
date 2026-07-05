@@ -10,6 +10,7 @@ import uuid
 import pytest
 from app.api.assessment import create_parent_share
 from app.api.parent import read_parent
+from app.api.report import read_report
 from app.db import SessionLocal
 from app.etl.ingest import upsert_draft
 from app.etl.schema import OccupationDraft
@@ -89,6 +90,13 @@ async def test_parent_gate_and_payload() -> None:
         # a bogus token 404s
         with pytest.raises(HTTPException) as ei:
             await read_parent("nope", "ru", s)
+        assert ei.value.status_code == 404
+
+        # the parent token must NOT resolve on the full-result share endpoint —
+        # otherwise swapping /p/<token> for /r/<token> would expose the raw
+        # buckets + llm_reason the parent report deliberately hides
+        with pytest.raises(HTTPException) as ei:
+            await read_report(token, "ru", s)
         assert ei.value.status_code == 404
 
     async with SessionLocal() as s:
