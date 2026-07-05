@@ -106,6 +106,22 @@ async def compute_funnel(session: AsyncSession) -> dict:
         str(a): {"started": int(st), "completed": int(cp)} for a, st, cp in age_rows
     }
 
+    # started/completed per locale (N7.4) — how the EN traffic behaves vs RU
+    locale_rows = (
+        await session.execute(
+            select(
+                Profile.locale,
+                func.count(),
+                func.count().filter(S.status == "completed"),
+            )
+            .join(Profile, Profile.id == S.profile_id)
+            .group_by(Profile.locale)
+        )
+    ).all()
+    by_locale = {
+        str(loc): {"started": int(st), "completed": int(cp)} for loc, st, cp in locale_rows
+    }
+
     # adults (working or 24+) vs teens
     adult_pred = (Profile.education_stage == "working") | (Profile.age_band == "24+")
     adult_started = await _scalar(
@@ -175,6 +191,7 @@ async def compute_funnel(session: AsyncSession) -> dict:
             "saved_to_account": saved_to_account,
         },
         "by_age_band": by_age_band,
+        "by_locale": by_locale,
         "feedback": feedback,
         "adults_vs_teens": {
             "adult": {"started": adult_started, "completed": adult_completed},

@@ -18,9 +18,21 @@
     currency: string;
     period: string | null;
     confidence: string | null;
+    source: string | null; // bls-oews | rosstat-ozpp | llm-estimate
+    as_of_date: string | null;
     demand_note: string | null;
   };
   const userCountry = $derived(getLocale() === "en" ? "US" : "RU");
+
+  // Source badge: show real data (BLS / Rosstat) distinctly from a rough estimate,
+  // rather than a flat "estimate" on both. Tooltip carries the method + as-of.
+  function srcBadge(f: Fact): { label: string; cls: string; tip: string } {
+    const on = f.as_of_date ? ` (${f.as_of_date.slice(0, 4)})` : "";
+    if (f.source === "bls-oews") return { label: m.src_bls(), cls: "src-bls", tip: m.src_bls_tip() + on };
+    if (f.source === "rosstat-ozpp")
+      return { label: m.src_rosstat(), cls: "src-rosstat", tip: m.src_rosstat_tip() + on };
+    return { label: m.prof_estimate(), cls: "src-est", tip: m.src_est_tip() };
+  }
   const fact = $derived(
     (o.facts as Fact[] | undefined)?.find((f) => f.country === userCountry) ?? null,
   );
@@ -121,9 +133,10 @@
         <div class="card">
           <div class="k">{m.prof_salary()}</div>
           {#if fact.salary_low}
+            {@const b = srcBadge(fact)}
             <p class="salary">
               {fact.salary_low.toLocaleString()}–{fact.salary_high?.toLocaleString()} {fact.currency}{#if fact.period === "year"}{m.salary_per_year()}{/if}
-              {#if fact.confidence === "estimate"}<span class="est">{m.prof_estimate()}</span>{/if}
+              <span class="src {b.cls}" title={b.tip}>{b.label}</span>
             </p>
           {/if}
           {#if fact.demand_note}<p class="demand">{fact.demand_note}</p>{/if}
@@ -268,6 +281,29 @@
     font-weight: 800;
     font-size: 20px;
     margin: 0;
+  }
+  .src {
+    display: inline-block;
+    margin-left: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    vertical-align: middle;
+    padding: 2px 8px;
+    border-radius: 99px;
+    cursor: help;
+  }
+  .src-bls {
+    color: #0a7d4b;
+    background: color-mix(in oklab, #12b76a 16%, transparent);
+  }
+  .src-rosstat {
+    color: #1560c0;
+    background: color-mix(in oklab, #4f9dff 18%, transparent);
+  }
+  .src-est {
+    color: var(--muted);
+    background: var(--line);
   }
   .demand {
     color: var(--muted);

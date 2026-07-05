@@ -8,6 +8,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.matching import OccupationVec
 from app.models import (
+    DataSource,
     Occupation,
     OccupationCountry,
     OccupationI18n,
@@ -87,6 +88,16 @@ async def get_occupation_detail(
     if country:
         countries = [c for c in countries if c.country == country]
 
+    # provenance key per fact (bls-oews / rosstat-ozpp / llm-estimate) so the UI
+    # can badge real data vs an estimate instead of a flat "estimate" on both.
+    src_ids = {c.source_id for c in countries if c.source_id}
+    src_by_id: dict = {}
+    if src_ids:
+        srcs = (
+            await session.execute(select(DataSource).where(DataSource.id.in_(src_ids)))
+        ).scalars().all()
+        src_by_id = {s.id: s.name for s in srcs}
+
     return {
         "slug": occ.slug,
         "riasec": occ.riasec or {},
@@ -108,6 +119,7 @@ async def get_occupation_detail(
                 "period": "year" if c.currency == "USD" else "month",
                 "demand_note": c.demand_note,
                 "confidence": c.confidence,  # 'estimate' → UI marks as estimate
+                "source": src_by_id.get(c.source_id),  # bls-oews | rosstat-ozpp | llm-estimate
                 "as_of_date": c.as_of_date.isoformat() if c.as_of_date else None,
             }
             for c in countries
