@@ -266,3 +266,27 @@ export async function createShare(sessionId: string): Promise<string | null> {
   const data = await r.json();
   return data.token as string;
 }
+
+// N5: parent report (teens only; the backend 422s for adult sessions).
+export interface ParentView {
+  axes: { axis: string; label: string }[];
+  strengths: string[];
+  support: string[];
+  professions: { slug: string; title: string; why: string | null }[];
+}
+
+export async function createParentShare(sessionId: string): Promise<string | null> {
+  const r = await fetch(`/api/assessment/${sessionId}/parent-share`, { method: "POST" });
+  if (!r.ok) return null;
+  return (await r.json()).token as string;
+}
+
+export async function getParentReport(
+  f: Fetch,
+  token: string,
+  locale: string,
+): Promise<ParentView | null> {
+  const r = await f(`/api/parent/${token}?locale=${locale}`);
+  if (!r.ok) return null;
+  return r.json();
+}

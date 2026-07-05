@@ -1,0 +1,135 @@
+{
+  "_doc": "N5 parent report content, curated per RIASEC axis (never LLM). label = warm human name of the axis; strengths = phrasings a parent reads about their teen; support = 'how to support, not push' tips. Shown only for teen sessions. Cyrillic allowed here (seed JSON).",
+  "R": {
+    "label_ru": "руки и практика",
+    "label_en": "hands-on and practical",
+    "strengths_ru": [
+      "умеет доводить дела до конкретного, осязаемого результата",
+      "любит разбираться, как всё устроено, и делать своими руками"
+    ],
+    "strengths_en": [
+      "gets things to a concrete, tangible result",
+      "likes to figure out how things work and build with their hands"
+    ],
+    "support_ru": [
+      "Поддержите интерес к практике: конструкторы, ремонт, мастерские, спорт, робототехника.",
+      "Не обесценивайте «работу руками» — сегодня это и инженерия, и высокие технологии.",
+      "Дайте пространство пробовать реальные задачи, а не только теорию из учебника."
+    ],
+    "support_en": [
+      "Encourage the hands-on side: building kits, repairs, workshops, sports, robotics.",
+      "Don't dismiss “working with your hands” — today that includes engineering and high tech.",
+      "Give room to try real tasks, not just textbook theory."
+    ]
+  },
+  "I": {
+    "label_ru": "анализ и исследование",
+    "label_en": "analysis and research",
+    "strengths_ru": [
+      "задаёт глубокие вопросы и не принимает ответы на веру",
+      "получает удовольствие, когда разбирается в чём-то сложном"
+    ],
+    "strengths_en": [
+      "asks deep questions and doesn't take answers on faith",
+      "genuinely enjoys getting to the bottom of something hard"
+    ],
+    "support_ru": [
+      "Поощряйте вопросы, даже неудобные — это топливо исследователя.",
+      "Помогите найти углублённые курсы, олимпиады, научные кружки по интересу.",
+      "Дайте время на «бесполезное» любопытство — из него часто и вырастает наука."
+    ],
+    "support_en": [
+      "Welcome the questions, even the awkward ones — that's the fuel of a researcher.",
+      "Help find deeper courses, competitions, or science clubs in their area of interest.",
+      "Allow time for “useless” curiosity — that's often where real science starts."
+    ]
+  },
+  "A": {
+    "label_ru": "творчество и самовыражение",
+    "label_en": "creativity and self-expression",
+    "strengths_ru": [
+      "видит и создаёт то, чего ещё нет",
+      "выражает мысли через образы, звук, текст или дизайн"
+    ],
+    "strengths_en": [
+      "sees and makes things that don't exist yet",
+      "expresses ideas through images, sound, writing, or design"
+    ],
+    "support_ru": [
+      "Дайте инструменты и материалы для творчества, без давления «сделай что-то полезное».",
+      "Цените процесс и смелость пробовать, а не только «красивый результат».",
+      "Помогите увидеть, что творчество — это и профессия, а не только хобби."
+    ],
+    "support_en": [
+      "Provide tools and materials to create, without the pressure to “make something useful”.",
+      "Value the process and the courage to try, not just a polished result.",
+      "Help them see that creativity is a profession too, not only a hobby."
+    ]
+  },
+  "S": {
+    "label_ru": "общение и помощь людям",
+    "label_en": "connecting with and helping people",
+    "strengths_ru": [
+      "чувствует состояние других и умеет поддержать",
+      "хорошо объясняет и умеет объединять людей"
+    ],
+    "strengths_en": [
+      "senses how others feel and knows how to support them",
+      "explains things well and brings people together"
+    ],
+    "support_ru": [
+      "Поддержите волонтёрство, наставничество, работу в команде.",
+      "Проговаривайте вслух, что забота о людях — это сильная и востребованная сторона.",
+      "Помогите развить это в профессию: медицина, образование, психология."
+    ],
+    "support_en": [
+      "Encourage volunteering, mentoring, and teamwork.",
+      "Say out loud that caring about people is a real strength, and one in demand.",
+      "Help grow it into a profession: medicine, education, psychology."
+    ]
+  },
+  "E": {
+    "label_ru": "лидерство и инициатива",
+    "label_en": "leadership and initiative",
+    "strengths_ru": [
+      "берёт инициативу и ведёт за собой",
+      "не боится предлагать идеи и убеждать"
+    ],
+    "strengths_en": [
+      "takes initiative and leads the way",
+      "isn't afraid to pitch ideas and persuade"
+    ],
+    "support_ru": [
+      "Дайте возможность вести проекты — от школьного мероприятия до мини-бизнеса.",
+      "Разница между «командует» и «ведёт» — в ответственности; помогите её увидеть.",
+      "Поддержите пробы в организации, продажах, публичных выступлениях."
+    ],
+    "support_en": [
+      "Give chances to lead a project — from a school event to a tiny business.",
+      "The difference between “bossing” and “leading” is responsibility; help them see it.",
+      "Support trying organizing, selling, and public speaking."
+    ]
+  },
+  "C": {
+    "label_ru": "порядок и точность",
+    "label_en": "structure and precision",
+    "strengths_ru": [
+      "любит порядок, точность и доведение дела до конца",
+      "хорошо работает с данными, системами и деталями"
+    ],
+    "strengths_en": [
+      "likes order, accuracy, and finishing what they start",
+      "works well with data, systems, and details"
+    ],
+    "support_ru": [
+      "Цените аккуратность и надёжность — это профессионально важные качества.",
+      "Дайте задачи с системой: таблицы, учёт, планирование, организация.",
+      "Покажите, что за порядком стоят целые профессии: финансы, аналитика, логистика."
+    ],
+    "support_en": [
+      "Value the precision and reliability — these are professionally important traits.",
+      "Give tasks with structure: spreadsheets, tracking, planning, organizing.",
+      "Show that whole professions rest on order: finance, analytics, logistics."
+    ]
+  }
+}

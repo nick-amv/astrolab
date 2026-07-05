@@ -436,3 +436,36 @@ async def create_share(
     )
     await session.commit()
     return ShareOut(token=token)
+
+
+# N5: a parent report is only meaningful for a teen. The gate is server-side —
+# adults get no button AND the API refuses (422) even if called directly.
+_TEEN_BANDS = ("14-16", "17-19")
+
+
+@router.post("/{session_id}/parent-share", response_model=ShareOut)
+async def create_parent_share(
+    session_id: str, session: AsyncSession = Depends(get_session)
+) -> ShareOut:
+    """Create a hashed link to a warm, no-raw-answers parent view. Teen sessions
+    only; an adult session (or one with no age) is refused with 422."""
+    ses = await _get_session_or_404(session, session_id)
+    prof = (
+        await session.execute(select(ProfileRow).where(ProfileRow.id == ses.profile_id))
+    ).scalars().first()
+    if prof is None or prof.age_band not in _TEEN_BANDS:
+        raise HTTPException(status_code=422, detail="parent report is for teens only")
+    payload = await result_payload(session, ses, "ru")
+    if payload is None:
+        raise HTTPException(status_code=409, detail="not scored yet")
+    token = new_token()
+    session.add(
+        Report(
+            session_id=ses.id,
+            kind="parent",
+            token_hash=hash_token(token),
+            expires_at=dt.datetime.now(dt.UTC) + dt.timedelta(days=settings.report_ttl_days),
+        )
+    )
+    await session.commit()
+    return ShareOut(token=token)

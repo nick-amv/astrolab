@@ -14,6 +14,7 @@ from app.api import (
     match,
     meta,
     occupations,
+    parent,
     privacy,
     report,
 )
@@ -44,6 +45,7 @@ def create_app() -> FastAPI:
     app.include_router(match.router)
     app.include_router(assessment.router)
     app.include_router(report.router)
+    app.include_router(parent.router)
     return app
 
 

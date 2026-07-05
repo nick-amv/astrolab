@@ -2,7 +2,13 @@
   import { onMount } from "svelte";
   import { page } from "$app/stores";
   import { goto } from "$app/navigation";
-  import { claimSession, createShare, enrichResult, type Result } from "$lib/api";
+  import {
+    claimSession,
+    createParentShare,
+    createShare,
+    enrichResult,
+    type Result,
+  } from "$lib/api";
   import ResultView from "$lib/ResultView.svelte";
   import { m } from "$lib/paraglide/messages";
   import { getLocale, localizeHref } from "$lib/paraglide/runtime";
@@ -68,6 +74,23 @@
     copied = true;
     setTimeout(() => (copied = false), 2200);
   }
+
+  // N5: parent report — only for teens (17-19 included; parents help with
+  // admissions). Server enforces the same gate, this just hides the button.
+  const isTeen = $derived(result.age_band === "14-16" || result.age_band === "17-19");
+  let pSharing = $state(false);
+  let pCopied = $state(false);
+  async function shareParent() {
+    if (pSharing) return;
+    pSharing = true;
+    const token = await createParentShare(sid);
+    pSharing = false;
+    if (!token) return;
+    const url = location.origin + localizeHref(`/p/${token}`);
+    await navigator.clipboard?.writeText(url);
+    pCopied = true;
+    setTimeout(() => (pCopied = false), 2200);
+  }
 </script>
 
 <svelte:head><title>{m.result_title()} — {m.app_name()}</title></svelte:head>
@@ -102,6 +125,11 @@
     <button class="ghost" onclick={share} disabled={sharing}>
       {copied ? m.result_share_done() : m.result_share()}
     </button>
+    {#if isTeen}
+      <button class="ghost" onclick={shareParent} disabled={pSharing}>
+        {pCopied ? m.result_share_done() : m.result_parent_share()}
+      </button>
+    {/if}
     <a class="ghost" href={localizeHref("/test")}>{m.result_retake()}</a>
   </div>
 </section>
