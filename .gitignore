@@ -21,3 +21,6 @@ Thumbs.db
 
 # Local artifacts
 *.log
+
+# Internal session plans (never public)
+internal/
