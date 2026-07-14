@@ -25,6 +25,23 @@
     { t: m.method_ai_t(), d: m.method_ai_d() },
   ];
   const limits = [m.method_limit_1(), m.method_limit_2(), m.method_limit_3(), m.method_limit_4()];
+  // Where the salary/demand numbers come from — mirrored per country, with the
+  // same source labels the profession pages use on their badges.
+  const dataSources = [
+    {
+      t: m.method_data_ru_t(),
+      d: m.method_data_ru_d(),
+      links: [
+        { label: m.src_hh(), href: "https://hh.ru" },
+        { label: m.src_rosstat(), href: "https://rosstat.gov.ru/compendium/document/60671" },
+      ],
+    },
+    {
+      t: m.method_data_us_t(),
+      d: m.method_data_us_d(),
+      links: [{ label: m.src_bls(), href: "https://www.bls.gov/oes/" }],
+    },
+  ];
 </script>
 
 <svelte:head>
@@ -81,6 +98,24 @@
         <li>{line}</li>
       {/each}
     </ul>
+  </section>
+
+  <section>
+    <h2>{m.method_data_t()}</h2>
+    <div class="cards">
+      {#each dataSources as item (item.t)}
+        <div class="card">
+          <h3>{item.t}</h3>
+          <p>{item.d}</p>
+          <div class="srcs">
+            {#each item.links as l (l.label)}
+              <a href={l.href} target="_blank" rel="noopener noreferrer">{l.label} ↗</a>
+            {/each}
+          </div>
+        </div>
+      {/each}
+    </div>
+    <p class="badge-note">{m.method_data_badge_d()}</p>
   </section>
 
   <section class="data">
@@ -191,6 +226,13 @@
     font-size: 15px;
     line-height: 1.55;
     margin: 8px 0;
+  }
+  .badge-note {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.55;
+    margin: 14px 0 0;
+    max-width: 64ch;
   }
   .data p {
     color: var(--muted);
