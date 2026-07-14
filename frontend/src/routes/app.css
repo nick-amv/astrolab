@@ -171,7 +171,9 @@ nav a {
 }
 nav a:hover {
   color: var(--ink);
-  background: #fff;
+  /* theme-aware: #fff was hardcoded and made near-white ink unreadable on the
+     dark theme's hover pill; --surface is white in light, indigo in dark */
+  background: var(--surface);
 }
 nav a.active {
   color: var(--ink);
