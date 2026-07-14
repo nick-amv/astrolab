@@ -1,6 +1,6 @@
 <script lang="ts">
   import { m } from "$lib/paraglide/messages";
-  import { localizeHref } from "$lib/paraglide/runtime";
+  import { getLocale, localizeHref } from "$lib/paraglide/runtime";
 
   const basis = [
     {
@@ -25,23 +25,28 @@
     { t: m.method_ai_t(), d: m.method_ai_d() },
   ];
   const limits = [m.method_limit_1(), m.method_limit_2(), m.method_limit_3(), m.method_limit_4()];
-  // Where the salary/demand numbers come from — mirrored per country, with the
-  // same source labels the profession pages use on their badges.
-  const dataSources = [
-    {
-      t: m.method_data_ru_t(),
-      d: m.method_data_ru_d(),
-      links: [
-        { label: m.src_hh(), href: "https://hh.ru" },
-        { label: m.src_rosstat(), href: "https://rosstat.gov.ru/compendium/document/60671" },
-      ],
-    },
-    {
-      t: m.method_data_us_t(),
-      d: m.method_data_us_d(),
-      links: [{ label: m.src_bls(), href: "https://www.bls.gov/oes/" }],
-    },
-  ];
+  // Where the salary numbers come from — country-scoped like the facts
+  // themselves: RU visitors see RU facts, so they only get the RU sources;
+  // EN (US) visitors only get the US ones.
+  const dataSources =
+    getLocale() === "en"
+      ? [
+          {
+            t: m.method_data_us_t(),
+            d: m.method_data_us_d(),
+            links: [{ label: m.src_bls(), href: "https://www.bls.gov/oes/" }],
+          },
+        ]
+      : [
+          {
+            t: m.method_data_ru_t(),
+            d: m.method_data_ru_d(),
+            links: [
+              { label: m.src_hh(), href: "https://hh.ru" },
+              { label: m.src_rosstat(), href: "https://rosstat.gov.ru/compendium/document/60671" },
+            ],
+          },
+        ];
 </script>
 
 <svelte:head>

@@ -178,7 +178,7 @@
   "method_data_ru_d": "The primary source is a salary analysis of live hh.ru job postings across Russia: the range on a profession page is the 25th–75th percentile of real offers (pre-tax). The data is refreshed regularly. For rare professions with few salary-tagged postings we use Rosstat's occupational wage survey, scaled to current levels.",
   "method_data_us_t": "United States",
   "method_data_us_d": "US Bureau of Labor Statistics data (the OEWS survey): national annual wages. If there is no reliable data for a profession, we simply don't show a salary.",
-  "method_data_badge_d": "Every number on a profession page carries a source badge: hh.ru, Rosstat, BLS — or “estimate” when the figure is approximate and not from an official source.",
+  "method_data_badge_d": "Every number on a profession page carries a source badge: BLS — or “estimate” when the figure is approximate and not from an official source.",
   "method_s4_t": "Data",
   "method_s4_d": "You can take the test anonymously, without an account. We collect the minimum.",
   "method_cta": "Take the test",
