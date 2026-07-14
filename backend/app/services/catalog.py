@@ -168,7 +168,7 @@ async def list_published(
                 "salary_low": c.salary_low,
                 "salary_high": c.salary_high,
                 "currency": c.currency,
-                "period": "year" if c.currency == "USD" else "month",
+                "period": "month" if c.currency == "RUB" else "year",
             }
             for c in facts
         }

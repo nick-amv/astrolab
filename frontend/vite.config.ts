@@ -5,8 +5,9 @@ import { defineConfig } from "vite";
 export default defineConfig({
   plugins: [
     // Compiles ./messages/*.json into $lib/paraglide with URL-based locale
-    // routing. baseLocale (ru) and en are both prefixed (/ru, /en) per DESIGN §9;
-    // the bare root is redirected to /ru in hooks.server.ts.
+    // routing. EVERY locale (incl. base ru) is prefixed (/ru, /en, /es) per
+    // DESIGN §9; the bare root is negotiated in hooks.server.ts.
+    // ⚠ When adding a locale: project.inlang/settings.json AND this list.
     paraglideVitePlugin({
       project: "./project.inlang",
       outdir: "./src/lib/paraglide",
@@ -17,6 +18,7 @@ export default defineConfig({
           localized: [
             ["ru", "/ru/:path(.*)?"],
             ["en", "/en/:path(.*)?"],
+            ["es", "/es/:path(.*)?"],
           ],
         },
       ],
