@@ -55,19 +55,28 @@ async def my_results(
 
     results = []
     for ses in sessions:
-        titles = (
+        # top-3 core occupations in rank order; title in the requested locale
+        # with ru fallback (same pattern as the result payload) — a plain
+        # locale == filter silently drops rows and used to leak ru-only output.
+        occ_rows = (
             await session.execute(
-                select(OccupationI18n.title)
-                .join(Match, Match.occupation_id == OccupationI18n.occupation_id)
-                .where(
-                    Match.session_id == ses.id,
-                    Match.bucket == "core",
-                    OccupationI18n.locale == locale,
-                )
+                select(Match.occupation_id)
+                .where(Match.session_id == ses.id, Match.bucket == "core")
                 .order_by(Match.rank_final)
                 .limit(3)
             )
         ).scalars().all()
+        i18n = (
+            await session.execute(
+                select(OccupationI18n).where(OccupationI18n.occupation_id.in_(occ_rows))
+            )
+        ).scalars().all() if occ_rows else []
+        t = {(str(r.occupation_id), r.locale): r.title for r in i18n}
+        titles = [
+            title
+            for oid in occ_rows
+            if (title := t.get((str(oid), locale)) or t.get((str(oid), "ru")))
+        ]
         results.append(
             {
                 "session_id": str(ses.id),

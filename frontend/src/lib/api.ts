@@ -219,8 +219,8 @@ export async function claimSession(
   return { ok: r.ok, needsConsent: r.status === 422 };
 }
 
-export async function getMyResults(f: Fetch): Promise<SavedResult[] | null> {
-  const r = await f("/api/me/results");
+export async function getMyResults(f: Fetch, locale: string): Promise<SavedResult[] | null> {
+  const r = await f(`/api/me/results?locale=${locale}`);
   if (r.status === 401) return null;
   if (!r.ok) return [];
   return (await r.json()).results as SavedResult[];
