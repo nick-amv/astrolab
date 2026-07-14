@@ -1,0 +1,182 @@
+{
+  "accountant": {
+    "title": "Contable",
+    "summary": "Lleva la contabilidad de una empresa, prepara las cuentas y está al día de los impuestos.",
+    "day_in_life": "Registra documentos, cuadra cifras, presenta las declaraciones a tiempo y trata con Hacienda y los bancos.",
+    "who_fits": "Para quienes valoran el orden, son cuidadosos con los números y los detalles y aprecian la estabilidad."
+  },
+  "architect": {
+    "title": "Arquitecto",
+    "summary": "Proyecta edificios y espacios combinando belleza, comodidad y solidez.",
+    "day_in_life": "Comenta el encargo con los clientes, busca la forma del edificio, dibuja los proyectos y los ajusta con los constructores y la normativa.",
+    "who_fits": "Para quienes tienen gusto artístico y precisión técnica, y paciencia para proyectos largos."
+  },
+  "biologist": {
+    "title": "Biólogo",
+    "summary": "Estudia los organismos vivos, desde las células hasta ecosistemas enteros, y cómo funciona la vida.",
+    "day_in_life": "Realiza experimentos en el laboratorio o sobre el terreno, observa y registra, analiza datos, lee y escribe trabajos científicos.",
+    "who_fits": "Para quienes sienten curiosidad por la naturaleza, son observadores y están preparados para un trabajo de investigación minucioso."
+  },
+  "chef": {
+    "title": "Cocinero",
+    "summary": "Prepara platos, crea recetas y responde del sabor y la calidad en la cocina.",
+    "day_in_life": "Adelanta las preparaciones, aguanta el ritmo de los fogones en hora punta, idea platos nuevos y cuida la calidad y la limpieza.",
+    "who_fits": "Para quienes disfrutan trabajando con las manos, tienen paladar y se crecen con el ritmo rápido."
+  },
+  "chemist": {
+    "title": "Químico",
+    "summary": "Investiga sustancias y reacciones, crea nuevos materiales y comprueba sus propiedades.",
+    "day_in_life": "Realiza experimentos en el laboratorio, mide y registra con precisión, analiza datos y cumple las normas de seguridad.",
+    "who_fits": "Para quienes son cuidadosos, disfrutan con los experimentos y quieren entender de qué está hecho el mundo."
+  },
+  "civil-engineer": {
+    "title": "Ingeniero civil",
+    "summary": "Proyecta y supervisa la construcción de edificios, carreteras y puentes, garantizando que sean resistentes y seguros.",
+    "day_in_life": "Calcula estructuras, prepara y revisa planos, visita las obras y coordina los trabajos con las contratas.",
+    "who_fits": "Para quienes valoran la precisión, la responsabilidad y ver el resultado en construcciones reales."
+  },
+  "cybersecurity-specialist": {
+    "title": "Especialista en ciberseguridad",
+    "summary": "Protege los datos y los sistemas de una empresa frente a intrusiones, fugas y ataques.",
+    "day_in_life": "Busca vulnerabilidades, configura las defensas, investiga eventos sospechosos y enseña a los compañeros hábitos seguros.",
+    "who_fits": "Para quienes cuidan los detalles, piensan como un atacante y están dispuestos a aprender sin parar."
+  },
+  "data-analyst": {
+    "title": "Analista de datos",
+    "summary": "Convierte los datos en conclusiones claras que ayudan a tomar decisiones.",
+    "day_in_life": "Recopila y limpia datos, calcula métricas, construye gráficos, busca patrones y cuenta lo que ha encontrado.",
+    "who_fits": "Para quienes disfrutan con los números, detectan patrones y saben explicar lo complejo de forma sencilla."
+  },
+  "data-scientist": {
+    "title": "Científico de datos",
+    "summary": "Construye modelos a partir de datos que predicen resultados y ayudan a la empresa a decidir.",
+    "day_in_life": "Reúne y explora datos, plantea hipótesis, entrena y valida modelos y explica los resultados al equipo.",
+    "who_fits": "Para quienes son fuertes en matemáticas, disfrutan investigando y no les importa pelearse con problemas enrevesados."
+  },
+  "dentist": {
+    "title": "Dentista",
+    "summary": "Trata dientes y encías y ayuda a mantener la boca sana.",
+    "day_in_life": "Examina a los pacientes, trata y extrae piezas, coloca empastes y prótesis y explica cómo cuidar los dientes.",
+    "who_fits": "Para quienes tienen pulso firme, mantienen la calma con pacientes nerviosos y están dispuestos a estudiar durante años."
+  },
+  "devops-engineer": {
+    "title": "Ingeniero DevOps",
+    "summary": "Configura cómo llega el código a los servidores y funciona sin fallos, automatizando todo lo posible.",
+    "day_in_life": "Monta pipelines de despliegue, vigila los servidores y la monitorización, resuelve incidencias y escribe scripts de automatización.",
+    "who_fits": "Para quienes disfrutan poniendo orden en los sistemas, no soportan la rutina manual y mantienen la calma cuando algo se rompe."
+  },
+  "electrical-engineer": {
+    "title": "Ingeniero eléctrico",
+    "summary": "Diseña sistemas y equipos eléctricos: desde aparatos domésticos hasta redes de energía.",
+    "day_in_life": "Calcula circuitos, prepara planos, prueba dispositivos y localiza y repara averías.",
+    "who_fits": "A quien le gustan la física, los cálculos exactos y entender cómo circula la corriente."
+  },
+  "environmental-scientist": {
+    "title": "Científico ambiental",
+    "summary": "Estudia el estado de la naturaleza y el impacto humano sobre ella, y busca formas de reducir el daño.",
+    "day_in_life": "Toma muestras de agua, aire y suelo, analiza datos, elabora informes y recomendaciones y evalúa proyectos.",
+    "who_fits": "A quien no le da igual lo que le pasa a la naturaleza y sabe trabajar tanto sobre el terreno como con datos."
+  },
+  "game-developer": {
+    "title": "Desarrollador de videojuegos",
+    "summary": "Programa juegos de ordenador y móvil: mecánicas, físicas, comportamiento de los personajes.",
+    "day_in_life": "Escribe y depura el código del juego, monta niveles en el motor, persigue por qué algo va lento y prueba el gameplay.",
+    "who_fits": "Para quienes aman los juegos no solo para jugar, sino para entenderlos por dentro, y están dispuestos a pulir detalles durante mucho tiempo."
+  },
+  "graphic-designer": {
+    "title": "Diseñador gráfico",
+    "summary": "Crea piezas visuales: logotipos, interfaces, carteles, identidades de marca.",
+    "day_in_life": "Comenta el encargo con el cliente, explora ideas, monta maquetas en programas de diseño y las pule con el feedback recibido.",
+    "who_fits": "Para quienes tienen buen gusto, disfrutan creando cosas nuevas y cuidan la forma y el color."
+  },
+  "journalist": {
+    "title": "Periodista",
+    "summary": "Encuentra historias que importan, verifica los hechos y las cuenta a su audiencia.",
+    "day_in_life": "Busca temas, hace entrevistas, contrasta la información, escribe los textos dentro del plazo y trabaja con un editor.",
+    "who_fits": "Para quienes son curiosos, manejan bien la palabra y no tienen miedo de hacer preguntas."
+  },
+  "lawyer": {
+    "title": "Abogado",
+    "summary": "Ayuda a personas y empresas a resolver asuntos dentro de la ley y defiende sus intereses.",
+    "day_in_life": "Estudia documentos y leyes, redacta contratos y demandas, asesora a los clientes y los representa en litigios.",
+    "who_fits": "Para quienes saben argumentar, disfrutan desentrañando normas y defienden su posición."
+  },
+  "mechanical-engineer": {
+    "title": "Ingeniero mecánico",
+    "summary": "Diseña máquinas, mecanismos y equipos y supervisa su funcionamiento.",
+    "day_in_life": "Calcula estructuras, prepara planos en CAD, prueba prototipos y averigua por qué algo se rompe.",
+    "who_fits": "A quien le gustan las máquinas, la precisión y entender cómo funcionan los mecanismos."
+  },
+  "nurse": {
+    "title": "Enfermero",
+    "summary": "Cuida de los pacientes, aplica las indicaciones del médico y acompaña a las personas durante el tratamiento.",
+    "day_in_life": "Realiza curas y procedimientos, vigila el estado de los pacientes, lleva los registros, tranquiliza y explica.",
+    "who_fits": "Para quienes son atentos y organizados y quieren ayudar de verdad a los demás cada día."
+  },
+  "pharmacist": {
+    "title": "Farmacéutico",
+    "summary": "Dispensa medicamentos, aconseja sobre cómo tomarlos y vela por la calidad de los fármacos.",
+    "day_in_life": "Selecciona y entrega los medicamentos, explica cómo tomarlos, controla caducidades y almacenamiento y lleva los registros.",
+    "who_fits": "Para quienes son atentos y responsables y les gusta ayudar a la gente con calma."
+  },
+  "physical-therapist": {
+    "title": "Fisioterapeuta",
+    "summary": "Ayuda a las personas a recuperarse de lesiones y enfermedades mediante el movimiento y el ejercicio.",
+    "day_in_life": "Valora al paciente, elige los ejercicios, dirige las sesiones y sigue el progreso, anima y motiva.",
+    "who_fits": "Para quienes tienen paciencia, disfrutan ayudando con las manos y con la palabra y celebran cada pequeño avance."
+  },
+  "physician": {
+    "title": "Médico",
+    "summary": "Diagnostica y trata enfermedades y hace seguimiento de la salud de los pacientes.",
+    "day_in_life": "Pasa consulta, explora a los pacientes, pide pruebas, prescribe tratamientos y lleva la historia clínica. Aprendizaje constante y responsabilidad sobre la vida de las personas.",
+    "who_fits": "Para quienes quieren ayudar a los demás, están dispuestos a estudiar mucho y a fondo y saben cargar con la responsabilidad."
+  },
+  "product-manager": {
+    "title": "Product manager",
+    "summary": "Decide en qué se convierte un producto: qué construir primero y por qué le importa a la gente.",
+    "day_in_life": "Habla con los usuarios y con el equipo, estudia datos y peticiones, prioriza tareas y se asegura de que lo importante salga a tiempo.",
+    "who_fits": "Para quienes saben escuchar a las distintas partes, decidir en la incertidumbre y no perder de vista el conjunto."
+  },
+  "psychologist": {
+    "title": "Psicólogo",
+    "summary": "Ayuda a las personas a entenderse a sí mismas, afrontar dificultades y mejorar sus relaciones.",
+    "day_in_life": "Pasa consulta, escucha y hace preguntas, toma notas, se forma continuamente y revisa casos.",
+    "who_fits": "Para quienes saben escuchar, sienten curiosidad por las personas y quieren ayudar a desenredar lo complicado."
+  },
+  "qa-engineer": {
+    "title": "Ingeniero de QA",
+    "summary": "Comprueba que el software funciona como debe y encuentra los fallos antes que los usuarios.",
+    "day_in_life": "Diseña escenarios de prueba, prueba las nuevas funciones a mano y con tests automáticos, documenta los errores y verifica las correcciones.",
+    "who_fits": "Para quienes son minuciosos, disfrutan rompiendo y comprobando cosas y no dejan escapar ningún detalle."
+  },
+  "software-developer": {
+    "title": "Desarrollador de software",
+    "summary": "Diseña, escribe y mantiene programas: desde aplicaciones móviles hasta sistemas de servidor.",
+    "day_in_life": "Desglosa la tarea, escribe y prueba código, revisa el de otros y discute la arquitectura con el equipo. Mucha resolución de problemas lógicos frente al editor de código.",
+    "who_fits": "Para quienes disfrutan entendiendo cómo funcionan las cosas, llevando la lógica hasta el final y viendo su trabajo funcionar en un producto real."
+  },
+  "systems-administrator": {
+    "title": "Administrador de sistemas",
+    "summary": "Mantiene en marcha y disponibles los ordenadores, las redes y los servidores de una empresa.",
+    "day_in_life": "Configura equipos y cuentas de usuario, vigila la red y las copias de seguridad y ayuda a la plantilla con la tecnología.",
+    "who_fits": "A quien le gusta la tecnología, es ordenado y está dispuesto a ser la persona a la que todos acuden cuando algo no funciona."
+  },
+  "teacher": {
+    "title": "Profesor",
+    "summary": "Enseña una asignatura a los niños y les ayuda a crecer y a descubrir sus puntos fuertes.",
+    "day_in_life": "Prepara e imparte clases, corrige trabajos, habla con alumnos y familias y busca maneras de explicar lo difícil de forma sencilla.",
+    "who_fits": "Para quienes disfrutan explicando, tienen paciencia y sacan energía del trato con la gente."
+  },
+  "ux-ui-designer": {
+    "title": "Diseñador UX/UI",
+    "summary": "Piensa cómo funcionan las pantallas de aplicaciones y webs para que sean claras y fáciles de usar.",
+    "day_in_life": "Estudia cómo se comportan los usuarios, dibuja prototipos y maquetas de pantallas, las comenta con el equipo y las ajusta tras las pruebas.",
+    "who_fits": "Para quienes disfrutan tanto dibujando como pensando con lógica y ponen la comodidad de la persona por encima de una imagen bonita."
+  },
+  "veterinarian": {
+    "title": "Veterinario",
+    "summary": "Trata a los animales, los ayuda a recuperarse y cuida de su salud.",
+    "day_in_life": "Examina a las mascotas, hace diagnósticos, realiza cirugías y vacunaciones y aconseja a los dueños sobre los cuidados.",
+    "who_fits": "Para quienes quieren a los animales, no son aprensivos y mantienen la calma en los casos difíciles."
+  }
+}

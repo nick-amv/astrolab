@@ -1,0 +1,1023 @@
+{
+  "country": "ES",
+  "as_of": "2026-07",
+  "note": "Rutas típicas del sistema educativo español: Grados universitarios (acceso por EBAU/PAU) y Formación Profesional (ciclos de Grado Medio y Superior). Orientativo — la oferta y las notas de corte varían por comunidad autónoma y centro; verifica siempre en la web oficial de la universidad o del centro. Todos los perfiles del catálogo están cubiertos.",
+  "domains": [
+    {
+      "code": "grado-informatica",
+      "title": "Grado en Ingeniería Informática",
+      "level": "Grado universitario (4 años)",
+      "ege": [
+        "Bachillerato (modalidad de Ciencias)",
+        "EBAU/PAU: sube nota con Matemáticas II y Física",
+        "Nota de corte: varía por universidad y año"
+      ],
+      "occupations": [
+        "software-developer",
+        "qa-engineer",
+        "devops-engineer",
+        "game-developer",
+        "cybersecurity-specialist",
+        "data-engineer",
+        "machine-learning-engineer",
+        "database-administrator"
+      ]
+    },
+    {
+      "code": "grado-ciencia-datos",
+      "title": "Grado en Ciencia de Datos",
+      "level": "Grado universitario (4 años)",
+      "ege": [
+        "Bachillerato (modalidad de Ciencias)",
+        "EBAU/PAU: sube nota con Matemáticas II",
+        "Nota de corte: varía por universidad y año"
+      ],
+      "occupations": [
+        "data-scientist",
+        "data-analyst",
+        "data-engineer",
+        "machine-learning-engineer"
+      ]
+    },
+    {
+      "code": "grado-matematicas",
+      "title": "Grado en Matemáticas",
+      "level": "Grado universitario (4 años)",
+      "ege": [
+        "Bachillerato (modalidad de Ciencias)",
+        "EBAU/PAU: sube nota con Matemáticas II y Física",
+        "Para ser actuario: después del grado, Máster en Ciencias Actuariales y Financieras"
+      ],
+      "occupations": [
+        "statistician",
+        "actuary"
+      ]
+    },
+    {
+      "code": "grado-medicina",
+      "title": "Grado en Medicina",
+      "level": "Grado universitario (6 años + MIR)",
+      "ege": [
+        "Bachillerato (modalidad de Ciencias)",
+        "EBAU/PAU: sube nota con Biología y Química",
+        "Nota de corte de las más altas — varía por universidad y año",
+        "Tras el grado: examen MIR para especializarte"
+      ],
+      "occupations": [
+        "physician"
+      ]
+    },
+    {
+      "code": "grado-enfermeria",
+      "title": "Grado en Enfermería",
+      "level": "Grado universitario (4 años)",
+      "ege": [
+        "Bachillerato (modalidad de Ciencias)",
+        "EBAU/PAU: sube nota con Biología y Química",
+        "Nota de corte alta en la pública — varía por universidad y año",
+        "En España, la enfermería cubre también funciones de instrumentista y terapia respiratoria"
+      ],
+      "occupations": [
+        "nurse",
+        "respiratory-therapist",
+        "surgical-technologist"
+      ]
+    },
+    {
+      "code": "grado-fisioterapia",
+      "title": "Grado en Fisioterapia",
+      "level": "Grado universitario (4 años)",
+      "ege": [
+        "Bachillerato (modalidad de Ciencias)",
+        "EBAU/PAU: sube nota con Biología y Química",
+        "Nota de corte: varía por universidad y año"
+      ],
+      "occupations": [
+        "physical-therapist"
+      ]
+    },
+    {
+      "code": "grado-odontologia",
+      "title": "Grado en Odontología",
+      "level": "Grado universitario (5 años)",
+      "ege": [
+        "Bachillerato (modalidad de Ciencias)",
+        "EBAU/PAU: sube nota con Biología y Química",
+        "Nota de corte muy alta en la pública — varía por universidad y año"
+      ],
+      "occupations": [
+        "dentist"
+      ]
+    },
+    {
+      "code": "grado-farmacia",
+      "title": "Grado en Farmacia",
+      "level": "Grado universitario (5 años)",
+      "ege": [
+        "Bachillerato (modalidad de Ciencias)",
+        "EBAU/PAU: sube nota con Química y Biología",
+        "Nota de corte: varía por universidad y año"
+      ],
+      "occupations": [
+        "pharmacist"
+      ]
+    },
+    {
+      "code": "grado-veterinaria",
+      "title": "Grado en Veterinaria",
+      "level": "Grado universitario (5 años)",
+      "ege": [
+        "Bachillerato (modalidad de Ciencias)",
+        "EBAU/PAU: sube nota con Biología y Química",
+        "Nota de corte alta y pocas facultades — varía por universidad y año"
+      ],
+      "occupations": [
+        "veterinarian"
+      ]
+    },
+    {
+      "code": "grado-optica",
+      "title": "Grado en Óptica y Optometría",
+      "level": "Grado universitario (4 años)",
+      "ege": [
+        "Bachillerato (modalidad de Ciencias)",
+        "EBAU/PAU: sube nota con Física y Biología",
+        "Nota de corte: varía por universidad y año"
+      ],
+      "occupations": [
+        "optometrist"
+      ]
+    },
+    {
+      "code": "grado-terapia-ocupacional",
+      "title": "Grado en Terapia Ocupacional",
+      "level": "Grado universitario (4 años)",
+      "ege": [
+        "Bachillerato (modalidad de Ciencias)",
+        "EBAU/PAU: sube nota con Biología",
+        "Nota de corte: varía por universidad y año"
+      ],
+      "occupations": [
+        "occupational-therapist"
+      ]
+    },
+    {
+      "code": "grado-logopedia",
+      "title": "Grado en Logopedia",
+      "level": "Grado universitario (4 años)",
+      "ege": [
+        "Bachillerato (Ciencias o Ciencias Sociales)",
+        "EBAU/PAU: sube nota con Biología",
+        "Nota de corte: varía por universidad y año"
+      ],
+      "occupations": [
+        "speech-language-pathologist"
+      ]
+    },
+    {
+      "code": "grado-nutricion",
+      "title": "Grado en Nutrición Humana y Dietética",
+      "level": "Grado universitario (4 años)",
+      "ege": [
+        "Bachillerato (modalidad de Ciencias)",
+        "EBAU/PAU: sube nota con Biología y Química",
+        "Nota de corte: varía por universidad y año"
+      ],
+      "occupations": [
+        "dietitian"
+      ]
+    },
+    {
+      "code": "grado-psicologia",
+      "title": "Grado en Psicología",
+      "level": "Grado universitario (4 años)",
+      "ege": [
+        "Bachillerato (Ciencias o Ciencias Sociales, según universidad)",
+        "EBAU/PAU: sube nota con Biología o Matemáticas",
+        "Para ejercer en clínica: Máster en Psicología General Sanitaria (o plaza PIR)"
+      ],
+      "occupations": [
+        "psychologist"
+      ]
+    },
+    {
+      "code": "grado-derecho",
+      "title": "Grado en Derecho",
+      "level": "Grado universitario (4 años + Máster de Abogacía)",
+      "ege": [
+        "Bachillerato (Humanidades y Ciencias Sociales)",
+        "EBAU/PAU: sube nota con Historia y Latín o Matemáticas Aplicadas",
+        "Para ejercer de abogado: Máster de Abogacía + examen de acceso"
+      ],
+      "occupations": [
+        "lawyer"
+      ]
+    },
+    {
+      "code": "grado-ade",
+      "title": "Grado en Administración y Dirección de Empresas (ADE)",
+      "level": "Grado universitario (4 años)",
+      "ege": [
+        "Bachillerato (Ciencias Sociales)",
+        "EBAU/PAU: sube nota con Matemáticas Aplicadas y Economía de la Empresa",
+        "Nota de corte: varía por universidad y año"
+      ],
+      "occupations": [
+        "accountant",
+        "product-manager",
+        "project-manager",
+        "management-consultant",
+        "operations-manager",
+        "logistician"
+      ]
+    },
+    {
+      "code": "grado-economia",
+      "title": "Grado en Economía",
+      "level": "Grado universitario (4 años)",
+      "ege": [
+        "Bachillerato (Ciencias Sociales)",
+        "EBAU/PAU: sube nota con Matemáticas Aplicadas y Economía de la Empresa",
+        "Nota de corte: varía por universidad y año"
+      ],
+      "occupations": [
+        "economist"
+      ]
+    },
+    {
+      "code": "grado-finanzas",
+      "title": "Grado en Finanzas y Contabilidad",
+      "level": "Grado universitario (4 años)",
+      "ege": [
+        "Bachillerato (Ciencias Sociales)",
+        "EBAU/PAU: sube nota con Matemáticas Aplicadas y Economía de la Empresa",
+        "Certificaciones (EFPA, CFA) ayudan para asesoría financiera"
+      ],
+      "occupations": [
+        "financial-analyst",
+        "financial-advisor"
+      ]
+    },
+    {
+      "code": "grado-marketing",
+      "title": "Grado en Marketing e Investigación de Mercados",
+      "level": "Grado universitario (4 años)",
+      "ege": [
+        "Bachillerato (Ciencias Sociales)",
+        "EBAU/PAU: sube nota con Matemáticas Aplicadas y Economía de la Empresa",
+        "Nota de corte: varía por universidad y año"
+      ],
+      "occupations": [
+        "marketing-manager",
+        "sales-manager"
+      ]
+    },
+    {
+      "code": "grado-publicidad",
+      "title": "Grado en Publicidad y Relaciones Públicas",
+      "level": "Grado universitario (4 años)",
+      "ege": [
+        "Bachillerato (Humanidades y Ciencias Sociales)",
+        "EBAU/PAU: sube nota con materias de la rama social",
+        "Un portafolio creativo ayuda al empezar a trabajar"
+      ],
+      "occupations": [
+        "marketing-manager",
+        "art-director"
+      ]
+    },
+    {
+      "code": "grado-rrll",
+      "title": "Grado en Relaciones Laborales y Recursos Humanos",
+      "level": "Grado universitario (4 años)",
+      "ege": [
+        "Bachillerato (Ciencias Sociales)",
+        "EBAU/PAU: sube nota con materias de la rama social",
+        "Nota de corte: suele ser accesible — varía por universidad y año"
+      ],
+      "occupations": [
+        "hr-specialist"
+      ]
+    },
+    {
+      "code": "grado-periodismo",
+      "title": "Grado en Periodismo",
+      "level": "Grado universitario (4 años)",
+      "ege": [
+        "Bachillerato (Humanidades y Ciencias Sociales)",
+        "EBAU/PAU: sube nota con Historia y Lengua",
+        "Nota de corte: varía por universidad y año"
+      ],
+      "occupations": [
+        "journalist"
+      ]
+    },
+    {
+      "code": "grado-comunicacion-audiovisual",
+      "title": "Grado en Comunicación Audiovisual",
+      "level": "Grado universitario (4 años)",
+      "ege": [
+        "Bachillerato (Humanidades y Ciencias Sociales o Artes)",
+        "EBAU/PAU: sube nota con materias de la rama social o artística",
+        "Nota de corte: varía por universidad y año"
+      ],
+      "occupations": [
+        "video-editor"
+      ]
+    },
+    {
+      "code": "grado-magisterio",
+      "title": "Grado en Magisterio (Educación Primaria)",
+      "level": "Grado universitario (4 años)",
+      "ege": [
+        "Bachillerato (cualquier modalidad)",
+        "EBAU/PAU: algunas comunidades piden prueba de aptitud personal",
+        "Para plaza en la escuela pública: oposiciones de maestros",
+        "Para dar clase en secundaria: otro grado + Máster de Profesorado"
+      ],
+      "occupations": [
+        "teacher"
+      ]
+    },
+    {
+      "code": "grado-pedagogia",
+      "title": "Grado en Pedagogía",
+      "level": "Grado universitario (4 años)",
+      "ege": [
+        "Bachillerato (Humanidades y Ciencias Sociales)",
+        "EBAU/PAU: sube nota con materias de la rama social",
+        "Para orientador en instituto: Máster de Profesorado (Orientación Educativa) + oposiciones"
+      ],
+      "occupations": [
+        "school-counselor"
+      ]
+    },
+    {
+      "code": "grado-informacion-documentacion",
+      "title": "Grado en Información y Documentación",
+      "level": "Grado universitario (4 años)",
+      "ege": [
+        "Bachillerato (cualquier modalidad)",
+        "EBAU/PAU: nota de corte suele ser accesible",
+        "Para bibliotecas públicas: oposiciones (cuerpos de bibliotecas)"
+      ],
+      "occupations": [
+        "librarian"
+      ]
+    },
+    {
+      "code": "grado-trabajo-social",
+      "title": "Grado en Trabajo Social",
+      "level": "Grado universitario (4 años)",
+      "ege": [
+        "Bachillerato (Humanidades y Ciencias Sociales)",
+        "EBAU/PAU: sube nota con materias de la rama social",
+        "Colegiación obligatoria para ejercer"
+      ],
+      "occupations": [
+        "social-worker"
+      ]
+    },
+    {
+      "code": "grado-traduccion",
+      "title": "Grado en Traducción e Interpretación",
+      "level": "Grado universitario (4 años)",
+      "ege": [
+        "Bachillerato (cualquier modalidad, idiomas fuertes)",
+        "EBAU/PAU: sube nota con Inglés u otra lengua extranjera",
+        "Muchas universidades piden prueba de nivel de idioma (B2–C1)"
+      ],
+      "occupations": [
+        "translator"
+      ]
+    },
+    {
+      "code": "grado-filologia",
+      "title": "Grado en Filología Hispánica",
+      "level": "Grado universitario (4 años)",
+      "ege": [
+        "Bachillerato (Humanidades)",
+        "EBAU/PAU: sube nota con Lengua, Literatura y Latín",
+        "Para escribir profesionalmente cuenta más el portafolio que el título"
+      ],
+      "occupations": [
+        "writer"
+      ]
+    },
+    {
+      "code": "grado-diseno",
+      "title": "Grado en Diseño",
+      "level": "Grado universitario (4 años)",
+      "ege": [
+        "Bachillerato (Artes recomendado, no obligatorio)",
+        "Muchas escuelas piden portafolio o prueba específica de acceso",
+        "También existe la vía de las Escuelas Superiores de Diseño (Título Superior)"
+      ],
+      "occupations": [
+        "graphic-designer",
+        "ux-ui-designer",
+        "interior-designer",
+        "art-director"
+      ]
+    },
+    {
+      "code": "grado-ing-diseno-industrial",
+      "title": "Grado en Ingeniería en Diseño Industrial y Desarrollo de Productos",
+      "level": "Grado universitario (4 años)",
+      "ege": [
+        "Bachillerato (modalidad de Ciencias)",
+        "EBAU/PAU: sube nota con Matemáticas II, Física y Dibujo Técnico",
+        "Nota de corte: varía por universidad y año"
+      ],
+      "occupations": [
+        "industrial-designer"
+      ]
+    },
+    {
+      "code": "grado-arquitectura",
+      "title": "Grado en Arquitectura",
+      "level": "Grado universitario (5 años + máster habilitante)",
+      "ege": [
+        "Bachillerato (modalidad de Ciencias)",
+        "EBAU/PAU: sube nota con Matemáticas II, Física y Dibujo Técnico",
+        "Para firmar proyectos: máster habilitante en Arquitectura"
+      ],
+      "occupations": [
+        "architect"
+      ]
+    },
+    {
+      "code": "grado-ing-mecanica",
+      "title": "Grado en Ingeniería Mecánica",
+      "level": "Grado universitario (4 años)",
+      "ege": [
+        "Bachillerato (modalidad de Ciencias)",
+        "EBAU/PAU: sube nota con Matemáticas II y Física",
+        "Nota de corte: varía por universidad y año"
+      ],
+      "occupations": [
+        "mechanical-engineer"
+      ]
+    },
+    {
+      "code": "grado-ing-civil",
+      "title": "Grado en Ingeniería Civil",
+      "level": "Grado universitario (4 años)",
+      "ege": [
+        "Bachillerato (modalidad de Ciencias)",
+        "EBAU/PAU: sube nota con Matemáticas II y Física",
+        "Nota de corte: varía por universidad y año"
+      ],
+      "occupations": [
+        "civil-engineer"
+      ]
+    },
+    {
+      "code": "grado-ing-electrica",
+      "title": "Grado en Ingeniería Eléctrica",
+      "level": "Grado universitario (4 años)",
+      "ege": [
+        "Bachillerato (modalidad de Ciencias)",
+        "EBAU/PAU: sube nota con Matemáticas II y Física",
+        "Nota de corte: varía por universidad y año"
+      ],
+      "occupations": [
+        "electrical-engineer"
+      ]
+    },
+    {
+      "code": "grado-biologia",
+      "title": "Grado en Biología",
+      "level": "Grado universitario (4 años)",
+      "ege": [
+        "Bachillerato (modalidad de Ciencias)",
+        "EBAU/PAU: sube nota con Biología y Química",
+        "Nota de corte: varía por universidad y año"
+      ],
+      "occupations": [
+        "biologist"
+      ]
+    },
+    {
+      "code": "grado-quimica",
+      "title": "Grado en Química",
+      "level": "Grado universitario (4 años)",
+      "ege": [
+        "Bachillerato (modalidad de Ciencias)",
+        "EBAU/PAU: sube nota con Química y Matemáticas II",
+        "Nota de corte: varía por universidad y año"
+      ],
+      "occupations": [
+        "chemist"
+      ]
+    },
+    {
+      "code": "grado-ciencias-ambientales",
+      "title": "Grado en Ciencias Ambientales",
+      "level": "Grado universitario (4 años)",
+      "ege": [
+        "Bachillerato (modalidad de Ciencias)",
+        "EBAU/PAU: sube nota con Biología, Química o Geología",
+        "Nota de corte: varía por universidad y año"
+      ],
+      "occupations": [
+        "environmental-scientist"
+      ]
+    },
+    {
+      "code": "grado-geografia",
+      "title": "Grado en Geografía y Ordenación del Territorio",
+      "level": "Grado universitario (4 años)",
+      "ege": [
+        "Bachillerato (Ciencias o Ciencias Sociales)",
+        "EBAU/PAU: sube nota con Geografía",
+        "Para urbanismo: se suele completar con un máster en Urbanismo u Ordenación del Territorio"
+      ],
+      "occupations": [
+        "urban-planner"
+      ]
+    },
+    {
+      "code": "grado-cafyd",
+      "title": "Grado en Ciencias de la Actividad Física y del Deporte (CAFYD)",
+      "level": "Grado universitario (4 años)",
+      "ege": [
+        "Bachillerato (cualquier modalidad, Ciencias recomendado)",
+        "Muchas universidades piden pruebas físicas de acceso",
+        "Nota de corte: varía por universidad y año"
+      ],
+      "occupations": [
+        "fitness-trainer"
+      ]
+    },
+    {
+      "code": "fp-gs-dam",
+      "title": "Técnico Superior en Desarrollo de Aplicaciones Multiplataforma (DAM)",
+      "level": "FP Grado Superior (2 años)",
+      "ege": [
+        "Acceso: Bachillerato, otro ciclo o prueba de acceso (19+)",
+        "Sin EBAU; plazas limitadas en centros públicos",
+        "Alternativa web: Desarrollo de Aplicaciones Web (DAW)"
+      ],
+      "occupations": [
+        "software-developer",
+        "qa-engineer"
+      ]
+    },
+    {
+      "code": "fp-gs-asir",
+      "title": "Técnico Superior en Administración de Sistemas Informáticos en Red (ASIR)",
+      "level": "FP Grado Superior (2 años)",
+      "ege": [
+        "Acceso: Bachillerato, otro ciclo o prueba de acceso (19+)",
+        "Sin EBAU; plazas limitadas en centros públicos",
+        "Después: Curso de Especialización en Ciberseguridad (FP)"
+      ],
+      "occupations": [
+        "systems-administrator",
+        "network-engineer",
+        "it-support-specialist",
+        "devops-engineer",
+        "database-administrator",
+        "cybersecurity-specialist"
+      ]
+    },
+    {
+      "code": "fp-gm-smr",
+      "title": "Técnico en Sistemas Microinformáticos y Redes (SMR)",
+      "level": "FP Grado Medio (2 años)",
+      "ege": [
+        "Acceso: ESO o prueba de acceso (17+)",
+        "Sin EBAU; plazas limitadas en centros públicos"
+      ],
+      "occupations": [
+        "it-support-specialist"
+      ]
+    },
+    {
+      "code": "fp-gs-animaciones-3d",
+      "title": "Técnico Superior en Animaciones 3D, Juegos y Entornos Interactivos",
+      "level": "FP Grado Superior (2 años)",
+      "ege": [
+        "Acceso: Bachillerato, otro ciclo o prueba de acceso (19+)",
+        "Sin EBAU; plazas limitadas en centros públicos",
+        "Un portafolio o demo propia ayuda mucho al buscar trabajo"
+      ],
+      "occupations": [
+        "animator",
+        "game-developer"
+      ]
+    },
+    {
+      "code": "fp-gs-imagen-diagnostico",
+      "title": "Técnico Superior en Imagen para el Diagnóstico y Medicina Nuclear",
+      "level": "FP Grado Superior (2 años)",
+      "ege": [
+        "Acceso: Bachillerato, otro ciclo o prueba de acceso (19+)",
+        "Sin EBAU; plazas limitadas en centros públicos"
+      ],
+      "occupations": [
+        "radiologic-technologist"
+      ]
+    },
+    {
+      "code": "fp-gm-cuidados-auxiliares",
+      "title": "Técnico en Cuidados Auxiliares de Enfermería",
+      "level": "FP Grado Medio (2 años)",
+      "ege": [
+        "Acceso: ESO o prueba de acceso (17+)",
+        "Sin EBAU; plazas limitadas en centros públicos"
+      ],
+      "occupations": [
+        "medical-assistant"
+      ]
+    },
+    {
+      "code": "fp-gs-laboratorio-clinico",
+      "title": "Técnico Superior en Laboratorio Clínico y Biomédico",
+      "level": "FP Grado Superior (2 años)",
+      "ege": [
+        "Acceso: Bachillerato, otro ciclo o prueba de acceso (19+)",
+        "Sin EBAU; plazas limitadas en centros públicos",
+        "Las extracciones de sangre forman parte del trabajo de laboratorio"
+      ],
+      "occupations": [
+        "phlebotomist"
+      ]
+    },
+    {
+      "code": "fp-gs-higiene-bucodental",
+      "title": "Técnico Superior en Higiene Bucodental",
+      "level": "FP Grado Superior (2 años)",
+      "ege": [
+        "Acceso: Bachillerato, otro ciclo o prueba de acceso (19+)",
+        "Sin EBAU; plazas limitadas en centros públicos"
+      ],
+      "occupations": [
+        "dental-hygienist"
+      ]
+    },
+    {
+      "code": "fp-gm-emergencias-sanitarias",
+      "title": "Técnico en Emergencias Sanitarias",
+      "level": "FP Grado Medio (2 años)",
+      "ege": [
+        "Acceso: ESO o prueba de acceso (17+)",
+        "Sin EBAU; plazas limitadas en centros públicos",
+        "Para conducir ambulancias: permiso de conducir adecuado"
+      ],
+      "occupations": [
+        "paramedic"
+      ]
+    },
+    {
+      "code": "fp-gs-dietetica",
+      "title": "Técnico Superior en Dietética",
+      "level": "FP Grado Superior (2 años)",
+      "ege": [
+        "Acceso: Bachillerato, otro ciclo o prueba de acceso (19+)",
+        "Sin EBAU; plazas limitadas en centros públicos"
+      ],
+      "occupations": [
+        "dietitian"
+      ]
+    },
+    {
+      "code": "fp-gm-cocina",
+      "title": "Técnico en Cocina y Gastronomía",
+      "level": "FP Grado Medio (2 años)",
+      "ege": [
+        "Acceso: ESO o prueba de acceso (17+)",
+        "Sin EBAU; plazas limitadas en centros públicos",
+        "Después: Grado Superior en Dirección de Cocina si quieres liderar"
+      ],
+      "occupations": [
+        "chef"
+      ]
+    },
+    {
+      "code": "fp-gm-electricidad",
+      "title": "Técnico en Instalaciones Eléctricas y Automáticas",
+      "level": "FP Grado Medio (2 años)",
+      "ege": [
+        "Acceso: ESO o prueba de acceso (17+)",
+        "Sin EBAU; plazas limitadas en centros públicos",
+        "Para redes eléctricas: formación en trabajos en altura y en tensión con la empresa"
+      ],
+      "occupations": [
+        "electrician",
+        "lineworker"
+      ]
+    },
+    {
+      "code": "fp-gm-vehiculos",
+      "title": "Técnico en Electromecánica de Vehículos Automóviles",
+      "level": "FP Grado Medio (2 años)",
+      "ege": [
+        "Acceso: ESO o prueba de acceso (17+)",
+        "Sin EBAU; plazas limitadas en centros públicos"
+      ],
+      "occupations": [
+        "automotive-technician"
+      ]
+    },
+    {
+      "code": "fp-gm-soldadura",
+      "title": "Técnico en Soldadura y Calderería",
+      "level": "FP Grado Medio (2 años)",
+      "ege": [
+        "Acceso: ESO o prueba de acceso (17+)",
+        "Sin EBAU; plazas limitadas en centros públicos",
+        "Las homologaciones de soldadura suben el sueldo"
+      ],
+      "occupations": [
+        "welder"
+      ]
+    },
+    {
+      "code": "fp-gm-produccion-calor",
+      "title": "Técnico en Instalaciones de Producción de Calor",
+      "level": "FP Grado Medio (2 años)",
+      "ege": [
+        "Acceso: ESO o prueba de acceso (17+)",
+        "Sin EBAU; plazas limitadas en centros públicos",
+        "Incluye fontanería y calefacción; carnés de instalador según especialidad"
+      ],
+      "occupations": [
+        "plumber"
+      ]
+    },
+    {
+      "code": "fp-gm-frio-climatizacion",
+      "title": "Técnico en Instalaciones Frigoríficas y de Climatización",
+      "level": "FP Grado Medio (2 años)",
+      "ege": [
+        "Acceso: ESO o prueba de acceso (17+)",
+        "Sin EBAU; plazas limitadas en centros públicos",
+        "Carné de manipulador de gases fluorados para trabajar con refrigerantes"
+      ],
+      "occupations": [
+        "hvac-technician"
+      ]
+    },
+    {
+      "code": "fp-gm-carpinteria",
+      "title": "Técnico en Carpintería y Mueble",
+      "level": "FP Grado Medio (2 años)",
+      "ege": [
+        "Acceso: ESO o prueba de acceso (17+)",
+        "Sin EBAU; plazas limitadas en centros públicos"
+      ],
+      "occupations": [
+        "carpenter"
+      ]
+    },
+    {
+      "code": "fp-gm-mecanizado",
+      "title": "Técnico en Mecanizado",
+      "level": "FP Grado Medio (2 años)",
+      "ege": [
+        "Acceso: ESO o prueba de acceso (17+)",
+        "Sin EBAU; plazas limitadas en centros públicos",
+        "Incluye manejo de tornos, fresadoras y máquinas CNC"
+      ],
+      "occupations": [
+        "machinist",
+        "cnc-machinist"
+      ]
+    },
+    {
+      "code": "fp-gs-programacion-fabricacion",
+      "title": "Técnico Superior en Programación de la Producción en Fabricación Mecánica",
+      "level": "FP Grado Superior (2 años)",
+      "ege": [
+        "Acceso: Bachillerato, otro ciclo o prueba de acceso (19+)",
+        "Sin EBAU; plazas limitadas en centros públicos",
+        "Nivel avanzado de CNC y CAD/CAM"
+      ],
+      "occupations": [
+        "cnc-machinist"
+      ]
+    },
+    {
+      "code": "fp-gm-excavaciones",
+      "title": "Técnico en Excavaciones y Sondeos",
+      "level": "FP Grado Medio (2 años)",
+      "ege": [
+        "Acceso: ESO o prueba de acceso (17+)",
+        "Sin EBAU; plazas limitadas en centros públicos",
+        "También se accede al oficio con certificados de profesionalidad y carnés de maquinaria"
+      ],
+      "occupations": [
+        "heavy-equipment-operator"
+      ]
+    },
+    {
+      "code": "fp-gs-aeromecanico",
+      "title": "Técnico Superior en Mantenimiento Aeromecánico de Aviones con Motor de Turbina",
+      "level": "FP Grado Superior (2 años)",
+      "ege": [
+        "Acceso: Bachillerato, otro ciclo o prueba de acceso (19+)",
+        "Sin EBAU; plazas limitadas en centros públicos",
+        "Para firmar mantenimientos: licencia EASA Parte 66"
+      ],
+      "occupations": [
+        "aircraft-mechanic"
+      ]
+    },
+    {
+      "code": "fp-gs-iluminacion-imagen",
+      "title": "Técnico Superior en Iluminación, Captación y Tratamiento de Imagen",
+      "level": "FP Grado Superior (2 años)",
+      "ege": [
+        "Acceso: Bachillerato, otro ciclo o prueba de acceso (19+)",
+        "Sin EBAU; plazas limitadas en centros públicos",
+        "En fotografía, el portafolio pesa más que el título"
+      ],
+      "occupations": [
+        "photographer"
+      ]
+    },
+    {
+      "code": "fp-gs-realizacion-audiovisual",
+      "title": "Técnico Superior en Realización de Proyectos Audiovisuales y Espectáculos",
+      "level": "FP Grado Superior (2 años)",
+      "ege": [
+        "Acceso: Bachillerato, otro ciclo o prueba de acceso (19+)",
+        "Sin EBAU; plazas limitadas en centros públicos",
+        "Un reel de montajes propios abre más puertas que el expediente"
+      ],
+      "occupations": [
+        "video-editor"
+      ]
+    },
+    {
+      "code": "fp-gs-sonido",
+      "title": "Técnico Superior en Sonido para Audiovisuales y Espectáculos",
+      "level": "FP Grado Superior (2 años)",
+      "ege": [
+        "Acceso: Bachillerato, otro ciclo o prueba de acceso (19+)",
+        "Sin EBAU; plazas limitadas en centros públicos"
+      ],
+      "occupations": [
+        "sound-engineer"
+      ]
+    },
+    {
+      "code": "fp-gs-acondicionamiento-fisico",
+      "title": "Técnico Superior en Acondicionamiento Físico",
+      "level": "FP Grado Superior (2 años)",
+      "ege": [
+        "Acceso: Bachillerato, otro ciclo o prueba de acceso (19+)",
+        "Sin EBAU; plazas limitadas en centros públicos",
+        "Habilita como entrenador en gimnasios y centros deportivos"
+      ],
+      "occupations": [
+        "fitness-trainer"
+      ]
+    },
+    {
+      "code": "fp-gs-ventas",
+      "title": "Técnico Superior en Gestión de Ventas y Espacios Comerciales",
+      "level": "FP Grado Superior (2 años)",
+      "ege": [
+        "Acceso: Bachillerato, otro ciclo o prueba de acceso (19+)",
+        "Sin EBAU; plazas limitadas en centros públicos",
+        "Para inmobiliaria: los requisitos de agente (API) varían por comunidad autónoma"
+      ],
+      "occupations": [
+        "sales-manager",
+        "real-estate-agent"
+      ]
+    },
+    {
+      "code": "fp-gs-administracion-finanzas",
+      "title": "Técnico Superior en Administración y Finanzas",
+      "level": "FP Grado Superior (2 años)",
+      "ege": [
+        "Acceso: Bachillerato, otro ciclo o prueba de acceso (19+)",
+        "Sin EBAU; plazas limitadas en centros públicos",
+        "Para mediador de seguros: curso acreditado por la Dirección General de Seguros"
+      ],
+      "occupations": [
+        "accountant",
+        "insurance-agent"
+      ]
+    },
+    {
+      "code": "fp-gs-transporte-logistica",
+      "title": "Técnico Superior en Transporte y Logística",
+      "level": "FP Grado Superior (2 años)",
+      "ege": [
+        "Acceso: Bachillerato, otro ciclo o prueba de acceso (19+)",
+        "Sin EBAU; plazas limitadas en centros públicos"
+      ],
+      "occupations": [
+        "logistician"
+      ]
+    },
+    {
+      "code": "superior-musica",
+      "title": "Título Superior de Música (Conservatorio Superior)",
+      "level": "Enseñanzas artísticas superiores (4 años)",
+      "ege": [
+        "Prueba específica de acceso al conservatorio (interpretación + teoría)",
+        "Bachillerato (o prueba de madurez para mayores de 18)",
+        "Años previos de conservatorio profesional o formación equivalente"
+      ],
+      "occupations": [
+        "musician"
+      ]
+    },
+    {
+      "code": "superior-arte-dramatico",
+      "title": "Título Superior de Arte Dramático (ESAD)",
+      "level": "Enseñanzas artísticas superiores (4 años)",
+      "ege": [
+        "Prueba específica de acceso (audición de interpretación)",
+        "Bachillerato (o prueba de madurez para mayores de 18)",
+        "Plazas muy limitadas en las escuelas públicas"
+      ],
+      "occupations": [
+        "actor"
+      ]
+    },
+    {
+      "code": "oposicion-policia",
+      "title": "Policía Nacional / Policía Local (Escala Básica)",
+      "level": "Oposición + academia oficial",
+      "ege": [
+        "Acceso por oposición (convocatorias públicas) + pruebas físicas",
+        "Titulación exigida: Bachillerato o equivalente",
+        "Requisitos de edad, nacionalidad y ausencia de antecedentes"
+      ],
+      "occupations": [
+        "police-officer"
+      ]
+    },
+    {
+      "code": "oposicion-bombero",
+      "title": "Bombero (oposición municipal o autonómica)",
+      "level": "Oposición + academia oficial",
+      "ege": [
+        "Acceso por oposición (convocatorias públicas) + pruebas físicas exigentes",
+        "Titulación según convocatoria (a menudo Bachillerato o FP)",
+        "Ayuda la FP: Técnico en Emergencias y Protección Civil"
+      ],
+      "occupations": [
+        "firefighter"
+      ]
+    },
+    {
+      "code": "licencia-atpl",
+      "title": "Piloto de línea aérea (licencia ATPL)",
+      "level": "Licencia profesional (escuela de vuelo)",
+      "ege": [
+        "Licencia ATPL en escuela de vuelo homologada (privada, cara)",
+        "Bachillerato de Ciencias recomendado (física y matemáticas)",
+        "Certificado médico aeronáutico de clase 1",
+        "Inglés de nivel alto (radiotelefonía OACI)"
+      ],
+      "occupations": [
+        "airline-pilot"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "stage": "school",
+      "date_rule": "09-15",
+      "title": "Empieza el curso: decide qué modalidad de Bachillerato (o ciclo de FP) te conviene"
+    },
+    {
+      "stage": "school",
+      "date_rule": "02-01",
+      "title": "Consulta las notas de corte del año pasado y la información de la EBAU"
+    },
+    {
+      "stage": "school",
+      "date_rule": "05-15",
+      "title": "Matrícula de la EBAU en tu instituto"
+    },
+    {
+      "stage": "school",
+      "date_rule": "06-05",
+      "title": "EBAU, convocatoria ordinaria (primeras semanas de junio)"
+    },
+    {
+      "stage": "school",
+      "date_rule": "06-20",
+      "title": "Preinscripción universitaria y solicitud de plaza en FP"
+    },
+    {
+      "stage": "school",
+      "date_rule": "07-10",
+      "title": "EBAU extraordinaria y segundas listas de admisión"
+    },
+    {
+      "stage": "school",
+      "date_rule": "09-01",
+      "title": "Matrícula definitiva y comienzo del nuevo curso"
+    }
+  ]
+}

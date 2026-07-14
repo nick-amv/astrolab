@@ -3,6 +3,7 @@
   "R": {
     "label_ru": "руки и практика",
     "label_en": "hands-on and practical",
+    "label_es": "manos y práctica",
     "strengths_ru": [
       "умеет доводить дела до конкретного, осязаемого результата",
       "любит разбираться, как всё устроено, и делать своими руками"
@@ -10,6 +11,10 @@
     "strengths_en": [
       "gets things to a concrete, tangible result",
       "likes to figure out how things work and build with their hands"
+    ],
+    "strengths_es": [
+      "lleva las cosas hasta un resultado concreto y tangible",
+      "le gusta entender cómo funciona todo y hacer cosas con sus propias manos"
     ],
     "support_ru": [
       "Поддержите интерес к практике: конструкторы, ремонт, мастерские, спорт, робототехника.",
@@ -20,11 +25,17 @@
       "Encourage the hands-on side: building kits, repairs, workshops, sports, robotics.",
       "Don't dismiss “working with your hands” — today that includes engineering and high tech.",
       "Give room to try real tasks, not just textbook theory."
+    ],
+    "support_es": [
+      "Apoya su lado práctico: kits de construcción, reparaciones, talleres, deporte, robótica.",
+      "No le quites valor al «trabajo manual»: hoy incluye la ingeniería y la alta tecnología.",
+      "Dale espacio para enfrentarse a tareas reales, no solo a la teoría del libro de texto."
     ]
   },
   "I": {
     "label_ru": "анализ и исследование",
     "label_en": "analysis and research",
+    "label_es": "análisis e investigación",
     "strengths_ru": [
       "задаёт глубокие вопросы и не принимает ответы на веру",
       "получает удовольствие, когда разбирается в чём-то сложном"
@@ -32,6 +43,10 @@
     "strengths_en": [
       "asks deep questions and doesn't take answers on faith",
       "genuinely enjoys getting to the bottom of something hard"
+    ],
+    "strengths_es": [
+      "hace preguntas profundas y no da las respuestas por buenas sin más",
+      "disfruta de verdad cuando llega a entender algo difícil"
     ],
     "support_ru": [
       "Поощряйте вопросы, даже неудобные — это топливо исследователя.",
@@ -42,11 +57,17 @@
       "Welcome the questions, even the awkward ones — that's the fuel of a researcher.",
       "Help find deeper courses, competitions, or science clubs in their area of interest.",
       "Allow time for “useless” curiosity — that's often where real science starts."
+    ],
+    "support_es": [
+      "Acoge sus preguntas, incluso las incómodas: son el combustible de quien investiga.",
+      "Ayúdale a encontrar cursos avanzados, olimpiadas o clubes de ciencia de lo que le interesa.",
+      "Deja tiempo para la curiosidad «inútil»: de ahí suele nacer la ciencia de verdad."
     ]
   },
   "A": {
     "label_ru": "творчество и самовыражение",
     "label_en": "creativity and self-expression",
+    "label_es": "creatividad y expresión personal",
     "strengths_ru": [
       "видит и создаёт то, чего ещё нет",
       "выражает мысли через образы, звук, текст или дизайн"
@@ -54,6 +75,10 @@
     "strengths_en": [
       "sees and makes things that don't exist yet",
       "expresses ideas through images, sound, writing, or design"
+    ],
+    "strengths_es": [
+      "ve y crea cosas que todavía no existen",
+      "expresa sus ideas con imágenes, sonido, textos o diseño"
     ],
     "support_ru": [
       "Дайте инструменты и материалы для творчества, без давления «сделай что-то полезное».",
@@ -64,11 +89,17 @@
       "Provide tools and materials to create, without the pressure to “make something useful”.",
       "Value the process and the courage to try, not just a polished result.",
       "Help them see that creativity is a profession too, not only a hobby."
+    ],
+    "support_es": [
+      "Dale herramientas y materiales para crear, sin la presión de «hacer algo útil».",
+      "Valora el proceso y la valentía de intentarlo, no solo el resultado pulido.",
+      "Ayúdale a ver que la creatividad también es una profesión, no solo una afición."
     ]
   },
   "S": {
     "label_ru": "общение и помощь людям",
     "label_en": "connecting with and helping people",
+    "label_es": "conectar con las personas y ayudarlas",
     "strengths_ru": [
       "чувствует состояние других и умеет поддержать",
       "хорошо объясняет и умеет объединять людей"
@@ -76,6 +107,10 @@
     "strengths_en": [
       "senses how others feel and knows how to support them",
       "explains things well and brings people together"
+    ],
+    "strengths_es": [
+      "percibe cómo se sienten los demás y sabe apoyarlos",
+      "explica bien las cosas y sabe unir a la gente"
     ],
     "support_ru": [
       "Поддержите волонтёрство, наставничество, работу в команде.",
@@ -86,11 +121,17 @@
       "Encourage volunteering, mentoring, and teamwork.",
       "Say out loud that caring about people is a real strength, and one in demand.",
       "Help grow it into a profession: medicine, education, psychology."
+    ],
+    "support_es": [
+      "Apoya el voluntariado, las mentorías y el trabajo en equipo.",
+      "Dile en voz alta que preocuparse por las personas es una fortaleza real y muy demandada.",
+      "Ayúdale a convertirla en profesión: medicina, educación, psicología."
     ]
   },
   "E": {
     "label_ru": "лидерство и инициатива",
     "label_en": "leadership and initiative",
+    "label_es": "liderazgo e iniciativa",
     "strengths_ru": [
       "берёт инициативу и ведёт за собой",
       "не боится предлагать идеи и убеждать"
@@ -98,6 +139,10 @@
     "strengths_en": [
       "takes initiative and leads the way",
       "isn't afraid to pitch ideas and persuade"
+    ],
+    "strengths_es": [
+      "toma la iniciativa y tira del grupo",
+      "no tiene miedo de proponer ideas y convencer"
     ],
     "support_ru": [
       "Дайте возможность вести проекты — от школьного мероприятия до мини-бизнеса.",
@@ -108,11 +153,17 @@
       "Give chances to lead a project — from a school event to a tiny business.",
       "The difference between “bossing” and “leading” is responsibility; help them see it.",
       "Support trying organizing, selling, and public speaking."
+    ],
+    "support_es": [
+      "Dale la oportunidad de liderar proyectos: desde un evento escolar hasta un pequeño negocio.",
+      "La diferencia entre «mandar» y «liderar» está en la responsabilidad; ayúdale a verla.",
+      "Apoya sus primeros pasos en organización, ventas y hablar en público."
     ]
   },
   "C": {
     "label_ru": "порядок и точность",
     "label_en": "structure and precision",
+    "label_es": "orden y precisión",
     "strengths_ru": [
       "любит порядок, точность и доведение дела до конца",
       "хорошо работает с данными, системами и деталями"
@@ -120,6 +171,10 @@
     "strengths_en": [
       "likes order, accuracy, and finishing what they start",
       "works well with data, systems, and details"
+    ],
+    "strengths_es": [
+      "le gustan el orden, la precisión y terminar lo que empieza",
+      "se le da bien trabajar con datos, sistemas y detalles"
     ],
     "support_ru": [
       "Цените аккуратность и надёжность — это профессионально важные качества.",
@@ -130,6 +185,11 @@
       "Value the precision and reliability — these are professionally important traits.",
       "Give tasks with structure: spreadsheets, tracking, planning, organizing.",
       "Show that whole professions rest on order: finance, analytics, logistics."
+    ],
+    "support_es": [
+      "Valora su meticulosidad y fiabilidad: son cualidades muy importantes en el mundo profesional.",
+      "Dale tareas con estructura: hojas de cálculo, registros, planificación, organización.",
+      "Enséñale que detrás del orden hay profesiones enteras: finanzas, análisis de datos, logística."
     ]
   }
 }

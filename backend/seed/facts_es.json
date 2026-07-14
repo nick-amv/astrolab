@@ -1,0 +1,810 @@
+{
+  "country": "ES",
+  "source_key": "ine-ees",
+  "source_name": "INE Encuesta de Estructura Salarial 2022 microdata (weighted p25-p75 by occupation group, full-time, gross annual), scaled to the latest EAES national wage level",
+  "source_url": "https://www.ine.es/ftp/microdatos/salarial/datos_2022.zip",
+  "as_of_date": "2025-01-01",
+  "facts": [
+    {
+      "slug": "accountant",
+      "cno_group": "E0",
+      "salary_low": 23000,
+      "salary_high": 38100,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "actor",
+      "cno_group": "C0",
+      "salary_low": 31500,
+      "salary_high": 58800,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "actuary",
+      "cno_group": "C0",
+      "salary_low": 31500,
+      "salary_high": 58800,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "aircraft-mechanic",
+      "cno_group": "L0",
+      "salary_low": 21000,
+      "salary_high": 34000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "animator",
+      "cno_group": "C0",
+      "salary_low": 31500,
+      "salary_high": 58800,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "architect",
+      "cno_group": "C0",
+      "salary_low": 31500,
+      "salary_high": 58800,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "art-director",
+      "cno_group": "C0",
+      "salary_low": 31500,
+      "salary_high": 58800,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "automotive-technician",
+      "cno_group": "L0",
+      "salary_low": 21000,
+      "salary_high": 34000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "biologist",
+      "cno_group": "C0",
+      "salary_low": 31500,
+      "salary_high": 58800,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "carpenter",
+      "cno_group": "K0",
+      "salary_low": 20600,
+      "salary_high": 28100,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "chef",
+      "cno_group": "G0",
+      "salary_low": 17500,
+      "salary_high": 24900,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "chemist",
+      "cno_group": "C0",
+      "salary_low": 31500,
+      "salary_high": 58800,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "civil-engineer",
+      "cno_group": "C0",
+      "salary_low": 31500,
+      "salary_high": 58800,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "cnc-machinist",
+      "cno_group": "L0",
+      "salary_low": 21000,
+      "salary_high": 34000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "cybersecurity-specialist",
+      "cno_group": "D0",
+      "salary_low": 25200,
+      "salary_high": 46600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "data-analyst",
+      "cno_group": "C0",
+      "salary_low": 31500,
+      "salary_high": 58800,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "data-engineer",
+      "cno_group": "C0",
+      "salary_low": 31500,
+      "salary_high": 58800,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "data-scientist",
+      "cno_group": "C0",
+      "salary_low": 31500,
+      "salary_high": 58800,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "database-administrator",
+      "cno_group": "D0",
+      "salary_low": 25200,
+      "salary_high": 46600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "dental-hygienist",
+      "cno_group": "D0",
+      "salary_low": 25200,
+      "salary_high": 46600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "dentist",
+      "cno_group": "B0",
+      "salary_low": 36200,
+      "salary_high": 54200,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "devops-engineer",
+      "cno_group": "C0",
+      "salary_low": 31500,
+      "salary_high": 58800,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "dietitian",
+      "cno_group": "B0",
+      "salary_low": 36200,
+      "salary_high": 54200,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "economist",
+      "cno_group": "C0",
+      "salary_low": 31500,
+      "salary_high": 58800,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "electrical-engineer",
+      "cno_group": "C0",
+      "salary_low": 31500,
+      "salary_high": 58800,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "electrician",
+      "cno_group": "K0",
+      "salary_low": 20600,
+      "salary_high": 28100,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "environmental-scientist",
+      "cno_group": "C0",
+      "salary_low": 31500,
+      "salary_high": 58800,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "financial-advisor",
+      "cno_group": "C0",
+      "salary_low": 31500,
+      "salary_high": 58800,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "financial-analyst",
+      "cno_group": "C0",
+      "salary_low": 31500,
+      "salary_high": 58800,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "firefighter",
+      "cno_group": "I0",
+      "salary_low": 23800,
+      "salary_high": 47600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "fitness-trainer",
+      "cno_group": "D0",
+      "salary_low": 25200,
+      "salary_high": 46600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "game-developer",
+      "cno_group": "C0",
+      "salary_low": 31500,
+      "salary_high": 58800,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "graphic-designer",
+      "cno_group": "C0",
+      "salary_low": 31500,
+      "salary_high": 58800,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "heavy-equipment-operator",
+      "cno_group": "N0",
+      "salary_low": 19400,
+      "salary_high": 31500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "hr-specialist",
+      "cno_group": "C0",
+      "salary_low": 31500,
+      "salary_high": 58800,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "hvac-technician",
+      "cno_group": "K0",
+      "salary_low": 20600,
+      "salary_high": 28100,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "industrial-designer",
+      "cno_group": "C0",
+      "salary_low": 31500,
+      "salary_high": 58800,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "insurance-agent",
+      "cno_group": "D0",
+      "salary_low": 25200,
+      "salary_high": 46600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "interior-designer",
+      "cno_group": "C0",
+      "salary_low": 31500,
+      "salary_high": 58800,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "it-support-specialist",
+      "cno_group": "D0",
+      "salary_low": 25200,
+      "salary_high": 46600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "journalist",
+      "cno_group": "C0",
+      "salary_low": 31500,
+      "salary_high": 58800,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "lawyer",
+      "cno_group": "C0",
+      "salary_low": 31500,
+      "salary_high": 58800,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "librarian",
+      "cno_group": "C0",
+      "salary_low": 31500,
+      "salary_high": 58800,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "lineworker",
+      "cno_group": "K0",
+      "salary_low": 20600,
+      "salary_high": 28100,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "logistician",
+      "cno_group": "D0",
+      "salary_low": 25200,
+      "salary_high": 46600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "machine-learning-engineer",
+      "cno_group": "C0",
+      "salary_low": 31500,
+      "salary_high": 58800,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "machinist",
+      "cno_group": "L0",
+      "salary_low": 21000,
+      "salary_high": 34000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "management-consultant",
+      "cno_group": "C0",
+      "salary_low": 31500,
+      "salary_high": 58800,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "marketing-manager",
+      "cno_group": "C0",
+      "salary_low": 31500,
+      "salary_high": 58800,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "mechanical-engineer",
+      "cno_group": "C0",
+      "salary_low": 31500,
+      "salary_high": 58800,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "medical-assistant",
+      "cno_group": "H0",
+      "salary_low": 17800,
+      "salary_high": 29200,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "musician",
+      "cno_group": "C0",
+      "salary_low": 31500,
+      "salary_high": 58800,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "network-engineer",
+      "cno_group": "D0",
+      "salary_low": 25200,
+      "salary_high": 46600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "nurse",
+      "cno_group": "B0",
+      "salary_low": 36200,
+      "salary_high": 54200,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "occupational-therapist",
+      "cno_group": "B0",
+      "salary_low": 36200,
+      "salary_high": 54200,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "operations-manager",
+      "cno_group": "A0",
+      "salary_low": 41700,
+      "salary_high": 83200,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "optometrist",
+      "cno_group": "B0",
+      "salary_low": 36200,
+      "salary_high": 54200,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "paramedic",
+      "cno_group": "D0",
+      "salary_low": 25200,
+      "salary_high": 46600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "pharmacist",
+      "cno_group": "B0",
+      "salary_low": 36200,
+      "salary_high": 54200,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "phlebotomist",
+      "cno_group": "H0",
+      "salary_low": 17800,
+      "salary_high": 29200,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "photographer",
+      "cno_group": "D0",
+      "salary_low": 25200,
+      "salary_high": 46600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "physical-therapist",
+      "cno_group": "B0",
+      "salary_low": 36200,
+      "salary_high": 54200,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "physician",
+      "cno_group": "B0",
+      "salary_low": 36200,
+      "salary_high": 54200,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "plumber",
+      "cno_group": "K0",
+      "salary_low": 20600,
+      "salary_high": 28100,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "police-officer",
+      "cno_group": "I0",
+      "salary_low": 23800,
+      "salary_high": 47600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "product-manager",
+      "cno_group": "C0",
+      "salary_low": 31500,
+      "salary_high": 58800,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "project-manager",
+      "cno_group": "C0",
+      "salary_low": 31500,
+      "salary_high": 58800,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "psychologist",
+      "cno_group": "B0",
+      "salary_low": 36200,
+      "salary_high": 54200,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "qa-engineer",
+      "cno_group": "C0",
+      "salary_low": 31500,
+      "salary_high": 58800,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "radiologic-technologist",
+      "cno_group": "D0",
+      "salary_low": 25200,
+      "salary_high": 46600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "real-estate-agent",
+      "cno_group": "D0",
+      "salary_low": 25200,
+      "salary_high": 46600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "respiratory-therapist",
+      "cno_group": "D0",
+      "salary_low": 25200,
+      "salary_high": 46600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "sales-manager",
+      "cno_group": "A0",
+      "salary_low": 41700,
+      "salary_high": 83200,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "school-counselor",
+      "cno_group": "B0",
+      "salary_low": 36200,
+      "salary_high": 54200,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "social-worker",
+      "cno_group": "C0",
+      "salary_low": 31500,
+      "salary_high": 58800,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "software-developer",
+      "cno_group": "C0",
+      "salary_low": 31500,
+      "salary_high": 58800,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "sound-engineer",
+      "cno_group": "D0",
+      "salary_low": 25200,
+      "salary_high": 46600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "speech-language-pathologist",
+      "cno_group": "B0",
+      "salary_low": 36200,
+      "salary_high": 54200,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "statistician",
+      "cno_group": "C0",
+      "salary_low": 31500,
+      "salary_high": 58800,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "surgical-technologist",
+      "cno_group": "D0",
+      "salary_low": 25200,
+      "salary_high": 46600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "systems-administrator",
+      "cno_group": "D0",
+      "salary_low": 25200,
+      "salary_high": 46600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "teacher",
+      "cno_group": "B0",
+      "salary_low": 36200,
+      "salary_high": 54200,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "translator",
+      "cno_group": "C0",
+      "salary_low": 31500,
+      "salary_high": 58800,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "urban-planner",
+      "cno_group": "C0",
+      "salary_low": 31500,
+      "salary_high": 58800,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "ux-ui-designer",
+      "cno_group": "C0",
+      "salary_low": 31500,
+      "salary_high": 58800,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "veterinarian",
+      "cno_group": "B0",
+      "salary_low": 36200,
+      "salary_high": 54200,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "video-editor",
+      "cno_group": "D0",
+      "salary_low": 25200,
+      "salary_high": 46600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "welder",
+      "cno_group": "L0",
+      "salary_low": 21000,
+      "salary_high": 34000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    },
+    {
+      "slug": "writer",
+      "cno_group": "C0",
+      "salary_low": 31500,
+      "salary_high": 58800,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate"
+    }
+  ]
+}

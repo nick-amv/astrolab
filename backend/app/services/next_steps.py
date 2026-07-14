@@ -34,11 +34,11 @@ def _url(link: dict | None, occupation: str, locale: str) -> str | None:
     if link["t"] == "youtube":
         return f"https://www.youtube.com/results?search_query={q}"
     if link["t"] == "course":
-        # Free intro courses: Coursera for EN, Stepik for RU (both search pages).
+        # Free intro courses: Stepik for RU, Coursera elsewhere (search pages).
         return (
-            f"https://www.coursera.org/search?query={q}"
-            if locale == "en"
-            else f"https://stepik.org/catalog/search?query={q}"
+            f"https://stepik.org/catalog/search?query={q}"
+            if locale == "ru"
+            else f"https://www.coursera.org/search?query={q}"
         )
     return None
 
@@ -51,7 +51,7 @@ def resolve_steps(
     Returns [{idx, text, url|None}]; idx is stable (used as plan_items.step_idx).
     """
     data = _data()
-    loc = locale if locale in ("ru", "en") else "ru"
+    loc = locale if locale in ("ru", "en", "es") else "ru"
     aud = audience if audience in ("teen", "adult") else "adult"
     common = data["common"][aud].get(loc) or data["common"][aud]["ru"]
     field = (data["by_field"].get(field_tag or "") or {}).get(loc)

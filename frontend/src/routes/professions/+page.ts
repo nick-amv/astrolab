@@ -1,4 +1,5 @@
 import type { PageLoad } from "./$types";
+import { countryFor } from "$lib/geo";
 import { getLocale } from "$lib/paraglide/runtime";
 
 // Public catalog list. SSR-rendered for SEO; only published occupations are
@@ -17,7 +18,7 @@ export interface CatalogItem {
 
 export const load: PageLoad = async ({ fetch }) => {
   const locale = getLocale();
-  const country = locale === "en" ? "US" : "RU";
+  const country = countryFor(locale);
   const res = await fetch(`/api/occupations?locale=${locale}&country=${country}`);
   const data = res.ok ? await res.json() : { count: 0, items: [] };
   return { occupations: data.items as CatalogItem[] };

@@ -5,11 +5,17 @@
       "ru": [
         {
           "text": "Посмотри 2–3 видео «День из жизни: {occupation}» — как реально проходит рабочий день, а не как в кино.",
-          "link": { "t": "youtube", "q": "{occupation} день из жизни" }
+          "link": {
+            "t": "youtube",
+            "q": "{occupation} день из жизни"
+          }
         },
         {
           "text": "Пройди бесплатный вводный урок по теме — просто попробовать на вкус, без обязательств.",
-          "link": { "t": "course", "q": "{occupation} для начинающих" }
+          "link": {
+            "t": "course",
+            "q": "{occupation} для начинающих"
+          }
         },
         {
           "text": "Найди человека этой профессии — среди знакомых, родителей друзей или в соцсетях — и задай 5 вопросов о работе.",
@@ -19,14 +25,40 @@
       "en": [
         {
           "text": "Watch 2–3 “a day in the life of a {occupation}” videos — what the job actually looks like, not the movie version.",
-          "link": { "t": "youtube", "q": "{occupation} day in the life" }
+          "link": {
+            "t": "youtube",
+            "q": "{occupation} day in the life"
+          }
         },
         {
           "text": "Take a free intro lesson on the subject, just to see if it clicks. No commitment.",
-          "link": { "t": "course", "q": "{occupation} for beginners" }
+          "link": {
+            "t": "course",
+            "q": "{occupation} for beginners"
+          }
         },
         {
           "text": "Find someone who does this job — a family friend, a relative, or someone online — and ask them 5 questions about the work.",
+          "link": null
+        }
+      ],
+      "es": [
+        {
+          "text": "Mira 2 o 3 vídeos de «un día en la vida de {occupation}»: cómo es el trabajo de verdad, no la versión de película.",
+          "link": {
+            "t": "youtube",
+            "q": "{occupation} día en la vida"
+          }
+        },
+        {
+          "text": "Haz una clase de introducción gratuita sobre el tema, solo para ver si te engancha. Sin compromiso.",
+          "link": {
+            "t": "course",
+            "q": "{occupation} para principiantes"
+          }
+        },
+        {
+          "text": "Busca a alguien que se dedique a esto —un amigo de la familia, un familiar o alguien en internet— y hazle 5 preguntas sobre su trabajo.",
           "link": null
         }
       ]
@@ -35,11 +67,17 @@
       "ru": [
         {
           "text": "Посмотри 2–3 видео «День из жизни: {occupation}» — чтобы увидеть реальные будни, а не картинку из вакансии.",
-          "link": { "t": "youtube", "q": "{occupation} день из жизни" }
+          "link": {
+            "t": "youtube",
+            "q": "{occupation} день из жизни"
+          }
         },
         {
           "text": "Пройди бесплатный вводный курс — оцени, заходит ли тема, прежде чем вкладывать деньги и время.",
-          "link": { "t": "course", "q": "{occupation}" }
+          "link": {
+            "t": "course",
+            "q": "{occupation}"
+          }
         },
         {
           "text": "Найди практика в LinkedIn или профильном чате и задай 5 конкретных вопросов: про будни, деньги и вход в профессию.",
@@ -49,14 +87,40 @@
       "en": [
         {
           "text": "Watch 2–3 “a day in the life of a {occupation}” videos to see the real day-to-day, not the job-post version.",
-          "link": { "t": "youtube", "q": "{occupation} day in the life" }
+          "link": {
+            "t": "youtube",
+            "q": "{occupation} day in the life"
+          }
         },
         {
           "text": "Take a free intro course to find out whether the topic clicks before you spend money or time on it.",
-          "link": { "t": "course", "q": "{occupation}" }
+          "link": {
+            "t": "course",
+            "q": "{occupation}"
+          }
         },
         {
           "text": "Find someone doing it on LinkedIn or an industry group and ask 5 pointed questions: the daily grind, the money, and how they got in.",
+          "link": null
+        }
+      ],
+      "es": [
+        {
+          "text": "Mira 2 o 3 vídeos de «un día en la vida de {occupation}» para ver el día a día real, no la versión que pinta la oferta de empleo.",
+          "link": {
+            "t": "youtube",
+            "q": "{occupation} día en la vida"
+          }
+        },
+        {
+          "text": "Haz un curso de introducción gratuito para comprobar si el tema te engancha antes de invertir dinero y tiempo.",
+          "link": {
+            "t": "course",
+            "q": "{occupation}"
+          }
+        },
+        {
+          "text": "Busca en LinkedIn o en un grupo del sector a alguien que ya se dedique a ello y hazle 5 preguntas concretas: el día a día, el dinero y cómo entró en la profesión.",
           "link": null
         }
       ]
@@ -66,161 +130,369 @@
     "tech": {
       "ru": {
         "text": "За выходные собери крошечный проект по гайду с нуля — сайт-визитку или простого бота. Важно довести до «работает».",
-        "link": { "t": "youtube", "q": "{occupation} проект с нуля для новичка" }
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} проект с нуля для новичка"
+        }
       },
       "en": {
         "text": "Over a weekend, build a tiny project from a beginner guide — a one-page site or a simple bot. The point is to get it to “it works”.",
-        "link": { "t": "youtube", "q": "{occupation} beginner project tutorial" }
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} beginner project tutorial"
+        }
+      },
+      "es": {
+        "text": "En un fin de semana, monta un proyecto diminuto siguiendo una guía para principiantes: una web de una página o un bot sencillo. Lo importante es llegar al «funciona».",
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} proyecto para principiantes"
+        }
       }
     },
     "health": {
       "ru": {
         "text": "Сходи на день понаблюдать за работой (знакомый врач, медсестра, волонтёрская смена) или пройди базовый курс первой помощи.",
-        "link": { "t": "youtube", "q": "{occupation} с чего начать обучение" }
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} с чего начать обучение"
+        }
       },
       "en": {
         "text": "Spend a day observing the work (a nurse or doctor you know, or a volunteer shift), or take a basic first-aid course.",
-        "link": { "t": "youtube", "q": "{occupation} how to get started" }
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} how to get started"
+        }
+      },
+      "es": {
+        "text": "Pasa un día observando el trabajo (un médico o una enfermera que conozcas, o un turno de voluntariado), o haz un curso básico de primeros auxilios.",
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} cómo empezar"
+        }
       }
     },
     "trades": {
       "ru": {
         "text": "Сделай дома небольшую реальную работу по видеогайду — почини, собери или установи что-то своими руками.",
-        "link": { "t": "youtube", "q": "{occupation} для начинающих своими руками" }
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} для начинающих своими руками"
+        }
       },
       "en": {
         "text": "Do a small real job at home from a video guide — fix, build, or install something with your own hands.",
-        "link": { "t": "youtube", "q": "{occupation} beginner how to" }
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} beginner how to"
+        }
+      },
+      "es": {
+        "text": "Haz en casa un pequeño trabajo real siguiendo un videotutorial: arregla, monta o instala algo con tus propias manos.",
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} para principiantes paso a paso"
+        }
       }
     },
     "business": {
       "ru": {
         "text": "Набросай одностраничный план крошечной реальной идеи и попробуй «продать» её трём людям — послушай, что скажут.",
-        "link": { "t": "youtube", "q": "{occupation} с чего начать" }
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} с чего начать"
+        }
       },
       "en": {
         "text": "Sketch a one-page plan for a tiny real idea and try to “sell” it to three people — listen to what they say.",
-        "link": { "t": "youtube", "q": "{occupation} how to start" }
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} how to start"
+        }
+      },
+      "es": {
+        "text": "Esboza en una página el plan de una idea real y diminuta e intenta «vendérsela» a tres personas: escucha lo que te digan.",
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} cómo empezar"
+        }
       }
     },
     "arts": {
       "ru": {
         "text": "За выходные доведи до конца одну маленькую работу и покажи её кому-то — важен законченный результат, а не идеал.",
-        "link": { "t": "youtube", "q": "{occupation} для начинающих туториал" }
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} для начинающих туториал"
+        }
       },
       "en": {
         "text": "Over a weekend, finish one small piece and show it to someone — a finished result matters more than a perfect one.",
-        "link": { "t": "youtube", "q": "{occupation} beginner tutorial" }
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} beginner tutorial"
+        }
+      },
+      "es": {
+        "text": "En un fin de semana, termina una pieza pequeña y enséñasela a alguien: importa más un resultado acabado que uno perfecto.",
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} tutorial para principiantes"
+        }
       }
     },
     "science": {
       "ru": {
         "text": "Повтори простой опыт или разбор из видео и запиши, что увидел и что удивило. Это и есть работа исследователя в миниатюре.",
-        "link": { "t": "youtube", "q": "{occupation} простой эксперимент" }
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} простой эксперимент"
+        }
       },
       "en": {
         "text": "Reproduce a simple experiment or analysis from a video and write up what you saw and what surprised you. That's research in miniature.",
-        "link": { "t": "youtube", "q": "{occupation} simple experiment" }
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} simple experiment"
+        }
+      },
+      "es": {
+        "text": "Reproduce un experimento o un análisis sencillo de un vídeo y apunta qué has visto y qué te ha sorprendido. Eso es la investigación en miniatura.",
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} experimento sencillo"
+        }
       }
     },
     "engineering": {
       "ru": {
         "text": "Собери небольшой набор или модель по инструкции для новичков (Arduino, механика, схемы) — от идеи до готового устройства.",
-        "link": { "t": "youtube", "q": "{occupation} проект для начинающих" }
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} проект для начинающих"
+        }
       },
       "en": {
         "text": "Assemble a small kit or model from a beginner guide (Arduino, mechanics, circuits) — from idea to a working device.",
-        "link": { "t": "youtube", "q": "{occupation} beginner project" }
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} beginner project"
+        }
+      },
+      "es": {
+        "text": "Monta un kit o una maqueta pequeña siguiendo una guía para principiantes (Arduino, mecánica, circuitos): de la idea al aparato funcionando.",
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} proyecto para principiantes"
+        }
       }
     },
     "finance": {
       "ru": {
         "text": "Собери в таблице простой бюджет или модельный портфель и веди его неделю — почувствуй, как это на практике.",
-        "link": { "t": "youtube", "q": "{occupation} с чего начать" }
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} с чего начать"
+        }
       },
       "en": {
         "text": "Build a simple budget or a mock portfolio in a spreadsheet and track it for a week — get a feel for the real thing.",
-        "link": { "t": "youtube", "q": "{occupation} how to start" }
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} how to start"
+        }
+      },
+      "es": {
+        "text": "Crea en una hoja de cálculo un presupuesto sencillo o una cartera simulada y llévala durante una semana: hazte una idea de cómo es en la práctica.",
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} cómo empezar"
+        }
       }
     },
     "education": {
       "ru": {
         "text": "Подготовь и проведи 15-минутный мини-урок для друга или младшего — объяснить понятно сложнее, чем кажется.",
-        "link": { "t": "youtube", "q": "{occupation} с чего начать" }
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} с чего начать"
+        }
       },
       "en": {
         "text": "Prepare and teach a 15-minute mini-lesson to a friend or a younger kid — explaining clearly is harder than it looks.",
-        "link": { "t": "youtube", "q": "{occupation} how to start" }
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} how to start"
+        }
+      },
+      "es": {
+        "text": "Prepara e imparte una miniclase de 15 minutos a un amigo o a alguien más pequeño: explicar con claridad es más difícil de lo que parece.",
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} cómo empezar"
+        }
       }
     },
     "media": {
       "ru": {
         "text": "За выходные сними и смонтируй один короткий ролик или напиши одну статью на тему, которая тебе близка.",
-        "link": { "t": "youtube", "q": "{occupation} для начинающих" }
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} для начинающих"
+        }
       },
       "en": {
         "text": "Over a weekend, shoot and edit one short video or write one article on a topic you care about.",
-        "link": { "t": "youtube", "q": "{occupation} for beginners" }
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} for beginners"
+        }
+      },
+      "es": {
+        "text": "En un fin de semana, graba y edita un vídeo corto o escribe un artículo sobre un tema que te importe.",
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} para principiantes"
+        }
       }
     },
     "social": {
       "ru": {
         "text": "Отработай несколько часов волонтёром в организации и обрати внимание, как проходит общение с людьми — это ядро профессии.",
-        "link": { "t": "youtube", "q": "{occupation} с чего начать" }
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} с чего начать"
+        }
       },
       "en": {
         "text": "Volunteer a few hours with an organization and notice how the conversations with people go — that's the core of the job.",
-        "link": { "t": "youtube", "q": "{occupation} how to start" }
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} how to start"
+        }
+      },
+      "es": {
+        "text": "Dedica unas horas a hacer voluntariado en una organización y fíjate en cómo son las conversaciones con la gente: ese es el núcleo de la profesión.",
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} cómo empezar"
+        }
       }
     },
     "law": {
       "ru": {
         "text": "Прочитай разбор одного реального дела и напиши свои аргументы за обе стороны — юрист должен видеть оба взгляда.",
-        "link": { "t": "youtube", "q": "{occupation} с чего начать" }
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} с чего начать"
+        }
       },
       "en": {
         "text": "Read a summary of one real case and write your own arguments for both sides — a good lawyer sees both.",
-        "link": { "t": "youtube", "q": "{occupation} how to start" }
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} how to start"
+        }
+      },
+      "es": {
+        "text": "Lee el resumen de un caso real y escribe tus propios argumentos para las dos partes: un buen jurista sabe ver ambas.",
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} cómo empezar"
+        }
       }
     },
     "marketing": {
       "ru": {
         "text": "Запусти крошечную промо-акцию — пост, страницу или объявление — и посмотри на цифры: что сработало, что нет.",
-        "link": { "t": "youtube", "q": "{occupation} для начинающих" }
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} для начинающих"
+        }
       },
       "en": {
         "text": "Run a tiny promo — a post, a page, or an ad — and watch the numbers: what worked and what didn't.",
-        "link": { "t": "youtube", "q": "{occupation} for beginners" }
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} for beginners"
+        }
+      },
+      "es": {
+        "text": "Lanza una promoción diminuta —una publicación, una página o un anuncio— y observa los números: qué ha funcionado y qué no.",
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} para principiantes"
+        }
       }
     },
     "hospitality": {
       "ru": {
         "text": "Организуй небольшое мероприятие или тематический ужин и проведи его от начала до конца — гости, тайминг, детали.",
-        "link": { "t": "youtube", "q": "{occupation} с чего начать" }
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} с чего начать"
+        }
       },
       "en": {
         "text": "Host a small event or a themed dinner and run it end to end — guests, timing, the details.",
-        "link": { "t": "youtube", "q": "{occupation} how to start" }
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} how to start"
+        }
+      },
+      "es": {
+        "text": "Organiza un pequeño evento o una cena temática y llévalo de principio a fin: invitados, tiempos y detalles.",
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} cómo empezar"
+        }
       }
     },
     "language": {
       "ru": {
         "text": "Проведи 15-минутный разговор с носителем языка (через приложение для языкового обмена) — вживую, не по учебнику.",
-        "link": { "t": "youtube", "q": "{occupation} с чего начать" }
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} с чего начать"
+        }
       },
       "en": {
         "text": "Have a 15-minute conversation with a native speaker (via a language-exchange app) — live, not from a textbook.",
-        "link": { "t": "youtube", "q": "{occupation} how to start" }
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} how to start"
+        }
+      },
+      "es": {
+        "text": "Mantén una conversación de 15 minutos con un hablante nativo (con una app de intercambio de idiomas): en vivo, no con el libro de texto.",
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} cómo empezar"
+        }
       }
     },
     "sports": {
       "ru": {
         "text": "Проведи мини-тренировку для друзей или понаблюдай за работой тренера — планирование нагрузки сложнее, чем кажется.",
-        "link": { "t": "youtube", "q": "{occupation} с чего начать" }
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} с чего начать"
+        }
       },
       "en": {
         "text": "Run a mini training session for friends or shadow a coach — planning the load is trickier than it looks.",
-        "link": { "t": "youtube", "q": "{occupation} how to start" }
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} how to start"
+        }
+      },
+      "es": {
+        "text": "Dirige un minientrenamiento para tus amigos u observa cómo trabaja un entrenador: planificar la carga es más difícil de lo que parece.",
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} cómo empezar"
+        }
       }
     }
   }

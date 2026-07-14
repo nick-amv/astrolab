@@ -120,9 +120,9 @@ async def get_occupation_detail(
                 "salary_low": c.salary_low,
                 "salary_high": c.salary_high,
                 "currency": c.currency,
-                # US OEWS wages are annual; RU figures are monthly. Surfacing the
-                # period stops a US visitor reading an annual number as monthly.
-                "period": "year" if c.currency == "USD" else "month",
+                # RU figures are monthly; US (USD) and ES (EUR) are annual.
+                # Surfacing the period stops a visitor misreading the number.
+                "period": "month" if c.currency == "RUB" else "year",
                 "demand_note": c.demand_note,
                 "confidence": c.confidence,  # 'estimate' → UI marks as estimate
                 "source": src_by_id.get(c.source_id),  # bls-oews | rosstat-ozpp | llm-estimate

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { countryFor } from "$lib/geo";
   import RiasecRadar from "$lib/RiasecRadar.svelte";
   import { m } from "$lib/paraglide/messages";
   import { getLocale, localizeHref } from "$lib/paraglide/runtime";
@@ -27,11 +28,11 @@
     as_of_date: string | null;
     demand_note: string | null;
   };
-  const userCountry = $derived(getLocale() === "en" ? "US" : "RU");
+  const userCountry = $derived(countryFor(getLocale()));
 
-  // Source badge: show real data (hh.ru / BLS / Rosstat) distinctly from a rough
-  // estimate, rather than a flat "estimate" on both. Tooltip carries the method
-  // + as-of. hh facts are refreshed from live vacancies, so the tooltip says so.
+  // Source badge: show real data (hh.ru / BLS / Rosstat / INE) distinctly from
+  // a rough estimate, rather than a flat "estimate" on both. Tooltip carries
+  // the method + as-of. hh facts are refreshed from live vacancies.
   function srcBadge(f: Fact): { label: string; cls: string; tip: string } {
     const on = f.as_of_date ? ` (${f.as_of_date.slice(0, 4)})` : "";
     if (f.source === "hh-vacancies")
@@ -39,6 +40,8 @@
     if (f.source === "bls-oews") return { label: m.src_bls(), cls: "src-bls", tip: m.src_bls_tip() + on };
     if (f.source === "rosstat-ozpp")
       return { label: m.src_rosstat(), cls: "src-rosstat", tip: m.src_rosstat_tip() + on };
+    if (f.source === "ine-ees")
+      return { label: m.src_ine(), cls: "src-ine", tip: m.src_ine_tip() + on };
     return { label: m.prof_estimate(), cls: "src-est", tip: m.src_est_tip() };
   }
   const fact = $derived(
@@ -50,9 +53,16 @@
   // code (SPO/college codes are XX.01.* / XX.02.*, higher ed is XX.03/04/05).
   // US -> College Scorecard's official Fields of Study search (its SPA has no
   // verifiable per-major deep link, so we point at the field-of-study search).
+  // ES -> todofp.es (official FP portal) for fp-* domains, notasdecorte.es
+  // (the de-facto cut-off-grades reference; the official QEDU portal broke in
+  // the 2024 ministry reorg) for university degrees.
   function admissionUrl(code: string): string {
-    if (getLocale() === "en") {
+    const loc = getLocale();
+    if (loc === "en") {
       return "https://collegescorecard.ed.gov/search/fos-landing/";
+    }
+    if (loc === "es") {
+      return code.startsWith("fp-") ? "https://www.todofp.es/" : "https://notasdecorte.es/";
     }
     const mid = code.split(".")[1] ?? "";
     const spo = mid === "01" || mid === "02";
@@ -86,7 +96,7 @@
       description: o.summary ?? undefined,
       occupationLocation: {
         "@type": "Country",
-        name: userCountry === "US" ? "United States" : "Russia",
+        name: { US: "United States", ES: "Spain", RU: "Russia" }[userCountry] ?? "Russia",
       },
       ...(fact?.salary_low
         ? {
@@ -181,7 +191,13 @@
             <div class="path">
               <div class="path-top">
                 <span class="path-title">{d.title}</span>
-                <span class="path-code">{d.code}{#if d.level} · {d.level}{/if}</span>
+                <!-- ES domain codes are internal slugs (Spain has no user-facing
+                     numeric codes like OKSO/CIP), so show only the level there -->
+                {#if getLocale() === "es"}
+                  {#if d.level}<span class="path-code">{d.level}</span>{/if}
+                {:else}
+                  <span class="path-code">{d.code}{#if d.level} · {d.level}{/if}</span>
+                {/if}
               </div>
               <div class="ege-label">{m.edu_ege()}</div>
               <div class="ege">
@@ -359,6 +375,10 @@
   .src-hh {
     color: #b3001b;
     background: color-mix(in oklab, #ff2b4e 14%, transparent);
+  }
+  .src-ine {
+    color: #8a5a00;
+    background: color-mix(in oklab, #f0a202 18%, transparent);
   }
   .src-est {
     color: var(--muted);

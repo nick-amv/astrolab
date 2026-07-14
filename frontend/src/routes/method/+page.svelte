@@ -26,27 +26,35 @@
   ];
   const limits = [m.method_limit_1(), m.method_limit_2(), m.method_limit_3(), m.method_limit_4()];
   // Where the salary numbers come from — country-scoped like the facts
-  // themselves: RU visitors see RU facts, so they only get the RU sources;
-  // EN (US) visitors only get the US ones.
-  const dataSources =
-    getLocale() === "en"
-      ? [
-          {
-            t: m.method_data_us_t(),
-            d: m.method_data_us_d(),
-            links: [{ label: m.src_bls(), href: "https://www.bls.gov/oes/" }],
-          },
-        ]
-      : [
-          {
-            t: m.method_data_ru_t(),
-            d: m.method_data_ru_d(),
-            links: [
-              { label: m.src_hh(), href: "https://hh.ru" },
-              { label: m.src_rosstat(), href: "https://rosstat.gov.ru/compendium/document/60671" },
-            ],
-          },
-        ];
+  // themselves: each locale only sees its own country's sources
+  // (ru -> RU, en -> US, es -> ES).
+  const DATA_SOURCES: Record<string, { t: string; d: string; links: { label: string; href: string }[] }[]> = {
+    en: [
+      {
+        t: m.method_data_us_t(),
+        d: m.method_data_us_d(),
+        links: [{ label: m.src_bls(), href: "https://www.bls.gov/oes/" }],
+      },
+    ],
+    es: [
+      {
+        t: m.method_data_es_t(),
+        d: m.method_data_es_d(),
+        links: [{ label: m.src_ine(), href: "https://www.ine.es/" }],
+      },
+    ],
+    ru: [
+      {
+        t: m.method_data_ru_t(),
+        d: m.method_data_ru_d(),
+        links: [
+          { label: m.src_hh(), href: "https://hh.ru" },
+          { label: m.src_rosstat(), href: "https://rosstat.gov.ru/compendium/document/60671" },
+        ],
+      },
+    ],
+  };
+  const dataSources = DATA_SOURCES[getLocale()] ?? DATA_SOURCES.ru;
 </script>
 
 <svelte:head>

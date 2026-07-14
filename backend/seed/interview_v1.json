@@ -1,27 +1,27 @@
 {
   "version": 1,
   "statements": [
-    { "axis": "R", "ru": "Мне приятнее, когда результат работы можно потрогать руками", "en": "I like it better when I can physically touch the result of my work" },
-    { "axis": "R", "ru": "Я лучше понимаю вещи, когда разбираю их и собираю сам", "en": "I understand things better when I take them apart and put them back together myself" },
+    { "axis": "R", "ru": "Мне приятнее, когда результат работы можно потрогать руками", "en": "I like it better when I can physically touch the result of my work", "es": "Me gusta más cuando el resultado de mi trabajo se puede tocar con las manos" },
+    { "axis": "R", "ru": "Я лучше понимаю вещи, когда разбираю их и собираю сам", "en": "I understand things better when I take them apart and put them back together myself", "es": "Entiendo mejor las cosas cuando las desmonto y las vuelvo a montar yo mismo" },
 
-    { "axis": "I", "ru": "Я могу надолго залипнуть, разбираясь, почему что-то работает именно так", "en": "I can get absorbed for a long time figuring out why something works the way it does" },
-    { "axis": "I", "ru": "Мне важнее понять суть, чем быстро получить готовый ответ", "en": "Getting to the heart of something matters more to me than getting a quick answer" },
+    { "axis": "I", "ru": "Я могу надолго залипнуть, разбираясь, почему что-то работает именно так", "en": "I can get absorbed for a long time figuring out why something works the way it does", "es": "Puedo pasarme mucho rato absorto averiguando por qué algo funciona como funciona" },
+    { "axis": "I", "ru": "Мне важнее понять суть, чем быстро получить готовый ответ", "en": "Getting to the heart of something matters more to me than getting a quick answer", "es": "Me importa más llegar al fondo de algo que obtener una respuesta rápida" },
 
-    { "axis": "A", "ru": "Мне тесно там, где нет места придумать что-то своё", "en": "I feel boxed in when there's no room to make something of my own" },
-    { "axis": "A", "ru": "Я замечаю красоту и детали там, где другие проходят мимо", "en": "I notice beauty and details where others walk right past" },
+    { "axis": "A", "ru": "Мне тесно там, где нет места придумать что-то своё", "en": "I feel boxed in when there's no room to make something of my own", "es": "Me siento encorsetado donde no hay espacio para crear algo propio" },
+    { "axis": "A", "ru": "Я замечаю красоту и детали там, где другие проходят мимо", "en": "I notice beauty and details where others walk right past", "es": "Percibo la belleza y los detalles donde otros pasan de largo" },
 
-    { "axis": "S", "ru": "Я заряжаюсь, когда вижу, что реально помог человеку", "en": "I get energized when I see I've really helped someone" },
-    { "axis": "S", "ru": "Мне легко почувствовать, что происходит с другим человеком", "en": "It's easy for me to sense what another person is going through" },
+    { "axis": "S", "ru": "Я заряжаюсь, когда вижу, что реально помог человеку", "en": "I get energized when I see I've really helped someone", "es": "Me llena de energía ver que de verdad he ayudado a alguien" },
+    { "axis": "S", "ru": "Мне легко почувствовать, что происходит с другим человеком", "en": "It's easy for me to sense what another person is going through", "es": "Me resulta fácil percibir lo que le pasa a otra persona" },
 
-    { "axis": "E", "ru": "Мне заходит убеждать людей и вести их за собой", "en": "I like persuading people and taking the lead" },
-    { "axis": "E", "ru": "Я скорее рискну и попробую, чем буду ждать идеального момента", "en": "I'd rather take a risk and try than wait for the perfect moment" },
+    { "axis": "E", "ru": "Мне заходит убеждать людей и вести их за собой", "en": "I like persuading people and taking the lead", "es": "Me gusta convencer a la gente y tomar la iniciativa" },
+    { "axis": "E", "ru": "Я скорее рискну и попробую, чем буду ждать идеального момента", "en": "I'd rather take a risk and try than wait for the perfect moment", "es": "Prefiero arriesgarme e intentarlo antes que esperar el momento perfecto" },
 
-    { "axis": "C", "ru": "Меня успокаивает, когда всё разложено по местам и по плану", "en": "It calms me when everything is in its place and goes to plan" },
-    { "axis": "C", "ru": "Я замечаю ошибку или неточность там, где другие не видят", "en": "I catch a mistake or inaccuracy where others don't" },
+    { "axis": "C", "ru": "Меня успокаивает, когда всё разложено по местам и по плану", "en": "It calms me when everything is in its place and goes to plan", "es": "Me tranquiliza que todo esté en su sitio y salga según lo previsto" },
+    { "axis": "C", "ru": "Я замечаю ошибку или неточность там, где другие не видят", "en": "I catch a mistake or inaccuracy where others don't", "es": "Detecto un error o una imprecisión donde otros no los ven" },
 
-    { "axis": "universal", "ru": "Я скорее доведу одну вещь до идеала, чем попробую много всего", "en": "I'd rather bring one thing to perfection than try a lot of things" },
-    { "axis": "universal", "ru": "Мне важнее свобода делать по-своему, чем стабильность и гарантии", "en": "Freedom to do things my own way matters more to me than stability and guarantees" },
-    { "axis": "universal", "ru": "Я лучше работаю в команде, чем в одиночку", "en": "I work better on a team than alone" },
-    { "axis": "universal", "ru": "Мне важно, чтобы в работе был живой контакт с людьми", "en": "It matters to me that my work involves real, face-to-face contact with people" }
+    { "axis": "universal", "ru": "Я скорее доведу одну вещь до идеала, чем попробую много всего", "en": "I'd rather bring one thing to perfection than try a lot of things", "es": "Prefiero perfeccionar una sola cosa antes que probar muchas" },
+    { "axis": "universal", "ru": "Мне важнее свобода делать по-своему, чем стабильность и гарантии", "en": "Freedom to do things my own way matters more to me than stability and guarantees", "es": "Me importa más la libertad de hacer las cosas a mi manera que la estabilidad y las garantías" },
+    { "axis": "universal", "ru": "Я лучше работаю в команде, чем в одиночку", "en": "I work better on a team than alone", "es": "Trabajo mejor en equipo que solo" },
+    { "axis": "universal", "ru": "Мне важно, чтобы в работе был живой контакт с людьми", "en": "It matters to me that my work involves real, face-to-face contact with people", "es": "Para mí es importante que el trabajo tenga contacto real y directo con personas" }
   ]
 }
