@@ -29,10 +29,13 @@
   };
   const userCountry = $derived(getLocale() === "en" ? "US" : "RU");
 
-  // Source badge: show real data (BLS / Rosstat) distinctly from a rough estimate,
-  // rather than a flat "estimate" on both. Tooltip carries the method + as-of.
+  // Source badge: show real data (hh.ru / BLS / Rosstat) distinctly from a rough
+  // estimate, rather than a flat "estimate" on both. Tooltip carries the method
+  // + as-of. hh facts are refreshed from live vacancies, so the tooltip says so.
   function srcBadge(f: Fact): { label: string; cls: string; tip: string } {
     const on = f.as_of_date ? ` (${f.as_of_date.slice(0, 4)})` : "";
+    if (f.source === "hh-vacancies")
+      return { label: m.src_hh(), cls: "src-hh", tip: m.src_hh_tip() + on };
     if (f.source === "bls-oews") return { label: m.src_bls(), cls: "src-bls", tip: m.src_bls_tip() + on };
     if (f.source === "rosstat-ozpp")
       return { label: m.src_rosstat(), cls: "src-rosstat", tip: m.src_rosstat_tip() + on };
@@ -352,6 +355,10 @@
   .src-rosstat {
     color: #1560c0;
     background: color-mix(in oklab, #4f9dff 18%, transparent);
+  }
+  .src-hh {
+    color: #b3001b;
+    background: color-mix(in oklab, #ff2b4e 14%, transparent);
   }
   .src-est {
     color: var(--muted);

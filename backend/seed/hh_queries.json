@@ -1,0 +1,273 @@
+{
+  "_doc": "hh.ru search queries per slug (N6.4). query = text for /vacancies search_field=name; only_with_salary, area=113 (Russia). Tune per slug; Cyrillic allowed here.",
+  "accountant": {
+    "query": "Бухгалтер"
+  },
+  "actor": {
+    "query": "Актёр"
+  },
+  "actuary": {
+    "query": "Актуарий"
+  },
+  "aircraft-mechanic": {
+    "query": "Авиатехник"
+  },
+  "airline-pilot": {
+    "query": "Пилот гражданской авиации"
+  },
+  "animator": {
+    "query": "Аниматор"
+  },
+  "architect": {
+    "query": "Архитектор"
+  },
+  "art-director": {
+    "query": "Арт-директор"
+  },
+  "automotive-technician": {
+    "query": "Автомеханик"
+  },
+  "biologist": {
+    "query": "Биолог"
+  },
+  "carpenter": {
+    "query": "Плотник"
+  },
+  "chef": {
+    "query": "Повар"
+  },
+  "chemist": {
+    "query": "Химик"
+  },
+  "civil-engineer": {
+    "query": "Инженер-строитель"
+  },
+  "cnc-machinist": {
+    "query": "Оператор станков с ЧПУ"
+  },
+  "cybersecurity-specialist": {
+    "query": "Специалист по кибербезопасности"
+  },
+  "data-analyst": {
+    "query": "Аналитик данных"
+  },
+  "data-engineer": {
+    "query": "Инженер данных"
+  },
+  "data-scientist": {
+    "query": "Специалист по данным (Data Scientist)"
+  },
+  "database-administrator": {
+    "query": "Администратор баз данных"
+  },
+  "dental-hygienist": {
+    "query": "Стоматологический гигиенист"
+  },
+  "dentist": {
+    "query": "Стоматолог"
+  },
+  "devops-engineer": {
+    "query": "DevOps-инженер"
+  },
+  "dietitian": {
+    "query": "Диетолог"
+  },
+  "economist": {
+    "query": "Экономист"
+  },
+  "electrical-engineer": {
+    "query": "Инженер-электрик"
+  },
+  "electrician": {
+    "query": "Электрик"
+  },
+  "environmental-scientist": {
+    "query": "Эколог"
+  },
+  "financial-advisor": {
+    "query": "Финансовый консультант"
+  },
+  "financial-analyst": {
+    "query": "Финансовый аналитик"
+  },
+  "firefighter": {
+    "query": "Пожарный"
+  },
+  "fitness-trainer": {
+    "query": "Фитнес-тренер"
+  },
+  "game-developer": {
+    "query": "Разработчик игр"
+  },
+  "graphic-designer": {
+    "query": "Графический дизайнер"
+  },
+  "heavy-equipment-operator": {
+    "query": "Машинист спецтехники"
+  },
+  "hr-specialist": {
+    "query": "HR-специалист (специалист по персоналу)"
+  },
+  "hvac-technician": {
+    "query": "Специалист по вентиляции и кондиционированию"
+  },
+  "industrial-designer": {
+    "query": "Промышленный дизайнер"
+  },
+  "insurance-agent": {
+    "query": "Страховой агент"
+  },
+  "interior-designer": {
+    "query": "Дизайнер интерьеров"
+  },
+  "it-support-specialist": {
+    "query": "Специалист технической поддержки"
+  },
+  "journalist": {
+    "query": "Журналист"
+  },
+  "lawyer": {
+    "query": "Юрист"
+  },
+  "librarian": {
+    "query": "Библиотекарь"
+  },
+  "lineworker": {
+    "query": "Электромонтёр линий электропередачи"
+  },
+  "logistician": {
+    "query": "Логист"
+  },
+  "machine-learning-engineer": {
+    "query": "Инженер по машинному обучению"
+  },
+  "machinist": {
+    "query": "Станочник (токарь-фрезеровщик)"
+  },
+  "management-consultant": {
+    "query": "Консультант по управлению"
+  },
+  "marketing-manager": {
+    "query": "Маркетолог (менеджер по маркетингу)"
+  },
+  "mechanical-engineer": {
+    "query": "Инженер-механик"
+  },
+  "medical-assistant": {
+    "query": "Медицинский ассистент"
+  },
+  "musician": {
+    "query": "Музыкант"
+  },
+  "network-engineer": {
+    "query": "Сетевой инженер"
+  },
+  "nurse": {
+    "query": "Медицинская сестра"
+  },
+  "occupational-therapist": {
+    "query": "Эрготерапевт"
+  },
+  "operations-manager": {
+    "query": "Операционный менеджер"
+  },
+  "optometrist": {
+    "query": "Оптометрист"
+  },
+  "paramedic": {
+    "query": "Фельдшер скорой помощи"
+  },
+  "pharmacist": {
+    "query": "Фармацевт"
+  },
+  "phlebotomist": {
+    "query": "Флеботомист"
+  },
+  "photographer": {
+    "query": "Фотограф"
+  },
+  "physical-therapist": {
+    "query": "Физический терапевт (реабилитолог)"
+  },
+  "physician": {
+    "query": "Врач"
+  },
+  "plumber": {
+    "query": "Сантехник"
+  },
+  "police-officer": {
+    "query": "Полицейский"
+  },
+  "product-manager": {
+    "query": "Продакт-менеджер"
+  },
+  "project-manager": {
+    "query": "Менеджер проектов"
+  },
+  "psychologist": {
+    "query": "Психолог"
+  },
+  "qa-engineer": {
+    "query": "Инженер по тестированию (QA)"
+  },
+  "radiologic-technologist": {
+    "query": "Рентгенолаборант"
+  },
+  "real-estate-agent": {
+    "query": "Агент по недвижимости"
+  },
+  "respiratory-therapist": {
+    "query": "Респираторный терапевт"
+  },
+  "sales-manager": {
+    "query": "Менеджер по продажам"
+  },
+  "school-counselor": {
+    "query": "Школьный психолог-консультант"
+  },
+  "social-worker": {
+    "query": "Социальный работник"
+  },
+  "software-developer": {
+    "query": "Разработчик программного обеспечения"
+  },
+  "sound-engineer": {
+    "query": "Звукорежиссёр"
+  },
+  "speech-language-pathologist": {
+    "query": "Логопед"
+  },
+  "statistician": {
+    "query": "Статистик"
+  },
+  "surgical-technologist": {
+    "query": "Операционный техник"
+  },
+  "systems-administrator": {
+    "query": "Системный администратор"
+  },
+  "teacher": {
+    "query": "Учитель"
+  },
+  "translator": {
+    "query": "Переводчик"
+  },
+  "urban-planner": {
+    "query": "Градостроитель"
+  },
+  "ux-ui-designer": {
+    "query": "UX/UI-дизайнер"
+  },
+  "veterinarian": {
+    "query": "Ветеринарный врач"
+  },
+  "video-editor": {
+    "query": "Видеомонтажёр"
+  },
+  "welder": {
+    "query": "Сварщик"
+  },
+  "writer": {
+    "query": "Писатель"
+  }
+}

@@ -92,6 +92,8 @@
   "src_rosstat": "Rosstat",
   "src_rosstat_tip": "Rosstat wage survey, scaled to recent wage growth",
   "src_est_tip": "Rough estimate, not from a data source",
+  "src_hh": "hh.ru",
+  "src_hh_tip": "Based on salary analysis of live hh.ru job postings across Russia, refreshed regularly",
   "salary_per_year": "/yr",
   "prof_cta": "Check if it fits me",
   "prof_howto": "How to get there",
