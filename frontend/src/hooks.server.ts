@@ -24,17 +24,34 @@ function negotiateLocale(header: string | null): string {
   return baseLocale;
 }
 
-// The bare root has no locale prefix — negotiate one from Accept-Language so
-// every rendered URL is locale-qualified (DESIGN §9). /ru and /en are then
-// handled by Paraglide's URL strategy.
+const LOCALE_COOKIE = "PARAGLIDE_LOCALE";
+
+// The bare root has no locale prefix — an explicit earlier choice (cookie)
+// wins, then Accept-Language, so switching to /es survives coming back via
+// the bare domain instead of silently resetting to the browser default.
 const handleRoot: Handle = ({ event }) => {
-  const loc = negotiateLocale(event.request.headers.get("accept-language"));
+  const remembered = event.cookies.get(LOCALE_COOKIE);
+  const loc =
+    remembered && (locales as readonly string[]).includes(remembered)
+      ? remembered
+      : negotiateLocale(event.request.headers.get("accept-language"));
   return new Response(null, { status: 307, headers: { location: `/${loc}` } });
 };
 
 const handleParaglide: Handle = ({ event, resolve }) =>
   paraglideMiddleware(event.request, ({ request, locale }) => {
     event.request = request;
+    // Persist the visited locale: the switcher is plain links (no setLocale()
+    // call), so without this the cookie is never written and the language
+    // "resets" whenever the URL loses its prefix.
+    if (event.cookies.get(LOCALE_COOKIE) !== locale) {
+      event.cookies.set(LOCALE_COOKIE, locale, {
+        path: "/",
+        maxAge: 60 * 60 * 24 * 365,
+        sameSite: "lax",
+        httpOnly: false, // the paraglide client runtime reads it too
+      });
+    }
     return resolve(event, {
       transformPageChunk: ({ html }) => html.replace("%lang%", locale),
     });

@@ -47,7 +47,8 @@
       {:else}
         <a class="section" href={localizeHref("/login")}>{m.nav_login()}</a>
       {/if}
-      <span class="lang" aria-label="Language">
+      <!-- translate="no": browser auto-translate must not mangle RU/EN/ES chips -->
+      <span class="lang" aria-label="Language" translate="no">
         {#each locales as loc (loc)}
           <a
             class="lang-opt"
