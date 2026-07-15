@@ -25,7 +25,7 @@
     if (!age || busy) return;
     busy = true;
     try {
-      const country = getLocale() === "en" ? "US" : "RU";
+      const country = { ru: "RU", en: "US", es: "ES" }[getLocale()] ?? "RU";
       const { session_id } = await startAssessment({
         age_band: age,
         locale: getLocale(),
