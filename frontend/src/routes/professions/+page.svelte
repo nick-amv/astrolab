@@ -38,20 +38,28 @@
     return [...c.entries()].sort((a, b) => b[1] - a[1]).map(([t]) => t);
   });
 
-  // salary brackets depend on currency (US annual USD vs RU monthly RUB)
-  const isUsd = $derived(items.find((o) => o.currency)?.currency === "USD");
+  // salary brackets depend on the country's currency and pay convention:
+  // US = annual USD, ES = annual EUR (Spanish levels: group p75 tops out
+  // around 80k, so bands sit far lower than the US ones), RU = monthly RUB.
+  const currency = $derived(items.find((o) => o.currency)?.currency);
   const salBands = $derived(
-    isUsd
+    currency === "USD"
       ? [
           { key: "lo", label: "≤ $60k", lo: 0, hi: 60000 },
           { key: "mid", label: "$60–100k", lo: 60000, hi: 100000 },
           { key: "hi", label: "$100k+", lo: 100000, hi: Infinity },
         ]
-      : [
-          { key: "lo", label: "≤ 70k ₽", lo: 0, hi: 70000 },
-          { key: "mid", label: "70–120k ₽", lo: 70000, hi: 120000 },
-          { key: "hi", label: "120k+ ₽", lo: 120000, hi: Infinity },
-        ],
+      : currency === "EUR"
+        ? [
+            { key: "lo", label: "≤ 25k €", lo: 0, hi: 25000 },
+            { key: "mid", label: "25–40k €", lo: 25000, hi: 40000 },
+            { key: "hi", label: "40k+ €", lo: 40000, hi: Infinity },
+          ]
+        : [
+            { key: "lo", label: "≤ 70k ₽", lo: 0, hi: 70000 },
+            { key: "mid", label: "70–120k ₽", lo: 70000, hi: 120000 },
+            { key: "hi", label: "120k+ ₽", lo: 120000, hi: Infinity },
+          ],
   );
 
   let field = $state<string | null>(null);
