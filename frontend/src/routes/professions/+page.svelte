@@ -53,7 +53,8 @@
         ? [
             { key: "lo", label: "≤ 25k €", lo: 0, hi: 25000 },
             { key: "mid", label: "25–40k €", lo: 25000, hi: 40000 },
-            { key: "hi", label: "40k+ €", lo: 40000, hi: Infinity },
+            { key: "hi", label: "40–60k €", lo: 40000, hi: 60000 },
+            { key: "top", label: "60k+ €", lo: 60000, hi: Infinity },
           ]
         : [
             { key: "lo", label: "≤ 70k ₽", lo: 0, hi: 70000 },

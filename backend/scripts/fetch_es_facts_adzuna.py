@@ -107,7 +107,7 @@ def main() -> None:
     ap.add_argument("--out", default=str(ROOT / "seed" / "facts_es_adzuna.json"))
     ap.add_argument("--slugs", default="", help="comma-separated subset")
     ap.add_argument("--pages", type=int, default=3)
-    ap.add_argument("--min-n", type=int, default=25)
+    ap.add_argument("--min-n", type=int, default=18)
     args = ap.parse_args()
 
     app_id = os.environ.get("ADZUNA_APP_ID", "")
