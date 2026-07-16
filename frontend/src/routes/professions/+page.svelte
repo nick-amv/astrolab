@@ -69,7 +69,10 @@
   // Filters live in the URL (?f=…&nouni=1&s=…&q=…): open a profession, hit
   // "back" — the browser restores the URL and the filters survive; filtered
   // views are also shareable. replaceState keeps typing out of history.
-  const initial = $page.url.searchParams;
+  // ⚠ On popstate the $page store can still hold the PREVIOUS route during
+  // component init (races the swap), so on the client we read window.location,
+  // which the browser updates before anything renders. $page is SSR-only here.
+  const initial = new URLSearchParams(browser ? window.location.search : $page.url.search);
   let field = $state<string | null>(initial.get("f"));
   let noUni = $state(initial.get("nouni") === "1");
   let salBand = $state<string | null>(initial.get("s"));
@@ -81,8 +84,9 @@
     if (noUni) qs.set("nouni", "1");
     if (salBand) qs.set("s", salBand);
     if (q.trim()) qs.set("q", q.trim());
-    if (browser && qs.toString() !== $page.url.searchParams.toString()) {
-      replaceState(qs.size ? `?${qs}` : $page.url.pathname, {});
+    const current = new URLSearchParams(window.location.search).toString();
+    if (qs.toString() !== current) {
+      replaceState(qs.size ? `?${qs}` : window.location.pathname, {});
     }
   });
 
