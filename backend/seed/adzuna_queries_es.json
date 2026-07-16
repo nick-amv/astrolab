@@ -1,0 +1,484 @@
+{
+  "_doc": "Adzuna ES search queries per slug. queries = title_only terms (AND within one query; multiple queries merged by ad id). Tune freely.",
+  "accountant": {
+    "queries": [
+      "contable"
+    ]
+  },
+  "actor": {
+    "queries": [
+      "actor",
+      "actriz"
+    ]
+  },
+  "actuary": {
+    "queries": [
+      "actuario"
+    ]
+  },
+  "aircraft-mechanic": {
+    "queries": [
+      "aeronaves"
+    ]
+  },
+  "airline-pilot": {
+    "queries": [
+      "piloto"
+    ],
+    "exclude": "drones|automoción|pruebas"
+  },
+  "animator": {
+    "queries": [
+      "animador 3d",
+      "animador 2d"
+    ]
+  },
+  "architect": {
+    "queries": [
+      "arquitecto"
+    ],
+    "exclude": "software|cloud|solutions|sistemas|datos|enterprise|it"
+  },
+  "art-director": {
+    "queries": [
+      "director de arte"
+    ]
+  },
+  "automotive-technician": {
+    "queries": [
+      "mecánico"
+    ],
+    "exclude": "aeronaves|avion"
+  },
+  "biologist": {
+    "queries": [
+      "biólogo"
+    ]
+  },
+  "carpenter": {
+    "queries": [
+      "carpintero"
+    ]
+  },
+  "chef": {
+    "queries": [
+      "cocinero",
+      "jefe de cocina"
+    ]
+  },
+  "chemist": {
+    "queries": [
+      "químico"
+    ]
+  },
+  "civil-engineer": {
+    "queries": [
+      "ingeniero civil",
+      "ingeniero de obra"
+    ]
+  },
+  "cnc-machinist": {
+    "queries": [
+      "cnc"
+    ]
+  },
+  "cybersecurity-specialist": {
+    "queries": [
+      "ciberseguridad",
+      "cybersecurity"
+    ]
+  },
+  "data-analyst": {
+    "queries": [
+      "analista datos",
+      "data analyst"
+    ]
+  },
+  "data-engineer": {
+    "queries": [
+      "data engineer"
+    ]
+  },
+  "data-scientist": {
+    "queries": [
+      "data scientist"
+    ]
+  },
+  "database-administrator": {
+    "queries": [
+      "dba",
+      "administrador base datos"
+    ]
+  },
+  "dental-hygienist": {
+    "queries": [
+      "higienista"
+    ]
+  },
+  "dentist": {
+    "queries": [
+      "dentista",
+      "odontólogo"
+    ]
+  },
+  "devops-engineer": {
+    "queries": [
+      "devops"
+    ]
+  },
+  "dietitian": {
+    "queries": [
+      "nutricionista",
+      "dietista"
+    ]
+  },
+  "economist": {
+    "queries": [
+      "economista"
+    ]
+  },
+  "electrical-engineer": {
+    "queries": [
+      "ingeniero eléctrico"
+    ]
+  },
+  "electrician": {
+    "queries": [
+      "electricista"
+    ]
+  },
+  "environmental-scientist": {
+    "queries": [
+      "medioambiental"
+    ]
+  },
+  "financial-advisor": {
+    "queries": [
+      "asesor financiero"
+    ]
+  },
+  "financial-analyst": {
+    "queries": [
+      "analista financiero"
+    ]
+  },
+  "firefighter": {
+    "queries": [
+      "bombero"
+    ]
+  },
+  "fitness-trainer": {
+    "queries": [
+      "entrenador personal",
+      "monitor gimnasio"
+    ]
+  },
+  "game-developer": {
+    "queries": [
+      "game developer",
+      "desarrollador videojuegos"
+    ]
+  },
+  "graphic-designer": {
+    "queries": [
+      "diseñador gráfico"
+    ]
+  },
+  "heavy-equipment-operator": {
+    "queries": [
+      "Operador de maquinaria pesada"
+    ]
+  },
+  "hr-specialist": {
+    "queries": [
+      "recursos humanos"
+    ]
+  },
+  "hvac-technician": {
+    "queries": [
+      "climatización"
+    ]
+  },
+  "industrial-designer": {
+    "queries": [
+      "diseñador industrial"
+    ]
+  },
+  "insurance-agent": {
+    "queries": [
+      "agente de seguros"
+    ]
+  },
+  "interior-designer": {
+    "queries": [
+      "diseñador interiores",
+      "interiorista"
+    ]
+  },
+  "it-support-specialist": {
+    "queries": [
+      "soporte informático",
+      "helpdesk"
+    ]
+  },
+  "journalist": {
+    "queries": [
+      "periodista"
+    ]
+  },
+  "lawyer": {
+    "queries": [
+      "Abogado"
+    ]
+  },
+  "librarian": {
+    "queries": [
+      "bibliotecario"
+    ]
+  },
+  "lineworker": {
+    "queries": [
+      "Instalador de líneas eléctricas"
+    ]
+  },
+  "logistician": {
+    "queries": [
+      "responsable logística",
+      "técnico logística"
+    ]
+  },
+  "machine-learning-engineer": {
+    "queries": [
+      "machine learning"
+    ]
+  },
+  "machinist": {
+    "queries": [
+      "mecanizado"
+    ]
+  },
+  "management-consultant": {
+    "queries": [
+      "consultor"
+    ],
+    "exclude": "inmobiliari|seguros|belleza"
+  },
+  "marketing-manager": {
+    "queries": [
+      "marketing manager",
+      "responsable marketing"
+    ]
+  },
+  "mechanical-engineer": {
+    "queries": [
+      "ingeniero mecánico"
+    ]
+  },
+  "medical-assistant": {
+    "queries": [
+      "auxiliar enfermería"
+    ]
+  },
+  "musician": {
+    "queries": [
+      "músico"
+    ]
+  },
+  "network-engineer": {
+    "queries": [
+      "ingeniero redes",
+      "network engineer"
+    ]
+  },
+  "nurse": {
+    "queries": [
+      "enfermero",
+      "enfermera"
+    ]
+  },
+  "occupational-therapist": {
+    "queries": [
+      "terapeuta ocupacional"
+    ]
+  },
+  "operations-manager": {
+    "queries": [
+      "director operaciones"
+    ]
+  },
+  "optometrist": {
+    "queries": [
+      "optometrista",
+      "óptico"
+    ]
+  },
+  "paramedic": {
+    "queries": [
+      "técnico emergencias"
+    ]
+  },
+  "pharmacist": {
+    "queries": [
+      "farmacéutico"
+    ]
+  },
+  "phlebotomist": {
+    "queries": [
+      "Flebotomista"
+    ]
+  },
+  "photographer": {
+    "queries": [
+      "fotógrafo"
+    ]
+  },
+  "physical-therapist": {
+    "queries": [
+      "fisioterapeuta"
+    ]
+  },
+  "physician": {
+    "queries": [
+      "médico"
+    ],
+    "exclude": "forense|veterinari"
+  },
+  "plumber": {
+    "queries": [
+      "fontanero"
+    ]
+  },
+  "police-officer": {
+    "queries": [
+      "policía"
+    ]
+  },
+  "product-manager": {
+    "queries": [
+      "product manager"
+    ]
+  },
+  "project-manager": {
+    "queries": [
+      "project manager",
+      "jefe de proyecto"
+    ]
+  },
+  "psychologist": {
+    "queries": [
+      "psicólogo"
+    ]
+  },
+  "qa-engineer": {
+    "queries": [
+      "qa",
+      "tester"
+    ]
+  },
+  "radiologic-technologist": {
+    "queries": [
+      "radiodiagnóstico"
+    ]
+  },
+  "real-estate-agent": {
+    "queries": [
+      "agente inmobiliario",
+      "asesor inmobiliario"
+    ]
+  },
+  "respiratory-therapist": {
+    "queries": [
+      "Terapeuta respiratorio"
+    ]
+  },
+  "sales-manager": {
+    "queries": [
+      "jefe de ventas",
+      "responsable comercial"
+    ]
+  },
+  "school-counselor": {
+    "queries": [
+      "orientador"
+    ]
+  },
+  "social-worker": {
+    "queries": [
+      "trabajador social"
+    ]
+  },
+  "software-developer": {
+    "queries": [
+      "desarrollador",
+      "software engineer"
+    ]
+  },
+  "sound-engineer": {
+    "queries": [
+      "técnico sonido"
+    ]
+  },
+  "speech-language-pathologist": {
+    "queries": [
+      "logopeda"
+    ]
+  },
+  "statistician": {
+    "queries": [
+      "estadístico"
+    ]
+  },
+  "surgical-technologist": {
+    "queries": [
+      "Técnico de quirófano"
+    ]
+  },
+  "systems-administrator": {
+    "queries": [
+      "administrador sistemas",
+      "system administrator"
+    ]
+  },
+  "teacher": {
+    "queries": [
+      "profesor",
+      "maestro"
+    ]
+  },
+  "translator": {
+    "queries": [
+      "traductor"
+    ]
+  },
+  "urban-planner": {
+    "queries": [
+      "urbanista"
+    ]
+  },
+  "ux-ui-designer": {
+    "queries": [
+      "ux"
+    ]
+  },
+  "veterinarian": {
+    "queries": [
+      "veterinario"
+    ]
+  },
+  "video-editor": {
+    "queries": [
+      "editor vídeo",
+      "editor video"
+    ]
+  },
+  "welder": {
+    "queries": [
+      "soldador"
+    ]
+  },
+  "writer": {
+    "queries": [
+      "redactor"
+    ]
+  }
+}

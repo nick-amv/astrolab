@@ -1,0 +1,100 @@
+{
+  "country": "ES",
+  "source_key": "adzuna-jobs",
+  "source_name": "Adzuna live job-ad salary analysis (p25-p75, gross annual, Spain)",
+  "source_url": "https://www.adzuna.es/",
+  "as_of_date": "2026-07-16",
+  "facts": [
+    {
+      "slug": "accountant",
+      "salary_low": 25000,
+      "salary_high": 35000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 94,
+      "median": 30000
+    },
+    {
+      "slug": "automotive-technician",
+      "salary_low": 25400,
+      "salary_high": 37600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 45,
+      "median": 30000
+    },
+    {
+      "slug": "electrician",
+      "salary_low": 23600,
+      "salary_high": 30500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 26,
+      "median": 25201
+    },
+    {
+      "slug": "lawyer",
+      "salary_low": 35000,
+      "salary_high": 55500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 29,
+      "median": 43000
+    },
+    {
+      "slug": "management-consultant",
+      "salary_low": 30000,
+      "salary_high": 55000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 47,
+      "median": 37500
+    },
+    {
+      "slug": "marketing-manager",
+      "salary_low": 41900,
+      "salary_high": 75000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 46,
+      "median": 51000
+    },
+    {
+      "slug": "operations-manager",
+      "salary_low": 66800,
+      "salary_high": 101200,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 34,
+      "median": 76250
+    },
+    {
+      "slug": "physician",
+      "salary_low": 70000,
+      "salary_high": 84700,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 30,
+      "median": 70000
+    },
+    {
+      "slug": "project-manager",
+      "salary_low": 40000,
+      "salary_high": 56900,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 80,
+      "median": 45250
+    }
+  ],
+  "_doc": "ES per-profession salary facts from live Adzuna job ads; ONLY slugs where the stated-salary sample represents the occupation honestly (curated). Dropped as misrepresentative: software-developer/qa/data-scientist (international-remote skew up), real-estate-agent (commission promises), teacher (private academies skew down vs oposicion reality), chemist (lab-tech skew), fitness-trainer (implausible). Seed AFTER facts_es.json so Adzuna overrides INE only where measured."
+}

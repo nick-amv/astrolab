@@ -40,7 +40,10 @@
       {
         t: m.method_data_es_t(),
         d: m.method_data_es_d(),
-        links: [{ label: m.src_ine(), href: "https://www.ine.es/" }],
+        links: [
+          { label: m.src_adzuna(), href: "https://www.adzuna.es/" },
+          { label: m.src_ine(), href: "https://www.ine.es/" },
+        ],
       },
     ],
     ru: [

@@ -42,6 +42,8 @@
       return { label: m.src_rosstat(), cls: "src-rosstat", tip: m.src_rosstat_tip() + on };
     if (f.source === "ine-ees")
       return { label: m.src_ine(), cls: "src-ine", tip: m.src_ine_tip() + on };
+    if (f.source === "adzuna-jobs")
+      return { label: m.src_adzuna(), cls: "src-adzuna", tip: m.src_adzuna_tip() + on };
     return { label: m.prof_estimate(), cls: "src-est", tip: m.src_est_tip() };
   }
   const fact = $derived(
@@ -379,6 +381,10 @@
   .src-ine {
     color: #8a5a00;
     background: color-mix(in oklab, #f0a202 18%, transparent);
+  }
+  .src-adzuna {
+    color: #0b7a5c;
+    background: color-mix(in oklab, #16c79a 16%, transparent);
   }
   .src-est {
     color: var(--muted);
