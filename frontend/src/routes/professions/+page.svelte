@@ -1,4 +1,7 @@
 <script lang="ts">
+  import { browser } from "$app/environment";
+  import { replaceState } from "$app/navigation";
+  import { page } from "$app/stores";
   import { m } from "$lib/paraglide/messages";
   import { localizeHref } from "$lib/paraglide/runtime";
   import type { CatalogItem } from "./+page";
@@ -63,10 +66,25 @@
           ],
   );
 
-  let field = $state<string | null>(null);
-  let noUni = $state(false);
-  let salBand = $state<string | null>(null);
-  let q = $state("");
+  // Filters live in the URL (?f=…&nouni=1&s=…&q=…): open a profession, hit
+  // "back" — the browser restores the URL and the filters survive; filtered
+  // views are also shareable. replaceState keeps typing out of history.
+  const initial = $page.url.searchParams;
+  let field = $state<string | null>(initial.get("f"));
+  let noUni = $state(initial.get("nouni") === "1");
+  let salBand = $state<string | null>(initial.get("s"));
+  let q = $state(initial.get("q") ?? "");
+
+  $effect(() => {
+    const qs = new URLSearchParams();
+    if (field) qs.set("f", field);
+    if (noUni) qs.set("nouni", "1");
+    if (salBand) qs.set("s", salBand);
+    if (q.trim()) qs.set("q", q.trim());
+    if (browser && qs.toString() !== $page.url.searchParams.toString()) {
+      replaceState(qs.size ? `?${qs}` : $page.url.pathname, {});
+    }
+  });
 
   const NO_UNI = new Set(["short", "vocational"]);
   const midpoint = (o: CatalogItem) =>
