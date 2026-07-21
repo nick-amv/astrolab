@@ -42,6 +42,8 @@
       return { label: m.src_rosstat(), cls: "src-rosstat", tip: m.src_rosstat_tip() + on };
     if (f.source === "ine-ees")
       return { label: m.src_ine(), cls: "src-ine", tip: m.src_ine_tip() + on };
+    if (f.source === "insee-ses")
+      return { label: m.src_insee(), cls: "src-ine", tip: m.src_insee_tip() + on };
     if (f.source === "adzuna-jobs")
       return { label: m.src_adzuna(), cls: "src-adzuna", tip: m.src_adzuna_tip() + on };
     return { label: m.prof_estimate(), cls: "src-est", tip: m.src_est_tip() };
@@ -58,10 +60,19 @@
   // ES -> todofp.es (official FP portal) for fp-* domains, notasdecorte.es
   // (the de-facto cut-off-grades reference; the official QEDU portal broke in
   // the 2024 ministry reorg) for university degrees.
-  function admissionUrl(code: string): string {
+  // FR -> ONISEP's official formation search by diploma name (its per-formation
+  // pages have no stable deep link); Parcoursup is the application portal,
+  // linked once below the paths (FR-2).
+  function admissionUrl(code: string, title = ""): string {
     const loc = getLocale();
     if (loc === "en") {
       return "https://collegescorecard.ed.gov/search/fos-landing/";
+    }
+    if (loc === "fr") {
+      // search the diploma name, trimmed at the first "/" or "(" so a title like
+      // "Licence / BUT Informatique" queries a clean "Licence" phrase
+      const q = (title || code).split(/[/(]/)[0].trim();
+      return `https://www.onisep.fr/recherche?text=${encodeURIComponent(q)}`;
     }
     if (loc === "es") {
       return code.startsWith("fp-") ? "https://www.todofp.es/" : "https://notasdecorte.es/";
@@ -98,7 +109,7 @@
       description: o.summary ?? undefined,
       occupationLocation: {
         "@type": "Country",
-        name: { US: "United States", ES: "Spain", RU: "Russia" }[userCountry] ?? "Russia",
+        name: { US: "United States", ES: "Spain", RU: "Russia", FR: "France" }[userCountry] ?? "Russia",
       },
       ...(fact?.salary_low
         ? {
@@ -193,9 +204,9 @@
             <div class="path">
               <div class="path-top">
                 <span class="path-title">{d.title}</span>
-                <!-- ES domain codes are internal slugs (Spain has no user-facing
+                <!-- ES/FR domain codes are internal slugs (no user-facing
                      numeric codes like OKSO/CIP), so show only the level there -->
-                {#if getLocale() === "es"}
+                {#if getLocale() === "es" || getLocale() === "fr"}
                   {#if d.level}<span class="path-code">{d.level}</span>{/if}
                 {:else}
                   <span class="path-code">{d.code}{#if d.level} · {d.level}{/if}</span>
@@ -207,7 +218,7 @@
               </div>
               <a
                 class="path-vuz"
-                href={admissionUrl(d.code)}
+                href={admissionUrl(d.code, d.title)}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -216,6 +227,19 @@
             </div>
           {/each}
         </div>
+
+        {#if getLocale() === "fr"}
+          <!-- France's national application portal — the "where you apply" anchor
+               that complements the per-diploma ONISEP explore links above -->
+          <a
+            class="edu-portal"
+            href="https://www.parcoursup.fr/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {m.edu_parcoursup()} ↗
+          </a>
+        {/if}
 
         {#if edu.milestones.length}
           <div class="timeline">
@@ -472,6 +496,17 @@
     text-decoration: none;
   }
   .path-vuz:hover {
+    text-decoration: underline;
+  }
+  .edu-portal {
+    display: inline-block;
+    margin-top: 16px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--chip-ink);
+    text-decoration: none;
+  }
+  .edu-portal:hover {
     text-decoration: underline;
   }
   .timeline {

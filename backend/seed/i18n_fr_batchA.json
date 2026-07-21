@@ -1,0 +1,182 @@
+{
+  "accountant": {
+    "title": "Comptable",
+    "summary": "Tu tiens la comptabilité d'une entreprise, tu prépares les comptes et tu suis les questions fiscales de près.",
+    "day_in_life": "Tu enregistres les pièces, tu fais coïncider les chiffres, tu déposes les déclarations dans les temps et tu échanges avec le fisc et les banques.",
+    "who_fits": "Pour toi qui aimes l'ordre, qui es rigoureux avec les chiffres et les détails et qui apprécies la stabilité."
+  },
+  "architect": {
+    "title": "Architecte",
+    "summary": "Tu conçois des bâtiments et des espaces en alliant la beauté, le confort et la solidité.",
+    "day_in_life": "Tu discutes du projet avec les clients, tu cherches la forme du bâtiment, tu dessines les plans et tu les ajustes avec les constructeurs et la réglementation.",
+    "who_fits": "Pour toi qui as le sens artistique et la précision technique, et la patience de mener des projets qui durent."
+  },
+  "biologist": {
+    "title": "Biologiste",
+    "summary": "Tu étudies les êtres vivants, de la cellule aux écosystèmes entiers, et tu cherches à comprendre comment fonctionne la vie.",
+    "day_in_life": "Tu mènes des expériences au labo ou sur le terrain, tu observes et tu notes, tu analyses des données, tu lis et tu rédiges des articles scientifiques.",
+    "who_fits": "Pour toi qui es curieux de la nature, qui as le sens de l'observation et qui es prêt pour un travail de recherche minutieux."
+  },
+  "chef": {
+    "title": "Cuisinier",
+    "summary": "Tu prépares les plats, tu crées des recettes et tu réponds du goût et de la qualité en cuisine.",
+    "day_in_life": "Tu avances les préparations, tu tiens le rythme des fourneaux au coup de feu, tu inventes de nouveaux plats et tu veilles à la qualité et à l'hygiène.",
+    "who_fits": "Pour toi qui aimes travailler de tes mains, qui as du palais et qui te sens porté par le rythme rapide."
+  },
+  "chemist": {
+    "title": "Chimiste",
+    "summary": "Tu étudies les substances et les réactions, tu crées de nouveaux matériaux et tu en vérifies les propriétés.",
+    "day_in_life": "Tu mènes des expériences au labo, tu mesures et tu notes avec précision, tu analyses des données et tu respectes les règles de sécurité.",
+    "who_fits": "Pour toi qui es soigneux, qui aimes les expériences et qui veux comprendre de quoi le monde est fait."
+  },
+  "civil-engineer": {
+    "title": "Ingénieur génie civil",
+    "summary": "Tu conçois et tu supervises la construction de bâtiments, de routes et de ponts, en garantissant qu'ils soient solides et sûrs.",
+    "day_in_life": "Tu calcules des structures, tu prépares et tu vérifies les plans, tu te rends sur les chantiers et tu coordonnes les travaux avec les entreprises.",
+    "who_fits": "Pour toi qui accordes de l'importance à la précision, aux responsabilités et au fait de voir le résultat dans des ouvrages bien réels."
+  },
+  "cybersecurity-specialist": {
+    "title": "Spécialiste en cybersécurité",
+    "summary": "Tu protèges les données et les systèmes d'une entreprise contre les intrusions, les fuites et les attaques.",
+    "day_in_life": "Tu traques les failles, tu configures les défenses, tu enquêtes sur les événements suspects et tu apprends aux collègues les bons réflexes de sécurité.",
+    "who_fits": "Pour toi qui soignes les détails, qui sais penser comme un attaquant et qui es prêt à apprendre sans relâche."
+  },
+  "data-analyst": {
+    "title": "Data analyst",
+    "summary": "Tu transformes les données en conclusions claires qui aident à prendre des décisions.",
+    "day_in_life": "Tu collectes et tu nettoies les données, tu calcules des indicateurs, tu construis des graphiques, tu repères des tendances et tu racontes ce que tu as trouvé.",
+    "who_fits": "Pour toi qui aimes les chiffres, qui repères les tendances et qui sais expliquer simplement ce qui est compliqué."
+  },
+  "data-scientist": {
+    "title": "Data scientist",
+    "summary": "Tu construis des modèles à partir de données qui prédisent des résultats et aident l'entreprise à décider.",
+    "day_in_life": "Tu rassembles et tu explores les données, tu formules des hypothèses, tu entraînes et tu valides des modèles, puis tu expliques les résultats à l'équipe.",
+    "who_fits": "Pour toi qui es à l'aise en maths, qui aimes chercher et qui n'as pas peur de te battre avec des problèmes tordus."
+  },
+  "dentist": {
+    "title": "Dentiste",
+    "summary": "Tu soignes les dents et les gencives et tu aides à garder la bouche en bonne santé.",
+    "day_in_life": "Tu examines les patients, tu soignes et tu extrais des dents, tu poses des plombages et des prothèses et tu expliques comment prendre soin de ses dents.",
+    "who_fits": "Pour toi qui as la main sûre, qui gardes ton calme face aux patients anxieux et qui es prêt à étudier pendant des années."
+  },
+  "devops-engineer": {
+    "title": "Ingénieur DevOps",
+    "summary": "Tu organises la façon dont le code arrive sur les serveurs et tourne sans accroc, en automatisant tout ce qui peut l'être.",
+    "day_in_life": "Tu montes des pipelines de déploiement, tu surveilles les serveurs et le monitoring, tu résous les incidents et tu écris des scripts d'automatisation.",
+    "who_fits": "Pour toi qui aimes mettre de l'ordre dans les systèmes, qui détestes la routine manuelle et qui gardes ton sang-froid quand quelque chose casse."
+  },
+  "electrical-engineer": {
+    "title": "Ingénieur électricien",
+    "summary": "Tu conçois des systèmes et des équipements électriques : de l'appareil ménager aux réseaux d'énergie.",
+    "day_in_life": "Tu calcules des circuits, tu prépares des plans, tu testes des dispositifs et tu localises et répares les pannes.",
+    "who_fits": "Pour toi qui aimes la physique, les calculs exacts et comprendre comment le courant circule."
+  },
+  "environmental-scientist": {
+    "title": "Spécialiste de l'environnement",
+    "summary": "Tu étudies l'état de la nature et l'impact humain sur elle, et tu cherches des moyens de réduire les dégâts.",
+    "day_in_life": "Tu prélèves des échantillons d'eau, d'air et de sol, tu analyses les données, tu rédiges des rapports et des recommandations et tu évalues des projets.",
+    "who_fits": "Pour toi qui ne te fiches pas de ce qui arrive à la nature et qui sais travailler aussi bien sur le terrain qu'avec des données."
+  },
+  "game-developer": {
+    "title": "Développeur de jeux vidéo",
+    "summary": "Tu programmes des jeux sur ordinateur et mobile : mécaniques, physique, comportement des personnages.",
+    "day_in_life": "Tu écris et tu débogues le code du jeu, tu montes des niveaux dans le moteur, tu traques pourquoi quelque chose rame et tu testes le gameplay.",
+    "who_fits": "Pour toi qui aimes les jeux pas seulement pour y jouer mais pour comprendre leurs rouages, et qui es prêt à peaufiner les détails longtemps."
+  },
+  "graphic-designer": {
+    "title": "Graphiste",
+    "summary": "Tu crées des supports visuels : logos, interfaces, affiches, identités de marque.",
+    "day_in_life": "Tu discutes du projet avec le client, tu explores des idées, tu montes des maquettes dans des logiciels de design et tu les affines avec les retours reçus.",
+    "who_fits": "Pour toi qui as du goût, qui aimes créer des choses nouvelles et qui soignes la forme et la couleur."
+  },
+  "journalist": {
+    "title": "Journaliste",
+    "summary": "Tu trouves les histoires qui comptent, tu vérifies les faits et tu les racontes à ton public.",
+    "day_in_life": "Tu cherches des sujets, tu mènes des interviews, tu recoupes les informations, tu rédiges tes articles dans les délais et tu travailles avec un rédacteur en chef.",
+    "who_fits": "Pour toi qui es curieux, qui manies bien les mots et qui n'as pas peur de poser des questions."
+  },
+  "lawyer": {
+    "title": "Avocat",
+    "summary": "Tu aides des personnes et des entreprises à régler leurs affaires dans le cadre de la loi et tu défends leurs intérêts.",
+    "day_in_life": "Tu étudies des documents et des lois, tu rédiges des contrats et des actes, tu conseilles les clients et tu les représentes devant les tribunaux.",
+    "who_fits": "Pour toi qui sais argumenter, qui aimes démêler des règles et qui défends ta position."
+  },
+  "mechanical-engineer": {
+    "title": "Ingénieur mécanicien",
+    "summary": "Tu conçois des machines, des mécanismes et des équipements et tu veilles à leur bon fonctionnement.",
+    "day_in_life": "Tu calcules des structures, tu prépares des plans en CAO, tu testes des prototypes et tu cherches pourquoi quelque chose casse.",
+    "who_fits": "Pour toi qui aimes les machines, la précision et comprendre comment fonctionnent les mécanismes."
+  },
+  "nurse": {
+    "title": "Infirmier",
+    "summary": "Tu prends soin des patients, tu appliques les prescriptions du médecin et tu accompagnes les gens tout au long de leur traitement.",
+    "day_in_life": "Tu réalises des soins et des actes, tu surveilles l'état des patients, tu tiens les dossiers, tu rassures et tu expliques.",
+    "who_fits": "Pour toi qui es attentif et organisé et qui veux vraiment aider les autres au quotidien."
+  },
+  "pharmacist": {
+    "title": "Pharmacien",
+    "summary": "Tu délivres les médicaments, tu conseilles sur la manière de les prendre et tu veilles à la qualité des produits.",
+    "day_in_life": "Tu sélectionnes et tu remets les médicaments, tu expliques comment les prendre, tu contrôles les dates de péremption et le stockage et tu tiens les registres.",
+    "who_fits": "Pour toi qui es attentif et responsable et qui aimes aider les gens avec calme."
+  },
+  "physical-therapist": {
+    "title": "Kinésithérapeute",
+    "summary": "Tu aides les gens à se remettre de blessures et de maladies grâce au mouvement et à l'exercice.",
+    "day_in_life": "Tu évalues le patient, tu choisis les exercices, tu diriges les séances et tu suis les progrès, tu encourages et tu motives.",
+    "who_fits": "Pour toi qui as de la patience, qui aimes aider avec tes mains et tes mots et qui célèbres chaque petit progrès."
+  },
+  "physician": {
+    "title": "Médecin",
+    "summary": "Tu diagnostiques et tu soignes les maladies et tu assures le suivi de la santé des patients.",
+    "day_in_life": "Tu reçois en consultation, tu examines les patients, tu prescris des examens, tu prescris des traitements et tu tiens le dossier médical. Apprentissage constant et responsabilité de la vie des gens.",
+    "who_fits": "Pour toi qui veux aider les autres, qui es prêt à étudier beaucoup et en profondeur et qui sais porter cette responsabilité."
+  },
+  "product-manager": {
+    "title": "Product manager",
+    "summary": "Tu décides de ce que devient un produit : quoi construire en premier et pourquoi ça compte pour les gens.",
+    "day_in_life": "Tu parles avec les utilisateurs et l'équipe, tu étudies les données et les demandes, tu priorises les tâches et tu t'assures que l'essentiel sorte à temps.",
+    "who_fits": "Pour toi qui sais écouter des parties différentes, décider dans l'incertitude et garder la vue d'ensemble."
+  },
+  "psychologist": {
+    "title": "Psychologue",
+    "summary": "Tu aides les gens à mieux se comprendre, à surmonter leurs difficultés et à améliorer leurs relations.",
+    "day_in_life": "Tu reçois en consultation, tu écoutes et tu poses des questions, tu prends des notes, tu te formes en continu et tu revois tes dossiers.",
+    "who_fits": "Pour toi qui sais écouter, qui es curieux des gens et qui veux aider à démêler ce qui est compliqué."
+  },
+  "qa-engineer": {
+    "title": "QA engineer",
+    "summary": "Tu vérifies que le logiciel fonctionne comme il faut et tu trouves les bugs avant les utilisateurs.",
+    "day_in_life": "Tu conçois des scénarios de test, tu testes les nouvelles fonctionnalités à la main et avec des tests automatiques, tu documentes les erreurs et tu vérifies les corrections.",
+    "who_fits": "Pour toi qui es minutieux, qui aimes casser et éprouver les choses et qui ne laisses passer aucun détail."
+  },
+  "software-developer": {
+    "title": "Développeur logiciel",
+    "summary": "Tu conçois, tu écris et tu maintiens des programmes : de l'application mobile aux systèmes serveur.",
+    "day_in_life": "Tu découpes la tâche, tu écris et tu testes du code, tu relis celui des autres et tu discutes de l'architecture avec l'équipe. Beaucoup de résolution de problèmes logiques face à l'éditeur de code.",
+    "who_fits": "Pour toi qui aimes comprendre comment marchent les choses, mener la logique jusqu'au bout et voir ton travail tourner dans un vrai produit."
+  },
+  "systems-administrator": {
+    "title": "Administrateur systèmes",
+    "summary": "Tu maintiens en marche et disponibles les ordinateurs, les réseaux et les serveurs d'une entreprise.",
+    "day_in_life": "Tu configures les postes et les comptes utilisateurs, tu surveilles le réseau et les sauvegardes et tu aides les collègues avec la technique.",
+    "who_fits": "Pour toi qui aimes la technique, qui es organisé et qui es prêt à être la personne vers qui tout le monde se tourne quand rien ne marche."
+  },
+  "teacher": {
+    "title": "Professeur",
+    "summary": "Tu enseignes une matière aux enfants et tu les aides à grandir et à découvrir leurs points forts.",
+    "day_in_life": "Tu prépares et tu donnes des cours, tu corriges les copies, tu échanges avec les élèves et les familles et tu cherches des façons d'expliquer simplement ce qui est difficile.",
+    "who_fits": "Pour toi qui aimes expliquer, qui as de la patience et qui puises ton énergie dans le contact avec les gens."
+  },
+  "ux-ui-designer": {
+    "title": "UX/UI designer",
+    "summary": "Tu réfléchis à la façon dont fonctionnent les écrans d'applications et de sites pour qu'ils soient clairs et faciles à utiliser.",
+    "day_in_life": "Tu étudies le comportement des utilisateurs, tu dessines des prototypes et des maquettes d'écrans, tu en discutes avec l'équipe et tu les ajustes après les tests.",
+    "who_fits": "Pour toi qui aimes autant dessiner que raisonner avec logique et qui fais passer le confort de la personne avant une jolie image."
+  },
+  "veterinarian": {
+    "title": "Vétérinaire",
+    "summary": "Tu soignes les animaux, tu les aides à se rétablir et tu veilles sur leur santé.",
+    "day_in_life": "Tu examines les animaux, tu poses des diagnostics, tu réalises des opérations et des vaccinations et tu conseilles les propriétaires sur les soins.",
+    "who_fits": "Pour toi qui aimes les animaux, qui n'es pas trop sensible et qui gardes ton calme dans les cas difficiles."
+  }
+}

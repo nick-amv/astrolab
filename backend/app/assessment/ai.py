@@ -33,7 +33,7 @@ _AXIS = {
     "C": "Conventional",
 }
 
-_LANG = {"ru": "Russian", "en": "English", "de": "German", "es": "Spanish"}
+_LANG = {"ru": "Russian", "en": "English", "de": "German", "es": "Spanish", "fr": "French"}
 
 _SYSTEM = (
     "You are a warm, honest career-guidance mentor for teenagers and adults. "

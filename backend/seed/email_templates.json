@@ -11,6 +11,10 @@
     "es": {
       "subject": "Iniciar sesión en Astrolab",
       "text": "¡Hola!\n\nHas solicitado iniciar sesión en Astrolab. Sigue el enlace para entrar y guardar tu resultado (el enlace es válido durante {ttl} minutos):\n\n{link}\n\nSi no lo solicitaste, simplemente ignora este correo: no pasará nada.\n\n— Astrolab · nikam.dev"
+    },
+    "fr": {
+      "subject": "Connexion à Astrolab",
+      "text": "Bonjour !\n\nTu as demandé à te connecter à Astrolab. Suis le lien pour te connecter et enregistrer ton résultat (le lien est valable {ttl} minutes) :\n\n{link}\n\nSi tu n'es pas à l'origine de cette demande, ignore simplement cet email — rien ne se passera.\n\n— Astrolab · nikam.dev"
     }
   }
 }

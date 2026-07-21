@@ -1,0 +1,182 @@
+{
+  "actuary": {
+    "title": "Actuaire",
+    "summary": "Calcule la probabilité des risques et des pertes pour que les assureurs et les fonds de pension fixent les bons tarifs.",
+    "day_in_life": "Tu rassembles des statistiques, tu construis des modèles mathématiques, tu calcules les primes et les réserves, tu rédiges des rapports et tu expliques tes conclusions à la direction.",
+    "who_fits": "Pour toi qui aimes les maths et les statistiques, qui as de la patience pour le détail et qui tiens à la précision dans tes calculs."
+  },
+  "airline-pilot": {
+    "title": "Pilote de ligne",
+    "summary": "Pilote des avions de passagers ou de fret d'un aéroport à l'autre, en toute sécurité et en respectant l'horaire prévu.",
+    "day_in_life": "Tu vérifies la météo et le plan de vol, tu inspectes l'avion, tu couvres la route avec l'équipage et tu assures le décollage, la croisière et l'atterrissage selon des procédures strictes.",
+    "who_fits": "Pour toi qui aimes la précision, qui gardes ton calme dans les moments de tension et qui sais appliquer des règles strictes sans jamais flancher."
+  },
+  "art-director": {
+    "title": "Directeur artistique",
+    "summary": "Dirige le style visuel d'un projet et guide une équipe de designers vers une image forte et cohérente.",
+    "day_in_life": "Tu donnes la direction créative, tu passes en revue les propositions de l'équipe, tu fais des retours, tu présentes les concepts aux clients et tu veilles à ce que tout respecte la marque.",
+    "who_fits": "Pour toi qui as du goût, qui sais voir l'ensemble et qui prends plaisir à emmener ton équipe vers cette image."
+  },
+  "data-engineer": {
+    "title": "Data engineer",
+    "summary": "Construit et entretient les systèmes qui collectent, stockent et déplacent d'énormes volumes de données.",
+    "day_in_life": "Tu écris des pipelines de données, tu nettoies et croises des tables, tu surveilles la charge du stockage, tu corriges les pannes et tu prépares des flux de données pour les analystes.",
+    "who_fits": "Pour toi qui aimes l'ordre dans les données, qui soignes les détails et qui sais transformer des flux chaotiques en systèmes stables."
+  },
+  "database-administrator": {
+    "title": "Administrateur de bases de données",
+    "summary": "Veille sur les données d'une entreprise : qu'elles soient sécurisées, rapides à interroger et bien sauvegardées.",
+    "day_in_life": "Tu configures et optimises les bases de données, tu fais des sauvegardes, tu gères les accès et les performances, et tu restaures les données après une panne.",
+    "who_fits": "Pour toi qui aimes l'ordre et la fiabilité, qui soignes les détails et qui apprécies la stabilité."
+  },
+  "dietitian": {
+    "title": "Diététicien",
+    "summary": "Élabore des plans alimentaires selon la santé et les objectifs de chacun et l'aide à prendre de meilleures habitudes.",
+    "day_in_life": "Tu discutes d'alimentation et de santé avec les gens, tu planifies leur régime, tu expliques tes choix d'aliments et tu suis leurs progrès.",
+    "who_fits": "Pour toi qui t'intéresses à la santé et à la nutrition et qui aimes aider les autres à changer pour le mieux."
+  },
+  "financial-advisor": {
+    "title": "Conseiller financier",
+    "summary": "Aide les gens à organiser leur argent : épargne, placements, retraite et protection contre les risques.",
+    "day_in_life": "Tu rencontres tes clients, tu analyses leurs objectifs et leurs revenus, tu proposes un plan d'investissement et d'assurance, tu expliques les risques et tu suis les résultats.",
+    "who_fits": "Pour toi qui es à l'aise avec les chiffres, qui sais expliquer clairement et qui gagnes la confiance des gens."
+  },
+  "firefighter": {
+    "title": "Pompier",
+    "summary": "Éteint les incendies, secourt les personnes en danger et intervient sur les accidents et les catastrophes.",
+    "day_in_life": "Tu t'entraînes et vérifies le matériel, tu es de garde à la caserne et, quand l'alarme retentit, tu pars sur les incendies et les accidents pour maîtriser le feu et mettre les gens en sécurité.",
+    "who_fits": "Pour toi qui es courageux, en bonne forme physique, qui travailles bien en équipe et qui veux aider quand tout va mal."
+  },
+  "industrial-designer": {
+    "title": "Designer industriel",
+    "summary": "Conçoit la forme et l'usage de produits physiques comme des meubles, des appareils et des outils, pour qu'ils soient efficaces et agréables.",
+    "day_in_life": "Tu croques des idées, tu crées des modèles 3D et des prototypes, tu testes comment un objet se tient en main et tu l'affines avec les ingénieurs.",
+    "who_fits": "Pour toi qui aimes autant dessiner que comprendre comment les choses sont faites, et qui te soucies de ce qu'on ressent en utilisant un objet."
+  },
+  "insurance-agent": {
+    "title": "Agent d'assurance",
+    "summary": "Vend des assurances et aide les clients à choisir les garanties pour leur vie, leur santé, leur voiture ou leurs biens.",
+    "day_in_life": "Tu prospectes des clients, tu analyses leurs risques, tu leur proposes des contrats adaptés, tu les fais signer et tu les accompagnes en cas de sinistre.",
+    "who_fits": "Pour toi qui es sociable et convaincant et qui te sens à l'aise avec des revenus qui dépendent des contrats vendus."
+  },
+  "it-support-specialist": {
+    "title": "Technicien support informatique",
+    "summary": "Aide les utilisateurs à résoudre leurs problèmes d'ordinateurs, de logiciels et de réseau.",
+    "day_in_life": "Tu reçois les demandes, tu cherches la cause de la panne, tu configures les postes et les logiciels, tu expliques la solution avec des mots simples et tu suis les tickets.",
+    "who_fits": "Pour toi qui expliques les choses avec calme, qui aimes aider les autres et qui ne paniques pas quand quelque chose tombe en panne."
+  },
+  "librarian": {
+    "title": "Bibliothécaire",
+    "summary": "Organise les livres et l'information et aide les gens à trouver et utiliser ce dont ils ont besoin.",
+    "day_in_life": "Tu classes et catalogues les documents, tu aides les visiteurs à chercher et choisir, tu organises des animations de lecture et tu tiens en ordre le fonds et les ressources numériques.",
+    "who_fits": "Pour toi qui aimes les livres et l'ordre, qui aimes aider discrètement et qui veux rendre le savoir facile à trouver."
+  },
+  "logistician": {
+    "title": "Logisticien",
+    "summary": "Planifie le déplacement des marchandises pour que tout arrive à l'heure et sans coûts inutiles.",
+    "day_in_life": "Tu traces les itinéraires, tu négocies avec les transporteurs, tu contrôles l'entrepôt et les délais de livraison, et tu cherches des moyens de transporter moins cher et plus vite.",
+    "who_fits": "Pour toi qui aimes l'ordre, qui es à l'aise avec les chiffres et qui sais garder plein de détails sous contrôle en même temps."
+  },
+  "machine-learning-engineer": {
+    "title": "Machine learning engineer",
+    "summary": "Construit et entraîne des modèles qui reconnaissent des schémas, font des prédictions et prennent des décisions à partir des données.",
+    "day_in_life": "Tu prépares les données, tu entraînes et testes des modèles, tu ajustes les paramètres, tu mets en production les modèles qui marchent et tu surveilles leur qualité.",
+    "who_fits": "Pour toi qui aimes les maths et les expériences, qui es prêt à creuser en profondeur et qui as de la patience face aux essais ratés."
+  },
+  "management-consultant": {
+    "title": "Consultant en management",
+    "summary": "Aide les entreprises à repérer ce qui coince dans leur fonctionnement et leur conseille comment mieux travailler et gagner plus.",
+    "day_in_life": "Tu étudies les données de l'entreprise, tu échanges avec les employés, tu repères les goulots d'étranglement, tu prépares des présentations avec des solutions et tu les défends devant la direction.",
+    "who_fits": "Pour toi qui te repères vite dans des domaines nouveaux, qui aimes analyser et qui sais présenter tes idées de façon convaincante."
+  },
+  "network-engineer": {
+    "title": "Ingénieur réseau",
+    "summary": "Conçoit, configure et entretient les réseaux informatiques pour que les connexions restent rapides et fiables.",
+    "day_in_life": "Tu configures les équipements et les routes, tu surveilles la charge du réseau, tu repères et répares les coupures de connexion, et tu planifies la croissance et la sécurité du réseau.",
+    "who_fits": "Pour toi qui aimes la technologie et la précision et qui sais traquer une panne avec calme, étape par étape."
+  },
+  "occupational-therapist": {
+    "title": "Ergothérapeute",
+    "summary": "Aide les personnes à retrouver leur autonomie après une blessure ou une maladie pour qu'elles reprennent leur vie de tous les jours.",
+    "day_in_life": "Tu évalues ce que le patient peut faire, tu choisis des exercices et des aides techniques, tu répètes les gestes du quotidien et tu célèbres avec lui ses petites victoires.",
+    "who_fits": "Pour toi qui es patient et débrouillard et qui veux aider les autres à retrouver leur indépendance."
+  },
+  "operations-manager": {
+    "title": "Responsable des opérations",
+    "summary": "Pilote le travail quotidien d'une entreprise ou d'un service pour que tout suive le plan et que les délais soient tenus.",
+    "day_in_life": "Tu répartis les tâches dans l'équipe, tu surveilles les délais et les budgets, tu règles les problèmes qui surgissent, tu améliores les processus et tu rends compte des résultats.",
+    "who_fits": "Pour toi qui sais organiser les gens, qui gardes plein de sujets en tête et qui assumes la responsabilité du résultat."
+  },
+  "optometrist": {
+    "title": "Optométriste",
+    "summary": "Examine la vue, prescrit lunettes et lentilles et repère à temps les maladies des yeux.",
+    "day_in_life": "Tu contrôles la vision avec des instruments, tu ajustes la correction, tu examines les yeux et tu expliques comment prendre soin de sa vue.",
+    "who_fits": "Pour toi qui es observateur, qui aimes le travail minutieux et qui veux aider les autres à bien voir."
+  },
+  "phlebotomist": {
+    "title": "Préleveur en laboratoire",
+    "summary": "Réalise les prises de sang pour analyses avec soin et sécurité et étiquette correctement les échantillons.",
+    "day_in_life": "Tu accueilles les patients, tu prélèves le sang dans la veine, tu étiquettes les tubes, tu tiens les registres et tu rassures ceux qui sont nerveux.",
+    "who_fits": "Pour toi qui es méticuleux, calme et qui sais transmettre de la sérénité aux patients nerveux."
+  },
+  "police-officer": {
+    "title": "Policier",
+    "summary": "Maintient l'ordre public, répond aux appels et protège les personnes et leurs biens dans le respect de la loi.",
+    "day_in_life": "Tu patrouilles un secteur, tu interviens sur les incidents, tu recueilles les déclarations des personnes et des témoins, tu rédiges des procès-verbaux et tu aides les citoyens en difficulté.",
+    "who_fits": "Pour toi qui gardes ton calme sous pression, qui veux protéger les autres et qui sais agir avec détermination."
+  },
+  "radiologic-technologist": {
+    "title": "Manipulateur en radiologie",
+    "summary": "Réalise des radiographies et d'autres examens d'imagerie qui aident les médecins à poser un diagnostic.",
+    "day_in_life": "Tu prépares l'appareil, tu installes le patient dans la bonne position, tu prends les images, tu veilles à la sécurité et tu transmets les résultats au médecin.",
+    "who_fits": "Pour toi qui aimes la technologie, qui es attentif aux détails et qui travailles calmement avec les patients."
+  },
+  "real-estate-agent": {
+    "title": "Agent immobilier",
+    "summary": "Aide les gens à acheter, vendre et louer des logements en mettant en relation vendeurs et acheteurs.",
+    "day_in_life": "Tu recherches des biens et des clients, tu fais visiter des logements, tu négocies le prix, tu prépares les documents et tu accompagnes l'opération jusqu'à la signature.",
+    "who_fits": "Pour toi qui es sociable et tenace et qui te sens à l'aise avec des revenus qui dépendent du nombre de transactions."
+  },
+  "respiratory-therapist": {
+    "title": "Kinésithérapeute respiratoire",
+    "summary": "Aide les patients qui ont des difficultés respiratoires : règle les équipements et soulage leur état.",
+    "day_in_life": "Tu évalues les patients, tu ajustes l'oxygène et les inhalateurs, tu surveilles la respiration, tu travailles avec les respirateurs et tu apprends aux gens à mieux respirer.",
+    "who_fits": "Pour toi qui veux aider dans les moments difficiles, qui comprends les équipements et qui gardes ton calme sous pression."
+  },
+  "school-counselor": {
+    "title": "Conseiller d'orientation",
+    "summary": "Aide les élèves avec leurs études, leurs émotions et leurs choix d'avenir, au sein de l'établissement scolaire.",
+    "day_in_life": "Tu reçois les élèves en tête-à-tête, tu animes des séances en groupe, tu aides à choisir des matières et un métier, tu repères les jeunes en difficulté et tu échanges avec les profs et les familles.",
+    "who_fits": "Pour toi qui te soucies vraiment des jeunes, qui sais écouter et qui veux les aider à trouver leur voie."
+  },
+  "sound-engineer": {
+    "title": "Ingénieur du son",
+    "summary": "Enregistre, mixe et équilibre le son pour la musique, le cinéma, les concerts et les diffusions.",
+    "day_in_life": "Tu places micros et équipements, tu enregistres les prises, tu ajustes les niveaux et les effets à la console et tu peaufines la piste finale.",
+    "who_fits": "Pour toi qui as l'oreille fine, qui aimes travailler avec du matériel et qui as de la patience pour les petits détails."
+  },
+  "speech-language-pathologist": {
+    "title": "Orthophoniste",
+    "summary": "Aide enfants et adultes à parler clairement et à surmonter leurs difficultés de parole et de langage.",
+    "day_in_life": "Tu animes des séances, tu proposes des jeux et des exercices sur les sons, tu suis les progrès et tu conseilles les familles pour s'entraîner à la maison.",
+    "who_fits": "Pour toi qui es patient, qui aimes la communication et qui te réjouis quand quelqu'un trouve enfin sa voix."
+  },
+  "statistician": {
+    "title": "Statisticien",
+    "summary": "Conçoit des études et utilise les maths pour trouver des tendances et des réponses fiables dans les données.",
+    "day_in_life": "Tu planifies la collecte des données, tu construis des modèles statistiques, tu mènes les analyses, tu vérifies que les résultats tiennent et tu expliques ce qu'ils signifient.",
+    "who_fits": "Pour toi qui aimes les maths, qui es rigoureux avec les preuves et qui aimes tirer des conclusions solides à partir des chiffres."
+  },
+  "surgical-technologist": {
+    "title": "Aide-opératoire de bloc",
+    "summary": "Prépare la salle d'opération et les instruments et assiste le chirurgien pendant les interventions.",
+    "day_in_life": "Tu stérilises et disposes les instruments, tu prépares la salle d'opération, tu passes les outils au chirurgien et tu veilles à ce que tout reste stérile.",
+    "who_fits": "Pour toi qui sais te concentrer, qui es habile de tes mains et qui gardes ton calme dans les moments critiques."
+  },
+  "urban-planner": {
+    "title": "Urbaniste",
+    "summary": "Planifie la façon dont grandissent les villes et les quartiers : où placer les logements, les rues, les parcs et les services.",
+    "day_in_life": "Tu étudies des cartes et des données, tu élabores des plans d'urbanisme et de zonage, tu rencontres habitants et autorités et tu évalues l'impact d'un projet sur le quartier.",
+    "who_fits": "Pour toi qui réfléchis au fonctionnement des villes, qui aimes équilibrer de nombreux besoins et qui te soucies des espaces publics."
+  }
+}

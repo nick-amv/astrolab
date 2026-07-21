@@ -1,0 +1,699 @@
+{
+  "country": "FR",
+  "source_key": "adzuna-jobs",
+  "source_name": "Adzuna live job-ad salary analysis (p25-p75, gross annual, France)",
+  "source_url": "https://www.adzuna.fr/",
+  "as_of_date": "2026-07-21",
+  "facts": [
+    {
+      "slug": "accountant",
+      "salary_low": 30000,
+      "salary_high": 42500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 124,
+      "median": 35000
+    },
+    {
+      "slug": "actuary",
+      "salary_low": 70000,
+      "salary_high": 82500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 39,
+      "median": 75000
+    },
+    {
+      "slug": "aircraft-mechanic",
+      "salary_low": 26500,
+      "salary_high": 32500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 79,
+      "median": 28000
+    },
+    {
+      "slug": "architect",
+      "salary_low": 43200,
+      "salary_high": 61800,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 98,
+      "median": 54600
+    },
+    {
+      "slug": "automotive-technician",
+      "salary_low": 24700,
+      "salary_high": 33000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 169,
+      "median": 28800
+    },
+    {
+      "slug": "carpenter",
+      "salary_low": 24600,
+      "salary_high": 24700,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 107,
+      "median": 24700
+    },
+    {
+      "slug": "chef",
+      "salary_low": 24700,
+      "salary_high": 40000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 217,
+      "median": 30000
+    },
+    {
+      "slug": "chemist",
+      "salary_low": 27500,
+      "salary_high": 33200,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 60,
+      "median": 31000
+    },
+    {
+      "slug": "civil-engineer",
+      "salary_low": 39500,
+      "salary_high": 47500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 339,
+      "median": 42500
+    },
+    {
+      "slug": "cnc-machinist",
+      "salary_low": 22500,
+      "salary_high": 27500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 74,
+      "median": 24700
+    },
+    {
+      "slug": "cybersecurity-specialist",
+      "salary_low": 42500,
+      "salary_high": 60000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 240,
+      "median": 47500
+    },
+    {
+      "slug": "data-analyst",
+      "salary_low": 37000,
+      "salary_high": 46500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 146,
+      "median": 42500
+    },
+    {
+      "slug": "data-engineer",
+      "salary_low": 40000,
+      "salary_high": 53000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 170,
+      "median": 47000
+    },
+    {
+      "slug": "data-scientist",
+      "salary_low": 42500,
+      "salary_high": 60400,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 66,
+      "median": 47500
+    },
+    {
+      "slug": "database-administrator",
+      "salary_low": 40500,
+      "salary_high": 55000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 108,
+      "median": 47500
+    },
+    {
+      "slug": "devops-engineer",
+      "salary_low": 41500,
+      "salary_high": 50000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 233,
+      "median": 45000
+    },
+    {
+      "slug": "economist",
+      "salary_low": 37500,
+      "salary_high": 47500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 220,
+      "median": 42500
+    },
+    {
+      "slug": "electrical-engineer",
+      "salary_low": 40500,
+      "salary_high": 47500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 249,
+      "median": 45000
+    },
+    {
+      "slug": "electrician",
+      "salary_low": 24600,
+      "salary_high": 24700,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 65,
+      "median": 24700
+    },
+    {
+      "slug": "environmental-scientist",
+      "salary_low": 34000,
+      "salary_high": 47500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 192,
+      "median": 40000
+    },
+    {
+      "slug": "financial-advisor",
+      "salary_low": 33200,
+      "salary_high": 55000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 459,
+      "median": 42500
+    },
+    {
+      "slug": "financial-analyst",
+      "salary_low": 35000,
+      "salary_high": 44000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 48,
+      "median": 37500
+    },
+    {
+      "slug": "graphic-designer",
+      "salary_low": 23700,
+      "salary_high": 33000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 33,
+      "median": 29000
+    },
+    {
+      "slug": "heavy-equipment-operator",
+      "salary_low": 23500,
+      "salary_high": 27500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 97,
+      "median": 24700
+    },
+    {
+      "slug": "hr-specialist",
+      "salary_low": 29100,
+      "salary_high": 50000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 256,
+      "median": 37500
+    },
+    {
+      "slug": "hvac-technician",
+      "salary_low": 27500,
+      "salary_high": 35000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 124,
+      "median": 32000
+    },
+    {
+      "slug": "industrial-designer",
+      "salary_low": 37400,
+      "salary_high": 55000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 16,
+      "median": 42750
+    },
+    {
+      "slug": "insurance-agent",
+      "salary_low": 27000,
+      "salary_high": 32500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 197,
+      "median": 29500
+    },
+    {
+      "slug": "interior-designer",
+      "salary_low": 42500,
+      "salary_high": 54800,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 25,
+      "median": 45000
+    },
+    {
+      "slug": "it-support-specialist",
+      "salary_low": 24500,
+      "salary_high": 30000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 259,
+      "median": 27000
+    },
+    {
+      "slug": "lawyer",
+      "salary_low": 37500,
+      "salary_high": 57500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 452,
+      "median": 45000
+    },
+    {
+      "slug": "lineworker",
+      "salary_low": 25000,
+      "salary_high": 29500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 118,
+      "median": 27500
+    },
+    {
+      "slug": "logistician",
+      "salary_low": 25000,
+      "salary_high": 42400,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 352,
+      "median": 32500
+    },
+    {
+      "slug": "machine-learning-engineer",
+      "salary_low": 41000,
+      "salary_high": 62500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 13,
+      "median": 50000
+    },
+    {
+      "slug": "machinist",
+      "salary_low": 24700,
+      "salary_high": 34500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 138,
+      "median": 29750
+    },
+    {
+      "slug": "management-consultant",
+      "salary_low": 40000,
+      "salary_high": 60000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 205,
+      "median": 48500
+    },
+    {
+      "slug": "marketing-manager",
+      "salary_low": 40000,
+      "salary_high": 62500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 119,
+      "median": 50000
+    },
+    {
+      "slug": "mechanical-engineer",
+      "salary_low": 39000,
+      "salary_high": 45000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 241,
+      "median": 41500
+    },
+    {
+      "slug": "medical-assistant",
+      "salary_low": 24500,
+      "salary_high": 30000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 48,
+      "median": 25710
+    },
+    {
+      "slug": "network-engineer",
+      "salary_low": 32000,
+      "salary_high": 47500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 338,
+      "median": 42000
+    },
+    {
+      "slug": "nurse",
+      "salary_low": 27500,
+      "salary_high": 34000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 345,
+      "median": 30000
+    },
+    {
+      "slug": "occupational-therapist",
+      "salary_low": 31000,
+      "salary_high": 35000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 105,
+      "median": 32500
+    },
+    {
+      "slug": "operations-manager",
+      "salary_low": 52500,
+      "salary_high": 90000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 366,
+      "median": 70000
+    },
+    {
+      "slug": "optometrist",
+      "salary_low": 28800,
+      "salary_high": 34400,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 121,
+      "median": 31200
+    },
+    {
+      "slug": "paramedic",
+      "salary_low": 27500,
+      "salary_high": 36000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 143,
+      "median": 32500
+    },
+    {
+      "slug": "pharmacist",
+      "salary_low": 49900,
+      "salary_high": 90000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 126,
+      "median": 67750
+    },
+    {
+      "slug": "phlebotomist",
+      "salary_low": 25000,
+      "salary_high": 30000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 161,
+      "median": 27500
+    },
+    {
+      "slug": "physical-therapist",
+      "salary_low": 35000,
+      "salary_high": 41500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 235,
+      "median": 37800
+    },
+    {
+      "slug": "physician",
+      "salary_low": 100000,
+      "salary_high": 117000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 173,
+      "median": 110000
+    },
+    {
+      "slug": "plumber",
+      "salary_low": 24600,
+      "salary_high": 26600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 81,
+      "median": 24700
+    },
+    {
+      "slug": "product-manager",
+      "salary_low": 40000,
+      "salary_high": 59300,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 273,
+      "median": 47500
+    },
+    {
+      "slug": "project-manager",
+      "salary_low": 40000,
+      "salary_high": 52500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 420,
+      "median": 46500
+    },
+    {
+      "slug": "psychologist",
+      "salary_low": 30000,
+      "salary_high": 40000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 172,
+      "median": 35000
+    },
+    {
+      "slug": "qa-engineer",
+      "salary_low": 35000,
+      "salary_high": 45000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 207,
+      "median": 40000
+    },
+    {
+      "slug": "radiologic-technologist",
+      "salary_low": 34000,
+      "salary_high": 40000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 102,
+      "median": 36112
+    },
+    {
+      "slug": "real-estate-agent",
+      "salary_low": 58800,
+      "salary_high": 72000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 450,
+      "median": 65000
+    },
+    {
+      "slug": "sales-manager",
+      "salary_low": 42500,
+      "salary_high": 70000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 594,
+      "median": 52500
+    },
+    {
+      "slug": "social-worker",
+      "salary_low": 27500,
+      "salary_high": 31600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 94,
+      "median": 30000
+    },
+    {
+      "slug": "software-developer",
+      "salary_low": 40000,
+      "salary_high": 47600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 286,
+      "median": 44500
+    },
+    {
+      "slug": "speech-language-pathologist",
+      "salary_low": 30000,
+      "salary_high": 37500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 118,
+      "median": 35000
+    },
+    {
+      "slug": "surgical-technologist",
+      "salary_low": 32500,
+      "salary_high": 40000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 91,
+      "median": 35000
+    },
+    {
+      "slug": "systems-administrator",
+      "salary_low": 35500,
+      "salary_high": 42500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 238,
+      "median": 39000
+    },
+    {
+      "slug": "teacher",
+      "salary_low": 26000,
+      "salary_high": 37000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 73,
+      "median": 28000
+    },
+    {
+      "slug": "urban-planner",
+      "salary_low": 39000,
+      "salary_high": 63300,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 80,
+      "median": 50000
+    },
+    {
+      "slug": "ux-ui-designer",
+      "salary_low": 39900,
+      "salary_high": 52500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 26,
+      "median": 44500
+    },
+    {
+      "slug": "veterinarian",
+      "salary_low": 45900,
+      "salary_high": 52500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 134,
+      "median": 48000
+    },
+    {
+      "slug": "video-editor",
+      "salary_low": 24600,
+      "salary_high": 24700,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 61,
+      "median": 24700
+    },
+    {
+      "slug": "welder",
+      "salary_low": 24700,
+      "salary_high": 43100,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 249,
+      "median": 35000
+    },
+    {
+      "slug": "writer",
+      "salary_low": 30000,
+      "salary_high": 37600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 130,
+      "median": 33000
+    }
+  ]
+}

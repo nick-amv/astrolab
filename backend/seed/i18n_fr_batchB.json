@@ -1,0 +1,182 @@
+{
+  "actor": {
+    "title": "Comédien",
+    "summary": "Incarne des personnages au théâtre, au cinéma et en doublage, en vivant son rôle sur scène ou face à la caméra.",
+    "day_in_life": "Apprend ses rôles, répète, joue et tourne, et travaille sa voix, son corps et son personnage.",
+    "who_fits": "Pour toi si tu n'as pas peur d'être sous les projecteurs, que tu ressens les émotions à fleur de peau et que tu sais encaisser la concurrence et les refus."
+  },
+  "aircraft-mechanic": {
+    "title": "Technicien de maintenance aéronautique",
+    "summary": "Inspecte, répare et entretient les moteurs, les systèmes et la structure des avions.",
+    "day_in_life": "Effectue les contrôles prévus par le manuel, repère et corrige les pannes, remplace des pièces et signe l'attestation que l'avion est sûr.",
+    "who_fits": "Pour toi si tu es minutieux, que tu aimes résoudre des casse-tête techniques et que tu comprends qu'ici, l'erreur n'est pas une option."
+  },
+  "animator": {
+    "title": "Animateur 2D/3D",
+    "summary": "Donne vie à des personnages et à des objets en créant du mouvement pour des dessins animés, des jeux vidéo et des vidéos.",
+    "day_in_life": "Conçoit et dessine le mouvement image par image ou en 3D, le retouche à partir des retours et veille à ce qu'il soit fluide.",
+    "who_fits": "Pour toi si tu dessines bien, que tu sens le mouvement et que tu es prêt à un travail minutieux du détail."
+  },
+  "automotive-technician": {
+    "title": "Mécanicien automobile",
+    "summary": "Entretient et répare les voitures : de la simple vidange aux diagnostics les plus complexes.",
+    "day_in_life": "Contrôle les voitures, repère les pannes, démonte les ensembles, remplace des pièces et vérifie le résultat.",
+    "who_fits": "Pour toi si la mécanique et les voitures te passionnent et que tu aimes comprendre pourquoi quelque chose ne fonctionne pas."
+  },
+  "carpenter": {
+    "title": "Charpentier",
+    "summary": "Construit et répare des structures et des éléments en bois et dans d'autres matériaux.",
+    "day_in_life": "Mesure et coupe le matériau, monte des structures et des pièces, pose des portes et des escaliers et finit les surfaces.",
+    "who_fits": "Pour toi si tu aimes fabriquer des choses solides de tes mains, que tu mesures deux fois avant de couper et que tu es fier d'une finition propre."
+  },
+  "cnc-machinist": {
+    "title": "Opérateur sur machine à commande numérique",
+    "summary": "Programme et pilote des machines à commande numérique qui usinent des pièces en métal et en plastique.",
+    "day_in_life": "Charge le programme, met en place les outils et le brut, lance la machine, vérifie la première pièce et ajuste le code.",
+    "who_fits": "Pour toi si tu aimes autant les machines que la logique, que tu es méticuleux et que tu prends plaisir à affiner le procédé jusqu'à ce que chaque pièce sorte parfaite."
+  },
+  "dental-hygienist": {
+    "title": "Hygiéniste dentaire",
+    "summary": "Réalise des détartrages professionnels, élimine la plaque et le tartre et apprend aux patients à prendre soin de leurs dents.",
+    "day_in_life": "Examine les dents et les gencives, effectue des nettoyages, réalise des radios et montre aux patients comment entretenir leurs dents.",
+    "who_fits": "Pour toi si tu es précis, que tu as de l'habileté manuelle et que tu veux aider les autres à rester en bonne santé, tout en douceur."
+  },
+  "economist": {
+    "title": "Économiste",
+    "summary": "Étudie comment fonctionnent l'argent, les marchés et l'économie, et explique ce qu'il y a derrière.",
+    "day_in_life": "Recueille et analyse des statistiques, élabore des prévisions, prépare des calculs et des rapports d'analyse et suit les tendances.",
+    "who_fits": "Pour toi si tu aimes la logique et les chiffres et que tu veux comprendre pourquoi l'économie se comporte comme elle le fait."
+  },
+  "electrician": {
+    "title": "Électricien",
+    "summary": "Installe et répare le câblage et les équipements électriques dans les logements, les bâtiments et l'industrie.",
+    "day_in_life": "Tire le câblage, installe des prises et des tableaux électriques, repère et répare les pannes et respecte les règles de sécurité.",
+    "who_fits": "Pour toi si tu aimes travailler de tes mains, que tu es soigneux et que tu sais qu'avec le courant, on ne plaisante pas."
+  },
+  "financial-analyst": {
+    "title": "Analyste financier",
+    "summary": "Analyse les finances et les marchés pour aider une entreprise ou des investisseurs à prendre des décisions sur l'argent.",
+    "day_in_life": "Recueille des données, construit des modèles financiers, évalue le risque et la rentabilité, et prépare des rapports et des recommandations.",
+    "who_fits": "Pour toi si tu es à l'aise avec les chiffres, attentif au détail et que tu aimes peser les options bien à l'avance."
+  },
+  "fitness-trainer": {
+    "title": "Coach sportif",
+    "summary": "Aide les gens à bien s'entraîner et à atteindre leurs objectifs en toute sécurité.",
+    "day_in_life": "Conçoit des programmes d'entraînement, encadre les séances, surveille la technique et motive et soutient ses clients.",
+    "who_fits": "Pour toi si tu aimes le sport, que tu sais expliquer et que tu communiques ton énergie aux autres."
+  },
+  "heavy-equipment-operator": {
+    "title": "Conducteur d'engins de chantier",
+    "summary": "Manœuvre des pelles mécaniques, des chargeuses, des bulldozers et des grues sur les chantiers et dans les carrières.",
+    "day_in_life": "Contrôle l'engin, déplace de la terre et des matériaux, creuse et nivelle le terrain et suit le plan du chantier par tous les temps.",
+    "who_fits": "Pour toi si tu aimes les engins puissants, que tu es serein aux commandes et que les longues journées en plein air ne te font pas peur."
+  },
+  "hr-specialist": {
+    "title": "Chargé de ressources humaines",
+    "summary": "Aide l'entreprise à trouver, recruter et fidéliser les bonnes personnes.",
+    "day_in_life": "Cherche des candidats, mène des entretiens, gère les embauches, aide les nouveaux à s'intégrer et règle les questions du quotidien au travail.",
+    "who_fits": "Pour toi si les gens t'intéressent vraiment et que tu sais écouter et trouver des terrains d'entente."
+  },
+  "hvac-technician": {
+    "title": "Technicien en climatisation",
+    "summary": "Installe et entretient des systèmes de chauffage, de ventilation et de climatisation.",
+    "day_in_life": "Monte les équipements, raccorde les gaines d'air et les circuits de réfrigérant, contrôle les pressions et répare les pannes.",
+    "who_fits": "Pour toi si tu aimes la mécanique, que tu prends soin de tes outils et que tu aimes aller au fond des choses pour comprendre une panne."
+  },
+  "interior-designer": {
+    "title": "Architecte d'intérieur",
+    "summary": "Imagine comment organiser l'espace intérieur d'une maison ou d'un bureau pour qu'il soit beau et pratique.",
+    "day_in_life": "Discute des envies du client, réalise des plans et des visualisations, choisit les matériaux et les meubles et suit le projet jusqu'au bout.",
+    "who_fits": "Pour toi si tu as du goût et le sens de l'espace et que tu aimes autant créer que composer avec un budget."
+  },
+  "lineworker": {
+    "title": "Monteur de lignes électriques",
+    "summary": "Construit et répare les lignes électriques et les équipements qui acheminent le courant jusqu'aux foyers et aux entreprises.",
+    "day_in_life": "Grimpe sur les poteaux ou travaille depuis une nacelle, tire et raccorde des câbles, remplace des équipements et rétablit le courant après les pannes.",
+    "who_fits": "Pour toi si tu n'as peur ni de la hauteur ni du mauvais temps, que tu travailles avec soin en équipe et que tu sais qu'avec le courant, on ne plaisante pas."
+  },
+  "machinist": {
+    "title": "Tourneur-fraiseur",
+    "summary": "Fabrique des pièces métalliques aux dimensions exactes sur des tours, des fraiseuses et des rectifieuses.",
+    "day_in_life": "Lit les plans, prépare la machine, usine la pièce et la contrôle avec des tolérances très serrées.",
+    "who_fits": "Pour toi si tu aimes le travail manuel de précision, que tu vises le dixième de millimètre et que tu prends plaisir à transformer le métal en pièces exactes."
+  },
+  "marketing-manager": {
+    "title": "Responsable marketing",
+    "summary": "Fait la promotion d'un produit : il étudie le public et crée et lance des campagnes publicitaires.",
+    "day_in_life": "Étudie le marché et les clients, planifie des campagnes, travaille avec l'équipe et les prestataires, et analyse les résultats pour ajuster la stratégie.",
+    "who_fits": "Pour toi si tu allies créativité et analyse, que tu aimes comprendre les gens et tester des choses nouvelles."
+  },
+  "medical-assistant": {
+    "title": "Assistant médical",
+    "summary": "Épaule le médecin pendant la consultation : prend les constantes, prépare les patients et tient les dossiers.",
+    "day_in_life": "Accueille les patients, mesure la tension et la température, prépare la salle, met à jour les dossiers et assiste le médecin.",
+    "who_fits": "Pour toi si tu es organisé et chaleureux et que tu aimes maintenir l'ordre tout en aidant les autres."
+  },
+  "musician": {
+    "title": "Musicien",
+    "summary": "Interprète ou compose de la musique : sur scène, en studio ou pour le cinéma et les jeux vidéo.",
+    "day_in_life": "Répète beaucoup, apprend et peaufine les morceaux, joue ou enregistre et travaille son propre son.",
+    "who_fits": "Pour toi si tu aimes la musique par-dessus tout, que tu es discipliné aux répétitions et que tu t'adaptes à des horaires irréguliers."
+  },
+  "paramedic": {
+    "title": "Ambulancier urgentiste",
+    "summary": "Prodigue des soins d'urgence lors des sorties de l'ambulance, souvent dans des situations critiques.",
+    "day_in_life": "Se rend sur les interventions, évalue vite l'état du patient, le prend en charge sur place et pendant le transport et décide sous pression.",
+    "who_fits": "Pour toi si tu gardes ton sang-froid dans le stress, que tu agis vite et que tu veux aider les gens dans leurs moments les plus difficiles."
+  },
+  "photographer": {
+    "title": "Photographe",
+    "summary": "Photographie des personnes, des événements et des objets, en créant des images expressives.",
+    "day_in_life": "Prépare la séance et la lumière, déclenche, sélectionne et retouche les meilleures prises et échange avec les clients.",
+    "who_fits": "Pour toi si tu as le sens du cadrage et de la lumière, que tu guettes le bon moment et que tu aimes le visuel."
+  },
+  "plumber": {
+    "title": "Plombier",
+    "summary": "Installe et répare les canalisations d'eau, de chauffage et d'assainissement ainsi que les sanitaires dans les logements et les bâtiments.",
+    "day_in_life": "Pose et raccorde des tuyaux, installe des lavabos et des WC, repère les fuites et débouche les canalisations.",
+    "who_fits": "Pour toi si tu aimes réparer les choses de tes mains, que le travail salissant ne te dérange pas et que tu mets un point d'honneur à bien faire."
+  },
+  "project-manager": {
+    "title": "Chef de projet",
+    "summary": "Dirige des projets de l'idée au résultat : il planifie, coordonne les équipes et surveille les délais.",
+    "day_in_life": "Élabore le plan, répartit les tâches, anime les réunions, lève les obstacles et tient l'équipe informée.",
+    "who_fits": "Pour toi si tu es organisé, que tu sais négocier et que tu aimes mener les choses jusqu'au bout."
+  },
+  "sales-manager": {
+    "title": "Commercial",
+    "summary": "Aide les clients à choisir un produit et mène la vente jusqu'à sa conclusion.",
+    "day_in_life": "Échange avec les clients, cerne leurs besoins, négocie et conclut des ventes, gère les objections et atteint ses objectifs commerciaux.",
+    "who_fits": "Pour toi si tu es sociable et persévérant et que tu aimes atteindre tes objectifs."
+  },
+  "social-worker": {
+    "title": "Travailleur social",
+    "summary": "Aide les personnes qui traversent des situations difficiles : personnes âgées, familles, personnes en situation de handicap.",
+    "day_in_life": "Rend visite aux personnes dont il s'occupe, les aide au quotidien et dans les démarches, les oriente vers les services adaptés et les soutient.",
+    "who_fits": "Pour toi si tu as bon cœur et des nerfs solides et que tu veux aider les plus vulnérables."
+  },
+  "translator": {
+    "title": "Traducteur",
+    "summary": "Traduit des textes et des discours d'une langue à une autre en préservant le sens et le ton.",
+    "day_in_life": "Traduit des documents, des articles ou des négociations, cherche la formulation juste et consulte dictionnaires et sources.",
+    "who_fits": "Pour toi si tu aimes les langues et les mots, que tu es attentif aux nuances et que tu sais te concentrer."
+  },
+  "video-editor": {
+    "title": "Monteur vidéo",
+    "summary": "Transforme les rushes en vidéo finie : reportages, films, contenus pour les réseaux sociaux.",
+    "day_in_life": "Visionne les rushes, monte les scènes, ajoute le son, les titrages et l'étalonnage, et corrige selon les indications du client.",
+    "who_fits": "Pour toi si tu es persévérant, que tu as le sens du rythme et que tu aimes construire une histoire à partir de fragments."
+  },
+  "welder": {
+    "title": "Soudeur",
+    "summary": "Assemble des pièces métalliques par soudage sur les chantiers, dans les usines et les ateliers.",
+    "day_in_life": "Lit les plans, prépare et nettoie les pièces, soude les assemblages et contrôle leur solidité et leur qualité.",
+    "who_fits": "Pour toi si tu aimes travailler de tes mains, que tu es constant et précis et que le travail physique ne t'effraie pas."
+  },
+  "writer": {
+    "title": "Écrivain",
+    "summary": "Crée des textes de fiction et de non-fiction : livres, nouvelles, scénarios.",
+    "day_in_life": "Invente des intrigues et des personnages, écrit et réécrit son texte, le corrige et cherche des maisons d'édition ou des plateformes où publier.",
+    "who_fits": "Pour toi si tu aimes les mots, que tu observes la vie avec attention et que tu peux travailler seul pendant de longues périodes."
+  }
+}

@@ -1,0 +1,923 @@
+{
+  "country": "FR",
+  "as_of": "2026-07",
+  "note": "Parcours typiques du système éducatif français : université (Licence / Master, avec les filières de santé PASS/L.AS), BUT et BTS, CAP et Bac professionnel pour les métiers, écoles spécialisées et diplôme d'ingénieur, conservatoires et concours de la fonction publique. Indicatif — l'offre et la sélectivité varient selon l'établissement et l'académie ; vérifie toujours sur le site officiel de l'établissement ou sur Parcoursup. Tous les métiers du catalogue sont couverts.",
+  "domains": [
+    {
+      "code": "licence-informatique",
+      "title": "Licence / BUT Informatique",
+      "level": "Université — Licence ou BUT (3 ans)",
+      "ege": [
+        "Bac général (spécialités Maths et/ou NSI recommandées)",
+        "Vœu sur Parcoursup ; le BUT est sélectif sur dossier, la licence l'est peu",
+        "Poursuite fréquente en Master ou en école d'ingénieurs"
+      ],
+      "occupations": [
+        "software-developer",
+        "qa-engineer",
+        "devops-engineer",
+        "game-developer",
+        "cybersecurity-specialist",
+        "data-engineer",
+        "machine-learning-engineer",
+        "database-administrator"
+      ]
+    },
+    {
+      "code": "bts-sio",
+      "title": "BTS Services informatiques aux organisations (SIO)",
+      "level": "Formation professionnelle — BTS (2 ans)",
+      "ege": [
+        "Bac général, technologique (STMG/STI2D) ou Bac pro",
+        "Vœu Parcoursup, sélection sur dossier ; deux options : SLAM (développement) et SISR (réseaux)",
+        "Voie plus courte et concrète que la licence ; poursuite possible en licence pro / BUT"
+      ],
+      "occupations": [
+        "software-developer",
+        "qa-engineer",
+        "systems-administrator",
+        "network-engineer",
+        "it-support-specialist",
+        "devops-engineer",
+        "database-administrator",
+        "cybersecurity-specialist"
+      ]
+    },
+    {
+      "code": "licence-data",
+      "title": "Licence Mathématiques–Informatique puis Master Science des données",
+      "level": "Université — Licence puis Master (3 + 2 ans)",
+      "ege": [
+        "Bac général (spécialité Maths fortement recommandée)",
+        "Licence MIASHS / Maths-Info sur Parcoursup, puis Master sélectif sur dossier",
+        "Les écoles d'ingénieurs offrent aussi un accès à ces métiers"
+      ],
+      "occupations": [
+        "data-scientist",
+        "data-analyst",
+        "data-engineer",
+        "machine-learning-engineer"
+      ]
+    },
+    {
+      "code": "licence-maths",
+      "title": "Licence de Mathématiques",
+      "level": "Université — Licence puis Master (3 + 2 ans)",
+      "ege": [
+        "Bac général (spécialité Maths)",
+        "Peu sélective à l'entrée ; exige de la rigueur et du travail régulier",
+        "Métier d'actuaire : Master spécialisé ou école reconnue par l'Institut des actuaires"
+      ],
+      "occupations": [
+        "statistician",
+        "actuary"
+      ]
+    },
+    {
+      "code": "pass-las-medecine",
+      "title": "Médecine (PASS / L.AS)",
+      "level": "Université — Diplôme d'État de docteur en médecine (9–11 ans)",
+      "ege": [
+        "Bac général (spécialités scientifiques vivement recommandées)",
+        "Parcoursup : PASS (parcours d'accès spécifique santé) ou L.AS (licence accès santé)",
+        "Accès très sélectif en 2e année (numerus apertus fixé par université)"
+      ],
+      "occupations": [
+        "physician"
+      ]
+    },
+    {
+      "code": "de-infirmier",
+      "title": "Diplôme d'État d'infirmier (IFSI)",
+      "level": "Paramédical — Diplôme d'État (3 ans)",
+      "ege": [
+        "Bac (général de préférence) ; entrée via Parcoursup en IFSI",
+        "Sélection sur dossier ; formation en alternance avec des stages cliniques",
+        "Spécialisations ensuite (bloc opératoire, anesthésie, puériculture…)"
+      ],
+      "occupations": [
+        "nurse",
+        "respiratory-therapist",
+        "surgical-technologist"
+      ]
+    },
+    {
+      "code": "de-kine",
+      "title": "Diplôme d'État de masseur-kinésithérapeute",
+      "level": "Paramédical — Diplôme d'État (4 ans après une 1re année)",
+      "ege": [
+        "Bac général (spécialités scientifiques recommandées)",
+        "Accès après une PASS/L.AS ou une L1 STAPS/Biologie, sur classement",
+        "Filière sélective et très demandée"
+      ],
+      "occupations": [
+        "physical-therapist"
+      ]
+    },
+    {
+      "code": "odontologie",
+      "title": "Chirurgien-dentiste (PASS / L.AS)",
+      "level": "Université — Diplôme d'État (6–9 ans)",
+      "ege": [
+        "Bac général (spécialités scientifiques recommandées)",
+        "Parcoursup : PASS ou L.AS, puis accès sélectif à la filière odontologie",
+        "Numerus apertus par université"
+      ],
+      "occupations": [
+        "dentist"
+      ]
+    },
+    {
+      "code": "pharmacie",
+      "title": "Pharmacien (PASS / L.AS)",
+      "level": "Université — Diplôme d'État (6–9 ans)",
+      "ege": [
+        "Bac général (spécialités scientifiques recommandées)",
+        "Parcoursup : PASS ou L.AS, puis accès sélectif à la filière pharmacie",
+        "Débouchés variés : officine, industrie, biologie médicale"
+      ],
+      "occupations": [
+        "pharmacist"
+      ]
+    },
+    {
+      "code": "veterinaire",
+      "title": "Vétérinaire (Écoles nationales vétérinaires)",
+      "level": "École spécialisée — Diplôme d'État (5–6 ans)",
+      "ege": [
+        "Bac général (spécialités scientifiques)",
+        "Voie post-bac sur Parcoursup ou concours après une prépa BCPST",
+        "Filière très sélective, places limitées dans les 4 ENV"
+      ],
+      "occupations": [
+        "veterinarian"
+      ]
+    },
+    {
+      "code": "bts-opticien",
+      "title": "BTS Opticien-lunetier",
+      "level": "Formation professionnelle — BTS (2 ans)",
+      "ege": [
+        "Bac général, techno (STL/STI2D) ou pro ; vœu Parcoursup, sélection sur dossier",
+        "Diplôme réglementé permettant d'exercer et de délivrer des équipements",
+        "Poursuite possible en licence pro (optométrie, contactologie)"
+      ],
+      "occupations": [
+        "optometrist"
+      ]
+    },
+    {
+      "code": "de-ergotherapeute",
+      "title": "Diplôme d'État d'ergothérapeute",
+      "level": "Paramédical — Diplôme d'État (3 ans)",
+      "ege": [
+        "Bac (général de préférence) ; entrée en institut de formation (IFE)",
+        "Accès sur Parcoursup ou après une PASS/L.AS selon les instituts",
+        "Formation en alternance avec des stages"
+      ],
+      "occupations": [
+        "occupational-therapist"
+      ]
+    },
+    {
+      "code": "orthophonie",
+      "title": "Certificat de capacité d'orthophoniste",
+      "level": "Université — diplôme réglementé (5 ans)",
+      "ege": [
+        "Bac général ; accès sur concours propre à chaque centre de formation",
+        "Filière très sélective (épreuves écrites et orales)",
+        "Master intégré, en 5 ans"
+      ],
+      "occupations": [
+        "speech-language-pathologist"
+      ]
+    },
+    {
+      "code": "bts-dietetique",
+      "title": "BTS / BUT Diététique",
+      "level": "Formation professionnelle — BTS ou BUT (2–3 ans)",
+      "ege": [
+        "Bac général, techno (ST2S/STL) ou pro ; vœu Parcoursup, sélection sur dossier",
+        "Diplôme requis pour porter le titre de diététicien",
+        "Stages en milieu hospitalier et en restauration collective"
+      ],
+      "occupations": [
+        "dietitian"
+      ]
+    },
+    {
+      "code": "licence-psychologie",
+      "title": "Licence puis Master de Psychologie",
+      "level": "Université — Licence puis Master (3 + 2 ans)",
+      "ege": [
+        "Bac général (spécialités au choix ; SES, HLP ou sciences appréciées)",
+        "Licence peu sélective, mais le Master (obligatoire pour le titre) l'est fortement",
+        "Le titre de psychologue exige le Master + un stage professionnel"
+      ],
+      "occupations": [
+        "psychologist"
+      ]
+    },
+    {
+      "code": "droit",
+      "title": "Licence puis Master de Droit",
+      "level": "Université — Licence puis Master (3 + 2 ans)",
+      "ege": [
+        "Bac général (spécialités HGGSP, SES ou HLP appréciées)",
+        "Licence peu sélective à l'entrée mais exigeante ; Master sélectif",
+        "Avocat : école du barreau (CRFPA) après le Master ; magistrat : concours de l'ENM"
+      ],
+      "occupations": [
+        "lawyer"
+      ]
+    },
+    {
+      "code": "eco-gestion",
+      "title": "Licence / BUT Gestion (ou école de commerce)",
+      "level": "Université ou école — Licence, BUT ou Programme Grande École (3–5 ans)",
+      "ege": [
+        "Bac général (Maths / SES appréciées) ou techno STMG",
+        "Université et BUT sur Parcoursup ; écoles de commerce sur concours (post-bac ou post-prépa)",
+        "Débouchés larges : gestion, conseil, opérations, produit"
+      ],
+      "occupations": [
+        "accountant",
+        "product-manager",
+        "project-manager",
+        "management-consultant",
+        "operations-manager",
+        "logistician"
+      ]
+    },
+    {
+      "code": "licence-economie",
+      "title": "Licence d'Économie",
+      "level": "Université — Licence puis Master (3 + 2 ans)",
+      "ege": [
+        "Bac général (spécialités Maths et SES recommandées)",
+        "La CPGE ECG est une autre voie vers les métiers de l'économie",
+        "Master pour se spécialiser (économétrie, économie appliquée…)"
+      ],
+      "occupations": [
+        "economist"
+      ]
+    },
+    {
+      "code": "finance",
+      "title": "Licence / Master Finance (ou école de commerce)",
+      "level": "Université ou école — Licence puis Master (3 + 2 ans)",
+      "ege": [
+        "Bac général (Maths recommandée) ; université ou école de commerce",
+        "Master Finance sélectif ; certifications reconnues (CFA) valorisées",
+        "Débouchés : analyse financière, conseil patrimonial"
+      ],
+      "occupations": [
+        "financial-analyst",
+        "financial-advisor"
+      ]
+    },
+    {
+      "code": "marketing",
+      "title": "BUT Techniques de commercialisation / Master Marketing",
+      "level": "Université ou école — BUT, Licence ou Master (3–5 ans)",
+      "ege": [
+        "Bac général ou techno STMG ; BUT TC très demandé, sélection sur dossier",
+        "Écoles de commerce sur concours pour les fonctions marketing/vente",
+        "Alternance fréquente et appréciée des recruteurs"
+      ],
+      "occupations": [
+        "marketing-manager",
+        "sales-manager"
+      ]
+    },
+    {
+      "code": "communication-publicite",
+      "title": "Communication et publicité (universités, écoles)",
+      "level": "Université ou école — Licence puis Master (3–5 ans)",
+      "ege": [
+        "Bac général ; licences Info-com à l'université ou écoles spécialisées",
+        "Master ou école pour la direction artistique / création publicitaire",
+        "Book / portfolio déterminant pour les métiers créatifs"
+      ],
+      "occupations": [
+        "marketing-manager",
+        "art-director"
+      ]
+    },
+    {
+      "code": "ressources-humaines",
+      "title": "Licence / Master Ressources humaines",
+      "level": "Université ou école — Licence puis Master (3 + 2 ans)",
+      "ege": [
+        "Bac général ou techno STMG ; licences gestion / droit / psycho puis Master RH",
+        "BUT GEA option RH et écoles de commerce sont d'autres voies",
+        "Alternance très répandue dans la filière"
+      ],
+      "occupations": [
+        "hr-specialist"
+      ]
+    },
+    {
+      "code": "journalisme",
+      "title": "École de journalisme / Master (écoles reconnues)",
+      "level": "École ou université — Master (bac+5)",
+      "ege": [
+        "Souvent une licence d'abord, puis concours d'entrée en école de journalisme",
+        "14 écoles reconnues par la profession (CFJ, ESJ Lille, IPJ…)",
+        "Sélection exigeante : culture générale et épreuves pratiques"
+      ],
+      "occupations": [
+        "journalist"
+      ]
+    },
+    {
+      "code": "audiovisuel",
+      "title": "BTS / Licence Métiers de l'audiovisuel",
+      "level": "Formation professionnelle ou université — BTS ou Licence (2–3 ans)",
+      "ege": [
+        "Bac général, techno ou pro ; BTS Métiers de l'audiovisuel sélectif sur dossier",
+        "Options montage, image, son selon le métier visé",
+        "Portfolio / réalisations personnelles valorisés"
+      ],
+      "occupations": [
+        "video-editor"
+      ]
+    },
+    {
+      "code": "professorat",
+      "title": "Licence + Master MEEF + concours",
+      "level": "Université — Licence puis Master MEEF, avec concours (5 ans)",
+      "ege": [
+        "Licence dans la discipline enseignée, puis Master MEEF",
+        "Concours de recrutement : CRPE (professeur des écoles) ou CAPES/agrégation (second degré)",
+        "Année de stage rémunérée après réussite au concours"
+      ],
+      "occupations": [
+        "teacher"
+      ]
+    },
+    {
+      "code": "orientation-psyen",
+      "title": "Conseiller d'orientation — psychologue de l'Éducation nationale",
+      "level": "Université — Master + concours (5 ans)",
+      "ege": [
+        "Licence de psychologie puis Master, avec concours de PsyEN (spécialité EDO)",
+        "Le conseiller principal d'éducation (CPE) passe un autre concours dédié",
+        "Postes en établissements et en CIO"
+      ],
+      "occupations": [
+        "school-counselor"
+      ]
+    },
+    {
+      "code": "metiers-livre",
+      "title": "Licence / Master Métiers du livre et de la documentation",
+      "level": "Université — Licence puis Master (3 + 2 ans)",
+      "ege": [
+        "Bac général ; BUT Information-communication option métiers du livre possible",
+        "Concours de la fonction publique pour les bibliothèques d'État et territoriales",
+        "Master pour les postes de conservateur / documentaliste"
+      ],
+      "occupations": [
+        "librarian"
+      ]
+    },
+    {
+      "code": "de-assistant-social",
+      "title": "Diplôme d'État d'assistant de service social",
+      "level": "Travail social — Diplôme d'État (3 ans)",
+      "ege": [
+        "Bac ; entrée en établissement de formation en travail social via Parcoursup",
+        "Sélection sur dossier et entretien ; formation en alternance avec des stages",
+        "Diplôme reconnu au grade de licence"
+      ],
+      "occupations": [
+        "social-worker"
+      ]
+    },
+    {
+      "code": "traduction",
+      "title": "Master LEA / Traduction (universités, écoles ESIT-ISIT)",
+      "level": "Université ou école — Master (bac+5)",
+      "ege": [
+        "Licence LLCER ou LEA, avec deux langues solides",
+        "Master spécialisé (traduction, interprétation) sélectif ; écoles ESIT / ISIT sur concours",
+        "Séjours à l'étranger fortement conseillés"
+      ],
+      "occupations": [
+        "translator"
+      ]
+    },
+    {
+      "code": "lettres",
+      "title": "Licence de Lettres",
+      "level": "Université — Licence puis Master (3 + 2 ans)",
+      "ege": [
+        "Bac général (spécialités HLP, langues appréciées)",
+        "Voie exigeante en lecture et en écriture ; débouchés variés (édition, écriture, enseignement)",
+        "Le métier d'auteur se construit surtout par la pratique et les publications"
+      ],
+      "occupations": [
+        "writer"
+      ]
+    },
+    {
+      "code": "dn-made-design",
+      "title": "DN MADE / Licence / écoles de design",
+      "level": "Formation supérieure d'art — DN MADE ou école (3–5 ans)",
+      "ege": [
+        "Bac général, techno STD2A ou pro ; le DN MADE remplace les BTS design",
+        "Sélection sur dossier + portfolio ; écoles d'art parfois sur concours",
+        "Mentions selon le métier : graphisme, numérique, espace"
+      ],
+      "occupations": [
+        "graphic-designer",
+        "ux-ui-designer",
+        "interior-designer",
+        "art-director"
+      ]
+    },
+    {
+      "code": "design-industriel",
+      "title": "DN MADE / Diplôme d'ingénieur en design industriel",
+      "level": "École ou université — Bac+3 à Bac+5",
+      "ege": [
+        "Bac général ou STD2A ; DN MADE mention objet, ou écoles de design produit",
+        "Portfolio déterminant ; certaines voies passent par une école d'ingénieurs",
+        "Alterne créativité et contraintes techniques de fabrication"
+      ],
+      "occupations": [
+        "industrial-designer"
+      ]
+    },
+    {
+      "code": "architecture",
+      "title": "Diplôme d'État d'architecte (ENSA)",
+      "level": "École nationale supérieure d'architecture (5 ans)",
+      "ege": [
+        "Bac général ; admission en ENSA sur dossier et entretien via Parcoursup",
+        "Filière sélective ; cursus en deux cycles (licence + master)",
+        "HMONP requise pour exercer en son nom propre"
+      ],
+      "occupations": [
+        "architect"
+      ]
+    },
+    {
+      "code": "ingenieur-mecanique",
+      "title": "Diplôme d'ingénieur / Licence-Master Mécanique",
+      "level": "École d'ingénieurs ou université — Bac+5",
+      "ege": [
+        "Bac général (Maths, Physique) ; écoles post-bac, post-prépa (CPGE) ou via BUT/licence",
+        "Le diplôme d'ingénieur est délivré par une école habilitée par la CTI",
+        "Débouchés en bureau d'études, production, R&D"
+      ],
+      "occupations": [
+        "mechanical-engineer"
+      ]
+    },
+    {
+      "code": "ingenieur-genie-civil",
+      "title": "Diplôme d'ingénieur / Master Génie civil",
+      "level": "École d'ingénieurs ou université — Bac+5",
+      "ege": [
+        "Bac général (Maths, Physique) ; écoles post-bac/post-prépa ou parcours universitaire",
+        "BUT Génie civil comme voie intermédiaire vers le métier",
+        "Chantiers, structures, ouvrages d'art"
+      ],
+      "occupations": [
+        "civil-engineer"
+      ]
+    },
+    {
+      "code": "ingenieur-electrique",
+      "title": "Diplôme d'ingénieur / BUT-Licence Génie électrique",
+      "level": "École d'ingénieurs ou université — Bac+3 à Bac+5",
+      "ege": [
+        "Bac général (Maths, Physique) ou techno STI2D",
+        "BUT Génie électrique et informatique industrielle (GEII) très professionnalisant",
+        "Écoles d'ingénieurs pour les postes de conception"
+      ],
+      "occupations": [
+        "electrical-engineer"
+      ]
+    },
+    {
+      "code": "licence-biologie",
+      "title": "Licence de Biologie (Sciences de la vie)",
+      "level": "Université — Licence puis Master (3 + 2 ans)",
+      "ege": [
+        "Bac général (spécialités SVT, Physique-Chimie)",
+        "Master pour se spécialiser (recherche, environnement, biotech)",
+        "La recherche exige souvent un doctorat"
+      ],
+      "occupations": [
+        "biologist"
+      ]
+    },
+    {
+      "code": "licence-chimie",
+      "title": "Licence de Chimie",
+      "level": "Université — Licence puis Master (3 + 2 ans)",
+      "ege": [
+        "Bac général (spécialités Physique-Chimie, Maths)",
+        "BUT Chimie comme voie professionnalisante ; écoles d'ingénieurs chimie",
+        "Débouchés en laboratoire, industrie, contrôle qualité"
+      ],
+      "occupations": [
+        "chemist"
+      ]
+    },
+    {
+      "code": "sciences-environnement",
+      "title": "Licence Sciences de l'environnement",
+      "level": "Université — Licence puis Master (3 + 2 ans)",
+      "ege": [
+        "Bac général (spécialités SVT, Physique-Chimie, Géographie)",
+        "Master pour se spécialiser (écologie, gestion des milieux, climat)",
+        "Terrain, mesures et analyse de données"
+      ],
+      "occupations": [
+        "environmental-scientist"
+      ]
+    },
+    {
+      "code": "urbanisme",
+      "title": "Licence Géographie-Aménagement puis Master Urbanisme",
+      "level": "Université — Licence puis Master (3 + 2 ans)",
+      "ege": [
+        "Bac général (HGGSP, Maths ou SES appréciées)",
+        "Master d'urbanisme sélectif ; l'Institut d'urbanisme forme aux métiers de la ville",
+        "Travail avec collectivités, bureaux d'études, agences d'urbanisme"
+      ],
+      "occupations": [
+        "urban-planner"
+      ]
+    },
+    {
+      "code": "staps",
+      "title": "Licence STAPS / BPJEPS",
+      "level": "Université ou brevet professionnel — Licence (3 ans) ou BPJEPS",
+      "ege": [
+        "Bac général ou techno ; STAPS sur Parcoursup (mention Entraînement / APAS)",
+        "Le BPJEPS (Activités de la forme) est une voie plus courte pour coacher",
+        "Carte professionnelle obligatoire pour encadrer contre rémunération"
+      ],
+      "occupations": [
+        "fitness-trainer"
+      ]
+    },
+    {
+      "code": "but-mmi-animation",
+      "title": "BUT MMI / écoles d'animation et de jeu vidéo",
+      "level": "Université ou école — BUT ou école (3–5 ans)",
+      "ege": [
+        "Bac général ou STD2A ; BUT MMI sélectif sur dossier, écoles sur portfolio + concours",
+        "Portfolio / démo déterminant pour l'animation et le jeu vidéo",
+        "Écoles spécialisées reconnues (souvent payantes)"
+      ],
+      "occupations": [
+        "animator",
+        "game-developer"
+      ]
+    },
+    {
+      "code": "de-manipulateur-radio",
+      "title": "Manipulateur en électroradiologie médicale (DE / DTS)",
+      "level": "Paramédical — Diplôme d'État ou DTS (3 ans)",
+      "ege": [
+        "Bac général (spécialités scientifiques recommandées) ; entrée via Parcoursup",
+        "Deux diplômes possibles (DE en IFMEM ou DTS IMRT), sélection sur dossier",
+        "Formation en alternance avec des stages hospitaliers"
+      ],
+      "occupations": [
+        "radiologic-technologist"
+      ]
+    },
+    {
+      "code": "aide-soignant",
+      "title": "Diplôme d'État d'aide-soignant / Bac pro ASSP",
+      "level": "Formation professionnelle — Diplôme d'État (≈1 an) ou Bac pro",
+      "ege": [
+        "Accessible sans le bac ; entrée en institut de formation sur dossier et entretien",
+        "Le Bac pro ASSP (accompagnement, soins et services à la personne) est une voie lycée",
+        "Formation courte et très professionnalisante"
+      ],
+      "occupations": [
+        "medical-assistant"
+      ]
+    },
+    {
+      "code": "bts-abm",
+      "title": "BTS Analyses de biologie médicale (ABM)",
+      "level": "Formation professionnelle — BTS (2 ans)",
+      "ege": [
+        "Bac général (spécialités scientifiques) ou techno STL",
+        "Vœu Parcoursup, sélection sur dossier",
+        "Travail en laboratoire d'analyses médicales (prélèvements, analyses)"
+      ],
+      "occupations": [
+        "phlebotomist"
+      ]
+    },
+    {
+      "code": "assistant-dentaire",
+      "title": "Assistant dentaire (titre professionnel en alternance)",
+      "level": "Formation professionnelle — titre en alternance (≈18 mois)",
+      "ege": [
+        "Souvent le bac ; formation en alternance dans un cabinet dentaire",
+        "Contrat de professionnalisation, sélection par l'employeur et le centre",
+        "Titre reconnu pour exercer au fauteuil et à la stérilisation"
+      ],
+      "occupations": [
+        "dental-hygienist"
+      ]
+    },
+    {
+      "code": "de-ambulancier",
+      "title": "DE Ambulancier / secours (sapeur-pompier)",
+      "level": "Formation professionnelle — Diplôme d'État (quelques mois) ou concours",
+      "ege": [
+        "Accessible sans le bac ; DE Ambulancier en institut de formation",
+        "Autre voie du secours d'urgence : sapeur-pompier professionnel sur concours",
+        "Permis de conduire et aptitude médicale requis"
+      ],
+      "occupations": [
+        "paramedic"
+      ]
+    },
+    {
+      "code": "cap-cuisine",
+      "title": "CAP Cuisine / Bac pro Cuisine",
+      "level": "Formation professionnelle — CAP (2 ans) ou Bac pro (3 ans)",
+      "ege": [
+        "Accessible après la 3e ; souvent en apprentissage",
+        "CAP pour entrer vite en cuisine ; Bac pro / BP pour évoluer vers chef",
+        "Poursuite possible en BTS management en hôtellerie-restauration"
+      ],
+      "occupations": [
+        "chef"
+      ]
+    },
+    {
+      "code": "cap-electricien",
+      "title": "CAP / Bac pro Électricité (MELEC)",
+      "level": "Formation professionnelle — CAP (2 ans) ou Bac pro (3 ans)",
+      "ege": [
+        "Accessible après la 3e ; formation souvent en apprentissage",
+        "Bac pro MELEC (métiers de l'électricité et de ses environnements connectés)",
+        "Habilitations électriques exigées sur le terrain"
+      ],
+      "occupations": [
+        "electrician",
+        "lineworker"
+      ]
+    },
+    {
+      "code": "cap-maintenance-auto",
+      "title": "CAP / Bac pro Maintenance des véhicules",
+      "level": "Formation professionnelle — CAP (2 ans) ou Bac pro (3 ans)",
+      "ege": [
+        "Accessible après la 3e ; apprentissage très courant",
+        "Options voitures particulières, véhicules de transport ou motocycles",
+        "Poursuite en BTS Maintenance des véhicules pour se spécialiser"
+      ],
+      "occupations": [
+        "automotive-technician"
+      ]
+    },
+    {
+      "code": "cap-chaudronnerie-soudage",
+      "title": "CAP / Bac pro Chaudronnerie–Soudage",
+      "level": "Formation professionnelle — CAP (2 ans) ou Bac pro (3 ans)",
+      "ege": [
+        "Accessible après la 3e ; souvent en apprentissage",
+        "Bac pro Technicien en chaudronnerie industrielle ; titres de soudeur",
+        "Certifications de soudage (licences) valorisées en industrie"
+      ],
+      "occupations": [
+        "welder"
+      ]
+    },
+    {
+      "code": "cap-plomberie",
+      "title": "CAP / Bac pro Installateur sanitaire (plomberie)",
+      "level": "Formation professionnelle — CAP (2 ans) ou Bac pro (3 ans)",
+      "ege": [
+        "Accessible après la 3e ; apprentissage fréquent",
+        "CAP Monteur en installations sanitaires, puis Bac pro / BP pour évoluer",
+        "Métier en tension, débouchés nombreux"
+      ],
+      "occupations": [
+        "plumber"
+      ]
+    },
+    {
+      "code": "bts-fed-clim",
+      "title": "CAP / BTS Fluides, énergies, domotique (froid et climatisation)",
+      "level": "Formation professionnelle — CAP à BTS (2–4 ans)",
+      "ege": [
+        "Accessible après la 3e pour le CAP ; BTS FED après le bac",
+        "Option génie frigorifique et conditionnement d'air",
+        "Attestation de manipulation des fluides frigorigènes requise"
+      ],
+      "occupations": [
+        "hvac-technician"
+      ]
+    },
+    {
+      "code": "cap-menuiserie",
+      "title": "CAP / Bac pro Menuiserie",
+      "level": "Formation professionnelle — CAP (2 ans) ou Bac pro (3 ans)",
+      "ege": [
+        "Accessible après la 3e ; souvent en apprentissage",
+        "CAP Menuisier, puis Bac pro Technicien menuisier-agenceur",
+        "Travail en atelier et sur chantier"
+      ],
+      "occupations": [
+        "carpenter"
+      ]
+    },
+    {
+      "code": "cap-usinage",
+      "title": "CAP / Bac pro / BTS Usinage",
+      "level": "Formation professionnelle — CAP à BTS (2–4 ans)",
+      "ege": [
+        "Accessible après la 3e pour le CAP ; Bac pro puis BTS pour la commande numérique",
+        "Lecture de plans, machines-outils et centres à commande numérique (CN)",
+        "Industrie mécanique et aéronautique très demandeuses"
+      ],
+      "occupations": [
+        "machinist",
+        "cnc-machinist"
+      ]
+    },
+    {
+      "code": "conduite-engins",
+      "title": "CAP / titre pro Conduite d'engins de chantier",
+      "level": "Formation professionnelle — CAP ou titre professionnel",
+      "ege": [
+        "Accessible après la 3e ou en reconversion (titre pro AFPA)",
+        "CACES obligatoire pour conduire les engins",
+        "Travaux publics et carrières"
+      ],
+      "occupations": [
+        "heavy-equipment-operator"
+      ]
+    },
+    {
+      "code": "bac-pro-aeronautique",
+      "title": "Bac pro / BTS Aéronautique (maintenance)",
+      "level": "Formation professionnelle — Bac pro puis BTS (3–5 ans)",
+      "ege": [
+        "Bac pro Aéronautique option avionique ou systèmes",
+        "BTS Aéronautique pour les postes techniques ; agréments Part-66 pour la maintenance",
+        "Anglais technique indispensable"
+      ],
+      "occupations": [
+        "aircraft-mechanic"
+      ]
+    },
+    {
+      "code": "bts-photographie",
+      "title": "BTS Photographie",
+      "level": "Formation professionnelle — BTS (2 ans)",
+      "ege": [
+        "Bac général, techno STD2A ou pro ; vœu Parcoursup + book",
+        "Sélection sur dossier et portfolio",
+        "Poursuite possible en écoles d'art / licence pro"
+      ],
+      "occupations": [
+        "photographer"
+      ]
+    },
+    {
+      "code": "bts-metiers-son",
+      "title": "BTS Métiers de l'audiovisuel (option son)",
+      "level": "Formation professionnelle — BTS (2 ans)",
+      "ege": [
+        "Bac général (spécialités scientifiques appréciées) ou techno",
+        "Sélection sur dossier ; option métiers du son",
+        "Écoles spécialisées (INA, ENS Louis-Lumière) comme voie d'excellence"
+      ],
+      "occupations": [
+        "sound-engineer"
+      ]
+    },
+    {
+      "code": "bts-commerce",
+      "title": "BTS NDRC / MCO (commerce et relation client)",
+      "level": "Formation professionnelle — BTS (2 ans)",
+      "ege": [
+        "Bac général, techno STMG ou pro ; alternance très répandue",
+        "NDRC (négociation, relation client) ou MCO (management commercial opérationnel)",
+        "L'agent immobilier peut aussi passer par le BTS Professions immobilières"
+      ],
+      "occupations": [
+        "sales-manager",
+        "real-estate-agent"
+      ]
+    },
+    {
+      "code": "bts-gestion-compta",
+      "title": "BTS Comptabilité-gestion / Gestion de la PME",
+      "level": "Formation professionnelle — BTS (2 ans)",
+      "ege": [
+        "Bac général ou techno STMG ; vœu Parcoursup, alternance possible",
+        "Poursuite vers le DCG / DSCG pour l'expertise comptable",
+        "L'assurance recrute aussi via des BTS et écoles spécialisées"
+      ],
+      "occupations": [
+        "accountant",
+        "insurance-agent"
+      ]
+    },
+    {
+      "code": "but-logistique",
+      "title": "BUT / BTS Gestion des transports et logistique",
+      "level": "Formation professionnelle — BUT ou BTS (2–3 ans)",
+      "ege": [
+        "Bac général ou techno STMG ; sélection sur dossier via Parcoursup",
+        "Alternance appréciée ; secteur qui recrute beaucoup",
+        "Poursuite possible en licence pro / master supply chain"
+      ],
+      "occupations": [
+        "logistician"
+      ]
+    },
+    {
+      "code": "conservatoire-musique",
+      "title": "Conservatoire (CNSMD) / écoles supérieures de musique",
+      "level": "Enseignement supérieur artistique (variable)",
+      "ege": [
+        "Pratique musicale solide, souvent depuis l'enfance (conservatoire à rayonnement)",
+        "Entrée sur concours ; DNSPM en établissement supérieur",
+        "Le parcours se construit autant par la scène que par le diplôme"
+      ],
+      "occupations": [
+        "musician"
+      ]
+    },
+    {
+      "code": "conservatoire-theatre",
+      "title": "Conservatoire / écoles supérieures d'art dramatique",
+      "level": "Enseignement supérieur artistique (2–3 ans)",
+      "ege": [
+        "Entrée sur concours (auditions) ; niveau bac généralement demandé",
+        "Écoles nationales (CNSAD, ENSATT, TNS…) très sélectives",
+        "Cours privés et pratique de la scène en complément"
+      ],
+      "occupations": [
+        "actor"
+      ]
+    },
+    {
+      "code": "concours-police",
+      "title": "Concours de gardien de la paix (Police nationale)",
+      "level": "Concours de la fonction publique + école de police",
+      "ege": [
+        "Concours ouvert avec le bac (gardien de la paix) ; nationalité française",
+        "Épreuves écrites, sportives et entretien ; conditions d'aptitude physique",
+        "Formation rémunérée en école de police après réussite"
+      ],
+      "occupations": [
+        "police-officer"
+      ]
+    },
+    {
+      "code": "concours-pompier",
+      "title": "Concours de sapeur-pompier professionnel",
+      "level": "Concours de la fonction publique territoriale",
+      "ege": [
+        "Concours de sapeur-pompier professionnel (souvent niveau bac ou brevet)",
+        "Épreuves sportives exigeantes et aptitude médicale",
+        "Le volontariat (SPV) est une porte d'entrée fréquente"
+      ],
+      "occupations": [
+        "firefighter"
+      ]
+    },
+    {
+      "code": "formation-pilote-atpl",
+      "title": "Formation de pilote de ligne (ATPL, écoles agréées)",
+      "level": "École professionnelle agréée (hors Parcoursup)",
+      "ege": [
+        "Bac général (Maths, Physique, anglais solides)",
+        "Licence ATPL en école agréée (ENAC ou écoles privées) ; sélection et coût élevés",
+        "Certificat médical de classe 1 obligatoire"
+      ],
+      "occupations": [
+        "airline-pilot"
+      ]
+    }
+  ],
+  "milestones": [
+    { "stage": "school", "date_rule": "11-15", "title": "Explore les métiers et les formations (ONISEP) et commence à faire ta liste" },
+    { "stage": "school", "date_rule": "12-20", "title": "Ouverture de la plateforme Parcoursup : découvre les formations et leurs attendus" },
+    { "stage": "school", "date_rule": "01-15", "title": "Formulation des vœux sur Parcoursup" },
+    { "stage": "school", "date_rule": "03-13", "title": "Date limite pour formuler tes vœux" },
+    { "stage": "school", "date_rule": "04-03", "title": "Finalise ton dossier et confirme tes vœux" },
+    { "stage": "school", "date_rule": "06-02", "title": "Ouverture de la phase d'admission : réponds aux propositions" },
+    { "stage": "school", "date_rule": "09-01", "title": "Rentrée dans ta formation" }
+  ]
+}

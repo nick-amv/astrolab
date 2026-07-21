@@ -1,6 +1,7 @@
 <script lang="ts">
   import { goto } from "$app/navigation";
   import { startAssessment } from "$lib/api";
+  import { countryFor } from "$lib/geo";
   import { m } from "$lib/paraglide/messages";
   import { getLocale, localizeHref } from "$lib/paraglide/runtime";
 
@@ -25,7 +26,7 @@
     if (!age || busy) return;
     busy = true;
     try {
-      const country = { ru: "RU", en: "US", es: "ES" }[getLocale()] ?? "RU";
+      const country = countryFor(getLocale());
       const { session_id } = await startAssessment({
         age_band: age,
         locale: getLocale(),

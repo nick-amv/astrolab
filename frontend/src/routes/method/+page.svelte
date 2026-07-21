@@ -46,6 +46,16 @@
         ],
       },
     ],
+    fr: [
+      {
+        t: m.method_data_fr_t(),
+        d: m.method_data_fr_d(),
+        links: [
+          { label: m.src_adzuna(), href: "https://www.adzuna.fr/" },
+          { label: m.src_insee(), href: "https://www.insee.fr/" },
+        ],
+      },
+    ],
     ru: [
       {
         t: m.method_data_ru_t(),

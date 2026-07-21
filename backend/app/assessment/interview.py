@@ -29,7 +29,7 @@ _AXIS = {
     "E": "Enterprising",
     "C": "Conventional",
 }
-_LANG = {"ru": "Russian", "en": "English", "de": "German", "es": "Spanish"}
+_LANG = {"ru": "Russian", "en": "English", "de": "German", "es": "Spanish", "fr": "French"}
 
 _GEN_SYSTEM = (
     "You are a warm, honest career-guidance mentor for teenagers and adults. "

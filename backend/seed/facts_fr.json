@@ -1,0 +1,810 @@
+{
+  "country": "FR",
+  "source_key": "insee-ses",
+  "source_name": "INSEE Structure des salaires 2022 — distribution par groupe socioprofessionnel (brut annuel, secteur privé), rééchelonnée 2024",
+  "source_url": "https://www.insee.fr/fr/statistiques/8541661",
+  "as_of_date": "2024-01-01",
+  "_doc": "GROUP-level base (ISCO-08 major group), coarse by design; Adzuna upgrades individual professions where enough live ads exist. p25/p75 interpolated from deciles, x1.073 to 2024. isco_group is kept for provenance, not seeded.",
+  "facts": [
+    {
+      "slug": "accountant",
+      "salary_low": 29000,
+      "salary_high": 47200,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 37200,
+      "isco_group": 3
+    },
+    {
+      "slug": "actuary",
+      "salary_low": 35700,
+      "salary_high": 67600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 48800,
+      "isco_group": 2
+    },
+    {
+      "slug": "aircraft-mechanic",
+      "salary_low": 29000,
+      "salary_high": 47200,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 37200,
+      "isco_group": 3
+    },
+    {
+      "slug": "animator",
+      "salary_low": 35700,
+      "salary_high": 67600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 48800,
+      "isco_group": 2
+    },
+    {
+      "slug": "architect",
+      "salary_low": 35700,
+      "salary_high": 67600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 48800,
+      "isco_group": 2
+    },
+    {
+      "slug": "art-director",
+      "salary_low": 35700,
+      "salary_high": 67600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 48800,
+      "isco_group": 2
+    },
+    {
+      "slug": "automotive-technician",
+      "salary_low": 25400,
+      "salary_high": 39000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 31200,
+      "isco_group": 8
+    },
+    {
+      "slug": "biologist",
+      "salary_low": 35700,
+      "salary_high": 67600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 48800,
+      "isco_group": 2
+    },
+    {
+      "slug": "carpenter",
+      "salary_low": 25400,
+      "salary_high": 39000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 31200,
+      "isco_group": 8
+    },
+    {
+      "slug": "chef",
+      "salary_low": 20700,
+      "salary_high": 33500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 27000,
+      "isco_group": 5
+    },
+    {
+      "slug": "chemist",
+      "salary_low": 35700,
+      "salary_high": 67600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 48800,
+      "isco_group": 2
+    },
+    {
+      "slug": "civil-engineer",
+      "salary_low": 35700,
+      "salary_high": 67600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 48800,
+      "isco_group": 2
+    },
+    {
+      "slug": "cnc-machinist",
+      "salary_low": 25400,
+      "salary_high": 39000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 31200,
+      "isco_group": 8
+    },
+    {
+      "slug": "cybersecurity-specialist",
+      "salary_low": 35700,
+      "salary_high": 67600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 48800,
+      "isco_group": 2
+    },
+    {
+      "slug": "data-analyst",
+      "salary_low": 35700,
+      "salary_high": 67600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 48800,
+      "isco_group": 2
+    },
+    {
+      "slug": "data-engineer",
+      "salary_low": 35700,
+      "salary_high": 67600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 48800,
+      "isco_group": 2
+    },
+    {
+      "slug": "data-scientist",
+      "salary_low": 35700,
+      "salary_high": 67600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 48800,
+      "isco_group": 2
+    },
+    {
+      "slug": "database-administrator",
+      "salary_low": 35700,
+      "salary_high": 67600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 48800,
+      "isco_group": 2
+    },
+    {
+      "slug": "dental-hygienist",
+      "salary_low": 29000,
+      "salary_high": 47200,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 37200,
+      "isco_group": 3
+    },
+    {
+      "slug": "devops-engineer",
+      "salary_low": 35700,
+      "salary_high": 67600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 48800,
+      "isco_group": 2
+    },
+    {
+      "slug": "dietitian",
+      "salary_low": 29000,
+      "salary_high": 47200,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 37200,
+      "isco_group": 3
+    },
+    {
+      "slug": "economist",
+      "salary_low": 35700,
+      "salary_high": 67600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 48800,
+      "isco_group": 2
+    },
+    {
+      "slug": "electrical-engineer",
+      "salary_low": 35700,
+      "salary_high": 67600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 48800,
+      "isco_group": 2
+    },
+    {
+      "slug": "electrician",
+      "salary_low": 25400,
+      "salary_high": 39000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 31200,
+      "isco_group": 8
+    },
+    {
+      "slug": "environmental-scientist",
+      "salary_low": 35700,
+      "salary_high": 67600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 48800,
+      "isco_group": 2
+    },
+    {
+      "slug": "financial-advisor",
+      "salary_low": 35700,
+      "salary_high": 67600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 48800,
+      "isco_group": 2
+    },
+    {
+      "slug": "financial-analyst",
+      "salary_low": 35700,
+      "salary_high": 67600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 48800,
+      "isco_group": 2
+    },
+    {
+      "slug": "fitness-trainer",
+      "salary_low": 29000,
+      "salary_high": 47200,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 37200,
+      "isco_group": 3
+    },
+    {
+      "slug": "game-developer",
+      "salary_low": 35700,
+      "salary_high": 67600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 48800,
+      "isco_group": 2
+    },
+    {
+      "slug": "graphic-designer",
+      "salary_low": 35700,
+      "salary_high": 67600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 48800,
+      "isco_group": 2
+    },
+    {
+      "slug": "heavy-equipment-operator",
+      "salary_low": 25400,
+      "salary_high": 39000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 31200,
+      "isco_group": 8
+    },
+    {
+      "slug": "hr-specialist",
+      "salary_low": 35700,
+      "salary_high": 67600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 48800,
+      "isco_group": 2
+    },
+    {
+      "slug": "hvac-technician",
+      "salary_low": 25400,
+      "salary_high": 39000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 31200,
+      "isco_group": 8
+    },
+    {
+      "slug": "industrial-designer",
+      "salary_low": 35700,
+      "salary_high": 67600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 48800,
+      "isco_group": 2
+    },
+    {
+      "slug": "insurance-agent",
+      "salary_low": 29000,
+      "salary_high": 47200,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 37200,
+      "isco_group": 3
+    },
+    {
+      "slug": "interior-designer",
+      "salary_low": 35700,
+      "salary_high": 67600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 48800,
+      "isco_group": 2
+    },
+    {
+      "slug": "it-support-specialist",
+      "salary_low": 29000,
+      "salary_high": 47200,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 37200,
+      "isco_group": 3
+    },
+    {
+      "slug": "lawyer",
+      "salary_low": 35700,
+      "salary_high": 67600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 48800,
+      "isco_group": 2
+    },
+    {
+      "slug": "lineworker",
+      "salary_low": 25400,
+      "salary_high": 39000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 31200,
+      "isco_group": 8
+    },
+    {
+      "slug": "logistician",
+      "salary_low": 29000,
+      "salary_high": 47200,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 37200,
+      "isco_group": 3
+    },
+    {
+      "slug": "machine-learning-engineer",
+      "salary_low": 35700,
+      "salary_high": 67600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 48800,
+      "isco_group": 2
+    },
+    {
+      "slug": "machinist",
+      "salary_low": 25400,
+      "salary_high": 39000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 31200,
+      "isco_group": 8
+    },
+    {
+      "slug": "management-consultant",
+      "salary_low": 35700,
+      "salary_high": 67600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 48800,
+      "isco_group": 2
+    },
+    {
+      "slug": "marketing-manager",
+      "salary_low": 35700,
+      "salary_high": 67600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 48800,
+      "isco_group": 2
+    },
+    {
+      "slug": "mechanical-engineer",
+      "salary_low": 35700,
+      "salary_high": 67600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 48800,
+      "isco_group": 2
+    },
+    {
+      "slug": "medical-assistant",
+      "salary_low": 29000,
+      "salary_high": 47200,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 37200,
+      "isco_group": 3
+    },
+    {
+      "slug": "network-engineer",
+      "salary_low": 35700,
+      "salary_high": 67600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 48800,
+      "isco_group": 2
+    },
+    {
+      "slug": "nurse",
+      "salary_low": 29000,
+      "salary_high": 47200,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 37200,
+      "isco_group": 3
+    },
+    {
+      "slug": "occupational-therapist",
+      "salary_low": 35700,
+      "salary_high": 67600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 48800,
+      "isco_group": 2
+    },
+    {
+      "slug": "operations-manager",
+      "salary_low": 45600,
+      "salary_high": 88700,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 61100,
+      "isco_group": 1
+    },
+    {
+      "slug": "optometrist",
+      "salary_low": 29000,
+      "salary_high": 47200,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 37200,
+      "isco_group": 3
+    },
+    {
+      "slug": "paramedic",
+      "salary_low": 29000,
+      "salary_high": 47200,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 37200,
+      "isco_group": 3
+    },
+    {
+      "slug": "pharmacist",
+      "salary_low": 35700,
+      "salary_high": 67600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 48800,
+      "isco_group": 2
+    },
+    {
+      "slug": "phlebotomist",
+      "salary_low": 29000,
+      "salary_high": 47200,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 37200,
+      "isco_group": 3
+    },
+    {
+      "slug": "photographer",
+      "salary_low": 29000,
+      "salary_high": 47200,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 37200,
+      "isco_group": 3
+    },
+    {
+      "slug": "physical-therapist",
+      "salary_low": 35700,
+      "salary_high": 67600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 48800,
+      "isco_group": 2
+    },
+    {
+      "slug": "physician",
+      "salary_low": 35700,
+      "salary_high": 67600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 48800,
+      "isco_group": 2
+    },
+    {
+      "slug": "plumber",
+      "salary_low": 25400,
+      "salary_high": 39000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 31200,
+      "isco_group": 8
+    },
+    {
+      "slug": "product-manager",
+      "salary_low": 35700,
+      "salary_high": 67600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 48800,
+      "isco_group": 2
+    },
+    {
+      "slug": "project-manager",
+      "salary_low": 35700,
+      "salary_high": 67600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 48800,
+      "isco_group": 2
+    },
+    {
+      "slug": "psychologist",
+      "salary_low": 35700,
+      "salary_high": 67600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 48800,
+      "isco_group": 2
+    },
+    {
+      "slug": "qa-engineer",
+      "salary_low": 35700,
+      "salary_high": 67600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 48800,
+      "isco_group": 2
+    },
+    {
+      "slug": "radiologic-technologist",
+      "salary_low": 29000,
+      "salary_high": 47200,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 37200,
+      "isco_group": 3
+    },
+    {
+      "slug": "real-estate-agent",
+      "salary_low": 29000,
+      "salary_high": 47200,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 37200,
+      "isco_group": 3
+    },
+    {
+      "slug": "respiratory-therapist",
+      "salary_low": 29000,
+      "salary_high": 47200,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 37200,
+      "isco_group": 3
+    },
+    {
+      "slug": "sales-manager",
+      "salary_low": 45600,
+      "salary_high": 88700,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 61100,
+      "isco_group": 1
+    },
+    {
+      "slug": "social-worker",
+      "salary_low": 35700,
+      "salary_high": 67600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 48800,
+      "isco_group": 2
+    },
+    {
+      "slug": "software-developer",
+      "salary_low": 35700,
+      "salary_high": 67600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 48800,
+      "isco_group": 2
+    },
+    {
+      "slug": "sound-engineer",
+      "salary_low": 29000,
+      "salary_high": 47200,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 37200,
+      "isco_group": 3
+    },
+    {
+      "slug": "speech-language-pathologist",
+      "salary_low": 35700,
+      "salary_high": 67600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 48800,
+      "isco_group": 2
+    },
+    {
+      "slug": "statistician",
+      "salary_low": 35700,
+      "salary_high": 67600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 48800,
+      "isco_group": 2
+    },
+    {
+      "slug": "surgical-technologist",
+      "salary_low": 29000,
+      "salary_high": 47200,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 37200,
+      "isco_group": 3
+    },
+    {
+      "slug": "systems-administrator",
+      "salary_low": 29000,
+      "salary_high": 47200,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 37200,
+      "isco_group": 3
+    },
+    {
+      "slug": "teacher",
+      "salary_low": 35700,
+      "salary_high": 67600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 48800,
+      "isco_group": 2
+    },
+    {
+      "slug": "urban-planner",
+      "salary_low": 35700,
+      "salary_high": 67600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 48800,
+      "isco_group": 2
+    },
+    {
+      "slug": "ux-ui-designer",
+      "salary_low": 35700,
+      "salary_high": 67600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 48800,
+      "isco_group": 2
+    },
+    {
+      "slug": "veterinarian",
+      "salary_low": 35700,
+      "salary_high": 67600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 48800,
+      "isco_group": 2
+    },
+    {
+      "slug": "video-editor",
+      "salary_low": 29000,
+      "salary_high": 47200,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 37200,
+      "isco_group": 3
+    },
+    {
+      "slug": "welder",
+      "salary_low": 25400,
+      "salary_high": 39000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 31200,
+      "isco_group": 8
+    },
+    {
+      "slug": "writer",
+      "salary_low": 35700,
+      "salary_high": 67600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 48800,
+      "isco_group": 2
+    }
+  ]
+}

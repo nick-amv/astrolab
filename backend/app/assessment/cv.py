@@ -18,7 +18,7 @@ from app.llm import LLMRequest, LLMUnavailable, get_provider
 
 _log = structlog.get_logger("astrolab.cv")
 
-_LANG = {"ru": "Russian", "en": "English", "de": "German", "es": "Spanish"}
+_LANG = {"ru": "Russian", "en": "English", "de": "German", "es": "Spanish", "fr": "French"}
 
 _SYSTEM = (
     "You extract structured career context from a person's pasted resume or free "

@@ -30,6 +30,16 @@
       "Apoya su lado práctico: kits de construcción, reparaciones, talleres, deporte, robótica.",
       "No le quites valor al «trabajo manual»: hoy incluye la ingeniería y la alta tecnología.",
       "Dale espacio para enfrentarse a tareas reales, no solo a la teoría del libro de texto."
+    ],
+    "label_fr": "concret et pratique",
+    "strengths_fr": [
+      "mène les choses jusqu'à un résultat concret et tangible",
+      "aime comprendre comment tout fonctionne et fabriquer de ses mains"
+    ],
+    "support_fr": [
+      "Encouragez le côté pratique : kits de montage, réparations, ateliers, sport, robotique.",
+      "Ne dévalorisez pas le « travail manuel » — aujourd'hui, il englobe l'ingénierie et les hautes technologies.",
+      "Laissez-lui de l'espace pour s'attaquer à de vraies tâches, pas seulement à la théorie du manuel."
     ]
   },
   "I": {
@@ -62,6 +72,16 @@
       "Acoge sus preguntas, incluso las incómodas: son el combustible de quien investiga.",
       "Ayúdale a encontrar cursos avanzados, olimpiadas o clubes de ciencia de lo que le interesa.",
       "Deja tiempo para la curiosidad «inútil»: de ahí suele nacer la ciencia de verdad."
+    ],
+    "label_fr": "analyse et recherche",
+    "strengths_fr": [
+      "pose des questions profondes et ne prend pas les réponses pour argent comptant",
+      "prend vraiment plaisir à comprendre quelque chose de difficile"
+    ],
+    "support_fr": [
+      "Accueillez ses questions, même les plus gênantes — c'est le carburant du chercheur.",
+      "Aidez-le à trouver des cours approfondis, des olympiades ou des clubs scientifiques dans son domaine d'intérêt.",
+      "Laissez du temps à la curiosité « inutile » — c'est souvent là que naît la vraie science."
     ]
   },
   "A": {
@@ -94,6 +114,16 @@
       "Dale herramientas y materiales para crear, sin la presión de «hacer algo útil».",
       "Valora el proceso y la valentía de intentarlo, no solo el resultado pulido.",
       "Ayúdale a ver que la creatividad también es una profesión, no solo una afición."
+    ],
+    "label_fr": "créativité et expression personnelle",
+    "strengths_fr": [
+      "voit et crée des choses qui n'existent pas encore",
+      "exprime ses idées par l'image, le son, l'écriture ou le design"
+    ],
+    "support_fr": [
+      "Donnez-lui des outils et du matériel pour créer, sans la pression de « faire quelque chose d'utile ».",
+      "Valorisez le processus et le courage d'essayer, pas seulement le résultat abouti.",
+      "Aidez-le à voir que la créativité est aussi un métier, pas seulement un loisir."
     ]
   },
   "S": {
@@ -126,6 +156,16 @@
       "Apoya el voluntariado, las mentorías y el trabajo en equipo.",
       "Dile en voz alta que preocuparse por las personas es una fortaleza real y muy demandada.",
       "Ayúdale a convertirla en profesión: medicina, educación, psicología."
+    ],
+    "label_fr": "relation et aide aux autres",
+    "strengths_fr": [
+      "perçoit ce que ressentent les autres et sait les soutenir",
+      "explique bien les choses et sait rassembler les gens"
+    ],
+    "support_fr": [
+      "Encouragez le bénévolat, le mentorat et le travail en équipe.",
+      "Dites-lui à voix haute que se soucier des autres est une vraie force, et très recherchée.",
+      "Aidez-le à en faire un métier : santé, éducation, psychologie."
     ]
   },
   "E": {
@@ -158,6 +198,16 @@
       "Dale la oportunidad de liderar proyectos: desde un evento escolar hasta un pequeño negocio.",
       "La diferencia entre «mandar» y «liderar» está en la responsabilidad; ayúdale a verla.",
       "Apoya sus primeros pasos en organización, ventas y hablar en público."
+    ],
+    "label_fr": "leadership et initiative",
+    "strengths_fr": [
+      "prend l'initiative et entraîne les autres",
+      "n'a pas peur de proposer des idées et de convaincre"
+    ],
+    "support_fr": [
+      "Donnez-lui l'occasion de mener des projets — d'un événement scolaire à une petite entreprise.",
+      "La différence entre « commander » et « diriger », c'est la responsabilité ; aidez-le à la voir.",
+      "Soutenez ses premiers pas dans l'organisation, la vente et la prise de parole en public."
     ]
   },
   "C": {
@@ -190,6 +240,16 @@
       "Valora su meticulosidad y fiabilidad: son cualidades muy importantes en el mundo profesional.",
       "Dale tareas con estructura: hojas de cálculo, registros, planificación, organización.",
       "Enséñale que detrás del orden hay profesiones enteras: finanzas, análisis de datos, logística."
+    ],
+    "label_fr": "ordre et précision",
+    "strengths_fr": [
+      "aime l'ordre, la précision et terminer ce qu'il commence",
+      "travaille bien avec les données, les systèmes et les détails"
+    ],
+    "support_fr": [
+      "Valorisez sa rigueur et sa fiabilité — ce sont des qualités importantes dans le monde professionnel.",
+      "Donnez-lui des tâches structurées : tableurs, suivi, planification, organisation.",
+      "Montrez-lui que des métiers entiers reposent sur l'ordre : finance, analyse de données, logistique."
     ]
   }
 }

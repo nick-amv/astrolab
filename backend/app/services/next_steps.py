@@ -51,7 +51,7 @@ def resolve_steps(
     Returns [{idx, text, url|None}]; idx is stable (used as plan_items.step_idx).
     """
     data = _data()
-    loc = locale if locale in ("ru", "en", "es") else "ru"
+    loc = locale if locale in ("ru", "en", "es", "fr") else "ru"
     aud = audience if audience in ("teen", "adult") else "adult"
     common = data["common"][aud].get(loc) or data["common"][aud]["ru"]
     field = (data["by_field"].get(field_tag or "") or {}).get(loc)

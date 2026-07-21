@@ -1,11 +1,11 @@
 import type { RequestHandler } from "./$types";
 
 // SEO sitemap: content pages + every published occupation, in every locale.
-// Each URL carries hreflang alternates (ru, en, es, x-default) so search
+// Each URL carries hreflang alternates (ru, en, es, fr, x-default) so search
 // engines serve the right language per user (DESIGN-EN §3).
 export const GET: RequestHandler = async ({ fetch, url }) => {
   const origin = url.origin;
-  const locs = ["ru", "en", "es"] as const;
+  const locs = ["ru", "en", "es", "fr"] as const;
 
   // Slugs are language-neutral ids shared across locales, so one fetch is enough.
   const res = await fetch("/api/occupations?locale=ru");
