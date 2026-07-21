@@ -165,8 +165,8 @@ def main() -> None:
     out = {
         "country": "ES",
         "source_key": "adzuna-jobs",
-        "source_name": "Adzuna live job-ad salary analysis (p25-p75, gross annual, Spain)",
-        "source_url": "https://www.adzuna.es/",
+        "source_name": "Adzuna live job-ad salary analysis (p25-p75, gross annual)",
+        "source_url": "https://www.adzuna.com/",
         "as_of_date": today,
         "facts": rows,
     }
