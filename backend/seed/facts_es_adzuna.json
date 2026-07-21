@@ -3,98 +3,247 @@
   "source_key": "adzuna-jobs",
   "source_name": "Adzuna live job-ad salary analysis (p25-p75, gross annual, Spain)",
   "source_url": "https://www.adzuna.es/",
-  "as_of_date": "2026-07-16",
+  "as_of_date": "2026-07-21",
   "facts": [
     {
       "slug": "accountant",
-      "salary_low": 25000,
-      "salary_high": 35000,
+      "salary_low": 20100,
+      "salary_high": 32500,
       "currency": "EUR",
       "period": "year",
       "confidence": "estimate",
-      "n": 94,
-      "median": 30000
+      "n": 48,
+      "median": 25750
     },
     {
       "slug": "automotive-technician",
-      "salary_low": 25400,
-      "salary_high": 37600,
+      "salary_low": 30000,
+      "salary_high": 45000,
       "currency": "EUR",
       "period": "year",
       "confidence": "estimate",
-      "n": 45,
-      "median": 30000
+      "n": 100,
+      "median": 45000
+    },
+    {
+      "slug": "chef",
+      "salary_low": 21200,
+      "salary_high": 35500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 21,
+      "median": 26000
+    },
+    {
+      "slug": "chemist",
+      "salary_low": 22900,
+      "salary_high": 29100,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 167,
+      "median": 27040
+    },
+    {
+      "slug": "civil-engineer",
+      "salary_low": 42500,
+      "salary_high": 52500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 87,
+      "median": 47500
+    },
+    {
+      "slug": "data-engineer",
+      "salary_low": 62500,
+      "salary_high": 80000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 19,
+      "median": 70000
+    },
+    {
+      "slug": "data-scientist",
+      "salary_low": 80000,
+      "salary_high": 104700,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 28,
+      "median": 86500
+    },
+    {
+      "slug": "devops-engineer",
+      "salary_low": 56000,
+      "salary_high": 100000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 16,
+      "median": 61000
     },
     {
       "slug": "electrician",
-      "salary_low": 23600,
+      "salary_low": 22500,
       "salary_high": 30500,
       "currency": "EUR",
       "period": "year",
       "confidence": "estimate",
-      "n": 26,
-      "median": 25201
+      "n": 27,
+      "median": 25500
+    },
+    {
+      "slug": "fitness-trainer",
+      "salary_low": 37400,
+      "salary_high": 52000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 170,
+      "median": 41600
     },
     {
       "slug": "lawyer",
-      "salary_low": 35000,
-      "salary_high": 55500,
+      "salary_low": 37500,
+      "salary_high": 60000,
       "currency": "EUR",
       "period": "year",
       "confidence": "estimate",
-      "n": 29,
-      "median": 43000
+      "n": 23,
+      "median": 45500
+    },
+    {
+      "slug": "logistician",
+      "salary_low": 35800,
+      "salary_high": 70000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 42,
+      "median": 48000
+    },
+    {
+      "slug": "machine-learning-engineer",
+      "salary_low": 70000,
+      "salary_high": 94200,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 22,
+      "median": 81250
     },
     {
       "slug": "management-consultant",
-      "salary_low": 30000,
-      "salary_high": 55000,
+      "salary_low": 28500,
+      "salary_high": 62500,
       "currency": "EUR",
       "period": "year",
       "confidence": "estimate",
-      "n": 47,
+      "n": 39,
       "median": 37500
     },
     {
       "slug": "marketing-manager",
-      "salary_low": 41900,
+      "salary_low": 42200,
       "salary_high": 75000,
       "currency": "EUR",
       "period": "year",
       "confidence": "estimate",
-      "n": 46,
+      "n": 41,
       "median": 51000
     },
     {
       "slug": "operations-manager",
-      "salary_low": 66800,
-      "salary_high": 101200,
+      "salary_low": 70000,
+      "salary_high": 105000,
       "currency": "EUR",
       "period": "year",
       "confidence": "estimate",
-      "n": 34,
-      "median": 76250
+      "n": 43,
+      "median": 90000
     },
     {
       "slug": "physician",
       "salary_low": 70000,
-      "salary_high": 84700,
+      "salary_high": 91900,
       "currency": "EUR",
       "period": "year",
       "confidence": "estimate",
-      "n": 30,
+      "n": 33,
       "median": 70000
     },
     {
-      "slug": "project-manager",
-      "salary_low": 40000,
-      "salary_high": 56900,
+      "slug": "product-manager",
+      "salary_low": 72500,
+      "salary_high": 90000,
       "currency": "EUR",
       "period": "year",
       "confidence": "estimate",
-      "n": 80,
-      "median": 45250
+      "n": 196,
+      "median": 80000
+    },
+    {
+      "slug": "project-manager",
+      "salary_low": 41100,
+      "salary_high": 63100,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 70,
+      "median": 48750
+    },
+    {
+      "slug": "qa-engineer",
+      "salary_low": 50000,
+      "salary_high": 85000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 27,
+      "median": 72500
+    },
+    {
+      "slug": "sales-manager",
+      "salary_low": 70000,
+      "salary_high": 105000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 111,
+      "median": 75000
+    },
+    {
+      "slug": "software-developer",
+      "salary_low": 30000,
+      "salary_high": 75000,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 91,
+      "median": 44000
+    },
+    {
+      "slug": "teacher",
+      "salary_low": 25000,
+      "salary_high": 31200,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 209,
+      "median": 29120
+    },
+    {
+      "slug": "welder",
+      "salary_low": 23200,
+      "salary_high": 33800,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "n": 26,
+      "median": 26950
     }
-  ],
-  "_doc": "ES per-profession salary facts from live Adzuna job ads; ONLY slugs where the stated-salary sample represents the occupation honestly (curated). Dropped as misrepresentative: software-developer/qa/data-scientist (international-remote skew up), real-estate-agent (commission promises), teacher (private academies skew down vs oposicion reality), chemist (lab-tech skew), fitness-trainer (implausible). Seed AFTER facts_es.json so Adzuna overrides INE only where measured."
+  ]
 }
