@@ -1,0 +1,528 @@
+{
+  "_doc": "Adzuna FR (France, adzuna.fr) search queries per slug. queries = title_only terms (AND within one query; multiple queries merged by ad id). French métier terms; English titles kept where France recruits in English. Tune freely.",
+  "accountant": {
+    "queries": [
+      "comptable"
+    ]
+  },
+  "actor": {
+    "queries": [
+      "comédien",
+      "acteur"
+    ]
+  },
+  "actuary": {
+    "queries": [
+      "actuaire"
+    ]
+  },
+  "aircraft-mechanic": {
+    "queries": [
+      "mécanicien aéronautique",
+      "maintenance aéronautique"
+    ]
+  },
+  "airline-pilot": {
+    "queries": [
+      "pilote de ligne",
+      "pilote"
+    ],
+    "exclude": "drone|essais|automobile|process|ligne de production"
+  },
+  "animator": {
+    "queries": [
+      "animateur 3d",
+      "animateur 2d"
+    ],
+    "exclude": "socioculturel|BAFA|enfants|centre de loisirs|colonie|périscolaire|jeunesse|animateur commercial"
+  },
+  "architect": {
+    "queries": [
+      "architecte"
+    ],
+    "exclude": "logiciel|solution|syst[eè]mes|cloud|data|réseau|sécurité|technique|SI|infrastructure"
+  },
+  "art-director": {
+    "queries": [
+      "directeur artistique"
+    ]
+  },
+  "automotive-technician": {
+    "queries": [
+      "mécanicien automobile",
+      "technicien automobile"
+    ],
+    "exclude": "aéronautique|avion"
+  },
+  "biologist": {
+    "queries": [
+      "biologiste"
+    ]
+  },
+  "carpenter": {
+    "queries": [
+      "charpentier",
+      "menuisier"
+    ]
+  },
+  "chef": {
+    "queries": [
+      "cuisinier",
+      "chef de cuisine",
+      "chef"
+    ]
+  },
+  "chemist": {
+    "queries": [
+      "chimiste"
+    ]
+  },
+  "civil-engineer": {
+    "queries": [
+      "ingénieur génie civil",
+      "conducteur de travaux"
+    ]
+  },
+  "cnc-machinist": {
+    "queries": [
+      "opérateur commande numérique",
+      "opérateur cn"
+    ]
+  },
+  "cybersecurity-specialist": {
+    "queries": [
+      "cybersécurité",
+      "sécurité informatique"
+    ]
+  },
+  "data-analyst": {
+    "queries": [
+      "data analyst",
+      "analyste données"
+    ]
+  },
+  "data-engineer": {
+    "queries": [
+      "data engineer",
+      "ingénieur données"
+    ]
+  },
+  "data-scientist": {
+    "queries": [
+      "data scientist"
+    ]
+  },
+  "database-administrator": {
+    "queries": [
+      "administrateur base de données",
+      "dba"
+    ]
+  },
+  "dental-hygienist": {
+    "queries": [
+      "hygiéniste dentaire"
+    ]
+  },
+  "dentist": {
+    "queries": [
+      "dentiste",
+      "chirurgien-dentiste"
+    ]
+  },
+  "devops-engineer": {
+    "queries": [
+      "devops"
+    ]
+  },
+  "dietitian": {
+    "queries": [
+      "diététicien",
+      "nutritionniste"
+    ]
+  },
+  "economist": {
+    "queries": [
+      "économiste"
+    ]
+  },
+  "electrical-engineer": {
+    "queries": [
+      "ingénieur électricien",
+      "ingénieur électronique"
+    ]
+  },
+  "electrician": {
+    "queries": [
+      "électricien"
+    ]
+  },
+  "environmental-scientist": {
+    "queries": [
+      "environnement",
+      "chargé d'études environnement"
+    ]
+  },
+  "financial-advisor": {
+    "queries": [
+      "conseiller financier",
+      "conseiller en gestion de patrimoine"
+    ]
+  },
+  "financial-analyst": {
+    "queries": [
+      "analyste financier"
+    ]
+  },
+  "firefighter": {
+    "queries": [
+      "pompier",
+      "sapeur-pompier"
+    ]
+  },
+  "fitness-trainer": {
+    "queries": [
+      "coach sportif",
+      "coach fitness"
+    ]
+  },
+  "game-developer": {
+    "queries": [
+      "développeur jeux vidéo",
+      "unity"
+    ]
+  },
+  "graphic-designer": {
+    "queries": [
+      "graphiste",
+      "designer graphique"
+    ]
+  },
+  "heavy-equipment-operator": {
+    "queries": [
+      "conducteur d'engins",
+      "conducteur d'engins de chantier"
+    ]
+  },
+  "hr-specialist": {
+    "queries": [
+      "ressources humaines",
+      "chargé de recrutement"
+    ]
+  },
+  "hvac-technician": {
+    "queries": [
+      "technicien climatisation",
+      "frigoriste"
+    ]
+  },
+  "industrial-designer": {
+    "queries": [
+      "designer industriel",
+      "designer produit"
+    ]
+  },
+  "insurance-agent": {
+    "queries": [
+      "agent d'assurance",
+      "conseiller assurance"
+    ]
+  },
+  "interior-designer": {
+    "queries": [
+      "architecte d'intérieur",
+      "décorateur d'intérieur"
+    ]
+  },
+  "it-support-specialist": {
+    "queries": [
+      "support informatique",
+      "technicien helpdesk"
+    ]
+  },
+  "journalist": {
+    "queries": [
+      "journaliste"
+    ]
+  },
+  "lawyer": {
+    "queries": [
+      "avocat",
+      "juriste"
+    ]
+  },
+  "librarian": {
+    "queries": [
+      "bibliothécaire"
+    ]
+  },
+  "lineworker": {
+    "queries": [
+      "monteur réseaux électriques",
+      "monteur électricien"
+    ]
+  },
+  "logistician": {
+    "queries": [
+      "responsable logistique",
+      "logisticien",
+      "logistique"
+    ]
+  },
+  "machine-learning-engineer": {
+    "queries": [
+      "machine learning engineer",
+      "machine learning"
+    ]
+  },
+  "machinist": {
+    "queries": [
+      "tourneur-fraiseur",
+      "usinage"
+    ]
+  },
+  "management-consultant": {
+    "queries": [
+      "consultant en management",
+      "consultant"
+    ],
+    "exclude": "immobilier|assurance|beauté|recrutement|voyage"
+  },
+  "marketing-manager": {
+    "queries": [
+      "responsable marketing",
+      "marketing manager"
+    ]
+  },
+  "mechanical-engineer": {
+    "queries": [
+      "ingénieur mécanique",
+      "ingénieur mécanicien"
+    ]
+  },
+  "medical-assistant": {
+    "queries": [
+      "assistant médical",
+      "aide-soignant"
+    ]
+  },
+  "musician": {
+    "queries": [
+      "musicien"
+    ]
+  },
+  "network-engineer": {
+    "queries": [
+      "ingénieur réseau",
+      "technicien réseau"
+    ]
+  },
+  "nurse": {
+    "queries": [
+      "infirmier",
+      "infirmière",
+      "infirmier diplômé"
+    ]
+  },
+  "occupational-therapist": {
+    "queries": [
+      "ergothérapeute"
+    ]
+  },
+  "operations-manager": {
+    "queries": [
+      "responsable des opérations",
+      "directeur des opérations"
+    ]
+  },
+  "optometrist": {
+    "queries": [
+      "optométriste",
+      "opticien"
+    ]
+  },
+  "paramedic": {
+    "queries": [
+      "ambulancier",
+      "technicien urgences"
+    ]
+  },
+  "pharmacist": {
+    "queries": [
+      "pharmacien"
+    ]
+  },
+  "phlebotomist": {
+    "queries": [
+      "préleveur",
+      "technicien de laboratoire"
+    ]
+  },
+  "photographer": {
+    "queries": [
+      "photographe"
+    ]
+  },
+  "physical-therapist": {
+    "queries": [
+      "kinésithérapeute",
+      "masseur-kinésithérapeute"
+    ]
+  },
+  "physician": {
+    "queries": [
+      "médecin"
+    ],
+    "exclude": "vétérinaire|légiste|médecin du travail"
+  },
+  "plumber": {
+    "queries": [
+      "plombier",
+      "plombier chauffagiste"
+    ]
+  },
+  "police-officer": {
+    "queries": [
+      "policier",
+      "gardien de la paix"
+    ]
+  },
+  "product-manager": {
+    "queries": [
+      "product manager",
+      "chef de produit"
+    ]
+  },
+  "project-manager": {
+    "queries": [
+      "chef de projet",
+      "project manager"
+    ]
+  },
+  "psychologist": {
+    "queries": [
+      "psychologue"
+    ]
+  },
+  "qa-engineer": {
+    "queries": [
+      "qa engineer",
+      "testeur"
+    ]
+  },
+  "radiologic-technologist": {
+    "queries": [
+      "manipulateur radiologie",
+      "manipulateur radio"
+    ]
+  },
+  "real-estate-agent": {
+    "queries": [
+      "agent immobilier",
+      "conseiller immobilier"
+    ]
+  },
+  "respiratory-therapist": {
+    "queries": [
+      "kinésithérapeute respiratoire"
+    ]
+  },
+  "sales-manager": {
+    "queries": [
+      "responsable commercial",
+      "directeur commercial",
+      "commercial"
+    ]
+  },
+  "school-counselor": {
+    "queries": [
+      "conseiller d'orientation",
+      "psychologue de l'éducation"
+    ]
+  },
+  "social-worker": {
+    "queries": [
+      "travailleur social",
+      "assistant social"
+    ]
+  },
+  "software-developer": {
+    "queries": [
+      "développeur",
+      "développeur logiciel"
+    ]
+  },
+  "sound-engineer": {
+    "queries": [
+      "ingénieur du son",
+      "technicien son"
+    ]
+  },
+  "speech-language-pathologist": {
+    "queries": [
+      "orthophoniste"
+    ]
+  },
+  "statistician": {
+    "queries": [
+      "statisticien"
+    ]
+  },
+  "surgical-technologist": {
+    "queries": [
+      "infirmier de bloc",
+      "aide de bloc opératoire"
+    ]
+  },
+  "systems-administrator": {
+    "queries": [
+      "administrateur systèmes",
+      "administrateur système"
+    ]
+  },
+  "teacher": {
+    "queries": [
+      "professeur",
+      "enseignant"
+    ]
+  },
+  "translator": {
+    "queries": [
+      "traducteur"
+    ]
+  },
+  "urban-planner": {
+    "queries": [
+      "urbaniste",
+      "chargé d'études urbanisme"
+    ]
+  },
+  "ux-ui-designer": {
+    "queries": [
+      "ux ui designer",
+      "ux designer"
+    ]
+  },
+  "veterinarian": {
+    "queries": [
+      "vétérinaire"
+    ]
+  },
+  "video-editor": {
+    "queries": [
+      "monteur vidéo",
+      "monteur"
+    ]
+  },
+  "welder": {
+    "queries": [
+      "soudeur",
+      "soudage"
+    ]
+  },
+  "writer": {
+    "queries": [
+      "rédacteur",
+      "écrivain"
+    ]
+  }
+}
