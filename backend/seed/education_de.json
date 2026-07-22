@@ -687,7 +687,7 @@
       ]
     },
     {
-      "code": "ausbildung-metallbauer-schweisser",
+      "code": "ausbildung-metallbau-schweiss",
       "title": "Ausbildung Metallbauer/-in / Schweißer/-in",
       "level": "Duale Ausbildung (3–3,5 Jahre)",
       "ege": [
@@ -713,7 +713,7 @@
       ]
     },
     {
-      "code": "ausbildung-mechatroniker-kaeltetechnik",
+      "code": "ausbildung-kaeltetechnik",
       "title": "Ausbildung Mechatroniker/-in für Kältetechnik",
       "level": "Duale Ausbildung (3,5 Jahre)",
       "ege": [

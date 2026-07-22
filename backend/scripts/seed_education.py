@@ -27,12 +27,16 @@ async def run(seed_path: Path) -> None:
     data = json.loads(seed_path.read_text("utf-8"))
     country = data["country"]
 
-    # Validate BEFORE the wipe: title_key is varchar(96). Catching an overlong
-    # title here (rather than mid-insert) avoids emptying a country's education
-    # and then failing, which is what a 97-char RU title once did.
+    # Validate BEFORE the wipe: title_key is varchar(96), code is varchar(32).
+    # Catching an overlong value here (rather than mid-insert) avoids emptying a
+    # country's education and then failing, which a 97-char RU title once did and
+    # a 38-char DE code (Ausbildung-…) later repeated.
     too_long = [d["code"] for d in data["domains"] if len(d["title"]) > 96]
     if too_long:
         raise SystemExit(f"[seed_education] title >96 chars for domains: {too_long}")
+    long_code = [d["code"] for d in data["domains"] if len(d["code"]) > 32]
+    if long_code:
+        raise SystemExit(f"[seed_education] code >32 chars for domains: {long_code}")
 
     async with SessionLocal() as s:
         # wipe this country (edu_domains cascade to requirements + occupation_edu)
