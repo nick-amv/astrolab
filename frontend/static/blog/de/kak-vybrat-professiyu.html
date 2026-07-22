@@ -81,7 +81,7 @@ article li{margin:6px 0}
 footer{color:var(--muted);font-size:13px;padding:24px 0 36px}
 footer a{color:var(--chip-ink);text-decoration:none;font-weight:600}
 a{color:var(--chip-ink)}
-.nav-right .tt{background:none;border:0;cursor:pointer;color:var(--muted);padding:6px;border-radius:99px;display:inline-flex;line-height:0}.nav-right .tt:hover{color:var(--ink);background:var(--surface)}.nav-right a.active{color:var(--ink)}</style>
+.nav-right .tt{background:none;border:0;cursor:pointer;color:var(--muted);padding:6px;border-radius:99px;display:inline-flex;line-height:0}.nav-right .tt:hover{color:var(--ink);background:var(--surface)}.nav-right a.active{color:var(--ink)}.lang-dd{position:relative}.lang-dd summary{display:inline-flex;align-items:center;gap:5px;padding:6px 10px;font-size:.8rem;font-weight:700;color:var(--muted);border:1px solid var(--line-strong);border-radius:999px;cursor:pointer;list-style:none;user-select:none}.lang-dd summary::-webkit-details-marker{display:none}.lang-dd summary:hover{color:var(--ink);background:var(--surface)}.lang-dd[open] summary{color:var(--ink)}.lang-dd .chev{transition:transform .18s ease}.lang-dd[open] summary .chev{transform:rotate(180deg)}.lang-menu{position:absolute;right:0;top:calc(100% + 6px);z-index:20;min-width:148px;display:flex;flex-direction:column;padding:6px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-sm);box-shadow:var(--shadow,0 18px 44px rgba(90,70,160,.14))}.lang-menu a{padding:9px 12px;font-size:.85rem;font-weight:600;color:var(--muted);text-decoration:none;border-radius:10px}.lang-menu a:hover{color:var(--ink);background:color-mix(in oklab,var(--c3) 8%,var(--surface))}.lang-menu a.on{color:var(--ink);font-weight:800}.lang-menu a.on::before{content:"\2713 ";color:var(--chip-ink)}@media(max-width:620px){.lang-menu a{padding:11px 12px}}</style>
 </head>
 <body>
 <div class="aurora" aria-hidden="true"></div>
@@ -93,7 +93,7 @@ a{color:var(--chip-ink)}
 <a href="/de/professions">Berufe</a>
 <a class="active" href="/blog/">Journal</a>
 <a href="/de/login">Anmelden</a>
-<span class="lang" translate="no"><a href="/blog/en/kak-vybrat-professiyu.html" hreflang="en">EN</a><a href="/blog/es/kak-vybrat-professiyu.html" hreflang="es">ES</a><a href="/blog/fr/kak-vybrat-professiyu.html" hreflang="fr">FR</a><a href="/blog/kak-vybrat-professiyu.html" hreflang="ru">RU</a><a class="on" href="/blog/de/kak-vybrat-professiyu.html" hreflang="de">DE</a></span>
+<details class="lang-dd" translate="no"><summary aria-label="Язык / Language"><svg class="globe" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span class="lc">DE</span><svg class="chev" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div class="lang-menu"><a href="/blog/en/kak-vybrat-professiyu.html" hreflang="en">English</a><a href="/blog/es/kak-vybrat-professiyu.html" hreflang="es">Español</a><a href="/blog/fr/kak-vybrat-professiyu.html" hreflang="fr">Français</a><a href="/blog/kak-vybrat-professiyu.html" hreflang="ru">Русский</a><a class="on" href="/blog/de/kak-vybrat-professiyu.html" hreflang="de" aria-current="true">Deutsch</a></div></details>
 <button class="tt" type="button" aria-label="Design wechseln" onclick="(function(d){var n=d.dataset.theme===&quot;dark&quot;?&quot;light&quot;:&quot;dark&quot;;d.dataset.theme=n;try{localStorage.setItem(&quot;theme&quot;,n)}catch(e){}})(document.documentElement)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
 <a class="cta" href="/de/test">Test starten</a>
 </nav>
@@ -173,5 +173,5 @@ a{color:var(--chip-ink)}
 <footer>Astrolab · <a href="https://nikam.dev">nikam.dev</a></footer>
 </div>
 
-</body>
+<script>document.addEventListener("click",function(e){var d=document.querySelector(".lang-dd[open]");if(d&&!d.contains(e.target))d.open=false},true)</script></body>
 </html>

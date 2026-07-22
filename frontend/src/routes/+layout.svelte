@@ -21,6 +21,20 @@
     ...(locales as readonly string[]).filter((l) => !["en", "es", "fr", "ru", "de"].includes(l)),
   ]);
 
+  // Native language names (locale-independent) for the switcher dropdown.
+  const LANG_NAMES: Record<string, string> = {
+    en: "English", es: "Español", fr: "Français", ru: "Русский", de: "Deutsch",
+  };
+
+  // Close the <details> language dropdown when clicking outside it.
+  function closeOnOutside(node: HTMLDetailsElement) {
+    const handler = (e: MouseEvent) => {
+      if (node.open && !node.contains(e.target as Node)) node.open = false;
+    };
+    document.addEventListener("click", handler, true);
+    return { destroy: () => document.removeEventListener("click", handler, true) };
+  }
+
   // GoatCounter: count.js records the initial page load; count client-side
   // route changes here so in-app navigation (test → result → professions)
   // is tracked too. Skip the initial "enter" to avoid double-counting.
@@ -58,19 +72,25 @@
       {:else}
         <a class="section" href={localizeHref("/login")}>{m.nav_login()}</a>
       {/if}
-      <!-- translate="no": browser auto-translate must not mangle RU/EN/ES chips -->
-      <span class="lang" aria-label="Language" translate="no">
-        {#each langOrder as loc (loc)}
-          <a
-            class="lang-opt"
-            class:on={getLocale() === loc}
-            href={localizeHref(barePath, { locale: loc })}
-            hreflang={loc}
-            aria-current={getLocale() === loc ? "true" : undefined}
-            data-sveltekit-reload>{langLabel(loc)}</a
-          >
-        {/each}
-      </span>
+      <!-- translate="no": browser auto-translate must not mangle the language names -->
+      <details class="lang-dd" use:closeOnOutside translate="no">
+        <summary aria-label="Язык / Language">
+          <svg class="globe" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" /><path d="M2 12h20" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+          <span class="lc">{langLabel(getLocale())}</span>
+          <svg class="chev" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+        </summary>
+        <div class="lang-menu">
+          {#each langOrder as loc (loc)}
+            <a
+              class:on={getLocale() === loc}
+              href={localizeHref(barePath, { locale: loc })}
+              hreflang={loc}
+              aria-current={getLocale() === loc ? "true" : undefined}
+              data-sveltekit-reload>{LANG_NAMES[loc] ?? loc.toUpperCase()}</a
+            >
+          {/each}
+        </div>
+      </details>
       <ThemeToggle />
     </nav>
   </header>
@@ -94,33 +114,80 @@
   .section {
     color: var(--ink) !important;
   }
-  .lang {
-    display: inline-flex;
-    align-items: center;
-    gap: 2px;
-    padding: 2px;
-    border: 1px solid var(--hair, rgba(0, 0, 0, 0.12));
-    border-radius: 999px;
+  /* Language dropdown (native <details>, no JS). Same look shared with the blog. */
+  .lang-dd {
+    position: relative;
   }
-  .lang-opt {
+  .lang-dd summary {
     display: inline-flex;
     align-items: center;
-    padding: 2px 9px;
-    font-size: 0.78rem;
-    font-weight: 600;
-    line-height: 1.4;
-    letter-spacing: 0.02em;
+    gap: 5px;
+    padding: 6px 10px;
+    font-size: 0.8rem;
+    font-weight: 700;
     color: var(--muted);
+    border: 1px solid var(--line-strong);
     border-radius: 999px;
-    text-decoration: none;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
     transition: color 0.15s ease, background-color 0.15s ease;
   }
-  .lang-opt:hover {
+  .lang-dd summary::-webkit-details-marker {
+    display: none;
+  }
+  .lang-dd summary:hover {
+    color: var(--ink);
+    background: var(--surface);
+  }
+  .lang-dd .chev {
+    transition: transform 0.18s var(--ease);
+  }
+  .lang-dd[open] summary .chev {
+    transform: rotate(180deg);
+  }
+  .lang-dd[open] summary {
     color: var(--ink);
   }
-  .lang-opt.on {
-    color: var(--chip-ink, #fff);
-    background: var(--accent, #ff5f8f);
+  .lang-menu {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 6px);
+    z-index: 20;
+    min-width: 148px;
+    display: flex;
+    flex-direction: column;
+    padding: 6px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--r-sm);
+    box-shadow: var(--shadow);
+  }
+  .lang-menu a {
+    padding: 9px 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--muted);
+    text-decoration: none;
+    border-radius: 10px;
+    transition: color 0.15s ease, background-color 0.15s ease;
+  }
+  .lang-menu a:hover {
+    color: var(--ink);
+    background: color-mix(in oklab, var(--c3) 8%, var(--surface));
+  }
+  .lang-menu a.on {
+    color: var(--ink);
+    font-weight: 800;
+  }
+  .lang-menu a.on::before {
+    content: "✓ ";
+    color: var(--chip-ink);
+  }
+  @media (max-width: 620px) {
+    .lang-menu a {
+      padding: 11px 12px;
+    }
   }
   .by {
     margin-left: auto;

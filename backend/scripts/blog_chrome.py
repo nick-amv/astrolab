@@ -54,6 +54,41 @@ _TT_CSS = (".nav-right .tt{background:none;border:0;cursor:pointer;color:var(--m
            ".nav-right .tt:hover{color:var(--ink);background:var(--surface)}"
            ".nav-right a.active{color:var(--ink)}")
 
+# native language names for the dropdown menu (locale-independent).
+LANG_NAMES = {"en": "English", "es": "Español", "fr": "Français", "ru": "Русский", "de": "Deutsch"}
+_GLOBE = ('<svg class="globe" width="15" height="15" viewBox="0 0 24 24" fill="none" '
+          'stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" '
+          'aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/>'
+          '<path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 '
+          '15.3 15.3 0 0 1 4-10z"/></svg>')
+_CHEV = ('<svg class="chev" width="13" height="13" viewBox="0 0 24 24" fill="none" '
+         'stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" '
+         'aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>')
+# language-dropdown style appended into the article's <style> once (mirrors the app).
+_LANG_DD_CSS = (
+    ".lang-dd{position:relative}"
+    ".lang-dd summary{display:inline-flex;align-items:center;gap:5px;padding:6px 10px;"
+    "font-size:.8rem;font-weight:700;color:var(--muted);border:1px solid var(--line-strong);"
+    "border-radius:999px;cursor:pointer;list-style:none;user-select:none}"
+    ".lang-dd summary::-webkit-details-marker{display:none}"
+    ".lang-dd summary:hover{color:var(--ink);background:var(--surface)}"
+    ".lang-dd[open] summary{color:var(--ink)}"
+    ".lang-dd .chev{transition:transform .18s ease}"
+    ".lang-dd[open] summary .chev{transform:rotate(180deg)}"
+    ".lang-menu{position:absolute;right:0;top:calc(100% + 6px);z-index:20;min-width:148px;"
+    "display:flex;flex-direction:column;padding:6px;background:var(--surface);"
+    "border:1px solid var(--line);border-radius:var(--r-sm);box-shadow:var(--shadow,0 18px 44px rgba(90,70,160,.14))}"
+    ".lang-menu a{padding:9px 12px;font-size:.85rem;font-weight:600;color:var(--muted);"
+    "text-decoration:none;border-radius:10px}"
+    ".lang-menu a:hover{color:var(--ink);background:color-mix(in oklab,var(--c3) 8%,var(--surface))}"
+    ".lang-menu a.on{color:var(--ink);font-weight:800}"
+    ".lang-menu a.on::before{content:\"\\2713 \";color:var(--chip-ink)}"
+    "@media(max-width:620px){.lang-menu a{padding:11px 12px}}"
+)
+# close the open language dropdown on outside click (blog is static — tiny inline script).
+_LANG_JS = ('<script>document.addEventListener("click",function(e){var d=document.querySelector'
+            '(".lang-dd[open]");if(d&&!d.contains(e.target))d.open=false},true)</script>')
+
 _HEADER_RE = re.compile(r'<header class="nav">.*?</header>', re.S)
 _BOTTOM_THEME_RE = re.compile(r'<script>\s*try\{var t=localStorage\.getItem\("astrolab-theme"\).*?</script>', re.S)
 
@@ -62,11 +97,17 @@ def _lang_switcher(slug: str, loc: str) -> str:
     def url(l: str) -> str:
         return f"/blog/{slug}.html" if l == "ru" else f"/blog/{l}/{slug}.html"
     links = "".join(
-        f'<a class="on" href="{url(l)}" hreflang="{l}">{l.upper()}</a>' if l == loc
-        else f'<a href="{url(l)}" hreflang="{l}">{l.upper()}</a>'
+        (f'<a class="on" href="{url(l)}" hreflang="{l}" aria-current="true">{LANG_NAMES[l]}</a>'
+         if l == loc
+         else f'<a href="{url(l)}" hreflang="{l}">{LANG_NAMES[l]}</a>')
         for l in LOCS
     )
-    return f'<span class="lang" translate="no">{links}</span>'
+    return (
+        '<details class="lang-dd" translate="no">'
+        f'<summary aria-label="Язык / Language">{_GLOBE}<span class="lc">{loc.upper()}</span>{_CHEV}</summary>'
+        f'<div class="lang-menu">{links}</div>'
+        '</details>'
+    )
 
 
 def _header(slug: str, loc: str) -> str:
@@ -101,9 +142,14 @@ def _process(p: Path) -> str:
     if 'localStorage.getItem("theme")' not in html.split("</head>")[0]:
         html = html.replace('<meta charset="utf-8" />',
                              '<meta charset="utf-8" />\n' + _HEAD_THEME, 1)
-    # toggle CSS into the first <style>, once.
+    # toggle + language-dropdown CSS into the first <style>, once each.
     if ".nav-right .tt{" not in html:
         html = html.replace("</style>", _TT_CSS + "</style>", 1)
+    if ".lang-dd{" not in html:
+        html = html.replace("</style>", _LANG_DD_CSS + "</style>", 1)
+    # close-on-outside-click for the dropdown, before </body>, once.
+    if 'querySelector(".lang-dd[open]")' not in html:
+        html = html.replace("</body>", _LANG_JS + "</body>", 1)
     # drop the old bottom theme script (wrong key).
     html = _BOTTOM_THEME_RE.sub("", html)
 
