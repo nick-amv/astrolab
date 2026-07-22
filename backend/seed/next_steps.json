@@ -81,6 +81,26 @@
           "text": "Trouve quelqu'un qui exerce ce métier — un ami de la famille, un proche ou quelqu'un en ligne — et pose-lui 5 questions sur son travail.",
           "link": null
         }
+      ],
+      "de": [
+        {
+          "text": "Schau dir 2–3 Videos „Ein Tag im Leben eines/einer {occupation}“ an — wie der Job wirklich aussieht, nicht die Kinoversion.",
+          "link": {
+            "t": "youtube",
+            "q": "{occupation} ein Tag im Leben"
+          }
+        },
+        {
+          "text": "Mach eine kostenlose Schnupperstunde zum Thema, einfach um zu sehen, ob es dich packt. Ganz unverbindlich.",
+          "link": {
+            "t": "course",
+            "q": "{occupation} für Anfänger"
+          }
+        },
+        {
+          "text": "Finde jemanden, der diesen Beruf ausübt — einen Familienfreund, einen Verwandten oder jemanden online — und stell ihm 5 Fragen zur Arbeit.",
+          "link": null
+        }
       ]
     },
     "adult": {
@@ -163,6 +183,26 @@
           "text": "Trouve sur LinkedIn ou dans un groupe du secteur quelqu'un qui exerce déjà ce métier et pose-lui 5 questions précises : le quotidien, l'argent et comment il ou elle est entré·e dans le métier.",
           "link": null
         }
+      ],
+      "de": [
+        {
+          "text": "Schau dir 2–3 Videos „Ein Tag im Leben eines/einer {occupation}“ an, um den echten Alltag zu sehen — nicht die geschönte Version aus der Stellenanzeige.",
+          "link": {
+            "t": "youtube",
+            "q": "{occupation} ein Tag im Leben"
+          }
+        },
+        {
+          "text": "Belege einen kostenlosen Einführungskurs, um herauszufinden, ob dich das Thema packt, bevor du Geld und Zeit investierst.",
+          "link": {
+            "t": "course",
+            "q": "{occupation}"
+          }
+        },
+        {
+          "text": "Finde jemanden auf LinkedIn oder in einer Fachgruppe, der das schon macht, und stell 5 gezielte Fragen: den Alltag, das Geld und wie er oder sie eingestiegen ist.",
+          "link": null
+        }
       ]
     }
   },
@@ -195,6 +235,13 @@
           "t": "youtube",
           "q": "{occupation} projet pour débutants"
         }
+      },
+      "de": {
+        "text": "Bau an einem Wochenende ein winziges Projekt nach einer Anleitung für Anfänger — eine Ein-Seiten-Website oder einen einfachen Bot. Wichtig ist, dass es am Ende „läuft“.",
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} Anfängerprojekt"
+        }
       }
     },
     "health": {
@@ -224,6 +271,13 @@
         "link": {
           "t": "youtube",
           "q": "{occupation} comment débuter"
+        }
+      },
+      "de": {
+        "text": "Verbring einen Tag damit, dem Beruf zuzuschauen (ein Arzt oder eine Pflegekraft, die du kennst, oder eine ehrenamtliche Schicht), oder mach einen Erste-Hilfe-Grundkurs.",
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} wie anfangen"
         }
       }
     },
@@ -255,6 +309,13 @@
           "t": "youtube",
           "q": "{occupation} pour débutants étape par étape"
         }
+      },
+      "de": {
+        "text": "Erledig zu Hause eine kleine echte Arbeit nach einem Video-Tutorial — reparier, bau oder installier etwas mit deinen eigenen Händen.",
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} für Anfänger Schritt für Schritt"
+        }
       }
     },
     "business": {
@@ -284,6 +345,13 @@
         "link": {
           "t": "youtube",
           "q": "{occupation} comment débuter"
+        }
+      },
+      "de": {
+        "text": "Skizzier auf einer Seite den Plan für eine winzige echte Idee und versuch, sie drei Leuten zu „verkaufen“ — hör zu, was sie sagen.",
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} wie anfangen"
         }
       }
     },
@@ -315,6 +383,13 @@
           "t": "youtube",
           "q": "{occupation} tutoriel pour débutants"
         }
+      },
+      "de": {
+        "text": "Bring an einem Wochenende ein kleines Werk zu Ende und zeig es jemandem — ein fertiges Ergebnis zählt mehr als ein perfektes.",
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} Tutorial für Anfänger"
+        }
       }
     },
     "science": {
@@ -344,6 +419,13 @@
         "link": {
           "t": "youtube",
           "q": "{occupation} expérience simple"
+        }
+      },
+      "de": {
+        "text": "Wiederhol ein einfaches Experiment oder eine Auswertung aus einem Video und halt fest, was du gesehen hast und was dich überrascht hat. Das ist Forschung im Kleinen.",
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} einfaches Experiment"
         }
       }
     },
@@ -375,6 +457,13 @@
           "t": "youtube",
           "q": "{occupation} projet pour débutants"
         }
+      },
+      "de": {
+        "text": "Bau einen kleinen Bausatz oder ein Modell nach einer Anleitung für Anfänger zusammen (Arduino, Mechanik, Schaltungen) — von der Idee bis zum funktionierenden Gerät.",
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} Projekt für Anfänger"
+        }
       }
     },
     "finance": {
@@ -404,6 +493,13 @@
         "link": {
           "t": "youtube",
           "q": "{occupation} comment débuter"
+        }
+      },
+      "de": {
+        "text": "Leg in einer Tabelle ein einfaches Budget oder ein Musterportfolio an und führ es eine Woche lang — bekomm ein Gefühl dafür, wie sich das in der Praxis anfühlt.",
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} wie anfangen"
         }
       }
     },
@@ -435,6 +531,13 @@
           "t": "youtube",
           "q": "{occupation} comment débuter"
         }
+      },
+      "de": {
+        "text": "Bereite eine 15-minütige Mini-Stunde vor und halt sie für einen Freund oder ein jüngeres Kind — klar zu erklären ist schwerer, als es aussieht.",
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} wie anfangen"
+        }
       }
     },
     "media": {
@@ -464,6 +567,13 @@
         "link": {
           "t": "youtube",
           "q": "{occupation} pour débutants"
+        }
+      },
+      "de": {
+        "text": "Dreh und schneide an einem Wochenende ein kurzes Video oder schreib einen Artikel über ein Thema, das dir am Herzen liegt.",
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} für Anfänger"
         }
       }
     },
@@ -495,6 +605,13 @@
           "t": "youtube",
           "q": "{occupation} comment débuter"
         }
+      },
+      "de": {
+        "text": "Arbeite ein paar Stunden ehrenamtlich in einer Organisation mit und achte darauf, wie die Gespräche mit den Menschen laufen — das ist der Kern des Berufs.",
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} wie anfangen"
+        }
       }
     },
     "law": {
@@ -524,6 +641,13 @@
         "link": {
           "t": "youtube",
           "q": "{occupation} comment débuter"
+        }
+      },
+      "de": {
+        "text": "Lies die Zusammenfassung eines echten Falls und schreib deine eigenen Argumente für beide Seiten — ein guter Jurist sieht immer beide.",
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} wie anfangen"
         }
       }
     },
@@ -555,6 +679,13 @@
           "t": "youtube",
           "q": "{occupation} pour débutants"
         }
+      },
+      "de": {
+        "text": "Starte eine winzige Promo — einen Post, eine Seite oder eine Anzeige — und schau auf die Zahlen: was funktioniert hat und was nicht.",
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} für Anfänger"
+        }
       }
     },
     "hospitality": {
@@ -584,6 +715,13 @@
         "link": {
           "t": "youtube",
           "q": "{occupation} comment débuter"
+        }
+      },
+      "de": {
+        "text": "Organisier eine kleine Veranstaltung oder ein Themen-Dinner und zieh es von Anfang bis Ende durch — Gäste, Timing, die Details.",
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} wie anfangen"
         }
       }
     },
@@ -615,6 +753,13 @@
           "t": "youtube",
           "q": "{occupation} comment débuter"
         }
+      },
+      "de": {
+        "text": "Führ ein 15-minütiges Gespräch mit einem Muttersprachler (über eine Sprachtausch-App) — live, nicht aus dem Lehrbuch.",
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} wie anfangen"
+        }
       }
     },
     "sports": {
@@ -644,6 +789,13 @@
         "link": {
           "t": "youtube",
           "q": "{occupation} comment débuter"
+        }
+      },
+      "de": {
+        "text": "Leite eine Mini-Trainingseinheit für deine Freunde oder schau einem Trainer über die Schulter — die Belastung zu planen ist kniffliger, als es aussieht.",
+        "link": {
+          "t": "youtube",
+          "q": "{occupation} wie anfangen"
         }
       }
     }

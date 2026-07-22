@@ -56,6 +56,16 @@
         ],
       },
     ],
+    de: [
+      {
+        t: m.method_data_de_t(),
+        d: m.method_data_de_d(),
+        links: [
+          { label: m.src_adzuna(), href: "https://www.adzuna.de/" },
+          { label: m.src_entgeltatlas(), href: "https://web.arbeitsagentur.de/entgeltatlas" },
+        ],
+      },
+    ],
     ru: [
       {
         t: m.method_data_ru_t(),

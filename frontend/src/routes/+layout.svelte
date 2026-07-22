@@ -11,7 +11,7 @@
   // Same page, other language: strip the locale prefix, then re-localize.
   const barePath = $derived(deLocalizeHref($page.url.pathname));
   const langLabel = (loc: string) =>
-    loc === "ru" ? m.nav_ru() : loc === "es" ? m.nav_es() : loc === "fr" ? m.nav_fr() : m.nav_en();
+    loc === "ru" ? m.nav_ru() : loc === "es" ? m.nav_es() : loc === "fr" ? m.nav_fr() : loc === "de" ? m.nav_de() : m.nav_en();
 
   // GoatCounter: count.js records the initial page load; count client-side
   // route changes here so in-app navigation (test → result → professions)

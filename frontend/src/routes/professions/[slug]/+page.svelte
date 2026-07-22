@@ -44,6 +44,8 @@
       return { label: m.src_ine(), cls: "src-ine", tip: m.src_ine_tip() + on };
     if (f.source === "insee-ses")
       return { label: m.src_insee(), cls: "src-ine", tip: m.src_insee_tip() + on };
+    if (f.source === "entgeltatlas")
+      return { label: m.src_entgeltatlas(), cls: "src-ine", tip: m.src_entgeltatlas_tip() + on };
     if (f.source === "adzuna-jobs")
       return { label: m.src_adzuna(), cls: "src-adzuna", tip: m.src_adzuna_tip() + on };
     return { label: m.prof_estimate(), cls: "src-est", tip: m.src_est_tip() };
@@ -81,6 +83,21 @@
         .trim();
       return `https://www.onisep.fr/recherche?text=${encodeURIComponent(q)}`;
     }
+    if (loc === "de") {
+      // Search the profession on BERUFENET (official Bundesagentur lexicon; its
+      // SPA has no stable per-profession deep link). Strip the pathway prefix
+      // ("Ausbildung "/"Studium "/…), gender suffixes ("/-frau", "/-in") and
+      // parentheticals, and turn separators into spaces so we query the real
+      // Beruf name (e.g. "Ausbildung Pflegefachmann/-frau" -> "Pflegefachmann").
+      const q = (title || code)
+        .replace(/\([^)]*\)/g, " ")
+        .replace(/\/-\p{L}+/gu, "")
+        .replace(/^(Duales Studium|Studium|Ausbildung|Staatsexamen)\s+/i, "")
+        .replace(/[/–—]/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
+      return `https://web.arbeitsagentur.de/berufenet/ergebnisseite?such=${encodeURIComponent(q)}`;
+    }
     if (loc === "es") {
       return code.startsWith("fp-") ? "https://www.todofp.es/" : "https://notasdecorte.es/";
     }
@@ -116,7 +133,7 @@
       description: o.summary ?? undefined,
       occupationLocation: {
         "@type": "Country",
-        name: { US: "United States", ES: "Spain", RU: "Russia", FR: "France" }[userCountry] ?? "Russia",
+        name: { US: "United States", ES: "Spain", RU: "Russia", FR: "France", DE: "Germany" }[userCountry] ?? "Russia",
       },
       ...(fact?.salary_low
         ? {
@@ -211,9 +228,9 @@
             <div class="path">
               <div class="path-top">
                 <span class="path-title">{d.title}</span>
-                <!-- ES/FR domain codes are internal slugs (no user-facing
+                <!-- ES/FR/DE domain codes are internal slugs (no user-facing
                      numeric codes like OKSO/CIP), so show only the level there -->
-                {#if getLocale() === "es" || getLocale() === "fr"}
+                {#if getLocale() === "es" || getLocale() === "fr" || getLocale() === "de"}
                   {#if d.level}<span class="path-code">{d.level}</span>{/if}
                 {:else}
                   <span class="path-code">{d.code}{#if d.level} · {d.level}{/if}</span>

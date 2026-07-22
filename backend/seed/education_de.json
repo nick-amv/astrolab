@@ -1,0 +1,946 @@
+{
+  "country": "DE",
+  "as_of": "2026-07",
+  "note": "Typische Wege im deutschen Bildungssystem: duale Ausbildung (Betrieb + Berufsschule, 2–3,5 Jahre) für Handwerk, Gesundheits- und kaufmännische Berufe, Studium (Bachelor/Master) an Universität oder Fachhochschule (HAW), reglementierte Berufe mit Staatsexamen (Medizin, Jura u. a.), Lehramt mit Staatsexamen und Referendariat sowie Fachschulen und Meister-Weiterbildungen. Indikativ — Zugang, Numerus Clausus (NC) und Angebot variieren je Hochschule, Bundesland und Jahr; prüfe immer auf den offiziellen Seiten (Hochschulstart, Hochschule, BERUFENET). Alle Berufe des Katalogs sind abgedeckt.",
+  "domains": [
+    {
+      "code": "studium-informatik",
+      "title": "Studium Informatik (Bachelor/Master)",
+      "level": "Studium — Bachelor an Universität/FH (3–4 Jahre) + optional Master",
+      "ege": [
+        "Abitur oder Fachabitur (für die FH); teils NC, variiert je Hochschule und Jahr",
+        "Mathe-Stärke hilft; Bewerbung direkt an der Hochschule oder über Hochschulstart",
+        "Vertiefung im Master (Data Science, Security, KI) üblich"
+      ],
+      "occupations": [
+        "software-developer",
+        "qa-engineer",
+        "devops-engineer",
+        "game-developer",
+        "cybersecurity-specialist",
+        "data-engineer",
+        "machine-learning-engineer",
+        "database-administrator"
+      ]
+    },
+    {
+      "code": "ausbildung-fachinformatiker",
+      "title": "Ausbildung Fachinformatiker/-in",
+      "level": "Duale Ausbildung (3 Jahre)",
+      "ege": [
+        "Mittlerer Schulabschluss oder Abitur",
+        "Ausbildungsvertrag mit einem Betrieb nötig",
+        "Fachrichtungen: Systemintegration (IT-Betrieb) oder Anwendungsentwicklung"
+      ],
+      "occupations": [
+        "software-developer",
+        "qa-engineer",
+        "it-support-specialist",
+        "systems-administrator",
+        "network-engineer",
+        "devops-engineer",
+        "database-administrator",
+        "cybersecurity-specialist"
+      ]
+    },
+    {
+      "code": "studium-data-science",
+      "title": "Studium Data Science / Statistik",
+      "level": "Studium — Bachelor + Master an Universität/FH (5 Jahre)",
+      "ege": [
+        "Abitur/Fachabitur; Mathematik empfohlen; NC variiert je Hochschule und Jahr",
+        "Bewerbung über die Hochschule; Master oft zulassungsbeschränkt",
+        "Alternativ Zugang über Mathematik-, Informatik- oder Wirtschaftsstudium"
+      ],
+      "occupations": [
+        "data-scientist",
+        "data-analyst",
+        "data-engineer",
+        "machine-learning-engineer"
+      ]
+    },
+    {
+      "code": "studium-mathematik",
+      "title": "Studium Mathematik",
+      "level": "Studium — Bachelor + Master an Universität (5 Jahre)",
+      "ege": [
+        "Abitur; oft zulassungsfrei, verlangt aber Ausdauer und regelmäßige Arbeit",
+        "Bewerbung an der Universität",
+        "Aktuar/-in: Weiterbildung/Prüfungen der Deutschen Aktuarvereinigung (DAV)"
+      ],
+      "occupations": [
+        "statistician",
+        "actuary"
+      ]
+    },
+    {
+      "code": "staatsexamen-medizin",
+      "title": "Studium Humanmedizin (Staatsexamen)",
+      "level": "Studium mit Staatsexamen (6 Jahre) + Facharztweiterbildung",
+      "ege": [
+        "Abitur; Zulassung über Hochschulstart, sehr hoher NC",
+        "Auswahl auch über TMS (Medizinertest), Wartezeit-Ersatzquoten und Auswahlverfahren",
+        "Nach dem Studium: mehrjährige Facharztweiterbildung"
+      ],
+      "occupations": [
+        "physician"
+      ]
+    },
+    {
+      "code": "ausbildung-pflegefachmann",
+      "title": "Ausbildung Pflegefachmann/-frau",
+      "level": "Duale/schulische Ausbildung (3 Jahre)",
+      "ege": [
+        "Mittlerer Schulabschluss (oder Hauptschulabschluss + Vorqualifikation)",
+        "Ausbildungsvertrag mit Klinik/Pflegeeinrichtung + Pflegeschule",
+        "In Deutschland umfasst die Pflege auch OP- und Atmungs-nahe Assistenztätigkeiten"
+      ],
+      "occupations": [
+        "nurse",
+        "respiratory-therapist",
+        "surgical-technologist"
+      ]
+    },
+    {
+      "code": "studium-physiotherapie",
+      "title": "Ausbildung/Studium Physiotherapie",
+      "level": "Schulische Ausbildung (3 Jahre) oder Bachelor an FH",
+      "ege": [
+        "Mittlerer Schulabschluss (Ausbildung) bzw. Abitur/Fachabitur (Studium)",
+        "Bewerbung an Berufsfachschule oder Hochschule; teils Aufnahmetests",
+        "Zunehmend akademisierter Weg über ein FH-Studium"
+      ],
+      "occupations": [
+        "physical-therapist"
+      ]
+    },
+    {
+      "code": "staatsexamen-zahnmedizin",
+      "title": "Studium Zahnmedizin (Staatsexamen)",
+      "level": "Studium mit Staatsexamen (5–6 Jahre)",
+      "ege": [
+        "Abitur; Zulassung über Hochschulstart, sehr hoher NC",
+        "Auswahl auch über Auswahlverfahren der Hochschulen (AdH)",
+        "Approbation nach dem Staatsexamen"
+      ],
+      "occupations": [
+        "dentist"
+      ]
+    },
+    {
+      "code": "staatsexamen-pharmazie",
+      "title": "Studium Pharmazie (Staatsexamen)",
+      "level": "Studium mit Staatsexamen (5 Jahre inkl. praktisches Jahr)",
+      "ege": [
+        "Abitur; Zulassung über Hochschulstart, hoher NC",
+        "Bewerbung über das zentrale Verfahren",
+        "Approbation nach drei Staatsexamina"
+      ],
+      "occupations": [
+        "pharmacist"
+      ]
+    },
+    {
+      "code": "staatsexamen-tiermedizin",
+      "title": "Studium Tiermedizin (Staatsexamen)",
+      "level": "Studium mit Staatsexamen (5,5 Jahre)",
+      "ege": [
+        "Abitur; Zulassung über Hochschulstart, sehr hoher NC",
+        "Wenige Studienstandorte, entsprechend begrenzte Plätze",
+        "Approbation nach dem Staatsexamen"
+      ],
+      "occupations": [
+        "veterinarian"
+      ]
+    },
+    {
+      "code": "ausbildung-augenoptiker",
+      "title": "Ausbildung Augenoptiker/-in (+ Meister/Optometrie)",
+      "level": "Duale Ausbildung (3 Jahre), optional Meister oder Studium",
+      "ege": [
+        "Mittlerer Schulabschluss oder Abitur; Ausbildungsvertrag nötig",
+        "Selbstständigkeit meist über den Augenoptikermeister",
+        "Optometrie-Studium (Bachelor an FH) als weiterführender Weg"
+      ],
+      "occupations": [
+        "optometrist"
+      ]
+    },
+    {
+      "code": "studium-ergotherapie",
+      "title": "Ausbildung/Studium Ergotherapie",
+      "level": "Schulische Ausbildung (3 Jahre) oder Bachelor an FH",
+      "ege": [
+        "Mittlerer Schulabschluss (Ausbildung) bzw. Abitur/Fachabitur (Studium)",
+        "Bewerbung an Berufsfachschule oder Hochschule",
+        "Praxisphasen sind fester Teil der Ausbildung"
+      ],
+      "occupations": [
+        "occupational-therapist"
+      ]
+    },
+    {
+      "code": "studium-logopaedie",
+      "title": "Ausbildung/Studium Logopädie",
+      "level": "Schulische Ausbildung (3 Jahre) oder Bachelor an FH",
+      "ege": [
+        "Mittlerer Schulabschluss (Ausbildung) bzw. Abitur/Fachabitur (Studium)",
+        "Bewerbung an Berufsfachschule oder Hochschule; teils Eignungstest (Stimme/Gehör)",
+        "Zunehmend als Hochschulstudium angeboten"
+      ],
+      "occupations": [
+        "speech-language-pathologist"
+      ]
+    },
+    {
+      "code": "studium-oecotrophologie",
+      "title": "Studium Ökotrophologie / Diätetik",
+      "level": "Studium — Bachelor an FH/Universität (3–4 Jahre)",
+      "ege": [
+        "Abitur/Fachabitur; NC variiert je Hochschule und Jahr",
+        "Alternativ Ausbildung Diätassistent/-in an einer Berufsfachschule",
+        "Bewerbung an der Hochschule bzw. Schule"
+      ],
+      "occupations": [
+        "dietitian"
+      ]
+    },
+    {
+      "code": "studium-psychologie",
+      "title": "Studium Psychologie (Bachelor/Master)",
+      "level": "Studium — Bachelor + Master an Universität (5 Jahre)",
+      "ege": [
+        "Abitur; Zulassung meist über hohen NC, variiert je Hochschule und Jahr",
+        "Für die Approbation als Psychotherapeut: approbationskonformer Master + Weiterbildung",
+        "Bewerbung an der Universität bzw. über Hochschulstart"
+      ],
+      "occupations": [
+        "psychologist"
+      ]
+    },
+    {
+      "code": "staatsexamen-jura",
+      "title": "Studium Rechtswissenschaft (Staatsexamen)",
+      "level": "Studium mit Staatsexamen (ca. 5 Jahre) + Referendariat (2 Jahre)",
+      "ege": [
+        "Abitur; teils NC, variiert je Hochschule und Jahr",
+        "Erstes Staatsexamen, dann Referendariat und zweites Staatsexamen",
+        "Beide Examina nötig, um als Anwalt/Anwältin zugelassen zu werden"
+      ],
+      "occupations": [
+        "lawyer"
+      ]
+    },
+    {
+      "code": "studium-bwl",
+      "title": "Studium Betriebswirtschaftslehre (BWL)",
+      "level": "Studium — Bachelor an Universität/FH (3–4 Jahre)",
+      "ege": [
+        "Abitur/Fachabitur; NC variiert je Hochschule und Jahr",
+        "Duales BWL-Studium (Betrieb + Hochschule) als praxisnahe Alternative",
+        "Breite Einsatzfelder: Management, Beratung, Operations, Produkt"
+      ],
+      "occupations": [
+        "accountant",
+        "product-manager",
+        "project-manager",
+        "management-consultant",
+        "operations-manager",
+        "logistician"
+      ]
+    },
+    {
+      "code": "studium-vwl",
+      "title": "Studium Volkswirtschaftslehre (VWL)",
+      "level": "Studium — Bachelor + Master an Universität (5 Jahre)",
+      "ege": [
+        "Abitur; Mathematik empfohlen; teils NC, variiert je Hochschule und Jahr",
+        "Master zur Spezialisierung (Ökonometrie, angewandte Ökonomie)",
+        "Bewerbung an der Universität"
+      ],
+      "occupations": [
+        "economist"
+      ]
+    },
+    {
+      "code": "studium-finanzen",
+      "title": "Studium Finance / Banking & Finance",
+      "level": "Studium — Bachelor + Master an Universität/FH (3–5 Jahre)",
+      "ege": [
+        "Abitur/Fachabitur; Mathematik empfohlen; NC variiert je Hochschule und Jahr",
+        "Zertifikate wie der CFA werden für die Anlageberatung geschätzt",
+        "Duales Studium bei Bank/Versicherung als praxisnahe Alternative"
+      ],
+      "occupations": [
+        "financial-analyst",
+        "financial-advisor"
+      ]
+    },
+    {
+      "code": "studium-marketing",
+      "title": "Studium Marketing / Vertrieb (BWL-Schwerpunkt)",
+      "level": "Studium — Bachelor an Universität/FH (3–4 Jahre)",
+      "ege": [
+        "Abitur/Fachabitur; NC variiert je Hochschule und Jahr",
+        "Duales Studium und Praktika sind bei Arbeitgebern gefragt",
+        "Bewerbung an der Hochschule"
+      ],
+      "occupations": [
+        "marketing-manager",
+        "sales-manager"
+      ]
+    },
+    {
+      "code": "studium-kommunikation",
+      "title": "Studium Kommunikationsdesign / Werbung",
+      "level": "Studium — Bachelor an FH/Kunsthochschule (3–4 Jahre)",
+      "ege": [
+        "Abitur/Fachabitur; oft Mappe (Portfolio) und Eignungsprüfung statt NC",
+        "Für kreative Rollen zählt das Portfolio besonders",
+        "Bewerbung direkt an der Hochschule"
+      ],
+      "occupations": [
+        "marketing-manager",
+        "art-director"
+      ]
+    },
+    {
+      "code": "studium-personalmanagement",
+      "title": "Studium Personalmanagement / BWL-HR",
+      "level": "Studium — Bachelor an Universität/FH (3–4 Jahre)",
+      "ege": [
+        "Abitur/Fachabitur; NC variiert je Hochschule und Jahr",
+        "Quereinstieg über BWL, Psychologie oder Ausbildung möglich",
+        "Duales Studium in Unternehmen weit verbreitet"
+      ],
+      "occupations": [
+        "hr-specialist"
+      ]
+    },
+    {
+      "code": "studium-journalismus",
+      "title": "Studium Journalismus / Volontariat",
+      "level": "Studium (Bachelor/Master) oder Volontariat (2 Jahre)",
+      "ege": [
+        "Abitur/Fachabitur; teils Eignungstest an Journalistenschulen",
+        "Klassischer Weg: Studium + Redaktions-Volontariat",
+        "Bewerbung an Hochschule oder direkt bei Redaktion/Journalistenschule"
+      ],
+      "occupations": [
+        "journalist"
+      ]
+    },
+    {
+      "code": "studium-film-medien",
+      "title": "Studium Film/Medien oder Mediengestalter-Ausbildung",
+      "level": "Studium an FH/Filmhochschule oder duale Ausbildung (3 Jahre)",
+      "ege": [
+        "Ausbildung Mediengestalter/-in Bild und Ton: Ausbildungsvertrag + mittlerer Abschluss",
+        "Filmhochschulen sind sehr selektiv; Arbeitsproben/Portfolio entscheidend",
+        "Zwei Wege: praxisnahe Ausbildung oder Hochschulstudium"
+      ],
+      "occupations": [
+        "video-editor"
+      ]
+    },
+    {
+      "code": "lehramt-staatsexamen",
+      "title": "Lehramtsstudium (Staatsexamen/Master) + Referendariat",
+      "level": "Studium mit Staatsexamen oder Master of Education (5 Jahre) + Referendariat",
+      "ege": [
+        "Abitur; Fächerwahl je Schulform; teils NC oder Eignungstests",
+        "Nach dem Studium: Referendariat (Vorbereitungsdienst) mit zweitem Staatsexamen",
+        "Bewerbung an der Universität"
+      ],
+      "occupations": [
+        "teacher"
+      ]
+    },
+    {
+      "code": "studium-schulpsychologie",
+      "title": "Studium Psychologie/Pädagogik (Beratung/Orientierung)",
+      "level": "Studium — Bachelor + Master an Universität (5 Jahre)",
+      "ege": [
+        "Abitur; hoher NC in Psychologie, variiert je Hochschule und Jahr",
+        "Schul-/Berufsberatung über Psychologie, Pädagogik oder Sozialpädagogik",
+        "Berufsberatung auch über duales Studium bei der Bundesagentur für Arbeit"
+      ],
+      "occupations": [
+        "school-counselor"
+      ]
+    },
+    {
+      "code": "studium-bibliothekswesen",
+      "title": "Studium/Ausbildung Bibliotheks- und Informationswesen",
+      "level": "Studium an FH (Bachelor) oder duale Ausbildung (3 Jahre)",
+      "ege": [
+        "Abitur/Fachabitur (Studium) bzw. mittlerer Abschluss (Ausbildung FaMI)",
+        "Ausbildung Fachangestellte/r für Medien- und Informationsdienste (FaMI) mit Vertrag",
+        "Für den höheren Bibliotheksdienst: Master + Referendariat"
+      ],
+      "occupations": [
+        "librarian"
+      ]
+    },
+    {
+      "code": "studium-soziale-arbeit",
+      "title": "Studium Soziale Arbeit",
+      "level": "Studium — Bachelor an FH (3,5 Jahre) + staatl. Anerkennung",
+      "ege": [
+        "Abitur/Fachabitur; NC variiert je Hochschule und Jahr",
+        "Praxissemester und staatliche Anerkennung gehören dazu",
+        "Bewerbung an der Hochschule"
+      ],
+      "occupations": [
+        "social-worker"
+      ]
+    },
+    {
+      "code": "studium-uebersetzen",
+      "title": "Studium Übersetzen/Dolmetschen",
+      "level": "Studium — Bachelor + Master an Universität/FH (5 Jahre)",
+      "ege": [
+        "Abitur/Fachabitur; zwei starke Fremdsprachen empfohlen",
+        "Teils Sprachtests zum Zugang; Auslandsaufenthalte ratsam",
+        "Master zur Spezialisierung (Fachübersetzen, Konferenzdolmetschen)"
+      ],
+      "occupations": [
+        "translator"
+      ]
+    },
+    {
+      "code": "studium-germanistik",
+      "title": "Studium Germanistik / Literatur (Schreiben)",
+      "level": "Studium — Bachelor + Master an Universität (5 Jahre)",
+      "ege": [
+        "Abitur; oft zulassungsfrei oder niedriger NC",
+        "Fürs professionelle Schreiben zählt vor allem die eigene Praxis/Veröffentlichung",
+        "Alternativ Studiengänge Kreatives Schreiben (z. B. Leipzig, Hildesheim)"
+      ],
+      "occupations": [
+        "writer"
+      ]
+    },
+    {
+      "code": "studium-design",
+      "title": "Studium Design (Grafik/UX/Innenarchitektur)",
+      "level": "Studium — Bachelor an FH/Kunsthochschule (3–4 Jahre)",
+      "ege": [
+        "Abitur/Fachabitur; meist Mappe (Portfolio) und Eignungsprüfung statt NC",
+        "Fachrichtungen: Kommunikations-, Interaction-/UX- oder Innenarchitektur-Design",
+        "Bewerbung direkt an der Hochschule"
+      ],
+      "occupations": [
+        "graphic-designer",
+        "ux-ui-designer",
+        "interior-designer",
+        "art-director"
+      ]
+    },
+    {
+      "code": "studium-industriedesign",
+      "title": "Studium Industrie-/Produktdesign",
+      "level": "Studium — Bachelor an FH/Kunsthochschule (3–4 Jahre)",
+      "ege": [
+        "Abitur/Fachabitur; Mappe (Portfolio) und Eignungsprüfung meist verpflichtend",
+        "Verbindet Gestaltung mit technischen Fertigungs-Anforderungen",
+        "Bewerbung direkt an der Hochschule"
+      ],
+      "occupations": [
+        "industrial-designer"
+      ]
+    },
+    {
+      "code": "studium-architektur",
+      "title": "Studium Architektur (Bachelor + Master)",
+      "level": "Studium — Bachelor + Master an Universität/FH (5 Jahre)",
+      "ege": [
+        "Abitur/Fachabitur; teils NC oder Mappe, variiert je Hochschule",
+        "Für die Kammereintragung sind i. d. R. Master + Berufspraxis nötig",
+        "Bewerbung an der Hochschule"
+      ],
+      "occupations": [
+        "architect"
+      ]
+    },
+    {
+      "code": "studium-maschinenbau",
+      "title": "Studium Maschinenbau",
+      "level": "Studium — Bachelor an Universität/FH (3–4 Jahre)",
+      "ege": [
+        "Abitur/Fachabitur; Mathe/Physik empfohlen; NC oft moderat, variiert je Jahr",
+        "Duales Studium (Betrieb + Hochschule) als praxisnahe Alternative",
+        "Einsatz in Konstruktion, Produktion und Forschung & Entwicklung"
+      ],
+      "occupations": [
+        "mechanical-engineer"
+      ]
+    },
+    {
+      "code": "studium-bauingenieurwesen",
+      "title": "Studium Bauingenieurwesen",
+      "level": "Studium — Bachelor an Universität/FH (3–4 Jahre)",
+      "ege": [
+        "Abitur/Fachabitur; Mathe/Physik empfohlen; NC variiert je Hochschule und Jahr",
+        "Duales Studium als praxisnahe Alternative",
+        "Baustellen, Tragwerke und Infrastruktur"
+      ],
+      "occupations": [
+        "civil-engineer"
+      ]
+    },
+    {
+      "code": "studium-elektrotechnik",
+      "title": "Studium Elektrotechnik",
+      "level": "Studium — Bachelor an Universität/FH (3–4 Jahre)",
+      "ege": [
+        "Abitur/Fachabitur; Mathe/Physik empfohlen; NC variiert je Hochschule und Jahr",
+        "Duales Studium als praxisnahe Alternative",
+        "Einsatz in Entwicklung, Energie und Automatisierung"
+      ],
+      "occupations": [
+        "electrical-engineer"
+      ]
+    },
+    {
+      "code": "studium-biologie",
+      "title": "Studium Biologie",
+      "level": "Studium — Bachelor + Master an Universität (5 Jahre)",
+      "ege": [
+        "Abitur; teils NC, variiert je Hochschule und Jahr",
+        "Master zur Spezialisierung; Forschung meist mit Promotion",
+        "Bewerbung an der Universität"
+      ],
+      "occupations": [
+        "biologist"
+      ]
+    },
+    {
+      "code": "studium-chemie",
+      "title": "Studium Chemie",
+      "level": "Studium — Bachelor + Master an Universität (5 Jahre)",
+      "ege": [
+        "Abitur; Chemie/Mathe empfohlen; teils NC, variiert je Hochschule und Jahr",
+        "Alternativ Ausbildung Chemielaborant/-in mit Ausbildungsvertrag",
+        "Einsatz in Labor, Industrie und Qualitätskontrolle"
+      ],
+      "occupations": [
+        "chemist"
+      ]
+    },
+    {
+      "code": "studium-umweltwissenschaften",
+      "title": "Studium Umweltwissenschaften / Geoökologie",
+      "level": "Studium — Bachelor + Master an Universität (5 Jahre)",
+      "ege": [
+        "Abitur; naturwissenschaftliche Fächer empfohlen; NC variiert je Hochschule",
+        "Master zur Spezialisierung (Ökologie, Klima, Umweltmanagement)",
+        "Feldarbeit, Messungen und Datenanalyse"
+      ],
+      "occupations": [
+        "environmental-scientist"
+      ]
+    },
+    {
+      "code": "studium-stadtplanung",
+      "title": "Studium Stadt- und Raumplanung",
+      "level": "Studium — Bachelor + Master an Universität/FH (5 Jahre)",
+      "ege": [
+        "Abitur/Fachabitur; teils NC, variiert je Hochschule und Jahr",
+        "Arbeit mit Kommunen, Planungsbüros und Behörden",
+        "Bewerbung an der Hochschule"
+      ],
+      "occupations": [
+        "urban-planner"
+      ]
+    },
+    {
+      "code": "studium-sportwissenschaft",
+      "title": "Studium Sportwissenschaft / Fitness-Ausbildung",
+      "level": "Studium an FH/Universität oder Fachwirt-/Trainer-Ausbildung",
+      "ege": [
+        "Abitur/Fachabitur (Studium); teils Sport-Eignungstest",
+        "Kürzerer Weg: Ausbildung/Weiterbildung zum Fitnesstrainer oder Sportfachwirt",
+        "Trainerlizenzen (Verbände) sind in der Praxis wichtig"
+      ],
+      "occupations": [
+        "fitness-trainer"
+      ]
+    },
+    {
+      "code": "studium-game-animation",
+      "title": "Studium Game Design/Animation oder Gestalter-Ausbildung",
+      "level": "Studium an FH/Kunsthochschule (3–4 Jahre) oder Ausbildung",
+      "ege": [
+        "Abitur/Fachabitur; meist Mappe (Portfolio) und Eignungsprüfung",
+        "Demoreel/Portfolio entscheidend für Animation und Games",
+        "Auch private (kostenpflichtige) Fachhochschulen bieten Studiengänge an"
+      ],
+      "occupations": [
+        "animator",
+        "game-developer"
+      ]
+    },
+    {
+      "code": "ausbildung-mtra",
+      "title": "Ausbildung MTR (Medizinische Technologie für Radiologie)",
+      "level": "Schulische Ausbildung (3 Jahre)",
+      "ege": [
+        "Mittlerer Schulabschluss; Bewerbung an einer MT-Schule (oft an Kliniken)",
+        "Praxisphasen im Krankenhaus gehören dazu",
+        "Staatliche Prüfung zum Abschluss"
+      ],
+      "occupations": [
+        "radiologic-technologist"
+      ]
+    },
+    {
+      "code": "ausbildung-mfa",
+      "title": "Ausbildung Medizinische/r Fachangestellte/r (MFA)",
+      "level": "Duale Ausbildung (3 Jahre)",
+      "ege": [
+        "Mindestens Hauptschulabschluss, häufig mittlerer Abschluss",
+        "Ausbildungsvertrag mit einer Arztpraxis nötig",
+        "Betrieb (Praxis) + Berufsschule im Wechsel"
+      ],
+      "occupations": [
+        "medical-assistant"
+      ]
+    },
+    {
+      "code": "ausbildung-mtla",
+      "title": "Ausbildung MTL (Medizinische Technologie für Laboratoriumsanalytik)",
+      "level": "Schulische Ausbildung (3 Jahre)",
+      "ege": [
+        "Mittlerer Schulabschluss; Bewerbung an einer MT-Schule",
+        "Blutentnahmen und Laboranalytik sind Teil des Berufs",
+        "Staatliche Prüfung zum Abschluss"
+      ],
+      "occupations": [
+        "phlebotomist"
+      ]
+    },
+    {
+      "code": "ausbildung-zfa",
+      "title": "Ausbildung Zahnmedizinische/r Fachangestellte/r (ZFA)",
+      "level": "Duale Ausbildung (3 Jahre)",
+      "ege": [
+        "Mindestens Hauptschulabschluss, häufig mittlerer Abschluss",
+        "Ausbildungsvertrag mit einer Zahnarztpraxis nötig",
+        "Weiterbildung zur Prophylaxe-/Dentalhygiene-Assistenz möglich"
+      ],
+      "occupations": [
+        "dental-hygienist"
+      ]
+    },
+    {
+      "code": "ausbildung-notfallsanitaeter",
+      "title": "Ausbildung Notfallsanitäter/-in",
+      "level": "Duale Ausbildung (3 Jahre)",
+      "ege": [
+        "Mittlerer Schulabschluss; Ausbildungsvertrag mit Rettungsdienst",
+        "Führerschein und gesundheitliche Eignung erforderlich",
+        "Schule, Rettungswache und Klinik im Wechsel"
+      ],
+      "occupations": [
+        "paramedic"
+      ]
+    },
+    {
+      "code": "ausbildung-koch",
+      "title": "Ausbildung Koch/Köchin",
+      "level": "Duale Ausbildung (3 Jahre)",
+      "ege": [
+        "Kein bestimmter Abschluss vorgeschrieben; Ausbildungsvertrag nötig",
+        "Betrieb (Küche) + Berufsschule im Wechsel",
+        "Weiterbildung zum Küchenmeister für Führungsrollen"
+      ],
+      "occupations": [
+        "chef"
+      ]
+    },
+    {
+      "code": "ausbildung-elektroniker",
+      "title": "Ausbildung Elektroniker/-in (+ Energietechnik)",
+      "level": "Duale Ausbildung (3,5 Jahre)",
+      "ege": [
+        "Haupt- oder mittlerer Schulabschluss; Ausbildungsvertrag nötig",
+        "Fachrichtungen z. B. Energie- und Gebäudetechnik oder Betriebstechnik",
+        "Arbeiten an Netzen/Leitungen über Betrieb + Zusatzqualifikationen"
+      ],
+      "occupations": [
+        "electrician",
+        "lineworker"
+      ]
+    },
+    {
+      "code": "ausbildung-kfz-mechatroniker",
+      "title": "Ausbildung Kfz-Mechatroniker/-in",
+      "level": "Duale Ausbildung (3,5 Jahre)",
+      "ege": [
+        "Haupt- oder mittlerer Schulabschluss; Ausbildungsvertrag nötig",
+        "Schwerpunkte z. B. Pkw-, Nutzfahrzeug- oder Systemtechnik",
+        "Weiterbildung zum Kfz-Meister für die Selbstständigkeit"
+      ],
+      "occupations": [
+        "automotive-technician"
+      ]
+    },
+    {
+      "code": "ausbildung-metallbauer-schweisser",
+      "title": "Ausbildung Metallbauer/-in / Schweißer/-in",
+      "level": "Duale Ausbildung (3–3,5 Jahre)",
+      "ege": [
+        "Haupt- oder mittlerer Schulabschluss; Ausbildungsvertrag nötig",
+        "Schweißerprüfungen/Zertifikate steigern das Gehalt in der Industrie",
+        "Betrieb + Berufsschule im Wechsel"
+      ],
+      "occupations": [
+        "welder"
+      ]
+    },
+    {
+      "code": "ausbildung-anlagenmechaniker-shk",
+      "title": "Ausbildung Anlagenmechaniker/-in SHK (Sanitär/Heizung)",
+      "level": "Duale Ausbildung (3,5 Jahre)",
+      "ege": [
+        "Haupt- oder mittlerer Schulabschluss; Ausbildungsvertrag nötig",
+        "Umfasst Sanitär-, Heizungs- und Klimatechnik",
+        "Gefragter Beruf mit Weiterbildung zum Installateurmeister"
+      ],
+      "occupations": [
+        "plumber"
+      ]
+    },
+    {
+      "code": "ausbildung-mechatroniker-kaeltetechnik",
+      "title": "Ausbildung Mechatroniker/-in für Kältetechnik",
+      "level": "Duale Ausbildung (3,5 Jahre)",
+      "ege": [
+        "Haupt- oder mittlerer Schulabschluss; Ausbildungsvertrag nötig",
+        "Sachkunde für den Umgang mit fluorierten Kältemitteln erforderlich",
+        "Betrieb + Berufsschule im Wechsel"
+      ],
+      "occupations": [
+        "hvac-technician"
+      ]
+    },
+    {
+      "code": "ausbildung-tischler",
+      "title": "Ausbildung Tischler/-in (Schreiner/-in)",
+      "level": "Duale Ausbildung (3 Jahre)",
+      "ege": [
+        "Haupt- oder mittlerer Schulabschluss; Ausbildungsvertrag nötig",
+        "Arbeit in Werkstatt und auf Montage",
+        "Weiterbildung zum Tischlermeister für die Selbstständigkeit"
+      ],
+      "occupations": [
+        "carpenter"
+      ]
+    },
+    {
+      "code": "ausbildung-zerspanungsmechaniker",
+      "title": "Ausbildung Zerspanungsmechaniker/-in",
+      "level": "Duale Ausbildung (3,5 Jahre)",
+      "ege": [
+        "Haupt- oder mittlerer Schulabschluss; Ausbildungsvertrag nötig",
+        "Umfasst Drehen, Fräsen und CNC-Programmierung",
+        "Weiterbildung zum Techniker/Meister für höhere Aufgaben"
+      ],
+      "occupations": [
+        "machinist",
+        "cnc-machinist"
+      ]
+    },
+    {
+      "code": "ausbildung-baugeraetefuehrer",
+      "title": "Ausbildung Baugeräteführer/-in",
+      "level": "Duale Ausbildung (3 Jahre)",
+      "ege": [
+        "Haupt- oder mittlerer Schulabschluss; Ausbildungsvertrag nötig",
+        "Führerscheine/Befähigungen für Baumaschinen gehören dazu",
+        "Einsatz im Tief- und Straßenbau"
+      ],
+      "occupations": [
+        "heavy-equipment-operator"
+      ]
+    },
+    {
+      "code": "ausbildung-fluggeraetmechaniker",
+      "title": "Ausbildung Fluggerätmechaniker/-in (+ Part-66)",
+      "level": "Duale Ausbildung (3,5 Jahre)",
+      "ege": [
+        "Mittlerer Schulabschluss; Ausbildungsvertrag mit Luftfahrtbetrieb",
+        "Für Freigaben: EASA-Part-66-Lizenz erforderlich",
+        "Gutes technisches Englisch wichtig"
+      ],
+      "occupations": [
+        "aircraft-mechanic"
+      ]
+    },
+    {
+      "code": "ausbildung-fotograf",
+      "title": "Ausbildung Fotograf/-in oder Studium Fotografie",
+      "level": "Duale Ausbildung (3 Jahre) oder Studium an FH/Kunsthochschule",
+      "ege": [
+        "Ausbildung: Ausbildungsvertrag; Studium: Mappe (Portfolio) + Fachabitur/Abitur",
+        "In der Fotografie zählt das Portfolio mehr als der Abschluss",
+        "Selbstständigkeit oft über die Meisterprüfung"
+      ],
+      "occupations": [
+        "photographer"
+      ]
+    },
+    {
+      "code": "studium-tontechnik",
+      "title": "Studium/Ausbildung Tontechnik (Audio Engineering)",
+      "level": "Studium an FH/Musikhochschule oder Ausbildung/Weiterbildung",
+      "ege": [
+        "Abitur/Fachabitur (Studium); teils Eignungsprüfung",
+        "Auch über Ausbildung Mediengestalter Bild und Ton oder private Akademien",
+        "Praxiserfahrung und Demos öffnen Türen"
+      ],
+      "occupations": [
+        "sound-engineer"
+      ]
+    },
+    {
+      "code": "ausbildung-immobilienkaufmann",
+      "title": "Ausbildung Immobilienkaufmann/-frau / Kaufleute Vertrieb",
+      "level": "Duale Ausbildung (3 Jahre)",
+      "ege": [
+        "Mittlerer Schulabschluss oder Abitur; Ausbildungsvertrag nötig",
+        "Vertrieb auch über kaufmännische Ausbildungen (z. B. Groß-/Außenhandel)",
+        "Immobilien: für Makler ist die Erlaubnis nach §34c GewO nötig"
+      ],
+      "occupations": [
+        "sales-manager",
+        "real-estate-agent"
+      ]
+    },
+    {
+      "code": "ausbildung-kaufmann-versicherung",
+      "title": "Ausbildung Kaufmann/-frau Versicherungen / Buchhaltung",
+      "level": "Duale Ausbildung (3 Jahre)",
+      "ege": [
+        "Mittlerer Schulabschluss oder Abitur; Ausbildungsvertrag nötig",
+        "Buchhaltung u. a. über Steuerfachangestellte/Industriekaufleute",
+        "Versicherung: Kaufmann/-frau für Versicherungen und Finanzanlagen"
+      ],
+      "occupations": [
+        "accountant",
+        "insurance-agent"
+      ]
+    },
+    {
+      "code": "ausbildung-kaufmann-logistik",
+      "title": "Ausbildung Kaufmann/-frau für Spedition und Logistik",
+      "level": "Duale Ausbildung (3 Jahre)",
+      "ege": [
+        "Mittlerer Schulabschluss oder Abitur; Ausbildungsvertrag nötig",
+        "Stark nachgefragte Branche mit guten Übernahmechancen",
+        "Weiterbildung zum Fachwirt/Betriebswirt für Supply-Chain-Rollen"
+      ],
+      "occupations": [
+        "logistician"
+      ]
+    },
+    {
+      "code": "studium-musik",
+      "title": "Studium Musik (Musikhochschule)",
+      "level": "Künstlerisches Studium (Bachelor + Master, ca. 5 Jahre)",
+      "ege": [
+        "Aufnahmeprüfung (Vorspiel) an der Musikhochschule ist entscheidend",
+        "Hochschulreife oder künstlerische Eignung als Zugang",
+        "Der Weg entsteht durch Bühne und Übung ebenso wie durch den Abschluss"
+      ],
+      "occupations": [
+        "musician"
+      ]
+    },
+    {
+      "code": "studium-schauspiel",
+      "title": "Studium Schauspiel (Schauspielschule/Hochschule)",
+      "level": "Künstlerisches Studium (3–4 Jahre)",
+      "ege": [
+        "Aufnahmeprüfung (Vorsprechen) ist entscheidend; sehr selektiv",
+        "Staatliche Hochschulen und anerkannte private Schulen",
+        "Bühnenpraxis begleitend zum Studium wichtig"
+      ],
+      "occupations": [
+        "actor"
+      ]
+    },
+    {
+      "code": "duales-studium-polizei",
+      "title": "Ausbildung/duales Studium bei der Polizei",
+      "level": "Ausbildung (mittlerer Dienst) oder duales Studium (gehobener Dienst)",
+      "ege": [
+        "Mittlerer Schulabschluss (Ausbildung) bzw. Abitur/Fachabitur (Studium)",
+        "Auswahlverfahren mit Sport-, Wissens- und Eignungstests",
+        "Bezahlte Ausbildung/Studium an einer Polizeihochschule/-akademie"
+      ],
+      "occupations": [
+        "police-officer"
+      ]
+    },
+    {
+      "code": "ausbildung-feuerwehr",
+      "title": "Ausbildung Feuerwehr (Beamtenlaufbahn)",
+      "level": "Laufbahnausbildung im Feuerwehrdienst (mittlerer/gehobener Dienst)",
+      "ege": [
+        "Oft handwerklicher/technischer Ausbildungsberuf als Voraussetzung (mittlerer Dienst)",
+        "Auswahlverfahren mit anspruchsvollen Sport- und Gesundheitstests",
+        "Bezahlte Laufbahnausbildung bei einer Berufsfeuerwehr"
+      ],
+      "occupations": [
+        "firefighter"
+      ]
+    },
+    {
+      "code": "flugschule-atpl",
+      "title": "Verkehrspilot/-in (ATPL, Flugschule)",
+      "level": "Berufsausbildung an einer zugelassenen Flugschule (außerhalb des Hochschulsystems)",
+      "ege": [
+        "Abitur empfohlen (Mathe/Physik, gutes Englisch)",
+        "ATPL-Ausbildung an zugelassener Flugschule (z. B. Lufthansa Aviation Training); teuer, mit Auswahl",
+        "Flugmedizinisches Tauglichkeitszeugnis Klasse 1 erforderlich"
+      ],
+      "occupations": [
+        "airline-pilot"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "stage": "school",
+      "date_rule": "10-05",
+      "title": "Berufe und Ausbildungen erkunden (Berufsinformationszentrum/BERUFENET) und Liste beginnen"
+    },
+    {
+      "stage": "school",
+      "date_rule": "11-15",
+      "title": "Ausbildung: Bewerbungen für das nächste Jahr starten (oft rund ein Jahr im Voraus)"
+    },
+    {
+      "stage": "school",
+      "date_rule": "01-15",
+      "title": "Abitur-Endspurt und Studienwahl konkretisieren"
+    },
+    {
+      "stage": "school",
+      "date_rule": "05-01",
+      "title": "Studium: Bewerbungsphase über Hochschulstart bzw. die Hochschule beginnt"
+    },
+    {
+      "stage": "school",
+      "date_rule": "07-15",
+      "title": "Bewerbungsschluss für zulassungsbeschränkte Studiengänge (NC)"
+    },
+    {
+      "stage": "school",
+      "date_rule": "09-01",
+      "title": "Ausbildung und Studium beginnen (Wintersemester ab Oktober)"
+    }
+  ]
+}

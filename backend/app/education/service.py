@@ -15,16 +15,19 @@ from app.models import (
 
 # Honest fallback for countries we haven't curated: point at official sources,
 # do NOT LLM-generate admission paths (design rule P5). US = CIP majors + College
-# Scorecard link-out (EN-2). FR = ONISEP + Parcoursup (FR-2).
-_SUPPORTED = {"RU", "US", "ES", "FR"}
+# Scorecard link-out (EN-2). FR = ONISEP + Parcoursup (FR-2). DE = BERUFENET +
+# Hochschulstart (DE-2).
+_SUPPORTED = {"RU", "US", "ES", "FR", "DE"}
 
 # First month of the admission cycle per country. The US senior year runs
 # Aug -> May, so a plain MM-DD sort would show January deadlines before the
 # August "build your college list" step. RU's cycle sits inside one calendar
 # year (Feb -> Aug), so it defaults to January. Spain's curso starts in Sep.
 # France's Parcoursup cycle wraps the year (explore in Nov -> rentrée in Sep),
-# so it starts in November like the US senior-year build-list step.
-_CYCLE_START = {"US": 8, "ES": 9, "FR": 11}
+# so it starts in November like the US senior-year build-list step. Germany's
+# cycle wraps too (explore in Oct -> Ausbildung/Wintersemester start next Sep-Oct),
+# so it starts in October.
+_CYCLE_START = {"US": 8, "ES": 9, "FR": 11, "DE": 10}
 
 
 def _cycle_key(date_rule: str, start_month: int) -> tuple[int, int]:

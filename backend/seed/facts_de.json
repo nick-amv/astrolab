@@ -1,0 +1,890 @@
+{
+  "country": "DE",
+  "source_key": "entgeltatlas",
+  "source_name": "Bundesagentur fuer Arbeit — Entgeltatlas: Medianentgelt nach Anforderungsniveau (brutto, Vollzeit), 2023 auf 2024 skaliert; Bandbreite als Schaetzung um den Median",
+  "source_url": "https://web.arbeitsagentur.de/entgeltatlas",
+  "as_of_date": "2024-01-01",
+  "_doc": "GROUP-level base by Anforderungsniveau (Helfer/Fachkraft/Spezialist/Experte), coarse by design; Adzuna upgrades individual professions. Level MEDIAN is real; p25/p75 band is an estimate (x0.80/x1.30), capped at the Beitragsbemessungsgrenze (90600/yr). niveau kept for provenance, not seeded.",
+  "facts": [
+    {
+      "slug": "accountant",
+      "salary_low": 37800,
+      "salary_high": 61300,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 47200,
+      "niveau": "fachkraft"
+    },
+    {
+      "slug": "actuary",
+      "salary_low": 63900,
+      "salary_high": 90600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 79800,
+      "niveau": "experte"
+    },
+    {
+      "slug": "aircraft-mechanic",
+      "salary_low": 37800,
+      "salary_high": 61300,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 47200,
+      "niveau": "fachkraft"
+    },
+    {
+      "slug": "airline-pilot",
+      "salary_low": 63900,
+      "salary_high": 90600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 79800,
+      "niveau": "experte"
+    },
+    {
+      "slug": "animator",
+      "salary_low": 50800,
+      "salary_high": 82500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 63500,
+      "niveau": "spezialist"
+    },
+    {
+      "slug": "architect",
+      "salary_low": 50800,
+      "salary_high": 82500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 63500,
+      "niveau": "spezialist"
+    },
+    {
+      "slug": "art-director",
+      "salary_low": 50800,
+      "salary_high": 82500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 63500,
+      "niveau": "spezialist"
+    },
+    {
+      "slug": "automotive-technician",
+      "salary_low": 37800,
+      "salary_high": 61300,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 47200,
+      "niveau": "fachkraft"
+    },
+    {
+      "slug": "biologist",
+      "salary_low": 50800,
+      "salary_high": 82500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 63500,
+      "niveau": "spezialist"
+    },
+    {
+      "slug": "carpenter",
+      "salary_low": 37800,
+      "salary_high": 61300,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 47200,
+      "niveau": "fachkraft"
+    },
+    {
+      "slug": "chef",
+      "salary_low": 37800,
+      "salary_high": 61300,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 47200,
+      "niveau": "fachkraft"
+    },
+    {
+      "slug": "chemist",
+      "salary_low": 50800,
+      "salary_high": 82500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 63500,
+      "niveau": "spezialist"
+    },
+    {
+      "slug": "civil-engineer",
+      "salary_low": 50800,
+      "salary_high": 82500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 63500,
+      "niveau": "spezialist"
+    },
+    {
+      "slug": "cnc-machinist",
+      "salary_low": 37800,
+      "salary_high": 61300,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 47200,
+      "niveau": "fachkraft"
+    },
+    {
+      "slug": "cybersecurity-specialist",
+      "salary_low": 50800,
+      "salary_high": 82500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 63500,
+      "niveau": "spezialist"
+    },
+    {
+      "slug": "data-analyst",
+      "salary_low": 50800,
+      "salary_high": 82500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 63500,
+      "niveau": "spezialist"
+    },
+    {
+      "slug": "data-engineer",
+      "salary_low": 50800,
+      "salary_high": 82500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 63500,
+      "niveau": "spezialist"
+    },
+    {
+      "slug": "data-scientist",
+      "salary_low": 63900,
+      "salary_high": 90600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 79800,
+      "niveau": "experte"
+    },
+    {
+      "slug": "database-administrator",
+      "salary_low": 50800,
+      "salary_high": 82500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 63500,
+      "niveau": "spezialist"
+    },
+    {
+      "slug": "dental-hygienist",
+      "salary_low": 37800,
+      "salary_high": 61300,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 47200,
+      "niveau": "fachkraft"
+    },
+    {
+      "slug": "dentist",
+      "salary_low": 63900,
+      "salary_high": 90600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 79800,
+      "niveau": "experte"
+    },
+    {
+      "slug": "devops-engineer",
+      "salary_low": 50800,
+      "salary_high": 82500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 63500,
+      "niveau": "spezialist"
+    },
+    {
+      "slug": "dietitian",
+      "salary_low": 37800,
+      "salary_high": 61300,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 47200,
+      "niveau": "fachkraft"
+    },
+    {
+      "slug": "economist",
+      "salary_low": 50800,
+      "salary_high": 82500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 63500,
+      "niveau": "spezialist"
+    },
+    {
+      "slug": "electrical-engineer",
+      "salary_low": 50800,
+      "salary_high": 82500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 63500,
+      "niveau": "spezialist"
+    },
+    {
+      "slug": "electrician",
+      "salary_low": 37800,
+      "salary_high": 61300,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 47200,
+      "niveau": "fachkraft"
+    },
+    {
+      "slug": "environmental-scientist",
+      "salary_low": 50800,
+      "salary_high": 82500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 63500,
+      "niveau": "spezialist"
+    },
+    {
+      "slug": "financial-advisor",
+      "salary_low": 50800,
+      "salary_high": 82500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 63500,
+      "niveau": "spezialist"
+    },
+    {
+      "slug": "financial-analyst",
+      "salary_low": 50800,
+      "salary_high": 82500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 63500,
+      "niveau": "spezialist"
+    },
+    {
+      "slug": "firefighter",
+      "salary_low": 37800,
+      "salary_high": 61300,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 47200,
+      "niveau": "fachkraft"
+    },
+    {
+      "slug": "fitness-trainer",
+      "salary_low": 37800,
+      "salary_high": 61300,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 47200,
+      "niveau": "fachkraft"
+    },
+    {
+      "slug": "game-developer",
+      "salary_low": 50800,
+      "salary_high": 82500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 63500,
+      "niveau": "spezialist"
+    },
+    {
+      "slug": "graphic-designer",
+      "salary_low": 37800,
+      "salary_high": 61300,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 47200,
+      "niveau": "fachkraft"
+    },
+    {
+      "slug": "heavy-equipment-operator",
+      "salary_low": 37800,
+      "salary_high": 61300,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 47200,
+      "niveau": "fachkraft"
+    },
+    {
+      "slug": "hr-specialist",
+      "salary_low": 50800,
+      "salary_high": 82500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 63500,
+      "niveau": "spezialist"
+    },
+    {
+      "slug": "hvac-technician",
+      "salary_low": 37800,
+      "salary_high": 61300,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 47200,
+      "niveau": "fachkraft"
+    },
+    {
+      "slug": "industrial-designer",
+      "salary_low": 50800,
+      "salary_high": 82500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 63500,
+      "niveau": "spezialist"
+    },
+    {
+      "slug": "insurance-agent",
+      "salary_low": 37800,
+      "salary_high": 61300,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 47200,
+      "niveau": "fachkraft"
+    },
+    {
+      "slug": "interior-designer",
+      "salary_low": 50800,
+      "salary_high": 82500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 63500,
+      "niveau": "spezialist"
+    },
+    {
+      "slug": "it-support-specialist",
+      "salary_low": 37800,
+      "salary_high": 61300,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 47200,
+      "niveau": "fachkraft"
+    },
+    {
+      "slug": "journalist",
+      "salary_low": 50800,
+      "salary_high": 82500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 63500,
+      "niveau": "spezialist"
+    },
+    {
+      "slug": "lawyer",
+      "salary_low": 63900,
+      "salary_high": 90600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 79800,
+      "niveau": "experte"
+    },
+    {
+      "slug": "librarian",
+      "salary_low": 50800,
+      "salary_high": 82500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 63500,
+      "niveau": "spezialist"
+    },
+    {
+      "slug": "lineworker",
+      "salary_low": 37800,
+      "salary_high": 61300,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 47200,
+      "niveau": "fachkraft"
+    },
+    {
+      "slug": "logistician",
+      "salary_low": 37800,
+      "salary_high": 61300,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 47200,
+      "niveau": "fachkraft"
+    },
+    {
+      "slug": "machine-learning-engineer",
+      "salary_low": 63900,
+      "salary_high": 90600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 79800,
+      "niveau": "experte"
+    },
+    {
+      "slug": "machinist",
+      "salary_low": 37800,
+      "salary_high": 61300,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 47200,
+      "niveau": "fachkraft"
+    },
+    {
+      "slug": "management-consultant",
+      "salary_low": 63900,
+      "salary_high": 90600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 79800,
+      "niveau": "experte"
+    },
+    {
+      "slug": "marketing-manager",
+      "salary_low": 50800,
+      "salary_high": 82500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 63500,
+      "niveau": "spezialist"
+    },
+    {
+      "slug": "mechanical-engineer",
+      "salary_low": 50800,
+      "salary_high": 82500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 63500,
+      "niveau": "spezialist"
+    },
+    {
+      "slug": "medical-assistant",
+      "salary_low": 37800,
+      "salary_high": 61300,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 47200,
+      "niveau": "fachkraft"
+    },
+    {
+      "slug": "network-engineer",
+      "salary_low": 50800,
+      "salary_high": 82500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 63500,
+      "niveau": "spezialist"
+    },
+    {
+      "slug": "nurse",
+      "salary_low": 37800,
+      "salary_high": 61300,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 47200,
+      "niveau": "fachkraft"
+    },
+    {
+      "slug": "occupational-therapist",
+      "salary_low": 50800,
+      "salary_high": 82500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 63500,
+      "niveau": "spezialist"
+    },
+    {
+      "slug": "operations-manager",
+      "salary_low": 50800,
+      "salary_high": 82500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 63500,
+      "niveau": "spezialist"
+    },
+    {
+      "slug": "optometrist",
+      "salary_low": 37800,
+      "salary_high": 61300,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 47200,
+      "niveau": "fachkraft"
+    },
+    {
+      "slug": "paramedic",
+      "salary_low": 37800,
+      "salary_high": 61300,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 47200,
+      "niveau": "fachkraft"
+    },
+    {
+      "slug": "pharmacist",
+      "salary_low": 63900,
+      "salary_high": 90600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 79800,
+      "niveau": "experte"
+    },
+    {
+      "slug": "phlebotomist",
+      "salary_low": 37800,
+      "salary_high": 61300,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 47200,
+      "niveau": "fachkraft"
+    },
+    {
+      "slug": "photographer",
+      "salary_low": 37800,
+      "salary_high": 61300,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 47200,
+      "niveau": "fachkraft"
+    },
+    {
+      "slug": "physical-therapist",
+      "salary_low": 50800,
+      "salary_high": 82500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 63500,
+      "niveau": "spezialist"
+    },
+    {
+      "slug": "physician",
+      "salary_low": 63900,
+      "salary_high": 90600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 79800,
+      "niveau": "experte"
+    },
+    {
+      "slug": "plumber",
+      "salary_low": 37800,
+      "salary_high": 61300,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 47200,
+      "niveau": "fachkraft"
+    },
+    {
+      "slug": "police-officer",
+      "salary_low": 37800,
+      "salary_high": 61300,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 47200,
+      "niveau": "fachkraft"
+    },
+    {
+      "slug": "product-manager",
+      "salary_low": 50800,
+      "salary_high": 82500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 63500,
+      "niveau": "spezialist"
+    },
+    {
+      "slug": "project-manager",
+      "salary_low": 50800,
+      "salary_high": 82500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 63500,
+      "niveau": "spezialist"
+    },
+    {
+      "slug": "psychologist",
+      "salary_low": 50800,
+      "salary_high": 82500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 63500,
+      "niveau": "spezialist"
+    },
+    {
+      "slug": "qa-engineer",
+      "salary_low": 50800,
+      "salary_high": 82500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 63500,
+      "niveau": "spezialist"
+    },
+    {
+      "slug": "radiologic-technologist",
+      "salary_low": 37800,
+      "salary_high": 61300,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 47200,
+      "niveau": "fachkraft"
+    },
+    {
+      "slug": "real-estate-agent",
+      "salary_low": 37800,
+      "salary_high": 61300,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 47200,
+      "niveau": "fachkraft"
+    },
+    {
+      "slug": "respiratory-therapist",
+      "salary_low": 37800,
+      "salary_high": 61300,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 47200,
+      "niveau": "fachkraft"
+    },
+    {
+      "slug": "sales-manager",
+      "salary_low": 50800,
+      "salary_high": 82500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 63500,
+      "niveau": "spezialist"
+    },
+    {
+      "slug": "school-counselor",
+      "salary_low": 50800,
+      "salary_high": 82500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 63500,
+      "niveau": "spezialist"
+    },
+    {
+      "slug": "social-worker",
+      "salary_low": 50800,
+      "salary_high": 82500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 63500,
+      "niveau": "spezialist"
+    },
+    {
+      "slug": "software-developer",
+      "salary_low": 50800,
+      "salary_high": 82500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 63500,
+      "niveau": "spezialist"
+    },
+    {
+      "slug": "sound-engineer",
+      "salary_low": 37800,
+      "salary_high": 61300,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 47200,
+      "niveau": "fachkraft"
+    },
+    {
+      "slug": "speech-language-pathologist",
+      "salary_low": 50800,
+      "salary_high": 82500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 63500,
+      "niveau": "spezialist"
+    },
+    {
+      "slug": "statistician",
+      "salary_low": 50800,
+      "salary_high": 82500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 63500,
+      "niveau": "spezialist"
+    },
+    {
+      "slug": "surgical-technologist",
+      "salary_low": 37800,
+      "salary_high": 61300,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 47200,
+      "niveau": "fachkraft"
+    },
+    {
+      "slug": "systems-administrator",
+      "salary_low": 37800,
+      "salary_high": 61300,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 47200,
+      "niveau": "fachkraft"
+    },
+    {
+      "slug": "teacher",
+      "salary_low": 50800,
+      "salary_high": 82500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 63500,
+      "niveau": "spezialist"
+    },
+    {
+      "slug": "translator",
+      "salary_low": 50800,
+      "salary_high": 82500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 63500,
+      "niveau": "spezialist"
+    },
+    {
+      "slug": "urban-planner",
+      "salary_low": 50800,
+      "salary_high": 82500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 63500,
+      "niveau": "spezialist"
+    },
+    {
+      "slug": "ux-ui-designer",
+      "salary_low": 50800,
+      "salary_high": 82500,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 63500,
+      "niveau": "spezialist"
+    },
+    {
+      "slug": "veterinarian",
+      "salary_low": 63900,
+      "salary_high": 90600,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 79800,
+      "niveau": "experte"
+    },
+    {
+      "slug": "video-editor",
+      "salary_low": 37800,
+      "salary_high": 61300,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 47200,
+      "niveau": "fachkraft"
+    },
+    {
+      "slug": "welder",
+      "salary_low": 37800,
+      "salary_high": 61300,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 47200,
+      "niveau": "fachkraft"
+    },
+    {
+      "slug": "writer",
+      "salary_low": 37800,
+      "salary_high": 61300,
+      "currency": "EUR",
+      "period": "year",
+      "confidence": "estimate",
+      "median": 47200,
+      "niveau": "fachkraft"
+    }
+  ]
+}

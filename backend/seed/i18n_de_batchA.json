@@ -1,0 +1,182 @@
+{
+  "accountant": {
+    "title": "Buchhalter",
+    "summary": "Du führst die Buchhaltung eines Unternehmens, erstellst die Abschlüsse und behältst die Steuern im Blick.",
+    "day_in_life": "Du erfasst Belege, bringst Zahlen ins Gleichgewicht, reichst Meldungen pünktlich ein und hast mit Finanzamt und Banken zu tun.",
+    "who_fits": "Für dich, wenn du Ordnung schätzt, sorgfältig mit Zahlen und Details umgehst und Stabilität magst."
+  },
+  "architect": {
+    "title": "Architekt",
+    "summary": "Du entwirfst Gebäude und Räume und verbindest dabei Schönheit, Komfort und Stabilität.",
+    "day_in_life": "Du besprichst den Auftrag mit den Kunden, suchst die Form des Gebäudes, zeichnest die Entwürfe und stimmst sie mit Baufirmen und Vorschriften ab.",
+    "who_fits": "Für dich, wenn du künstlerisches Gespür und technische Präzision mitbringst und Geduld für lange Projekte hast."
+  },
+  "biologist": {
+    "title": "Biologe",
+    "summary": "Du erforschst lebende Organismen, von einzelnen Zellen bis zu ganzen Ökosystemen, und wie das Leben funktioniert.",
+    "day_in_life": "Du führst Experimente im Labor oder im Gelände durch, beobachtest und dokumentierst, wertest Daten aus und liest und schreibst wissenschaftliche Arbeiten.",
+    "who_fits": "Für dich, wenn du neugierig auf die Natur bist, genau hinschaust und dich auf gründliche Forschungsarbeit einlässt."
+  },
+  "chef": {
+    "title": "Koch",
+    "summary": "Du bereitest Gerichte zu, entwickelst Rezepte und stehst in der Küche für Geschmack und Qualität gerade.",
+    "day_in_life": "Du bereitest die Mise en Place vor, hältst zur Stoßzeit dem Tempo am Herd stand, denkst dir neue Gerichte aus und achtest auf Qualität und Sauberkeit.",
+    "who_fits": "Für dich, wenn du gern mit den Händen arbeitest, ein feines Geschmacksempfinden hast und beim schnellen Tempo erst richtig aufblühst."
+  },
+  "chemist": {
+    "title": "Chemiker",
+    "summary": "Du erforschst Stoffe und Reaktionen, entwickelst neue Materialien und prüfst ihre Eigenschaften.",
+    "day_in_life": "Du führst Experimente im Labor durch, misst und protokollierst genau, wertest Daten aus und hältst die Sicherheitsvorschriften ein.",
+    "who_fits": "Für dich, wenn du sorgfältig bist, Freude an Experimenten hast und verstehen willst, woraus die Welt gemacht ist."
+  },
+  "civil-engineer": {
+    "title": "Bauingenieur",
+    "summary": "Du planst und überwachst den Bau von Gebäuden, Straßen und Brücken und sorgst dafür, dass sie stabil und sicher sind.",
+    "day_in_life": "Du berechnest Tragwerke, erstellst und prüfst Pläne, besuchst die Baustellen und stimmst die Arbeiten mit den Firmen ab.",
+    "who_fits": "Für dich, wenn du Genauigkeit und Verantwortung schätzt und das Ergebnis in echten Bauwerken sehen willst."
+  },
+  "cybersecurity-specialist": {
+    "title": "IT-Sicherheitsexperte",
+    "summary": "Du schützt die Daten und Systeme eines Unternehmens vor Eindringlingen, Datenlecks und Angriffen.",
+    "day_in_life": "Du suchst nach Schwachstellen, richtest die Abwehr ein, untersuchst verdächtige Vorgänge und bringst den Kolleginnen und Kollegen sichere Gewohnheiten bei.",
+    "who_fits": "Für dich, wenn du auf Details achtest, wie ein Angreifer denkst und bereit bist, ständig dazuzulernen."
+  },
+  "data-analyst": {
+    "title": "Data Analyst",
+    "summary": "Du machst aus Daten klare Erkenntnisse, die bei Entscheidungen helfen.",
+    "day_in_life": "Du sammelst und bereinigst Daten, berechnest Kennzahlen, baust Diagramme, suchst nach Mustern und erzählst, was du gefunden hast.",
+    "who_fits": "Für dich, wenn du Freude an Zahlen hast, Muster erkennst und Kompliziertes einfach erklären kannst."
+  },
+  "data-scientist": {
+    "title": "Data Scientist",
+    "summary": "Du baust aus Daten Modelle, die Ergebnisse vorhersagen und dem Unternehmen bei Entscheidungen helfen.",
+    "day_in_life": "Du sammelst und erkundest Daten, stellst Hypothesen auf, trainierst und validierst Modelle und erklärst die Ergebnisse dem Team.",
+    "who_fits": "Für dich, wenn du stark in Mathe bist, gern forschst und dich nicht scheust, dich in verzwickte Probleme zu verbeißen."
+  },
+  "dentist": {
+    "title": "Zahnarzt",
+    "summary": "Du behandelst Zähne und Zahnfleisch und hilfst dabei, den Mund gesund zu halten.",
+    "day_in_life": "Du untersuchst Patienten, behandelst und ziehst Zähne, setzt Füllungen und Prothesen und erklärst, wie man die Zähne pflegt.",
+    "who_fits": "Für dich, wenn du eine ruhige Hand hast, bei nervösen Patienten gelassen bleibst und bereit bist, jahrelang zu lernen."
+  },
+  "devops-engineer": {
+    "title": "DevOps Engineer",
+    "summary": "Du sorgst dafür, dass der Code reibungslos auf die Server kommt und läuft, und automatisierst so viel wie möglich.",
+    "day_in_life": "Du baust Deployment-Pipelines auf, überwachst Server und Monitoring, behebst Störungen und schreibst Skripte zur Automatisierung.",
+    "who_fits": "Für dich, wenn du gern Ordnung in Systeme bringst, manuelle Routine nicht ausstehen kannst und ruhig bleibst, wenn etwas kaputtgeht."
+  },
+  "electrical-engineer": {
+    "title": "Elektroingenieur",
+    "summary": "Du entwickelst elektrische Systeme und Geräte, von Haushaltsgeräten bis zu Stromnetzen.",
+    "day_in_life": "Du berechnest Schaltungen, erstellst Pläne, testest Geräte und findest und behebst Störungen.",
+    "who_fits": "Für dich, wenn du Physik und exakte Berechnungen magst und verstehen willst, wie der Strom fließt."
+  },
+  "environmental-scientist": {
+    "title": "Umweltwissenschaftler",
+    "summary": "Du untersuchst den Zustand der Natur und den menschlichen Einfluss darauf und suchst nach Wegen, Schäden zu verringern.",
+    "day_in_life": "Du nimmst Proben von Wasser, Luft und Boden, wertest Daten aus, erstellst Berichte und Empfehlungen und bewertest Projekte.",
+    "who_fits": "Für dich, wenn dir nicht egal ist, was mit der Natur passiert, und du sowohl im Gelände als auch mit Daten arbeiten kannst."
+  },
+  "game-developer": {
+    "title": "Spieleentwickler",
+    "summary": "Du programmierst Computer- und Handyspiele: Mechaniken, Physik, das Verhalten der Figuren.",
+    "day_in_life": "Du schreibst und debuggst den Spielcode, baust Level in der Engine, spürst auf, warum etwas ruckelt, und testest das Gameplay.",
+    "who_fits": "Für dich, wenn du Spiele nicht nur zum Spielen liebst, sondern auch verstehen willst, wie sie von innen funktionieren, und bereit bist, lange an Details zu feilen."
+  },
+  "graphic-designer": {
+    "title": "Grafikdesigner",
+    "summary": "Du gestaltest Visuelles: Logos, Benutzeroberflächen, Plakate, Markenauftritte.",
+    "day_in_life": "Du besprichst den Auftrag mit dem Kunden, entwickelst Ideen, baust Entwürfe in Designprogrammen und feilst sie mit dem Feedback aus.",
+    "who_fits": "Für dich, wenn du einen guten Geschmack hast, gern Neues erschaffst und auf Form und Farbe achtest."
+  },
+  "journalist": {
+    "title": "Journalist",
+    "summary": "Du findest Geschichten, die zählen, prüfst die Fakten und erzählst sie deinem Publikum.",
+    "day_in_life": "Du suchst Themen, führst Interviews, überprüfst die Informationen, schreibst die Texte bis zum Redaktionsschluss und arbeitest mit einem Redakteur zusammen.",
+    "who_fits": "Für dich, wenn du neugierig bist, gut mit Worten umgehst und keine Angst hast, Fragen zu stellen."
+  },
+  "lawyer": {
+    "title": "Rechtsanwalt",
+    "summary": "Du hilfst Menschen und Unternehmen, ihre Angelegenheiten im Rahmen des Gesetzes zu klären, und vertrittst ihre Interessen.",
+    "day_in_life": "Du studierst Dokumente und Gesetze, entwirfst Verträge und Klagen, berätst die Mandanten und vertrittst sie vor Gericht.",
+    "who_fits": "Für dich, wenn du gut argumentieren kannst, gern Regeln durchdringst und deinen Standpunkt verteidigst."
+  },
+  "mechanical-engineer": {
+    "title": "Maschinenbauingenieur",
+    "summary": "Du entwickelst Maschinen, Mechanismen und Anlagen und überwachst ihren Betrieb.",
+    "day_in_life": "Du berechnest Konstruktionen, erstellst Pläne im CAD, testest Prototypen und findest heraus, warum etwas kaputtgeht.",
+    "who_fits": "Für dich, wenn du Maschinen und Präzision magst und verstehen willst, wie Mechanismen funktionieren."
+  },
+  "nurse": {
+    "title": "Krankenpfleger",
+    "summary": "Du kümmerst dich um die Patienten, setzt die Anweisungen des Arztes um und begleitest die Menschen während der Behandlung.",
+    "day_in_life": "Du übernimmst Verbände und Behandlungen, überwachst den Zustand der Patienten, führst die Dokumentation, beruhigst und erklärst.",
+    "who_fits": "Für dich, wenn du aufmerksam und organisiert bist und anderen jeden Tag wirklich helfen willst."
+  },
+  "pharmacist": {
+    "title": "Apotheker",
+    "summary": "Du gibst Medikamente aus, berätst zur Einnahme und achtest auf die Qualität der Arzneimittel.",
+    "day_in_life": "Du wählst die Medikamente aus und gibst sie heraus, erklärst die Einnahme, kontrollierst Haltbarkeit und Lagerung und führst die Dokumentation.",
+    "who_fits": "Für dich, wenn du aufmerksam und zuverlässig bist und Menschen gern in Ruhe hilfst."
+  },
+  "physical-therapist": {
+    "title": "Physiotherapeut",
+    "summary": "Du hilfst Menschen, sich nach Verletzungen und Krankheiten durch Bewegung und Übungen zu erholen.",
+    "day_in_life": "Du beurteilst den Patienten, wählst die Übungen aus, leitest die Sitzungen und verfolgst den Fortschritt, machst Mut und motivierst.",
+    "who_fits": "Für dich, wenn du Geduld hast, gern mit Händen und Worten hilfst und dich über jeden kleinen Fortschritt freust."
+  },
+  "physician": {
+    "title": "Arzt",
+    "summary": "Du diagnostizierst und behandelst Krankheiten und überwachst die Gesundheit der Patienten.",
+    "day_in_life": "Du hältst Sprechstunde, untersuchst die Patienten, veranlasst Tests, verordnest Behandlungen und führst die Krankenakte. Ständiges Lernen und Verantwortung für das Leben von Menschen.",
+    "who_fits": "Für dich, wenn du anderen helfen willst, bereit bist, viel und gründlich zu lernen, und Verantwortung tragen kannst."
+  },
+  "product-manager": {
+    "title": "Product Manager",
+    "summary": "Du entscheidest, was aus einem Produkt wird: was zuerst gebaut wird und warum es den Menschen wichtig ist.",
+    "day_in_life": "Du sprichst mit den Nutzern und mit dem Team, wertest Daten und Wünsche aus, priorisierst Aufgaben und sorgst dafür, dass das Wichtige rechtzeitig fertig wird.",
+    "who_fits": "Für dich, wenn du den verschiedenen Seiten zuhören, in Unsicherheit entscheiden und dabei das Ganze im Blick behalten kannst."
+  },
+  "psychologist": {
+    "title": "Psychologe",
+    "summary": "Du hilfst Menschen, sich selbst zu verstehen, Schwierigkeiten zu bewältigen und ihre Beziehungen zu verbessern.",
+    "day_in_life": "Du hältst Sprechstunde, hörst zu und stellst Fragen, machst dir Notizen, bildest dich fortlaufend weiter und besprichst Fälle.",
+    "who_fits": "Für dich, wenn du gut zuhören kannst, neugierig auf Menschen bist und helfen willst, Kompliziertes zu entwirren."
+  },
+  "qa-engineer": {
+    "title": "QA Engineer",
+    "summary": "Du prüfst, ob die Software so funktioniert, wie sie soll, und findest die Fehler vor den Nutzern.",
+    "day_in_life": "Du entwirfst Testszenarien, prüfst neue Funktionen von Hand und mit automatischen Tests, dokumentierst die Fehler und verifizierst die Korrekturen.",
+    "who_fits": "Für dich, wenn du gründlich bist, gern Dinge auf die Probe stellst und dir kein Detail entgeht."
+  },
+  "software-developer": {
+    "title": "Softwareentwickler",
+    "summary": "Du entwirfst, schreibst und pflegst Programme: von Handy-Apps bis zu Serversystemen.",
+    "day_in_life": "Du zerlegst die Aufgabe, schreibst und testest Code, prüfst den Code anderer und diskutierst die Architektur mit dem Team. Viel logisches Lösen von Problemen vor dem Code-Editor.",
+    "who_fits": "Für dich, wenn du gern verstehst, wie Dinge funktionieren, die Logik bis zum Ende durchziehst und deine Arbeit in einem echten Produkt laufen sehen willst."
+  },
+  "systems-administrator": {
+    "title": "Systemadministrator",
+    "summary": "Du hältst die Computer, Netzwerke und Server eines Unternehmens am Laufen und verfügbar.",
+    "day_in_life": "Du richtest Geräte und Benutzerkonten ein, überwachst das Netzwerk und die Backups und hilfst der Belegschaft bei der Technik.",
+    "who_fits": "Für dich, wenn du Technik magst, ordentlich bist und bereit bist, die Person zu sein, an die sich alle wenden, wenn etwas nicht funktioniert."
+  },
+  "teacher": {
+    "title": "Lehrer",
+    "summary": "Du unterrichtest Kinder in einem Fach und hilfst ihnen, zu wachsen und ihre Stärken zu entdecken.",
+    "day_in_life": "Du bereitest Unterricht vor und hältst ihn, korrigierst Arbeiten, sprichst mit Schülern und Eltern und suchst nach Wegen, Schwieriges einfach zu erklären.",
+    "who_fits": "Für dich, wenn du gern erklärst, Geduld hast und aus dem Umgang mit Menschen Energie ziehst."
+  },
+  "ux-ui-designer": {
+    "title": "UX/UI Designer",
+    "summary": "Du überlegst dir, wie die Bildschirme von Apps und Webseiten funktionieren, damit sie klar und leicht zu bedienen sind.",
+    "day_in_life": "Du untersuchst, wie sich die Nutzer verhalten, zeichnest Prototypen und Entwürfe von Bildschirmen, besprichst sie mit dem Team und passt sie nach den Tests an.",
+    "who_fits": "Für dich, wenn du gern zeichnest und zugleich logisch denkst und den Komfort des Menschen über ein hübsches Bild stellst."
+  },
+  "veterinarian": {
+    "title": "Tierarzt",
+    "summary": "Du behandelst Tiere, hilfst ihnen bei der Genesung und kümmerst dich um ihre Gesundheit.",
+    "day_in_life": "Du untersuchst die Tiere, stellst Diagnosen, führst Operationen und Impfungen durch und berätst die Halter zur Pflege.",
+    "who_fits": "Für dich, wenn du Tiere liebst, nicht zimperlich bist und in schwierigen Fällen ruhig bleibst."
+  }
+}

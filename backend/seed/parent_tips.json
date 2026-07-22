@@ -40,6 +40,16 @@
       "Encouragez le côté pratique : kits de montage, réparations, ateliers, sport, robotique.",
       "Ne dévalorisez pas le « travail manuel » — aujourd'hui, il englobe l'ingénierie et les hautes technologies.",
       "Laissez-lui de l'espace pour s'attaquer à de vraies tâches, pas seulement à la théorie du manuel."
+    ],
+    "label_de": "praktisch und handwerklich",
+    "strengths_de": [
+      "bringt Dinge zu einem konkreten, greifbaren Ergebnis",
+      "versteht gern, wie alles funktioniert, und baut mit den eigenen Händen"
+    ],
+    "support_de": [
+      "Fördern Sie die praktische Seite: Bausätze, Reparaturen, Werkstätten, Sport, Robotik.",
+      "Werten Sie „Handarbeit“ nicht ab — heute gehören dazu Ingenieurwesen und Hightech.",
+      "Geben Sie Raum, echte Aufgaben anzupacken, nicht nur Theorie aus dem Lehrbuch."
     ]
   },
   "I": {
@@ -82,6 +92,16 @@
       "Accueillez ses questions, même les plus gênantes — c'est le carburant du chercheur.",
       "Aidez-le à trouver des cours approfondis, des olympiades ou des clubs scientifiques dans son domaine d'intérêt.",
       "Laissez du temps à la curiosité « inutile » — c'est souvent là que naît la vraie science."
+    ],
+    "label_de": "Analyse und Forschung",
+    "strengths_de": [
+      "stellt tiefe Fragen und nimmt Antworten nicht einfach hin",
+      "hat echte Freude daran, etwas Schwieriges bis zum Grund zu verstehen"
+    ],
+    "support_de": [
+      "Nehmen Sie die Fragen an, auch die unbequemen — das ist der Treibstoff eines Forschers.",
+      "Helfen Sie, vertiefende Kurse, Wettbewerbe oder Wissenschaftsclubs im Interessengebiet zu finden.",
+      "Lassen Sie Zeit für „nutzlose“ Neugier — daraus entsteht oft echte Wissenschaft."
     ]
   },
   "A": {
@@ -124,6 +144,16 @@
       "Donnez-lui des outils et du matériel pour créer, sans la pression de « faire quelque chose d'utile ».",
       "Valorisez le processus et le courage d'essayer, pas seulement le résultat abouti.",
       "Aidez-le à voir que la créativité est aussi un métier, pas seulement un loisir."
+    ],
+    "label_de": "Kreativität und Selbstausdruck",
+    "strengths_de": [
+      "sieht und erschafft Dinge, die es noch nicht gibt",
+      "drückt Ideen durch Bilder, Klang, Text oder Design aus"
+    ],
+    "support_de": [
+      "Geben Sie Werkzeuge und Material zum Gestalten — ohne den Druck, „etwas Nützliches“ zu machen.",
+      "Schätzen Sie den Prozess und den Mut, es zu versuchen, nicht nur das perfekte Ergebnis.",
+      "Helfen Sie zu erkennen, dass Kreativität auch ein Beruf ist, nicht nur ein Hobby."
     ]
   },
   "S": {
@@ -166,6 +196,16 @@
       "Encouragez le bénévolat, le mentorat et le travail en équipe.",
       "Dites-lui à voix haute que se soucier des autres est une vraie force, et très recherchée.",
       "Aidez-le à en faire un métier : santé, éducation, psychologie."
+    ],
+    "label_de": "Umgang mit und Hilfe für Menschen",
+    "strengths_de": [
+      "spürt, wie es anderen geht, und weiß sie zu unterstützen",
+      "erklärt Dinge gut und bringt Menschen zusammen"
+    ],
+    "support_de": [
+      "Fördern Sie ehrenamtliches Engagement, Mentoring und Teamarbeit.",
+      "Sagen Sie laut, dass Fürsorge für Menschen eine echte und gefragte Stärke ist.",
+      "Helfen Sie, daraus einen Beruf zu machen: Medizin, Bildung, Psychologie."
     ]
   },
   "E": {
@@ -208,6 +248,16 @@
       "Donnez-lui l'occasion de mener des projets — d'un événement scolaire à une petite entreprise.",
       "La différence entre « commander » et « diriger », c'est la responsabilité ; aidez-le à la voir.",
       "Soutenez ses premiers pas dans l'organisation, la vente et la prise de parole en public."
+    ],
+    "label_de": "Führung und Initiative",
+    "strengths_de": [
+      "ergreift die Initiative und reißt andere mit",
+      "hat keine Angst, Ideen vorzuschlagen und zu überzeugen"
+    ],
+    "support_de": [
+      "Geben Sie Gelegenheit, Projekte zu leiten — von der Schulveranstaltung bis zum kleinen Business.",
+      "Der Unterschied zwischen „Befehlen“ und „Führen“ liegt in der Verantwortung; helfen Sie, ihn zu sehen.",
+      "Unterstützen Sie erste Schritte in Organisation, Verkauf und dem Reden vor Publikum."
     ]
   },
   "C": {
@@ -250,6 +300,16 @@
       "Valorisez sa rigueur et sa fiabilité — ce sont des qualités importantes dans le monde professionnel.",
       "Donnez-lui des tâches structurées : tableurs, suivi, planification, organisation.",
       "Montrez-lui que des métiers entiers reposent sur l'ordre : finance, analyse de données, logistique."
+    ],
+    "label_de": "Ordnung und Genauigkeit",
+    "strengths_de": [
+      "mag Ordnung, Genauigkeit und bringt zu Ende, was begonnen wurde",
+      "arbeitet gut mit Daten, Systemen und Details"
+    ],
+    "support_de": [
+      "Schätzen Sie Sorgfalt und Verlässlichkeit — im Berufsleben sind das wichtige Eigenschaften.",
+      "Geben Sie strukturierte Aufgaben: Tabellen, Buchführung, Planung, Organisation.",
+      "Zeigen Sie, dass ganze Berufe auf Ordnung beruhen: Finanzen, Datenanalyse, Logistik."
     ]
   }
 }

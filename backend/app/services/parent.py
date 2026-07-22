@@ -40,7 +40,7 @@ async def build_parent_view(
     if riasec_row is None or not riasec_row.vector:
         return None
     tips = _tips()
-    loc = locale if locale in ("ru", "en", "es", "fr") else "ru"
+    loc = locale if locale in ("ru", "en", "es", "fr", "de") else "ru"
     vec = riasec_row.vector
     top2 = sorted(_AXES, key=lambda a: vec.get(a, 0.0), reverse=True)[:2]
 

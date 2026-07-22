@@ -76,7 +76,7 @@ async def request_link(
     body: MagicRequestIn, session: AsyncSession = Depends(get_session)
 ) -> dict:
     email = (body.email or "").strip().lower()[:320]
-    locale = body.locale if body.locale in ("ru", "en", "es", "fr") else "ru"
+    locale = body.locale if body.locale in ("ru", "en", "es", "fr", "de") else "ru"
     # Always return ok (no account enumeration). Invalid email → no-op.
     if not _EMAIL_RE.match(email):
         return {"ok": True}
