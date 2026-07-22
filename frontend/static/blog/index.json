@@ -7,27 +7,27 @@
     "i18n": {
       "ru": {
         "title": "Что такое RIASEC и почему это не тест из соцсетей",
-        "dek": "В интернете тысячи тестов «узнай свою профессию». Большинство выдают результат — и не объясняют, откуда он взялся. RIASEC устроен иначе: это теоретическая модель, разработанная психологом Джоном Холландом в конце 1950-х и с тех пор лежащая в основе профессиональных баз данных, которыми пользуются карьерные центры по всему миру.",
+        "dek": "Модель вышла в 1959 году — раньше первого полёта человека в космос — и сегодня держит O*NET, базу Минтруда США почти на тысячу профессий. Разберём, откуда берётся код вроде ISA, что он предсказывает и где у него потолок.",
         "url": "/blog/chto-takoe-riasec.html"
       },
       "en": {
         "title": "What Is RIASEC — and Why It's Not a Social Media Quiz",
-        "dek": "There are thousands of \"find your career in 2 minutes\" quizzes online. Most give you a result without explaining where it came from. RIASEC works differently: it's a theoretical model developed by psychologist John Holland in the late 1950s, used since then by universities, career centers, and labor departments worldwide.",
+        "dek": "The model dates to 1959 — before the first human spaceflight — and today it powers O*NET, the U.S. Department of Labor's database of nearly a thousand occupations. Let's unpack where a code like ISA comes from, what it predicts, and where it runs out of road.",
         "url": "/blog/en/chto-takoe-riasec.html"
       },
       "es": {
         "title": "Qué es el RIASEC y por qué no es un test de redes sociales",
-        "dek": "En internet hay miles de tests «descubre tu profesión ideal en 2 minutos». La mayoría dan un resultado sin explicar de dónde viene. El RIASEC funciona de otra manera: es un modelo teórico desarrollado por el psicólogo John Holland a finales de los años 50 y que desde entonces usan universidades, servicios de orientación y agencias de empleo de todo el mundo.",
+        "dek": "El modelo salió en 1959, antes de que ningún ser humano llegara al espacio, y hoy sostiene O*NET, la base del Departamento de Trabajo de EE. UU. con casi mil profesiones. Veamos de dónde sale un código como ISA, qué predice y dónde está su techo.",
         "url": "/blog/es/chto-takoe-riasec.html"
       },
       "fr": {
         "title": "Qu'est-ce que le RIASEC — et pourquoi ce n'est pas un test de réseaux sociaux",
-        "dek": "Sur internet, il existe des milliers de tests « découvrez votre métier idéal en 2 minutes ». La plupart donnent un résultat sans expliquer d'où il vient. Le RIASEC fonctionne autrement : c'est un modèle théorique développé par le psychologue John Holland à la fin des années 1950, utilisé depuis lors par les universités, les centres d'orientation et les services de l'emploi du monde entier.",
+        "dek": "Le modèle date de 1959 — avant le premier vol habité dans l'espace — et fait tourner aujourd'hui l'O*NET, la base du ministère du Travail des États-Unis qui couvre près d'un millier de métiers. Voyons d'où sort un code comme ISA, ce qu'il prédit et où se situe sa limite.",
         "url": "/blog/fr/chto-takoe-riasec.html"
       },
       "de": {
         "title": "Was ist RIASEC — und warum ist das kein Quiz aus sozialen Medien",
-        "dek": "Im Internet gibt es Tausende von Tests „Finde deinen Traumberuf in 2 Minuten\". Die meisten liefern ein Ergebnis, ohne zu erklären, wie es zustande kommt. RIASEC funktioniert anders: Es ist ein theoretisches Modell, das der Psychologe John Holland Ende der 1950er Jahre entwickelt hat und das seitdem von Universitäten, Berufsberatungsstellen und Arbeitsagenturen weltweit verwendet wird.",
+        "dek": "Das Modell kam 1959 heraus — vor dem ersten bemannten Raumflug — und trägt heute O*NET, die Berufsdatenbank des US-Arbeitsministeriums mit fast tausend Berufen. Schauen wir, woher ein Code wie ISA kommt, was er vorhersagt und wo seine Grenze liegt.",
         "url": "/blog/de/chto-takoe-riasec.html"
       }
     }
