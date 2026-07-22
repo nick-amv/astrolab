@@ -1,0 +1,6 @@
+[Unit]
+Description=Astrolab autopost failure alert (Telegram)
+
+[Service]
+Type=oneshot
+ExecStart=/opt/astrolab-autopost/ops/notify-failure.sh

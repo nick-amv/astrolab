@@ -1,0 +1,10 @@
+[Unit]
+Description=Astrolab Journal autopost (headless Claude)
+After=network-online.target
+Wants=network-online.target
+OnFailure=astrolab-autopost-alert.service
+
+[Service]
+Type=oneshot
+ExecStart=/opt/astrolab-autopost/ops/run-autopost.sh
+TimeoutStartSec=3900

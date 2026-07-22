@@ -1,0 +1,9 @@
+[Unit]
+Description=Astrolab Journal autopost 2x/week (Tue, Fri 10:07 MSK)
+
+[Timer]
+OnCalendar=Tue,Fri 07:07
+Persistent=true
+
+[Install]
+WantedBy=timers.target
