@@ -1,5 +1,38 @@
 [
   {
+    "slug": "professii-s-vysokoy-zarplatoy",
+    "category": "Профессии",
+    "read_min": 6,
+    "date": "2026-07-22",
+    "i18n": {
+      "ru": {
+        "title": "Профессии с самой высокой зарплатой — и почему это не первый вопрос",
+        "dek": "Высокие зарплаты собираются в нескольких семьях профессий — и это полезно знать. Но если начать выбор с денег, легко попасть туда, где будешь много зарабатывать и всё равно выгоришь.",
+        "url": "/blog/professii-s-vysokoy-zarplatoy.html"
+      },
+      "en": {
+        "title": "The Highest-Paying Professions — and Why That Isn't the First Question",
+        "dek": "High salaries cluster in a handful of profession families — and that's worth knowing. But if you start your choice with money, it's easy to land somewhere you'll earn a lot and still burn out.",
+        "url": "/blog/en/professii-s-vysokoy-zarplatoy.html"
+      },
+      "es": {
+        "title": "Las profesiones mejor pagadas — y por qué no es la primera pregunta",
+        "dek": "Los sueldos altos se concentran en unas pocas familias de profesiones — y viene bien saberlo. Pero si empiezas a elegir por el dinero, es fácil acabar donde ganas mucho y aun así te quemas.",
+        "url": "/blog/es/professii-s-vysokoy-zarplatoy.html"
+      },
+      "fr": {
+        "title": "Les métiers les mieux payés — et pourquoi ce n'est pas la première question",
+        "dek": "Les hauts salaires se concentrent dans quelques familles de métiers — et c'est utile à savoir. Mais si tu commences ton choix par l'argent, tu risques de te retrouver là où tu gagnes beaucoup et t'épuises quand même.",
+        "url": "/blog/fr/professii-s-vysokoy-zarplatoy.html"
+      },
+      "de": {
+        "title": "Berufe mit den höchsten Gehältern — und warum das nicht die erste Frage ist",
+        "dek": "Hohe Gehälter sammeln sich in einigen wenigen Berufsfamilien — und das ist gut zu wissen. Aber wenn du deine Wahl mit dem Geld beginnst, landest du leicht dort, wo du viel verdienst und trotzdem ausbrennst.",
+        "url": "/blog/de/professii-s-vysokoy-zarplatoy.html"
+      }
+    }
+  },
+  {
     "slug": "kak-vybrat-professiyu",
     "category": "Выбор профессии",
     "read_min": 7,

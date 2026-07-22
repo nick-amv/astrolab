@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
+<script>try{var t=localStorage.getItem("theme");if(t!=="light"&&t!=="dark")t=matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";document.documentElement.dataset.theme=t}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>How to Choose a Career: A Method, Not Guesswork — Astrolab</title>
 <meta name="description" content="You don't choose a career from a list of &quot;in-demand&quot; jobs — you choose by matching your interests, values, and inclinations to real careers. The RIASEC method gives you a direction in 15 minutes, without guessing or pressure." />
@@ -80,24 +81,22 @@ article li{margin:6px 0}
 footer{color:var(--muted);font-size:13px;padding:24px 0 36px}
 footer a{color:var(--chip-ink);text-decoration:none;font-weight:600}
 a{color:var(--chip-ink)}
-</style>
+.nav-right .tt{background:none;border:0;cursor:pointer;color:var(--muted);padding:6px;border-radius:99px;display:inline-flex;line-height:0}.nav-right .tt:hover{color:var(--ink);background:var(--surface)}.nav-right a.active{color:var(--ink)}</style>
 </head>
 <body>
 <div class="aurora" aria-hidden="true"></div>
 <div class="shell">
 <header class="nav">
 <a class="brand" href="/en"><span class="mark"></span>Astrolab</a>
-<span class="nav-right">
-<a href="/blog/">Journal</a>
-<span class="lang" translate="no">
-<a href="/blog/kak-vybrat-professiyu.html" hreflang="ru">RU</a>
-<a class="on" href="/blog/en/kak-vybrat-professiyu.html" hreflang="en">EN</a>
-<a href="/blog/es/kak-vybrat-professiyu.html" hreflang="es">ES</a>
-<a href="/blog/fr/kak-vybrat-professiyu.html" hreflang="fr">FR</a>
-<a href="/blog/de/kak-vybrat-professiyu.html" hreflang="de">DE</a>
-</span>
+<nav class="nav-right">
+<a href="/en/method">Method</a>
+<a href="/en/professions">Professions</a>
+<a class="active" href="/blog/">Journal</a>
+<a href="/en/login">Sign in</a>
+<span class="lang" translate="no"><a href="/blog/kak-vybrat-professiyu.html" hreflang="ru">RU</a><a class="on" href="/blog/en/kak-vybrat-professiyu.html" hreflang="en">EN</a><a href="/blog/es/kak-vybrat-professiyu.html" hreflang="es">ES</a><a href="/blog/fr/kak-vybrat-professiyu.html" hreflang="fr">FR</a><a href="/blog/de/kak-vybrat-professiyu.html" hreflang="de">DE</a></span>
+<button class="tt" type="button" aria-label="Toggle theme" onclick="(function(d){var n=d.dataset.theme===&quot;dark&quot;?&quot;light&quot;:&quot;dark&quot;;d.dataset.theme=n;try{localStorage.setItem(&quot;theme&quot;,n)}catch(e){}})(document.documentElement)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
 <a class="cta" href="/en/test">Take the test</a>
-</span>
+</nav>
 </header>
 
 <article>
@@ -173,8 +172,6 @@ a{color:var(--chip-ink)}
 
 <footer>Astrolab · <a href="https://nikam.dev">nikam.dev</a></footer>
 </div>
-<script>
-try{var t=localStorage.getItem("astrolab-theme");if(t==="dark"||(!t&&matchMedia("(prefers-color-scheme:dark)").matches))document.documentElement.setAttribute("data-theme","dark")}catch(e){}
-</script>
+
 </body>
 </html>
