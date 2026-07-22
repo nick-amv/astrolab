@@ -69,9 +69,16 @@
       return "https://collegescorecard.ed.gov/search/fos-landing/";
     }
     if (loc === "fr") {
-      // search the diploma name, trimmed at the first "/" or "(" so a title like
-      // "Licence / BUT Informatique" queries a clean "Licence" phrase
-      const q = (title || code).split(/[/(]/)[0].trim();
+      // Search the full diploma name on ONISEP. Drop parenthetical qualifiers
+      // and turn separators ("/", en/em dashes) into spaces so a title like
+      // "Licence / BUT Informatique" stays specific ("Licence BUT Informatique")
+      // instead of collapsing to a broad "Licence" search. Do NOT split on "/":
+      // most FR titles use it to list two real pathways.
+      const q = (title || code)
+        .replace(/\([^)]*\)/g, " ")
+        .replace(/[/–—]/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
       return `https://www.onisep.fr/recherche?text=${encodeURIComponent(q)}`;
     }
     if (loc === "es") {
