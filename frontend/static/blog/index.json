@@ -40,27 +40,27 @@
     "i18n": {
       "ru": {
         "title": "Профессии с самой высокой зарплатой — и почему это не первый вопрос",
-        "dek": "Высокие зарплаты собираются в нескольких сферах — и это полезно знать. Но если начать выбор с денег, легко попасть туда, где будешь много зарабатывать и всё равно выгоришь.",
+        "dek": "Верхние зарплаты в России собираются в узком коридоре профессий — знать эти цифры полезно. Загвоздка в другом: платят по верхней границе диапазона не всем в профессии, а тем, кто дорос до неё, — и вот кто дорастает, а кто застревает внизу, деньги не подсказывают.",
         "url": "/blog/professii-s-vysokoy-zarplatoy.html"
       },
       "en": {
         "title": "The Highest-Paying Professions — and Why That Isn't the First Question",
-        "dek": "High salaries cluster in a handful of profession families — and that's worth knowing. But if you start your choice with money, it's easy to land somewhere you'll earn a lot and still burn out.",
+        "dek": "The top US salaries gather in a narrow band of professions, and those numbers are worth knowing. The catch sits elsewhere: the upper figure in a range is paid not to everyone in the field but to those who grow into it — and money doesn't tell you who grows and who stalls at the bottom.",
         "url": "/blog/en/professii-s-vysokoy-zarplatoy.html"
       },
       "es": {
         "title": "Las profesiones mejor pagadas — y por qué no es la primera pregunta",
-        "dek": "Los sueldos altos se concentran en unas pocas familias de profesiones — y viene bien saberlo. Pero si empiezas a elegir por el dinero, es fácil acabar donde ganas mucho y aun así te quemas.",
+        "dek": "Los sueldos altos en España se concentran en una franja estrecha de profesiones, y conviene conocer esas cifras. El matiz está en otro sitio: la cifra alta de un rango no se paga a todos los del oficio, sino a quienes crecen hasta ella — y el dinero no te dice quién crece y quién se queda abajo.",
         "url": "/blog/es/professii-s-vysokoy-zarplatoy.html"
       },
       "fr": {
         "title": "Les métiers les mieux payés — et pourquoi ce n'est pas la première question",
-        "dek": "Les hauts salaires se concentrent dans quelques familles de métiers — et c'est utile à savoir. Mais si tu commences ton choix par l'argent, tu risques de te retrouver là où tu gagnes beaucoup et t'épuises quand même.",
+        "dek": "En France, les hauts salaires se concentrent dans une bande étroite de métiers, et ces chiffres sont utiles à connaître. Le piège est ailleurs : le chiffre haut d'une fourchette n'est pas versé à tous ceux du métier, mais à ceux qui y grandissent — et l'argent ne te dit pas qui grandit et qui reste en bas.",
         "url": "/blog/fr/professii-s-vysokoy-zarplatoy.html"
       },
       "de": {
         "title": "Berufe mit den höchsten Gehältern — und warum das nicht die erste Frage ist",
-        "dek": "Hohe Gehälter sammeln sich in einigen wenigen Berufsfamilien — und das ist gut zu wissen. Aber wenn du deine Wahl mit dem Geld beginnst, landest du leicht dort, wo du viel verdienst und trotzdem ausbrennst.",
+        "dek": "Die Spitzengehälter in Deutschland sammeln sich in einem schmalen Band von Berufen, und diese Zahlen zu kennen lohnt sich. Der Haken liegt woanders: Die obere Zahl einer Spanne wird nicht jedem im Beruf gezahlt, sondern denen, die in sie hineinwachsen — und wer wächst und wer unten hängen bleibt, verrät dir das Geld nicht.",
         "url": "/blog/de/professii-s-vysokoy-zarplatoy.html"
       }
     }
@@ -73,27 +73,27 @@
     "i18n": {
       "ru": {
         "title": "Как выбрать профессию: метод, а не гадание",
-        "dek": "«Кем ты хочешь стать?» — плохой первый вопрос. Он требует ответа, которого у тебя ещё нет. Есть способ надёжнее — начать не с названия профессии, а со склонностей.",
+        "dek": "Метод, который здесь работает, психолог Джон Холланд опубликовал в Journal of Counseling Psychology ещё в 1959 году. Сегодня на нём держится O*NET — база Минтруда США на 900+ профессий. Не гороскоп, а полвека проверок.",
         "url": "/blog/kak-vybrat-professiyu.html"
       },
       "en": {
         "title": "How to Choose a Career: A Method, Not Guesswork",
-        "dek": "\"What do you want to be?\" is a bad first question. It demands an answer you don't have yet. There's a more reliable way — start not with the name of a job, but with your inclinations.",
+        "dek": "The method that works here was published by psychologist John Holland in the Journal of Counseling Psychology back in 1959. Today it holds up O*NET — the U.S. Department of Labor's database of 900+ occupations. Not a horoscope, but half a century of testing.",
         "url": "/blog/en/kak-vybrat-professiyu.html"
       },
       "es": {
         "title": "Cómo elegir una profesión: un método, no adivinación",
-        "dek": "«¿Qué quieres ser de mayor?» es una mala primera pregunta. Exige una respuesta que aún no tienes. Hay una forma más fiable: empezar no por el nombre de la profesión, sino por tus aptitudes.",
+        "dek": "El método que aquí funciona lo publicó el psicólogo John Holland en el Journal of Counseling Psychology allá por 1959. Hoy sostiene O*NET, la base del Departamento de Trabajo de EE. UU. con más de 900 profesiones. No un horóscopo, sino medio siglo de comprobaciones.",
         "url": "/blog/es/kak-vybrat-professiyu.html"
       },
       "fr": {
         "title": "Comment choisir un métier : une méthode, pas de la divination",
-        "dek": "« Qu'est-ce que tu veux faire plus tard ? » — c'est une mauvaise première question. Elle réclame une réponse que tu n'as pas encore. Il existe un chemin plus sûr : partir non pas du nom d'un métier, mais de tes aptitudes.",
+        "dek": "La méthode qui fonctionne ici, le psychologue John Holland l'a publiée dans le Journal of Counseling Psychology dès 1959. Elle fait tourner aujourd'hui O*NET, la base du ministère du Travail des États-Unis qui recense plus de 900 métiers. Pas un horoscope, mais un demi-siècle de vérifications.",
         "url": "/blog/fr/kak-vybrat-professiyu.html"
       },
       "de": {
         "title": "Berufswahl: eine Methode statt Raten",
-        "dek": "«Was willst du werden?» — das ist eine schlechte erste Frage. Sie verlangt eine Antwort, die du noch gar nicht hast. Es gibt einen verlässlicheren Weg: nicht mit dem Berufsnamen anzufangen, sondern mit deinen Neigungen.",
+        "dek": "Die Methode, die hier trägt, veröffentlichte der Psychologe John Holland schon 1959 im Journal of Counseling Psychology. Heute stützt sie O*NET, die Datenbank des US-Arbeitsministeriums mit über 900 Berufen. Kein Horoskop, sondern ein halbes Jahrhundert an Prüfungen.",
         "url": "/blog/de/kak-vybrat-professiyu.html"
       }
     }
