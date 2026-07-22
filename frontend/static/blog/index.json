@@ -1,5 +1,38 @@
 [
   {
+    "slug": "chto-takoe-riasec",
+    "category": "Метод и самоопределение",
+    "read_min": 7,
+    "date": "2026-07-22",
+    "i18n": {
+      "ru": {
+        "title": "Что такое RIASEC и почему это не тест из соцсетей",
+        "dek": "В интернете тысячи тестов «узнай свою профессию». Большинство выдают результат — и не объясняют, откуда он взялся. RIASEC устроен иначе: это теоретическая модель, разработанная психологом Джоном Холландом в конце 1950-х и с тех пор лежащая в основе профессиональных баз данных, которыми пользуются карьерные центры по всему миру.",
+        "url": "/blog/chto-takoe-riasec.html"
+      },
+      "en": {
+        "title": "What Is RIASEC — and Why It's Not a Social Media Quiz",
+        "dek": "There are thousands of \"find your career in 2 minutes\" quizzes online. Most give you a result without explaining where it came from. RIASEC works differently: it's a theoretical model developed by psychologist John Holland in the late 1950s, used since then by universities, career centers, and labor departments worldwide.",
+        "url": "/blog/en/chto-takoe-riasec.html"
+      },
+      "es": {
+        "title": "Qué es el RIASEC y por qué no es un test de redes sociales",
+        "dek": "En internet hay miles de tests «descubre tu profesión ideal en 2 minutos». La mayoría dan un resultado sin explicar de dónde viene. El RIASEC funciona de otra manera: es un modelo teórico desarrollado por el psicólogo John Holland a finales de los años 50 y que desde entonces usan universidades, servicios de orientación y agencias de empleo de todo el mundo.",
+        "url": "/blog/es/chto-takoe-riasec.html"
+      },
+      "fr": {
+        "title": "Qu'est-ce que le RIASEC — et pourquoi ce n'est pas un test de réseaux sociaux",
+        "dek": "Sur internet, il existe des milliers de tests « découvrez votre métier idéal en 2 minutes ». La plupart donnent un résultat sans expliquer d'où il vient. Le RIASEC fonctionne autrement : c'est un modèle théorique développé par le psychologue John Holland à la fin des années 1950, utilisé depuis lors par les universités, les centres d'orientation et les services de l'emploi du monde entier.",
+        "url": "/blog/fr/chto-takoe-riasec.html"
+      },
+      "de": {
+        "title": "Was ist RIASEC — und warum ist das kein Quiz aus sozialen Medien",
+        "dek": "Im Internet gibt es Tausende von Tests „Finde deinen Traumberuf in 2 Minuten\". Die meisten liefern ein Ergebnis, ohne zu erklären, wie es zustande kommt. RIASEC funktioniert anders: Es ist ein theoretisches Modell, das der Psychologe John Holland Ende der 1950er Jahre entwickelt hat und das seitdem von Universitäten, Berufsberatungsstellen und Arbeitsagenturen weltweit verwendet wird.",
+        "url": "/blog/de/chto-takoe-riasec.html"
+      }
+    }
+  },
+  {
     "slug": "professii-s-vysokoy-zarplatoy",
     "category": "Профессии",
     "read_min": 6,
