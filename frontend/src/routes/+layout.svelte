@@ -13,6 +13,14 @@
   const langLabel = (loc: string) =>
     loc === "ru" ? m.nav_ru() : loc === "es" ? m.nav_es() : loc === "fr" ? m.nav_fr() : loc === "de" ? m.nav_de() : m.nav_en();
 
+  // Display order of the language switcher (RU sits between FR and DE, not first —
+  // the RU audience reaches the site less directly). Falls back to any locale the
+  // runtime adds that isn't listed here.
+  const langOrder = $derived([
+    ...(["en", "es", "fr", "ru", "de"] as const).filter((l) => (locales as readonly string[]).includes(l)),
+    ...(locales as readonly string[]).filter((l) => !["en", "es", "fr", "ru", "de"].includes(l)),
+  ]);
+
   // GoatCounter: count.js records the initial page load; count client-side
   // route changes here so in-app navigation (test → result → professions)
   // is tracked too. Skip the initial "enter" to avoid double-counting.
@@ -52,7 +60,7 @@
       {/if}
       <!-- translate="no": browser auto-translate must not mangle RU/EN/ES chips -->
       <span class="lang" aria-label="Language" translate="no">
-        {#each locales as loc (loc)}
+        {#each langOrder as loc (loc)}
           <a
             class="lang-opt"
             class:on={getLocale() === loc}

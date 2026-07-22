@@ -20,7 +20,8 @@ import re
 from pathlib import Path
 
 BLOG = Path(__file__).resolve().parents[2] / "frontend" / "static" / "blog"
-LOCS = ("ru", "en", "es", "fr", "de")
+# switcher display order: RU sits between FR and DE, not first (matches the app).
+LOCS = ("en", "es", "fr", "ru", "de")
 
 NAV = {
     "ru": {"method": "Методика", "prof": "Профессии", "journal": "Журнал", "login": "Войти",
