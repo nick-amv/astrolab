@@ -42,6 +42,9 @@
     <nav>
       <a class="section" href={localizeHref("/method")}>{m.nav_method()}</a>
       <a class="section" href={localizeHref("/professions")}>{m.nav_catalog()}</a>
+      <!-- Journal is served as static HTML at /blog/ (locale-aware client-side),
+           outside the SvelteKit locale routing, so it's a plain href. -->
+      <a class="section" href="/blog/" data-sveltekit-reload>{m.nav_journal()}</a>
       {#if data.user}
         <a class="section" href={localizeHref("/me")}>{m.nav_account()}</a>
       {:else}

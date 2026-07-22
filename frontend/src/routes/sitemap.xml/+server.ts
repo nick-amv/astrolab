@@ -34,6 +34,33 @@ export const GET: RequestHandler = async ({ fetch, url }) => {
     }
   }
 
+  // Journal — static HTML under /blog/ (ru flat, others /blog/<locale>/…). URLs
+  // and per-locale hreflang come from the blog manifest so new articles appear
+  // automatically. The manifest lives in the static dir, fetched same-origin.
+  const blogUrl = (loc: string, slug: string): string =>
+    loc === "ru" ? `${origin}/blog/${slug}.html` : `${origin}/blog/${loc}/${slug}.html`;
+  const blogAlternates = (slug: string): string =>
+    locs
+      .map((l) => `<xhtml:link rel="alternate" hreflang="${l}" href="${blogUrl(l, slug)}"/>`)
+      .join("") +
+    `<xhtml:link rel="alternate" hreflang="x-default" href="${blogUrl("en", slug)}"/>`;
+  try {
+    const bres = await fetch("/blog/index.json");
+    if (bres.ok) {
+      const articles: { slug: string; i18n?: Record<string, unknown> }[] = await bres.json();
+      entries.push(`  <url><loc>${origin}/blog/</loc></url>`);
+      for (const a of articles) {
+        for (const loc of locs) {
+          entries.push(
+            `  <url><loc>${blogUrl(loc, a.slug)}</loc>${blogAlternates(a.slug)}</url>`,
+          );
+        }
+      }
+    }
+  } catch {
+    // no manifest yet — skip the blog section, keep the rest of the sitemap valid
+  }
+
   const body =
     `<?xml version="1.0" encoding="UTF-8"?>\n` +
     `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" ` +

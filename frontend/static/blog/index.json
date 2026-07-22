@@ -1,0 +1,35 @@
+[
+  {
+    "slug": "kak-vybrat-professiyu",
+    "category": "Выбор профессии",
+    "read_min": 7,
+    "date": "2026-07-22",
+    "i18n": {
+      "ru": {
+        "title": "Как выбрать профессию: метод, а не гадание",
+        "dek": "«Кем ты хочешь стать?» — плохой первый вопрос. Он требует ответа, которого у тебя ещё нет. Есть способ надёжнее — начать не с названия профессии, а со склонностей.",
+        "url": "/blog/kak-vybrat-professiyu.html"
+      },
+      "en": {
+        "title": "How to Choose a Career: A Method, Not Guesswork",
+        "dek": "\"What do you want to be?\" is a bad first question. It demands an answer you don't have yet. There's a more reliable way — start not with the name of a job, but with your inclinations.",
+        "url": "/blog/en/kak-vybrat-professiyu.html"
+      },
+      "es": {
+        "title": "Cómo elegir una profesión: un método, no adivinación",
+        "dek": "«¿Qué quieres ser de mayor?» es una mala primera pregunta. Exige una respuesta que aún no tienes. Hay una forma más fiable: empezar no por el nombre de la profesión, sino por tus aptitudes.",
+        "url": "/blog/es/kak-vybrat-professiyu.html"
+      },
+      "fr": {
+        "title": "Comment choisir un métier : une méthode, pas de la divination",
+        "dek": "« Qu'est-ce que tu veux faire plus tard ? » — c'est une mauvaise première question. Elle réclame une réponse que tu n'as pas encore. Il existe un chemin plus sûr : partir non pas du nom d'un métier, mais de tes aptitudes.",
+        "url": "/blog/fr/kak-vybrat-professiyu.html"
+      },
+      "de": {
+        "title": "Berufswahl: eine Methode statt Raten",
+        "dek": "«Was willst du werden?» — das ist eine schlechte erste Frage. Sie verlangt eine Antwort, die du noch gar nicht hast. Es gibt einen verlässlicheren Weg: nicht mit dem Berufsnamen anzufangen, sondern mit deinen Neigungen.",
+        "url": "/blog/de/kak-vybrat-professiyu.html"
+      }
+    }
+  }
+]

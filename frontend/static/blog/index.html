@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Журнал — Astrolab</title>
+<meta name="description" content="Astrolab Journal — статьи о выборе профессии, поступлении, смене карьеры и самоопределении. Честно, на данных, без гадания." />
+<link rel="canonical" href="https://astrolab.nikam.dev/blog/" />
+<link rel="alternate" hreflang="ru" href="https://astrolab.nikam.dev/blog/" />
+<link rel="alternate" hreflang="x-default" href="https://astrolab.nikam.dev/blog/" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<style>
+:root{--bg:#fbfaff;--surface:#fff;--ink:#1b1633;--muted:#6d6790;--line:#ece9f6;--line-strong:#ddd8ee;--chip-ink:#7c4be0;--c1:#ff9d6c;--c2:#ff5f8f;--c3:#8b5cf6;--c4:#4f9dff;--grad-cta:linear-gradient(100deg,#cc3a66,#6d3fd4);--shadow-sm:0 4px 16px rgba(90,70,160,.08);--shadow-c2:0 12px 30px rgba(255,95,143,.28);--r-sm:12px;--r:18px;--r-lg:26px;color-scheme:light}
+html[data-theme=dark]{--bg:#0c0a1a;--surface:#161231;--ink:#ece9fb;--muted:#a49cce;--line:#241d47;--line-strong:#362d64;--chip-ink:#c3b0ff;--shadow-sm:0 4px 16px rgba(0,0,0,.3);--shadow-c2:0 14px 34px rgba(255,95,143,.32);color-scheme:dark}
+*{box-sizing:border-box}html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:"Manrope",system-ui,sans-serif;-webkit-font-smoothing:antialiased;min-height:100dvh;overflow-x:hidden;line-height:1.6}
+.aurora{position:fixed;inset:-18vmax -8vmax auto -8vmax;height:52vh;z-index:0;pointer-events:none;background:radial-gradient(46% 52% at 80% 4%,rgba(255,95,143,.5),transparent 68%),radial-gradient(42% 52% at 16% -2%,rgba(139,92,246,.42),transparent 68%),radial-gradient(58% 58% at 48% -12%,rgba(255,157,108,.4),transparent 62%);filter:blur(30px) saturate(1.08);opacity:.9}
+.shell{position:relative;z-index:1;max-width:940px;margin:0 auto;padding:0 24px}
+header.nav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:22px 0;flex-wrap:wrap}
+.brand{font-weight:800;font-size:20px;letter-spacing:-.02em;text-decoration:none;color:var(--ink);display:inline-flex;align-items:center;gap:9px}
+.brand .mark{width:16px;height:16px;border-radius:50%;background:linear-gradient(100deg,var(--c2),var(--c3));box-shadow:var(--shadow-c2)}
+.nav-right{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.nav-right a{font-weight:600;font-size:14px;color:var(--muted);text-decoration:none;padding:7px 12px;border-radius:99px}
+.nav-right a:hover{color:var(--ink);background:var(--surface)}
+.nav-right a.cta{color:#fff;background:var(--grad-cta);box-shadow:var(--shadow-c2)}
+.lang{display:inline-flex;gap:2px;border:1px solid var(--line-strong);border-radius:99px;padding:2px}
+.lang button{background:none;border:0;cursor:pointer;padding:4px 8px;font-size:12px;font-weight:700;color:var(--muted);border-radius:99px;font-family:inherit}
+.lang button.on{color:#fff;background:var(--c3)}
+.lede{padding:16px 0 8px}
+.lede .chip{display:inline-block;font-size:13px;font-weight:600;color:var(--chip-ink);background:var(--surface);border:1px solid var(--line);border-radius:99px;padding:6px 14px;box-shadow:var(--shadow-sm)}
+.lede h1{font-size:clamp(30px,6vw,46px);letter-spacing:-.02em;line-height:1.08;margin:14px 0 10px}
+.lede p{color:var(--muted);font-size:18px;max-width:60ch;margin:0}
+.grid{display:grid;grid-template-columns:1fr;gap:14px;padding:26px 0 10px}
+@media(min-width:640px){.grid{grid-template-columns:1fr 1fr}}
+.card{display:block;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow-sm);padding:22px 24px;text-decoration:none;color:var(--ink);transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-3px);box-shadow:0 18px 44px rgba(90,70,160,.14)}
+.card .top{display:flex;justify-content:space-between;gap:10px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+.card .cat{color:var(--chip-ink)}
+.card .rt{color:var(--muted)}
+.card h2{font-size:20px;line-height:1.25;margin:12px 0 8px;letter-spacing:-.01em}
+.card p{color:var(--muted);font-size:15px;margin:0 0 12px}
+.card .more{font-size:14px;font-weight:700;color:var(--chip-ink)}
+.empty{color:var(--muted);padding:30px 0}
+footer{color:var(--muted);font-size:13px;padding:28px 0 36px}
+footer a{color:var(--chip-ink);text-decoration:none;font-weight:600}
+</style>
+</head>
+<body>
+<div class="aurora" aria-hidden="true"></div>
+<div class="shell">
+<header class="nav">
+<a class="brand" href="/ru"><span class="mark"></span>Astrolab</a>
+<span class="nav-right">
+<span class="lang" id="lang" translate="no">
+<button data-l="ru" class="on">RU</button><button data-l="en">EN</button><button data-l="es">ES</button><button data-l="fr">FR</button><button data-l="de">DE</button>
+</span>
+<a class="cta" id="cta" href="/ru/test">Пройти тест</a>
+</span>
+</header>
+
+<section class="lede">
+<span class="chip" id="eyebrow">Журнал</span>
+<h1 id="title">О выборе профессии — честно и на данных</h1>
+<p id="sub">Как выбрать профессию, куда пойти учиться, как сменить карьеру и понять, что тебе подходит. Без гадания.</p>
+</section>
+
+<div class="grid" id="grid"><div class="empty">Загрузка…</div></div>
+
+<footer>Astrolab · <a href="https://nikam.dev">nikam.dev</a></footer>
+</div>
+
+<script>
+try{var t=localStorage.getItem("astrolab-theme");if(t==="dark"||(!t&&matchMedia("(prefers-color-scheme:dark)").matches))document.documentElement.setAttribute("data-theme","dark")}catch(e){}
+
+var UI={
+ru:{eyebrow:"Журнал",title:"О выборе профессии — честно и на данных",sub:"Как выбрать профессию, куда пойти учиться, как сменить карьеру и понять, что тебе подходит. Без гадания.",cta:"Пройти тест",more:"Читать →",read:"мин",empty:"Скоро здесь появятся статьи."},
+en:{eyebrow:"Journal",title:"Career choices — honest and data-driven",sub:"How to choose a career, where to study, how to switch paths, and how to know what fits you. No guesswork.",cta:"Take the test",more:"Read →",read:"min",empty:"Articles are coming soon."},
+es:{eyebrow:"Revista",title:"Sobre elegir profesión — con honestidad y datos",sub:"Cómo elegir profesión, dónde estudiar, cómo cambiar de carrera y saber qué te encaja. Sin adivinar.",cta:"Hacer el test",more:"Leer →",read:"min",empty:"Pronto habrá artículos aquí."},
+fr:{eyebrow:"Journal",title:"Choisir un métier — honnêtement et avec des données",sub:"Comment choisir un métier, où étudier, comment changer de voie et savoir ce qui te correspond. Sans deviner.",cta:"Faire le test",more:"Lire →",read:"min",empty:"Des articles arrivent bientôt."},
+de:{eyebrow:"Journal",title:"Berufswahl — ehrlich und datenbasiert",sub:"Wie du einen Beruf wählst, wo du studierst, wie du die Richtung wechselst und erkennst, was zu dir passt. Ohne Raten.",cta:"Test starten",more:"Lesen →",read:"Min.",empty:"Bald erscheinen hier Artikel."}
+};
+var CAT={
+"Выбор профессии":{en:"Choosing a career",es:"Elegir profesión",fr:"Choisir un métier",de:"Berufswahl"},
+"Поступление":{en:"Getting in",es:"Acceso",fr:"Admission",de:"Zugang"},
+"Смена профессии":{en:"Career change",es:"Cambio de profesión",fr:"Reconversion",de:"Berufswechsel"},
+"Профессии":{en:"Careers",es:"Profesiones",fr:"Métiers",de:"Berufe"},
+"Метод и самоопределение":{en:"Method & self-discovery",es:"Método y autoconocimiento",fr:"Méthode et connaissance de soi",de:"Methode & Selbstfindung"},
+"Работа и карьера":{en:"Work & career",es:"Trabajo y carrera",fr:"Travail et carrière",de:"Arbeit & Karriere"}
+};
+function pickLocale(){try{var s=localStorage.getItem("astrolab-locale");if(s&&UI[s])return s;}catch(e){}var n=(navigator.language||"en").slice(0,2);return UI[n]?n:"en";}
+var loc=pickLocale();
+function catLabel(ru){if(loc==="ru")return ru;return (CAT[ru]&&CAT[ru][loc])||ru;}
+function apply(){var u=UI[loc];document.documentElement.lang=loc;document.getElementById("eyebrow").textContent=u.eyebrow;document.getElementById("title").textContent=u.title;document.getElementById("sub").textContent=u.sub;var cta=document.getElementById("cta");cta.textContent=u.cta;cta.href="/"+loc+"/test";document.querySelector(".brand").href="/"+loc;
+[].forEach.call(document.querySelectorAll("#lang button"),function(b){b.classList.toggle("on",b.dataset.l===loc);});}
+function render(items){var g=document.getElementById("grid");var u=UI[loc];if(!items||!items.length){g.innerHTML='<div class="empty">'+u.empty+'</div>';return;}
+g.innerHTML=items.map(function(a){var t=(a.i18n&&a.i18n[loc])||a.i18n.en||a.i18n.ru;return '<a class="card" href="'+t.url+'"><div class="top"><span class="cat">'+catLabel(a.category)+'</span><span class="rt">'+a.read_min+' '+u.read+'</span></div><h2>'+t.title+'</h2><p>'+t.dek+'</p><span class="more">'+u.more+'</span></a>';}).join("");}
+apply();
+[].forEach.call(document.querySelectorAll("#lang button"),function(b){b.addEventListener("click",function(){loc=b.dataset.l;try{localStorage.setItem("astrolab-locale",loc);}catch(e){}apply();render(window.__items||[]);});});
+fetch("/blog/index.json").then(function(r){return r.json();}).then(function(d){window.__items=d;render(d);}).catch(function(){render([]);});
+</script>
+</body>
+</html>
