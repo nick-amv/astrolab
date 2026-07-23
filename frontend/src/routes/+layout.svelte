@@ -18,12 +18,12 @@
   // runtime adds that isn't listed here.
   const langOrder = $derived([
     ...(["en", "es", "fr", "ru", "de"] as const).filter((l) => (locales as readonly string[]).includes(l)),
-    ...(locales as readonly string[]).filter((l) => !["en", "es", "fr", "ru", "de"].includes(l)),
+    ...locales.filter((l) => !(["en", "es", "fr", "ru", "de"] as readonly string[]).includes(l)),
   ]);
 
   // Native language names (locale-independent) for the switcher dropdown.
   const LANG_NAMES: Record<string, string> = {
-    en: "English", es: "Español", fr: "Français", ru: "Русский", de: "Deutsch",
+    en: "English", es: "Español", fr: "Français", ru: "Русский", de: "Deutsch", // cyrillic-ok: native language endonyms
   };
 
   // Close the <details> language dropdown when clicking outside it.
@@ -74,7 +74,7 @@
       {/if}
       <!-- translate="no": browser auto-translate must not mangle the language names -->
       <details class="lang-dd" use:closeOnOutside translate="no">
-        <summary aria-label="Язык / Language">
+        <summary aria-label={m.nav_language()}>
           <svg class="globe" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" /><path d="M2 12h20" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
           <span class="lc">{langLabel(getLocale())}</span>
           <svg class="chev" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>

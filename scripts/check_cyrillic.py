@@ -17,9 +17,11 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 
+# The running app must carry i18n keys, not strings. Generator/ops scripts under
+# backend/scripts are the *rendering layer* for the static blog (they legitimately
+# hold the localized labels they emit), so they're intentionally not scanned here.
 SCAN_DIRS = [
     "backend/app",
-    "backend/scripts",
     "backend/alembic",
     "frontend/src",
 ]
@@ -52,6 +54,10 @@ def main() -> int:
             except UnicodeDecodeError:
                 continue
             for i, line in enumerate(text.splitlines(), 1):
+                # Opt-out for legitimate cases (e.g. native language endonyms in the
+                # switcher, which are never translated): annotate the line `cyrillic-ok`.
+                if "cyrillic-ok" in line:
+                    continue
                 if CYRILLIC.search(line):
                     offenders.append((str(path.relative_to(ROOT)), i, line.strip()[:80]))
 
