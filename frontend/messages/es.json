@@ -324,5 +324,16 @@
   "val_recognition": "Reconocimiento",
   "val_relationships": "Relaciones",
   "val_stability": "Estabilidad",
-  "val_conditions": "Condiciones"
+  "val_conditions": "Condiciones",
+
+  "prof_tldr_label": "En breve",
+  "prof_tldr_salary": "Salario de mercado: {range}.",
+  "prof_faq_title": "Preguntas frecuentes",
+  "prof_faq_q_salary": "¿Cuánto gana un {title}?",
+  "prof_faq_q_howto": "¿Cómo llegar a ser {title}?",
+  "prof_faq_q_who": "¿A quién le encaja esta profesión?",
+  "prof_faq_a_salary_note": "Es la franja media del mercado: quien empieza suele estar más cerca del extremo inferior y quien tiene experiencia, más cerca del superior. También influye mucho la región.",
+  "prof_faq_a_howto": "Casi siempre a través de estos itinerarios: {paths}. Consulta los programas y requisitos concretos en la sección «Cómo llegar» más abajo.",
+  "prof_seo_title_tail": "salario, competencias y cómo entrar en la profesión",
+  "prof_seo_desc_salary": " Salario de mercado: {range}."
 }

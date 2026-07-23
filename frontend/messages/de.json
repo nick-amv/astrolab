@@ -324,5 +324,16 @@
   "val_recognition": "Anerkennung",
   "val_relationships": "Beziehungen",
   "val_stability": "Stabilität",
-  "val_conditions": "Bedingungen"
+  "val_conditions": "Bedingungen",
+
+  "prof_tldr_label": "Kurz gesagt",
+  "prof_tldr_salary": "Marktübliches Gehalt — {range}.",
+  "prof_faq_title": "Häufige Fragen",
+  "prof_faq_q_salary": "Wie viel verdient man als {title}?",
+  "prof_faq_q_howto": "Wie wirst du {title}?",
+  "prof_faq_q_who": "Zu wem passt dieser Beruf?",
+  "prof_faq_a_salary_note": "Das ist der mittlere Marktbereich: Einsteiger liegen meist näher am unteren Ende, erfahrene Fachkräfte näher am oberen. Vieles hängt auch von der Region ab.",
+  "prof_faq_a_howto": "Meist über diese Richtungen: {paths}. Konkrete Programme und Voraussetzungen findest du im Abschnitt „Wie du dorthin kommst“ weiter unten.",
+  "prof_seo_title_tail": "Gehalt, Skills und wie du einsteigst",
+  "prof_seo_desc_salary": " Marktübliches Gehalt: {range}."
 }

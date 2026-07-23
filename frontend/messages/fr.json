@@ -324,5 +324,16 @@
   "val_recognition": "Reconnaissance",
   "val_relationships": "Relations",
   "val_stability": "Stabilité",
-  "val_conditions": "Conditions"
+  "val_conditions": "Conditions",
+
+  "prof_tldr_label": "En bref",
+  "prof_tldr_salary": "Salaire du marché — {range}.",
+  "prof_faq_title": "Questions fréquentes",
+  "prof_faq_q_salary": "Combien gagne un {title} ?",
+  "prof_faq_q_howto": "Comment devenir {title} ?",
+  "prof_faq_q_who": "À qui convient ce métier ?",
+  "prof_faq_a_salary_note": "C'est la fourchette médiane du marché : un débutant se situe plutôt en bas, un profil expérimenté plutôt en haut. La région joue aussi beaucoup.",
+  "prof_faq_a_howto": "Le plus souvent par ces filières : {paths}. Retrouve les formations et les prérequis précis dans la section « Comment y arriver » ci-dessous.",
+  "prof_seo_title_tail": "salaire, compétences et comment entrer dans le métier",
+  "prof_seo_desc_salary": " Salaire du marché : {range}."
 }

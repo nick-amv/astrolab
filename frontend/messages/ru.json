@@ -324,5 +324,16 @@
   "val_recognition": "Признание",
   "val_relationships": "Отношения",
   "val_stability": "Стабильность",
-  "val_conditions": "Условия"
+  "val_conditions": "Условия",
+
+  "prof_tldr_label": "Коротко",
+  "prof_tldr_salary": "Зарплата по рынку — {range}.",
+  "prof_faq_title": "Частые вопросы",
+  "prof_faq_q_salary": "Сколько зарабатывает {title}?",
+  "prof_faq_q_howto": "Как стать: {title}?",
+  "prof_faq_q_who": "Кому подходит эта профессия?",
+  "prof_faq_a_salary_note": "Это серединный коридор рынка: новичок обычно ближе к нижней границе, опытный специалист — к верхней. Многое зависит и от региона.",
+  "prof_faq_a_howto": "Чаще всего — через направления: {paths}. Конкретные программы и требования смотри в разделе ниже.",
+  "prof_seo_title_tail": "зарплата, навыки и как войти в профессию",
+  "prof_seo_desc_salary": " Зарплата по рынку: {range}."
 }

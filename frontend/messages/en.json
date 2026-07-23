@@ -324,5 +324,16 @@
   "val_recognition": "Recognition",
   "val_relationships": "Relationships",
   "val_stability": "Stability",
-  "val_conditions": "Conditions"
+  "val_conditions": "Conditions",
+
+  "prof_tldr_label": "In short",
+  "prof_tldr_salary": "Market pay — {range}.",
+  "prof_faq_title": "Frequently asked",
+  "prof_faq_q_salary": "How much does a {title} earn?",
+  "prof_faq_q_howto": "How do you become a {title}?",
+  "prof_faq_q_who": "Who is this profession a good fit for?",
+  "prof_faq_a_salary_note": "This is the middle band of the market: a beginner usually sits closer to the lower end, an experienced specialist closer to the top. A lot also depends on where you are.",
+  "prof_faq_a_howto": "Most often through these fields: {paths}. See specific programs and requirements in the “How to get there” section below.",
+  "prof_seo_title_tail": "salary, skills and how to break in",
+  "prof_seo_desc_salary": " Market pay: {range}."
 }

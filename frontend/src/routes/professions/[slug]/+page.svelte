@@ -3,6 +3,7 @@
   import RiasecRadar from "$lib/RiasecRadar.svelte";
   import { m } from "$lib/paraglide/messages";
   import { getLocale, localizeHref } from "$lib/paraglide/runtime";
+  import { page } from "$app/stores";
   import type { PageData } from "./$types";
 
   let { data }: { data: PageData } = $props();
@@ -125,16 +126,72 @@
     C: m.riasec_c_short(),
   };
 
+  // AEO/answer-page helpers. Salary range as a plain string, the fields of
+  // study joined for prose, and a small FAQ derived from what data exists.
+  const salaryRange = $derived(
+    fact?.salary_low
+      ? `${fact.salary_low.toLocaleString()}–${fact.salary_high?.toLocaleString()} ${fact.currency}${fact.period === "year" ? m.salary_per_year() : ""}`
+      : "",
+  );
+  const pathsStr = $derived(
+    edu?.domains?.length ? edu.domains.map((d) => d.title).slice(0, 4).join(", ") : "",
+  );
+  const faqs = $derived(
+    [
+      ...(fact?.salary_low
+        ? [
+            {
+              q: m.prof_faq_q_salary({ title: o.title }),
+              a:
+                salaryRange +
+                " — " +
+                srcBadge(fact).label +
+                ". " +
+                m.prof_faq_a_salary_note() +
+                (fact.demand_note ? " " + fact.demand_note : ""),
+            },
+          ]
+        : []),
+      ...(edu?.domains?.length
+        ? [
+            {
+              q: m.prof_faq_q_howto({ title: o.title }),
+              a: m.prof_faq_a_howto({ paths: pathsStr }),
+            },
+          ]
+        : []),
+      ...(o.who_fits ? [{ q: m.prof_faq_q_who(), a: o.who_fits }] : []),
+    ] as { q: string; a: string }[],
+  );
+  const faqLd = $derived(
+    faqs.length
+      ? JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqs.map((f) => ({
+            "@type": "Question",
+            name: f.q,
+            acceptedAnswer: { "@type": "Answer", text: f.a },
+          })),
+        })
+      : "",
+  );
+
   const jsonLd = $derived(
     JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Occupation",
       name: o.title,
       description: o.summary ?? undefined,
+      url: $page.url.href,
+      mainEntityOfPage: $page.url.href,
       occupationLocation: {
         "@type": "Country",
         name: { US: "United States", ES: "Spain", RU: "Russia", FR: "France", DE: "Germany" }[userCountry] ?? "Russia",
       },
+      responsibilities: o.day_in_life ?? undefined,
+      qualifications: pathsStr || undefined,
+      skills: o.who_fits ?? undefined,
       ...(fact?.salary_low
         ? {
             estimatedSalary: {
@@ -151,15 +208,31 @@
 </script>
 
 <svelte:head>
-  <title>{o.title} — {m.app_name()}</title>
-  <meta name="description" content={o.summary ?? o.title} />
+  <title>{o.title} — {m.prof_seo_title_tail()} · {m.app_name()}</title>
+  <meta
+    name="description"
+    content={`${o.summary ?? o.title}${fact?.salary_low ? m.prof_seo_desc_salary({ range: salaryRange }) : ""}`}
+  />
   {@html `<script type="application/ld+json">${jsonLd}<` + `/script>`}
+  {#if faqLd}
+    {@html `<script type="application/ld+json">${faqLd}<` + `/script>`}
+  {/if}
 </svelte:head>
 
 <article class="prof">
   <a class="back" href={localizeHref("/professions")}>← {m.catalog_title()}</a>
   <h1>{o.title}</h1>
   {#if o.summary}<p class="summary">{o.summary}</p>{/if}
+
+  {#if fact?.salary_low || o.who_fits}
+    <div class="tldr">
+      <div class="tldr-k">{m.prof_tldr_label()}</div>
+      {#if fact?.salary_low}
+        <p class="tldr-salary">{m.prof_tldr_salary({ range: salaryRange })}</p>
+      {/if}
+      {#if o.who_fits}<p class="tldr-who">{o.who_fits}</p>{/if}
+    </div>
+  {/if}
 
   <div class="cols">
     <div class="main">
@@ -281,6 +354,20 @@
 
         <p class="edu-disclaimer">{m.edu_disclaimer()}</p>
       {/if}
+    </section>
+  {/if}
+
+  {#if faqs.length}
+    <section class="faq">
+      <h2 class="faq-h">{m.prof_faq_title()}</h2>
+      <div class="faq-list">
+        {#each faqs as f (f.q)}
+          <div class="faq-item">
+            <p class="faq-q">{f.q}</p>
+            <p class="faq-a">{f.a}</p>
+          </div>
+        {/each}
+      </div>
     </section>
   {/if}
 </article>
@@ -566,5 +653,75 @@
     line-height: 1.6;
     max-width: 62ch;
     margin-top: 22px;
+  }
+
+  /* TL;DR answer box */
+  .tldr {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--r);
+    box-shadow: var(--shadow-sm);
+    padding: 18px 22px;
+    margin: 0 0 36px;
+    max-width: 58ch;
+  }
+  .tldr-k {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+  .tldr-salary {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--ink);
+    margin: 0;
+  }
+  .tldr-who {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--muted);
+    margin: 8px 0 0;
+  }
+
+  /* FAQ */
+  .faq {
+    margin-top: 48px;
+    border-top: 1px solid var(--line);
+    padding-top: 36px;
+  }
+  .faq-h {
+    font-weight: 800;
+    font-size: clamp(24px, 3.4vw, 32px);
+    letter-spacing: -0.02em;
+    margin: 0 0 22px;
+  }
+  .faq-list {
+    display: grid;
+    gap: 18px;
+  }
+  .faq-item {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--r);
+    box-shadow: var(--shadow-sm);
+    padding: 18px 22px;
+  }
+  .faq-q {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--ink);
+    margin: 0 0 8px;
+  }
+  .faq-a {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--muted);
+    margin: 0;
+    max-width: 62ch;
   }
 </style>
