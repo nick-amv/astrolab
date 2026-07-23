@@ -1,5 +1,104 @@
 [
   {
+    "slug": "pora-menyat-professiyu",
+    "category": "Смена профессии",
+    "read_min": 7,
+    "date": "2026-07-23",
+    "i18n": {
+      "ru": {
+        "title": "Как понять, что пора менять профессию",
+        "dek": "Воскресный вечер, а внутри уже сжимается. Знакомо? Само по себе это ещё ничего не значит — так реагируют и на тяжёлый месяц, и на дело, которое давно стало чужим. Вопрос в том, как отличить одно от другого, не рубя сплеча.",
+        "url": "/blog/pora-menyat-professiyu.html"
+      },
+      "en": {
+        "title": "How to Know It's Time to Change Careers",
+        "dek": "It's Sunday evening and something inside is already tightening. Sound familiar? On its own that means nothing — it's how people react to a hard month and to work that stopped being theirs long ago. The trick is telling one from the other without acting rashly.",
+        "url": "/blog/en/pora-menyat-professiyu.html"
+      },
+      "es": {
+        "title": "Cómo saber que es hora de cambiar de profesión",
+        "dek": "Es domingo por la tarde y algo por dentro ya se aprieta. ¿Te suena? Por sí solo no significa nada: así se reacciona ante un mes duro y ante un trabajo que dejó de ser tuyo hace tiempo. La clave está en distinguir uno del otro sin actuar a la ligera.",
+        "url": "/blog/es/pora-menyat-professiyu.html"
+      },
+      "fr": {
+        "title": "Comment savoir qu'il est temps de changer de métier",
+        "dek": "C'est dimanche soir et quelque chose se serre déjà à l'intérieur. Ça te parle ? En soi, cela ne veut rien dire : on réagit ainsi à un mois difficile comme à un métier qui a cessé d'être le tien depuis longtemps. Tout l'enjeu est de distinguer l'un de l'autre sans agir à la légère.",
+        "url": "/blog/fr/pora-menyat-professiyu.html"
+      },
+      "de": {
+        "title": "Woran du merkst, dass es Zeit für einen Berufswechsel ist",
+        "dek": "Sonntagabend, und innen zieht sich schon alles zusammen. Kommt dir bekannt vor? Für sich genommen sagt das nichts: So reagiert man auf einen harten Monat und auf eine Arbeit, die längst nicht mehr die eigene ist. Die Kunst liegt darin, das eine vom anderen zu trennen, ohne kopflos zu handeln.",
+        "url": "/blog/de/pora-menyat-professiyu.html"
+      }
+    }
+  },
+  {
+    "slug": "tsennosti-v-rabote",
+    "category": "Метод и самоопределение",
+    "read_min": 8,
+    "date": "2026-07-23",
+    "i18n": {
+      "ru": {
+        "title": "Ценности в работе: почему деньги — не единственное",
+        "dek": "Пятнадцать лет все повторяли: после 75 000 долларов в год деньги на счастье не влияют. А в 2023 году два спорящих учёных сели за одни данные — и цифра рассыпалась. Разберём, что деньги дают на самом деле и что стоит взвесить рядом с ними.",
+        "url": "/blog/tsennosti-v-rabote.html"
+      },
+      "en": {
+        "title": "Values at Work: Why Money Isn't the Only One",
+        "dek": "For fifteen years everyone repeated it: past $75,000 a year, money stops buying happiness. Then in 2023 two feuding researchers sat down over the same data — and the number fell apart. Let's unpack what money really does, and what deserves weight beside it.",
+        "url": "/blog/en/tsennosti-v-rabote.html"
+      },
+      "es": {
+        "title": "Los valores en el trabajo: por qué el dinero no es lo único",
+        "dek": "Durante quince años todos lo repitieron: pasados los 75 000 dólares al año, el dinero deja de comprar felicidad. Y en 2023 dos investigadores enfrentados se sentaron ante los mismos datos, y la cifra se deshizo. Veamos qué hace el dinero de verdad y qué merece peso a su lado.",
+        "url": "/blog/es/tsennosti-v-rabote.html"
+      },
+      "fr": {
+        "title": "Les valeurs au travail : pourquoi l'argent n'est pas la seule",
+        "dek": "Pendant quinze ans, tout le monde l'a répété : passé 75 000 dollars par an, l'argent n'achète plus le bonheur. Puis, en 2023, deux chercheurs qui s'affrontaient se sont assis devant les mêmes données, et le chiffre s'est effondré. Voyons ce que l'argent fait vraiment, et ce qui mérite du poids à côté.",
+        "url": "/blog/fr/tsennosti-v-rabote.html"
+      },
+      "de": {
+        "title": "Werte im Beruf: Warum Geld nicht der einzige ist",
+        "dek": "Fünfzehn Jahre lang hieß es: Über 75.000 Dollar im Jahr kauft Geld kein Glück mehr. Dann setzten sich 2023 zwei zerstrittene Forscher an dieselben Daten, und die Zahl zerfiel. Sehen wir uns an, was Geld wirklich bewirkt und was daneben Gewicht verdient.",
+        "url": "/blog/de/tsennosti-v-rabote.html"
+      }
+    }
+  },
+  {
+    "slug": "professiya-po-lyubimomu-predmetu",
+    "category": "Выбор профессии",
+    "read_min": 6,
+    "date": "2026-07-23",
+    "i18n": {
+      "ru": {
+        "title": "Профессия по любимому предмету — миф или ориентир?",
+        "dek": "Одна биология в базе O*NET Минтруда США расходится на биолога, ветеринара, врача, эколога, учителя и научного иллюстратора — и у каждого свой код интересов. Любимый предмет показывает направление, но не адрес. Разберём, куда именно он показывает.",
+        "url": "/blog/professiya-po-lyubimomu-predmetu.html"
+      },
+      "en": {
+        "title": "A Career from Your Favorite Subject — Myth or Compass?",
+        "dek": "In the U.S. Department of Labor's O*NET database, biology alone branches into biologist, veterinarian, physician, ecologist, teacher, and medical illustrator — each with its own interest code. A favorite subject points you in a direction, not to an address. Let's see where it actually points.",
+        "url": "/blog/en/professiya-po-lyubimomu-predmetu.html"
+      },
+      "es": {
+        "title": "¿Una profesión según tu asignatura favorita: mito o brújula?",
+        "dek": "En la base O*NET del Departamento de Trabajo de EE. UU., solo la biología se ramifica en biólogo, veterinario, médico, ecólogo, docente e ilustrador científico, y cada uno tiene su propio código de intereses. Una asignatura favorita señala una dirección, no una dirección postal. Veamos hacia dónde apunta de verdad.",
+        "url": "/blog/es/professiya-po-lyubimomu-predmetu.html"
+      },
+      "fr": {
+        "title": "Un métier d'après ta matière préférée : mythe ou boussole ?",
+        "dek": "Dans la base O*NET du ministère du Travail des États-Unis, la seule biologie se ramifie en biologiste, vétérinaire, médecin, écologue, enseignant et illustrateur scientifique, chacun avec son propre code d'intérêts. Une matière préférée indique une direction, pas une adresse. Voyons vers où elle pointe vraiment.",
+        "url": "/blog/fr/professiya-po-lyubimomu-predmetu.html"
+      },
+      "de": {
+        "title": "Ein Beruf nach dem Lieblingsfach – Mythos oder Kompass?",
+        "dek": "In der O*NET-Datenbank des US-Arbeitsministeriums verzweigt sich allein die Biologie in Biologe, Tierarzt, Ärztin, Ökologe, Lehrkraft und wissenschaftlichen Illustrator – jeder mit eigenem Interessencode. Ein Lieblingsfach zeigt eine Richtung an, keine Adresse. Schauen wir, wohin es wirklich zeigt.",
+        "url": "/blog/de/professiya-po-lyubimomu-predmetu.html"
+      }
+    }
+  },
+  {
     "slug": "chto-takoe-riasec",
     "category": "Метод и самоопределение",
     "read_min": 7,
