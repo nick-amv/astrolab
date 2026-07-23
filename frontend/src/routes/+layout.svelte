@@ -48,6 +48,10 @@
 </script>
 
 <svelte:head>
+  <!-- Self-referential canonical (was missing site-wide): pairs with the hreflang
+       set below so search/AI engines treat the 5 locale URLs as one page in 5
+       languages instead of competing duplicates. -->
+  <link rel="canonical" href={$page.url.origin + $page.url.pathname} />
   {#each locales as loc (loc)}
     <link rel="alternate" hreflang={loc} href={$page.url.origin + localizeHref(barePath, { locale: loc })} />
   {/each}
