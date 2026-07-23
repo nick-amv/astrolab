@@ -134,7 +134,7 @@
       : "",
   );
   const pathsStr = $derived(
-    edu?.domains?.length ? edu.domains.map((d) => d.title).slice(0, 4).join(", ") : "",
+    edu?.domains?.length ? edu.domains.map((d: { title: string }) => d.title).slice(0, 4).join(", ") : "",
   );
   const faqs = $derived(
     [
