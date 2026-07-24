@@ -1,5 +1,38 @@
 [
   {
+    "slug": "pervaya-rabota",
+    "category": "Работа и карьера",
+    "read_min": 7,
+    "date": "2026-07-24",
+    "i18n": {
+      "ru": {
+        "title": "Первая работа без опыта: где настоящий барьер",
+        "dek": "По данным hh.ru, в 2025 году 42% российских вакансий — 4,3 миллиона предложений — открыты для кандидатов без трудового стажа. Но большинство выпускников всё равно убеждены: «без опыта не возьмут». Разбираем, где разрыв и что с ним делать.",
+        "url": "/blog/pervaya-rabota.html"
+      },
+      "en": {
+        "title": "Your First Job with No Experience: Where the Real Barrier Is",
+        "dek": "The Cengage Group's 2025 Graduate Employability Report found that only 30% of that year's graduates landed entry-level jobs in their field — the worst rate in five years. Meanwhile, millions of entry-level positions go unfilled. The mismatch isn't the market. It's the framing.",
+        "url": "/blog/en/pervaya-rabota.html"
+      },
+      "es": {
+        "title": "Tu primer empleo sin experiencia: dónde está la barrera real",
+        "dek": "España tiene la tasa de desempleo juvenil más alta de la Unión Europea: más del 27% para menores de 25 años, según Eurostat (2024). Pero la barrera no es el mercado. Es la ausencia de pruebas de lo que sabes hacer. Aquí explicamos qué significa eso y cómo resolverlo.",
+        "url": "/blog/es/pervaya-rabota.html"
+      },
+      "fr": {
+        "title": "Premier emploi sans expérience : où se trouve la vraie barrière",
+        "dek": "En France, le taux de chômage des jeunes de moins de 25 ans tourne autour de 15 % (Eurostat, 2024) — et pourtant des milliers de postes débutants restent vacants. La barrière n'est pas le marché. C'est l'absence de preuves concrètes de ce que tu sais faire. Voici ce que cela change — et comment y remédier.",
+        "url": "/blog/fr/pervaya-rabota.html"
+      },
+      "de": {
+        "title": "Erster Job ohne Erfahrung: Wo die echte Hürde liegt",
+        "dek": "Das duale Ausbildungssystem gibt Deutschland einen klaren Vorteil beim Berufseinstieg — doch wer ohne Ausbildungsvertrag auf den Arbeitsmarkt kommt, steht vor derselben Frage wie alle anderen: Wie überzeuge ich einen Arbeitgeber, wenn ich noch nichts vorweisen kann? Die Antwort überrascht: Die Hürde ist nicht fehlende Erfahrung, sondern fehlender Nachweis.",
+        "url": "/blog/de/pervaya-rabota.html"
+      }
+    }
+  },
+  {
     "slug": "pora-menyat-professiyu",
     "category": "Смена профессии",
     "read_min": 7,
