@@ -1,5 +1,38 @@
 [
   {
+    "slug": "vygoranie-signal",
+    "category": "Смена профессии",
+    "read_min": 7,
+    "date": "2026-07-28",
+    "i18n": {
+      "ru": {
+        "title": "Выгорание — это сигнал, а не приговор",
+        "dek": "ВОЗ в 2019 году внесла выгорание в МКБ-11 — но не в раздел болезней, а в «факторы, влияющие на здоровье». Это не формальность: классификация означает, что корень проблемы — в рабочей среде, а не в человеке. Разбираем, что из этого следует на практике.",
+        "url": "/blog/vygoranie-signal.html"
+      },
+      "en": {
+        "title": "Burnout Is a Signal, Not a Sentence",
+        "dek": "In 2019 the WHO added burnout to ICD-11 — not under diseases, but under \"factors influencing health status.\" That's not a technicality: the classification says the root of the problem is the work environment, not the person. Here's what that means in practice.",
+        "url": "/blog/en/vygoranie-signal.html"
+      },
+      "es": {
+        "title": "El burnout es una señal, no una condena",
+        "dek": "En 2019 la OMS incluyó el burnout en la CIE-11 — no en el capítulo de enfermedades, sino en los «factores que influyen en el estado de salud». No es un tecnicismo: la clasificación dice que el origen del problema está en el entorno laboral, no en la persona. Esto es lo que implica en la práctica.",
+        "url": "/blog/es/vygoranie-signal.html"
+      },
+      "fr": {
+        "title": "Le burnout est un signal, pas une sentence",
+        "dek": "En 2019, l'OMS a inscrit le burnout dans la CIM-11 — non pas dans le chapitre des maladies, mais dans les « facteurs influençant l'état de santé ». Ce n'est pas un détail de forme : la classification dit que le problème est dans l'environnement de travail, pas dans la personne. Voici ce que ça change concrètement.",
+        "url": "/blog/fr/vygoranie-signal.html"
+      },
+      "de": {
+        "title": "Burnout ist ein Signal, kein Urteil",
+        "dek": "2019 hat die WHO Burnout in die ICD-11 aufgenommen — aber nicht ins Krankheitskapitel, sondern in die «Faktoren, die den Gesundheitszustand beeinflussen». Das ist kein Formalkram: Die Klassifikation besagt, dass die Wurzel des Problems im Arbeitsumfeld liegt, nicht in der Person. Was das praktisch bedeutet, erklären wir hier.",
+        "url": "/blog/de/vygoranie-signal.html"
+      }
+    }
+  },
+  {
     "slug": "pervaya-rabota",
     "category": "Работа и карьера",
     "read_min": 7,
