@@ -1,5 +1,38 @@
 [
   {
+    "slug": "oshibki-pri-vybore-professii",
+    "category": "Выбор профессии",
+    "read_min": 7,
+    "date": "2026-07-31",
+    "i18n": {
+      "ru": {
+        "title": "5 ошибок при выборе профессии — и почему они такие живучие",
+        "dek": "По данным NCES (2018), около 30% американских первокурсников меняют специальность в первые три года — и чаще всего не потому, что передумали, а потому что изначально выбирали снаружи. Разбираем пять установок, которые к этому приводят, и почему их так трудно отловить заранее.",
+        "url": "/blog/oshibki-pri-vybore-professii.html"
+      },
+      "en": {
+        "title": "5 Mistakes When Choosing a Career — and Why They're So Hard to Spot",
+        "dek": "According to NCES (2018), about 30% of first-year U.S. students change their major within three years — not because they changed their minds, but because they chose from the outside in. Here are five patterns that lead there, and why they're so easy to miss at the time.",
+        "url": "/blog/en/oshibki-pri-vybore-professii.html"
+      },
+      "es": {
+        "title": "5 errores al elegir una profesión — y por qué son tan difíciles de detectar",
+        "dek": "Según el NCES (2018), alrededor del 30% de los estudiantes de primer año cambian de especialidad en los tres primeros años — no porque hayan cambiado de idea, sino porque eligieron desde fuera hacia dentro. Estos son los cinco patrones que llevan a eso, y por qué resultan tan difíciles de ver en el momento.",
+        "url": "/blog/es/oshibki-pri-vybore-professii.html"
+      },
+      "fr": {
+        "title": "5 erreurs quand on choisit un métier — et pourquoi elles sont si difficiles à repérer",
+        "dek": "Selon le NCES (2018), environ 30 % des étudiants de première année changent de filière dans les trois premières années — pas parce qu'ils ont changé d'avis, mais parce qu'ils ont choisi de l'extérieur vers l'intérieur. Voici cinq schémas qui mènent là, et pourquoi ils sont si difficiles à détecter sur le moment.",
+        "url": "/blog/fr/oshibki-pri-vybore-professii.html"
+      },
+      "de": {
+        "title": "5 Fehler bei der Berufswahl — und warum sie so schwer zu erkennen sind",
+        "dek": "Laut NCES (2018) wechseln rund 30 % der US-amerikanischen Erstsemester innerhalb der ersten drei Jahre ihr Studienfach — nicht weil sie es sich anders überlegt haben, sondern weil sie von außen nach innen gewählt haben. Hier sind fünf Muster, die dazu führen, und warum man sie im Moment selbst so schwer sieht.",
+        "url": "/blog/de/oshibki-pri-vybore-professii.html"
+      }
+    }
+  },
+  {
     "slug": "vygoranie-signal",
     "category": "Смена профессии",
     "read_min": 7,
