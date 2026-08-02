@@ -33,14 +33,24 @@ The app depends **only** on the `LLMProvider` protocol and the
 backend and never shells out to a CLI directly.
 
 ```
-feature code ─► get_provider() ─► GatedProvider (RateGate) ─► backend
-                                                              ├─ max_cli  (Claude via CLI, $0, default)
-                                                              └─ openrouter (paid fallback)
+feature code ─► get_provider(feature) ─► GatedProvider (RateGate) ─► backend
+                                                                     ├─ max_cli  (Claude via CLI, $0, default)
+                                                                     └─ openrouter (paid fallback)
 ```
 
 - **Backend selection is config** (`ASTROLAB_LLM_BACKEND`), so swapping
   max_cli → openrouter → a future gateway is an env change with zero code impact
   (a design decision, П1). No architectural lock-in to a CLI that has no SLA.
+- **Latency split by feature.** Features named in `ASTROLAB_LLM_FAST_FEATURES`
+  (default: `interview`) run on `ASTROLAB_LLM_FAST_BACKEND` first; everything
+  else runs on the primary. The two backends are each other's fallback either
+  way. Rationale: the interview blocks a page load, while the re-rank is fired
+  after the deterministic result is already on screen — so the interview buys
+  speed and the re-rank buys quality.
+- **Model choice is measured, not assumed.** On the subscription CLI the default
+  is opus (`app/llm/max_cli.py` carries the bench: 27s / 1.4k output tokens vs
+  haiku's 190s / 19k on the same re-rank prompt — the CLI's agent harness costs
+  the smaller models far more than the task does).
 - **RateGate** bounds process-wide concurrency (`ASTROLAB_LLM_MAX_CONCURRENCY`)
   and per-minute rate (`ASTROLAB_LLM_RATE_LIMIT_PER_MIN`) so a burst of anonymous
   sessions can't stampede the backend or the subscription quota.
@@ -51,6 +61,11 @@ feature code ─► get_provider() ─► GatedProvider (RateGate) ─► backen
   (reproducible). The LLM writes only `rank_llm` + explanations; `rank_final` is
   computed on the backend (`rank_llm if ok else rank_det`). Every call is audited
   in `llm_calls`.
+- **Audit covers every feature** (`app/assessment/audit.py`): re-rank, interview
+  and CV each write a row with the backend, model, prompt hash, input/output
+  tokens, latency, and `cost_usd_x10000` — list-price equivalent, since the
+  subscription backend bills nothing. A call that produced unusable output is
+  still recorded: it consumed capacity. `/admin` stats aggregate it under `llm`.
 - **Wave 0 status:** interface, RateGate, both backends, and contract tests ship
   now; backends are dormant (no feature calls them, `healthy()` is False without
   credentials). Real generation wires in at Wave 3.

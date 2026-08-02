@@ -14,6 +14,7 @@ from pathlib import Path
 
 import structlog
 
+from app.assessment.audit import audit_of
 from app.llm import LLMRequest, LLMUnavailable, get_provider
 
 _log = structlog.get_logger("astrolab.interview")
@@ -59,9 +60,16 @@ def _profile_digest(profile: dict) -> str:
     )
 
 
-async def generate_statements(profile: dict, locale: str, limit: int = 6) -> list[dict] | None:
-    """LLM-personalised reflective statements for THIS profile. Degradable:
-    returns None on any failure so the caller falls back to the static set."""
+async def generate_statements(
+    profile: dict, locale: str, limit: int = 6
+) -> tuple[list[dict] | None, dict | None]:
+    """LLM-personalised reflective statements for THIS profile.
+
+    Returns `(statements, audit)`. Degradable: `statements` is None on any
+    failure so the caller falls back to the static set. `audit` is non-None
+    whenever the model actually answered — including when its output was
+    unusable, because a call that burned tokens and produced nothing is exactly
+    what the audit trail should show."""
     lang = _LANG.get(locale, "English")
     user = (
         f"{_profile_digest(profile)}\n\n"
@@ -79,20 +87,21 @@ async def generate_statements(profile: dict, locale: str, limit: int = 6) -> lis
         timeout_s=30,  # blocking page load; degrade to static set if slow
     )
     try:
-        res = await get_provider().complete_json(req)
+        res = await get_provider("interview").complete_json(req)
     except LLMUnavailable as exc:
         _log.info("interview.gen.unavailable", error=str(exc))
-        return None
+        return None, None
+    audit = audit_of(res, _GEN_SYSTEM, user)
     try:
         data = json.loads(res.text)
         items = [str(s).strip() for s in data.get("statements", []) if str(s).strip()]
     except Exception as exc:  # noqa: BLE001 — bad output degrades to static set
         _log.warning("interview.gen.bad_output", error=str(exc))
-        return None
+        return None, audit
     items = items[:limit]
     if len(items) < 3:
-        return None
-    return [{"id": f"g{i}", "text": t} for i, t in enumerate(items)]
+        return None, audit
+    return [{"id": f"g{i}", "text": t} for i, t in enumerate(items)], audit
 
 
 @lru_cache(maxsize=1)

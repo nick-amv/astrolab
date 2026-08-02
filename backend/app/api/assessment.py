@@ -17,6 +17,7 @@ from sqlalchemy import delete, select, update
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.assessment import AnswerItem, compute_scores
+from app.assessment.audit import llm_call
 from app.assessment.cv import extract_cv
 from app.assessment.interview import generate_statements, select_statements
 from app.assessment.pipeline import enrich_with_llm, store_deterministic
@@ -281,7 +282,16 @@ async def submit_cv(
         await session.execute(select(ProfileRow).where(ProfileRow.id == ses.profile_id))
     ).scalars().first()
     locale = profile_row.locale if profile_row else "ru"
-    cv = await extract_cv(body.text, locale)
+    cv, audit = await extract_cv(body.text, locale)
+    if audit:
+        session.add(
+            llm_call(
+                session_id=ses.id,
+                purpose="cv",
+                audit=audit,
+                output={"ok": cv is not None, "skills": len((cv or {}).get("skills", []))},
+            )
+        )
     if cv and profile_row:
         profile_row.cv = cv
         # re-enrich with the CV context on the next result load
@@ -290,7 +300,9 @@ async def submit_cv(
             .where(Match.session_id == ses.id)
             .values(llm_reason=None, rank_llm=None, rank_final=Match.rank_det)
         )
-        await session.commit()
+    # commit unconditionally: the audit row must survive even when extraction
+    # produced nothing usable (that call still cost tokens).
+    await session.commit()
     return {"ok": cv is not None}
 
 
@@ -319,8 +331,18 @@ async def interview_questions(
         "values": by_kind.get("values", {}),
         "subjects": by_kind.get("subjects", {}),
     }
-    stmts = await generate_statements(profile, locale)
+    stmts, audit = await generate_statements(profile, locale)
     personalized = stmts is not None
+    if audit:
+        session.add(
+            llm_call(
+                session_id=ses.id,
+                purpose="interview",
+                audit=audit,
+                output={"personalized": personalized, "count": len(stmts or [])},
+            )
+        )
+        await session.commit()
     if stmts is None:
         stmts = select_statements(riasec, locale=locale)
     return {"statements": stmts, "personalized": personalized}

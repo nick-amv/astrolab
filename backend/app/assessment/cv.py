@@ -14,6 +14,7 @@ import json
 
 import structlog
 
+from app.assessment.audit import audit_of
 from app.llm import LLMRequest, LLMUnavailable, get_provider
 
 _log = structlog.get_logger("astrolab.cv")
@@ -27,10 +28,13 @@ _SYSTEM = (
 )
 
 
-async def extract_cv(text: str, locale: str) -> dict | None:
+async def extract_cv(text: str, locale: str) -> tuple[dict | None, dict | None]:
+    """Returns `(cv, audit)` — see app.assessment.audit. `cv` is None whenever
+    the extraction failed or was skipped; `audit` is non-None whenever a model
+    call actually happened, so the trail records spend even on a bad answer."""
     text = (text or "").strip()
     if len(text) < 20:
-        return None
+        return None, None
     lang = _LANG.get(locale, "English")
     user = (
         "Here is the person's experience (resume or free text):\n\n"
@@ -53,17 +57,18 @@ async def extract_cv(text: str, locale: str) -> dict | None:
         timeout_s=90,
     )
     try:
-        res = await get_provider().complete_json(req)
+        res = await get_provider("cv").complete_json(req)
     except LLMUnavailable as exc:
         _log.info("cv.unavailable", error=str(exc))
-        return None
+        return None, None
+    audit = audit_of(res, _SYSTEM, user)
     try:
         data = json.loads(res.text)
     except Exception as exc:  # noqa: BLE001
         _log.warning("cv.bad_output", error=str(exc))
-        return None
+        return None, audit
     return {
         "summary": str(data.get("summary", ""))[:400],
         "field": str(data.get("field", ""))[:80],
         "skills": [str(s)[:60] for s in (data.get("skills") or [])][:8],
-    }
+    }, audit

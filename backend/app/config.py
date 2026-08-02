@@ -52,6 +52,12 @@ class Settings(BaseSettings):
     # Optional secondary tried when the primary raises (timeout / 5xx / no key).
     # e.g. primary=openrouter (fast paid) with fallback=max_cli (subscription, $0).
     llm_fallback_backend: str = ""  # "" = none
+    # Latency escape hatch: these features block a page load, so they run on
+    # `llm_fast_backend` first (the primary becomes their fallback). The
+    # subscription CLI answers a re-rank in ~27s — fine for the async enrich,
+    # too slow for a page the user is waiting on.
+    llm_fast_backend: str = ""  # "" = no split, everything uses llm_backend
+    llm_fast_features: str = "interview"  # comma-separated LLMRequest.feature values
     llm_timeout_s: float = 30.0
     llm_rate_limit_per_min: int = 30  # per-provider ceiling, enforced in queue
     llm_max_concurrency: int = 4

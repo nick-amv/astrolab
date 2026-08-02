@@ -16,6 +16,7 @@ from app.models import (
     AiInterview,
     Answer,
     AssessmentSession,
+    LlmCall,
     Match,
     MatchFeedback,
     Profile,
@@ -32,6 +33,50 @@ def _fit_rate(d: dict[str, int]) -> float | None:
 
 async def _scalar(session: AsyncSession, stmt) -> int:
     return int((await session.execute(stmt)).scalar() or 0)
+
+
+async def llm_usage(session: AsyncSession) -> dict:
+    """What the model layer actually did, per feature and backend.
+
+    `cost_usd_equivalent` is list price, not spend: on the Max-subscription
+    backend every call bills zero, and this is the number that says what the
+    feature would cost if it ran on the paid API instead (i.e. what a fallback
+    to OpenRouter is worth per call)."""
+    rows = (
+        await session.execute(
+            select(
+                LlmCall.purpose,
+                LlmCall.backend,
+                LlmCall.model,
+                func.count(),
+                func.sum(func.coalesce(LlmCall.input_tokens, 0)),
+                func.sum(func.coalesce(LlmCall.output_tokens, 0)),
+                func.sum(func.coalesce(LlmCall.cost_usd_x10000, 0)),
+                func.avg(LlmCall.latency_ms),
+            ).group_by(LlmCall.purpose, LlmCall.backend, LlmCall.model)
+        )
+    ).all()
+    by_call = [
+        {
+            "purpose": purpose,
+            "backend": backend,
+            "model": model,
+            "calls": int(calls),
+            "input_tokens": int(in_tok or 0),
+            "output_tokens": int(out_tok or 0),
+            "cost_usd_equivalent": round((cost or 0) / 10_000, 4),
+            "avg_latency_ms": int(latency or 0),
+        }
+        for purpose, backend, model, calls, in_tok, out_tok, cost, latency in rows
+    ]
+    by_call.sort(key=lambda r: -r["calls"])
+    return {
+        "by_call": by_call,
+        "totals": {
+            "calls": sum(r["calls"] for r in by_call),
+            "cost_usd_equivalent": round(sum(r["cost_usd_equivalent"] for r in by_call), 4),
+        },
+    }
 
 
 async def compute_funnel(session: AsyncSession) -> dict:
@@ -201,4 +246,5 @@ async def compute_funnel(session: AsyncSession) -> dict:
             },
         },
         "recent": recent,
+        "llm": await llm_usage(session),
     }

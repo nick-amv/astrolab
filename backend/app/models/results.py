@@ -124,7 +124,13 @@ class LlmCall(Base):
     prompt_hash: Mapped[str | None] = mapped_column(String(64))
     config_version: Mapped[int | None] = mapped_column(Integer)
     output: Mapped[dict | None] = mapped_column(JSON)
-    tokens: Mapped[int | None] = mapped_column(Integer)
+    tokens: Mapped[int | None] = mapped_column(Integer)  # input + output, kept for history
+    input_tokens: Mapped[int | None] = mapped_column(Integer)
+    output_tokens: Mapped[int | None] = mapped_column(Integer)
+    # What the call WOULD have cost at list price, in USD × 10 000. On the
+    # subscription backend the real spend is zero; this is the number that says
+    # what the feature is worth and what falling back to a paid API would cost.
+    cost_usd_x10000: Mapped[int | None] = mapped_column(Integer)
     latency_ms: Mapped[int | None] = mapped_column(Integer)
     ts: Mapped[dt.datetime] = created_at_col()
 

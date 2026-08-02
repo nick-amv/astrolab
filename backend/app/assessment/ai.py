@@ -12,11 +12,11 @@ rank_det); the LLM only produces rank_llm + explanations.
 
 from __future__ import annotations
 
-import hashlib
 import json
 
 import structlog
 
+from app.assessment.audit import audit_of
 from app.llm import LLMRequest, LLMUnavailable, get_provider
 
 _log = structlog.get_logger("astrolab.ai")
@@ -41,7 +41,31 @@ _SYSTEM = (
     "school subjects, explain why specific occupations fit THIS person. "
     "Rules: 1-2 short sentences per occupation; concrete and kind; no cliches, no "
     "promises of wealth, no pressure; never invent occupations outside the given "
-    "list. Return STRICT JSON only."
+    "list. "
+    # Learned from a model bench on the real prompt: without these two rules the
+    # output drifts between formal/informal address inside one response and
+    # reuses the same clause ("you can work independently") for half the list.
+    "Ground every explanation in something specific to this person — a named "
+    "subject, a value, or a statement they reacted to — and say what the daily "
+    "work actually involves; a sentence that would fit any of the occupations is "
+    "a failed sentence. Never reuse the same reason for two occupations. "
+    "Address the person consistently throughout, in the form given below. "
+    "Return STRICT JSON only."
+)
+
+# Russian and German (and, less strictly, Spanish and French) force a T-V choice
+# the model otherwise re-decides per occupation, so one answer ends up mixing
+# both. Phrased in English, no locale literals — same reason the rest of the
+# prompt is locale-agnostic.
+_ADDRESS = {
+    "14-16": "informally, the way you would speak to a teenager (in languages with a "
+    "T-V distinction, use the familiar form)",
+    "17-19": "informally, the way you would speak to a student (in languages with a "
+    "T-V distinction, use the familiar form)",
+}
+_ADDRESS_ADULT = (
+    "politely, the way you would speak to an adult you have just met (in languages "
+    "with a T-V distinction, use the polite form)"
 )
 
 
@@ -110,6 +134,9 @@ def build_prompt(
         if cv
         else ""
     )
+    # An adult (CV present) is always addressed formally; otherwise the age band
+    # decides. Absent age band → adult, the safer default for a stranger.
+    address = _ADDRESS_ADULT if cv else _ADDRESS.get(profile.get("age_band", ""), _ADDRESS_ADULT)
     user = (
         f"{_profile_summary(profile)}\n"
         + _cv_summary(cv)
@@ -118,6 +145,7 @@ def build_prompt(
         + "\n".join(lines)
         + "\n\nSort them by how well they fit THIS specific person, and for each write "
         f'1-2 "why it fits you" sentences addressed to the person, in {lang}. '
+        f"Address them {address}, and keep that form in every sentence. "
         + cv_hint
         + "If the reflections above are present, let them shape the wording. "
         'Reply strictly as JSON: {"order": ["slug1", ...], "why": {"slug1": "text", ...}}'
@@ -136,13 +164,13 @@ async def rerank_and_explain(
     if the LLM is unavailable / returned unusable output."""
     if not occupations:
         return None
-    provider = get_provider()
+    provider = get_provider("rerank")
     system, user = build_prompt(profile, occupations, locale, interview, cv)
     req = LLMRequest(
         feature="rerank",
-        # model=None → each backend's default: openrouter=gpt-4o-mini (fast paid,
-        # primary), max_cli=haiku (subscription, $0 fallback). Ample for the short
-        # "why you" text; no backend-specific alias leaks in.
+        # model=None → each backend's own default (max_cli=opus-5 on the
+        # subscription, openrouter=its configured model). No backend-specific
+        # alias leaks into the feature code.
         model=None,
         system_prompt=system,
         user_prompt=user,
@@ -168,14 +196,4 @@ async def rerank_and_explain(
     if not order:
         return None
 
-    return {
-        "order": order,
-        "why": why,
-        "audit": {
-            "backend": res.backend,
-            "model": res.model,
-            "prompt_hash": hashlib.sha256((system + user).encode()).hexdigest(),
-            "tokens": res.input_tokens + res.output_tokens,
-            "latency_ms": res.latency_ms,
-        },
-    }
+    return {"order": order, "why": why, "audit": audit_of(res, system, user)}

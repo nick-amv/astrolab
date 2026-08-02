@@ -27,11 +27,24 @@ from app.llm.base import LLMBackendError, LLMRequest, LLMResult
 name = "max_cli"
 
 # Requested model → Claude CLI model id (dashes, not dots).
+#
+# Default is opus, which is counter-intuitive for a short JSON task but is what
+# the numbers say. Benchmarked on the real re-rank prompt (15 occupations, ru),
+# two runs each, on this host:
+#
+#     opus-5     27s / 28s    1356 output tokens
+#     sonnet-5   111s / 74s   11361 output tokens
+#     haiku-4.5  183s / 209s  19346 output tokens
+#
+# The CLI wraps every call in the Claude Code agent harness (~20k cached tokens
+# of system prompt), and the smaller models spend far more tokens working
+# through it; opus answers directly. It is also the best "why it fits you"
+# copy of the three. Subscription-billed, so the token spread costs nothing.
 _MODEL_MAP: dict[str | None, str] = {
-    None: "claude-haiku-4-5",
+    None: "claude-opus-5",
     "haiku": "claude-haiku-4-5",
-    "sonnet": "claude-sonnet-4-6",
-    "opus": "claude-opus-4-8",
+    "sonnet": "claude-sonnet-5",
+    "opus": "claude-opus-5",
 }
 
 
@@ -98,12 +111,21 @@ class MaxCliProvider:
             raise LLMBackendError("max_cli: empty result")
         text = _strip_to_json(raw)
         usage = data.get("usage") or {}
+        # `input_tokens` alone is misleading here (single digits): the CLI ships
+        # the agent harness as cached prefix, so the real input is the sum of the
+        # three input counters. `total_cost_usd` is what the call would have cost
+        # at list price — we bill nothing on the subscription, but it is the only
+        # honest number for "what is this feature worth".
+        input_tokens = sum(
+            int(usage.get(k) or 0)
+            for k in ("input_tokens", "cache_creation_input_tokens", "cache_read_input_tokens")
+        )
         return LLMResult(
             text=text,
             backend=self.name,
             model=cli_model,
-            input_tokens=int(usage.get("input_tokens") or 0),
+            input_tokens=input_tokens,
             output_tokens=int(usage.get("output_tokens") or 0),
             latency_ms=int((time.perf_counter() - started) * 1000),
-            cost_usd_x10000=0,
+            cost_usd_x10000=round(float(data.get("total_cost_usd") or 0.0) * 10_000),
         )

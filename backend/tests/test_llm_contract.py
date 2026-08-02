@@ -121,3 +121,35 @@ async def test_fallback_all_fail_raises_unavailable() -> None:
         await fb.complete_json(
             LLMRequest(feature="t", system_prompt="s", user_prompt="u")
         )
+
+
+def test_fast_feature_routes_to_fast_backend(monkeypatch) -> None:
+    """Latency-critical features run on the fast backend, everything else on the
+    primary — and each keeps the other as its fallback, so either can be down.
+
+    The interview blocks a page load while the re-rank is fired asynchronously
+    after the result is already on screen; that difference is the whole reason
+    the split exists, so it is worth pinning."""
+    from app.llm import registry
+
+    monkeypatch.setattr(registry.settings, "llm_backend", "max_cli")
+    monkeypatch.setattr(registry.settings, "llm_fallback_backend", "openrouter")
+    monkeypatch.setattr(registry.settings, "llm_fast_backend", "openrouter")
+    monkeypatch.setattr(registry.settings, "llm_fast_features", "interview")
+
+    assert get_provider("interview").name == "openrouter"
+    assert get_provider("rerank").name == "max_cli"
+    assert get_provider("cv").name == "max_cli"
+    assert get_provider().name == "max_cli"  # unlabelled calls keep the primary
+
+
+def test_fast_backend_unset_keeps_one_backend(monkeypatch) -> None:
+    """Without a fast backend configured the split is inert — no accidental
+    routing when a deployment only sets ASTROLAB_LLM_BACKEND."""
+    from app.llm import registry
+
+    monkeypatch.setattr(registry.settings, "llm_backend", "max_cli")
+    monkeypatch.setattr(registry.settings, "llm_fallback_backend", "")
+    monkeypatch.setattr(registry.settings, "llm_fast_backend", "")
+
+    assert get_provider("interview").name == "max_cli"

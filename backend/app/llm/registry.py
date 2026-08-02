@@ -99,10 +99,26 @@ class GatedProvider:
             _gate.release()
 
 
-def get_provider() -> GatedProvider:
-    primary = _build_backend(settings.llm_backend)
+def _fast_features() -> set[str]:
+    return {f.strip() for f in settings.llm_fast_features.split(",") if f.strip()}
+
+
+def get_provider(feature: str | None = None) -> GatedProvider:
+    """The provider for a feature. `feature` matters only for latency: features
+    listed in `llm_fast_features` run on `llm_fast_backend` first, because they
+    block a page load and a slow answer is worse than a cheaper one. Everything
+    else (re-rank, CV) runs on the primary backend, where quality wins — the
+    subscription CLI is slower per call but costs nothing and writes better copy.
+    Both orders keep the other backend as the fallback, so either can be down."""
+    primary_name = settings.llm_backend
     fb_name = settings.llm_fallback_backend.strip()
-    fallback = _build_backend(fb_name) if fb_name and fb_name != settings.llm_backend else None
+    fast_name = settings.llm_fast_backend.strip()
+
+    if feature and fast_name and feature in _fast_features():
+        primary_name, fb_name = fast_name, settings.llm_backend
+
+    primary = _build_backend(primary_name)
+    fallback = _build_backend(fb_name) if fb_name and fb_name != primary_name else None
     backend: LLMProvider | FallbackProvider | None = (
         FallbackProvider(primary, fallback) if fallback else primary
     )

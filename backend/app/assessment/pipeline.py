@@ -17,11 +17,11 @@ from sqlalchemy import delete, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.assessment.ai import rerank_and_explain
+from app.assessment.audit import llm_call
 from app.matching import Profile, match
 from app.models import (
     AiInterview,
     AssessmentSession,
-    LlmCall,
     Match,
     Occupation,
     OccupationI18n,
@@ -131,13 +131,10 @@ async def enrich_with_llm(session: AsyncSession, ses: AssessmentSession) -> bool
 
     locale = profile_row.locale if profile_row else "ru"
     cv = profile_row.cv if profile_row else None
-    ai = await rerank_and_explain(
-        {k: by_kind.get(k, {}) for k in ("riasec", "values", "subjects")},
-        candidates,
-        locale,
-        interview,
-        cv,
-    )
+    profile_for_llm = {k: by_kind.get(k, {}) for k in ("riasec", "values", "subjects")}
+    # age band picks the T-V form of address used in the "why you" copy
+    profile_for_llm["age_band"] = profile_row.age_band if profile_row else ""
+    ai = await rerank_and_explain(profile_for_llm, candidates, locale, interview, cv)
     if not ai:
         return False
 
@@ -151,16 +148,12 @@ async def enrich_with_llm(session: AsyncSession, ses: AssessmentSession) -> bool
         m.llm_reason = why.get(slug)
 
     session.add(
-        LlmCall(
+        llm_call(
             session_id=ses.id,
             purpose="rerank",
-            backend=ai["audit"]["backend"],
-            model=ai["audit"]["model"],
-            prompt_hash=ai["audit"]["prompt_hash"],
-            config_version=ses.scoring_version,
+            audit=ai["audit"],
             output={"order": ai["order"], "why_count": len(why)},
-            tokens=ai["audit"]["tokens"],
-            latency_ms=ai["audit"]["latency_ms"],
+            config_version=ses.scoring_version,
         )
     )
     await session.commit()
