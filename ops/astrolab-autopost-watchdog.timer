@@ -1,0 +1,9 @@
+[Unit]
+Description=Astrolab autopost watchdog (daily)
+
+[Timer]
+OnCalendar=*-*-* 08:43
+Persistent=true
+
+[Install]
+WantedBy=timers.target

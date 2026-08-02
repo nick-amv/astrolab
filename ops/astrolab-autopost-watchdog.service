@@ -1,0 +1,6 @@
+[Unit]
+Description=Astrolab autopost watchdog (health check + self-heal + TG alert)
+
+[Service]
+Type=oneshot
+ExecStart=/opt/astrolab-autopost/ops/watchdog.sh
