@@ -42,6 +42,7 @@
 - Скопируй скелет и `<style>` дословно. Переведи весь видимый текст + текстовые поля `<head>`/JSON-LD, **думая на языке-цели** (не калькируй).
 - ⚠️ **Диакритика ОБЯЗАТЕЛЬНА и правильная:** ES `á é í ó ú ñ ¿ ¡`; FR `é è ê à ç î ï ô û « »`; DE `ä ö ü ß`. НЕ упрощать до ASCII. EN — без диакритики.
 - Технические поля под локаль: `<html lang>`, canonical + og:url → URL локали, og:locale (`en_US/es_ES/fr_FR/de_DE`), оба JSON-LD `inLanguage`, локализованная `articleSection`, `@id` = canonical локали. hreflang-блок — идентичен во всех (5 + x-default→en). FAQ Q&A совпадают в видимой `.faq` и в FAQPage JSON-LD.
+- ⚠️ **В EN-версию добавь `<meta name="llms-note" content="..." />`** (сразу после `<meta name="description">`) — это evidence-строка статьи для `llms.txt`, по ней ИИ-поисковики решают, цитировать ли нас: 1–3 предложения по-английски с **именованными источниками (автор/год/журнал или институт) и конкретными числами** из статьи. Без двойных кавычек внутри (сломают атрибут). Если не впишешь — в `llms.txt` уйдёт `meta description`, это допустимый фолбэк, но слабее.
 
 ## 4. Пост-проходы (детерминированные)
 
@@ -52,8 +53,9 @@ python3 -m scripts.blog_chrome   # полная шапка (навигация+�
 # затем впиши новую статью в ARTICLES в scripts/blog_index.py (первым элементом:
 #   {"slug":"<slug>","category":"<RU-лейбл>","read_min":N,"date":"YYYY-MM-DD"}), и:
 python3 -m scripts.blog_index    # соберёт index.json из HTML-файлов
+python3 -m scripts.blog_llms     # перепишет секцию Journal в frontend/static/llms.txt из index.json + EN-статей
 ```
-Sitemap подхватит блог из index.json автоматически.
+Sitemap подхватит блог из index.json автоматически. `blog_llms` — строго ПОСЛЕ `blog_index` (читает манифест); идемпотентен, ненулевой код возврата = статья не попала в индекс (см. гейт).
 
 ## 5. ВАЛИДАЦИЯ (гейт — если не проходит, НЕ публикуй)
 
@@ -62,6 +64,7 @@ Sitemap подхватит блог из index.json автоматически.
 - ровно два `application/ld+json` в каждом; `<style>` присутствует; `class="tt"` (тема) и полная навигация присутствуют (их ставит blog_chrome);
 - ES/FR/DE содержат свою диакритику (напр. es grep `profesión`; fr `é`; de `für`/`ä`); EN без кириллицы;
 - `index.json` валидный JSON, новая статья с 5 локалями, у каждой непустые title/dek.
+- `frontend/static/llms.txt` содержит строку новой статьи (`grep <slug> frontend/static/llms.txt`), а `blog_llms` завершился с кодом 0 и без `WARN` — иначе ИИ-поисковики не увидят статью в индексе.
 - **Анти-ИИ-гейт (§3bis A–C, самопроверка по RU-мастеру):** в теле вплетены **≥2 именованных источника** (автор/год/журнал или институт) — не только в блоке «Источники»; есть **≥1 якорный неочевидный факт/цитата**; **дек, TL;DR, первый абзац и pull-quote не повторяют один тезис**; нет серии триплетов подряд. Не выполнено — статья сквозит ИИ, переписать, НЕ публиковать.
 
 (Полный `npm run build` не нужен — статьи это статические HTML, они не участвуют в сборке SvelteKit; проверяй сами файлы.)
@@ -72,7 +75,7 @@ Sitemap подхватит блог из index.json автоматически.
 
 Только если валидация зелёная:
 ```
-git add frontend/static/blog backend/scripts/blog_index.py
+git add frontend/static/blog frontend/static/llms.txt backend/scripts/blog_index.py
 git commit -m "Journal: <заголовок статьи> (<slug>, 5 langs)"   # БЕЗ Co-Authored-By (публичный репо)
 git push origin main
 ```
@@ -80,7 +83,7 @@ git push origin main
 
 ## 7. IndexNow + уведомление
 
-- IndexNow: запусти `python3 backend/scripts/indexnow_ping.py` — он сам возьмёт URL блога из живого sitemap и пингнёт Bing/Yandex (ключ уже захостен в `frontend/static/`). Не фейль запуск, если пинг вернёт ошибку (best-effort).
+- IndexNow: запусти `python3 backend/scripts/indexnow_ping.py` — он возьмёт URL блога из локального `frontend/static/blog/index.json` (без сети, без прод-sitemap) и пингнёт Bing/Yandex (ключ уже захостен в `frontend/static/`). Не фейль запуск, если пинг вернёт ошибку (best-effort).
 - Telegram: отправь в `$ADMIN_CHAT_ID` через `$BOT_TOKEN` короткое сообщение: при успехе «📰 Astrolab Журнал: новая статья — <заголовок> (5 языков)»; при ошибке валидации — что именно не прошло, статья НЕ опубликована.
 
 ## Границы
