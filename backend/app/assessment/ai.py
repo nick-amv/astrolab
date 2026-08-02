@@ -177,7 +177,11 @@ async def rerank_and_explain(
         locale=locale,
         max_tokens=1400,
         temperature=0.4,
-        timeout_s=90,
+        # A live prod run took 66s (vs 27s on the isolated bench — the real
+        # prompt is bigger and the subscription CLI is shared with other jobs on
+        # this host). 90s left too little headroom before degrading to the paid
+        # fallback; nothing waits on this call, so buy the margin.
+        timeout_s=150,
     )
     try:
         res = await provider.complete_json(req)
