@@ -1,0 +1,66 @@
+{
+  "_comment": "Per-locale article slugs. The key is the article id (= the Russian slug, which is also the ru URL). A localized URL is /blog/<locale>/<slug>.html, and /blog/<slug>.html for ru. Read by backend/scripts/blog_chrome.py (canonical, hreflang, language switcher), blog_index.py (manifest URLs) and frontend/src/hooks.server.ts (301s from the old transliterated URLs). Keep slugs ASCII, lowercase, hyphenated, no diacritics — a URL is copied, typed and logged far more often than it is read.",
+  "oshibki-pri-vybore-professii": {
+    "ru": "oshibki-pri-vybore-professii",
+    "en": "career-choice-mistakes",
+    "es": "errores-al-elegir-profesion",
+    "fr": "erreurs-choix-metier",
+    "de": "fehler-bei-der-berufswahl"
+  },
+  "vygoranie-signal": {
+    "ru": "vygoranie-signal",
+    "en": "burnout-is-a-signal",
+    "es": "el-burnout-es-una-senal",
+    "fr": "le-burnout-est-un-signal",
+    "de": "burnout-ist-ein-signal"
+  },
+  "pervaya-rabota": {
+    "ru": "pervaya-rabota",
+    "en": "first-job-no-experience",
+    "es": "primer-empleo-sin-experiencia",
+    "fr": "premier-emploi-sans-experience",
+    "de": "erster-job-ohne-erfahrung"
+  },
+  "pora-menyat-professiyu": {
+    "ru": "pora-menyat-professiyu",
+    "en": "time-to-change-careers",
+    "es": "cuando-cambiar-de-profesion",
+    "fr": "quand-changer-de-metier",
+    "de": "zeit-fuer-einen-berufswechsel"
+  },
+  "tsennosti-v-rabote": {
+    "ru": "tsennosti-v-rabote",
+    "en": "values-at-work",
+    "es": "valores-en-el-trabajo",
+    "fr": "valeurs-au-travail",
+    "de": "werte-im-beruf"
+  },
+  "professiya-po-lyubimomu-predmetu": {
+    "ru": "professiya-po-lyubimomu-predmetu",
+    "en": "favorite-subject-career",
+    "es": "asignatura-favorita-y-profesion",
+    "fr": "matiere-preferee-et-metier",
+    "de": "lieblingsfach-und-beruf"
+  },
+  "chto-takoe-riasec": {
+    "ru": "chto-takoe-riasec",
+    "en": "what-is-riasec",
+    "es": "que-es-riasec",
+    "fr": "qu-est-ce-que-riasec",
+    "de": "was-ist-riasec"
+  },
+  "professii-s-vysokoy-zarplatoy": {
+    "ru": "professii-s-vysokoy-zarplatoy",
+    "en": "highest-paying-careers",
+    "es": "profesiones-mejor-pagadas",
+    "fr": "metiers-les-mieux-payes",
+    "de": "bestbezahlte-berufe"
+  },
+  "kak-vybrat-professiyu": {
+    "ru": "kak-vybrat-professiyu",
+    "en": "how-to-choose-a-career",
+    "es": "como-elegir-profesion",
+    "fr": "comment-choisir-un-metier",
+    "de": "berufswahl-mit-methode"
+  }
+}

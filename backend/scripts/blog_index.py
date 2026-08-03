@@ -18,6 +18,8 @@ import json
 import re
 from pathlib import Path
 
+from scripts.blog_slugs import slug_for, url_for
+
 BLOG = Path(__file__).resolve().parents[2] / "frontend" / "static" / "blog"
 LOCALES = ("ru", "en", "es", "fr", "de")
 
@@ -45,12 +47,15 @@ def _text(html: str, rx: re.Pattern) -> str:
     return re.sub(r"<[^>]+>", "", m.group(1)).strip()
 
 
-def _path(loc: str, slug: str) -> Path:
+def _path(loc: str, article_id: str) -> Path:
+    slug = slug_for(article_id, loc)
     return BLOG / f"{slug}.html" if loc == "ru" else BLOG / loc / f"{slug}.html"
 
 
-def _url(loc: str, slug: str) -> str:
-    return f"/blog/{slug}.html" if loc == "ru" else f"/blog/{loc}/{slug}.html"
+def _url(loc: str, article_id: str) -> str:
+    # localized slugs come from the registry (scripts/blog_slugs.py), so a
+    # French reader gets a French URL rather than a transliterated Russian one
+    return url_for(article_id, loc)
 
 
 def main() -> None:

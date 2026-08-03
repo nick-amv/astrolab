@@ -38,10 +38,12 @@
 
 ## 3. Перевод на 4 языка (фан-аут)
 
-Для каждого из `en, es, fr, de` создай `frontend/static/blog/<locale>/<slug>.html`:
+⚠️ **Слаг у каждой локали свой** (URL — на языке страницы, не транслит русского). Сначала впиши в `frontend/static/blog/slugs.json` запись `"<ru-slug>": {"ru": "<ru-slug>", "en": "...", "es": "...", "fr": "...", "de": "..."}`: 2–4 слова из заголовка на языке локали, ASCII, нижний регистр, через дефис, без диакритики (`ä→ae`, `é→e`, `ñ→n`). Этот файл — источник истины: по нему `blog_chrome` строит canonical/hreflang/переключатель языков, `blog_index` — URL в манифесте, а SvelteKit-хук — 301 со старых адресов.
+
+Для каждого из `en, es, fr, de` создай `frontend/static/blog/<locale>/<локализованный-slug>.html`:
 - Скопируй скелет и `<style>` дословно. Переведи весь видимый текст + текстовые поля `<head>`/JSON-LD, **думая на языке-цели** (не калькируй).
 - ⚠️ **Диакритика ОБЯЗАТЕЛЬНА и правильная:** ES `á é í ó ú ñ ¿ ¡`; FR `é è ê à ç î ï ô û « »`; DE `ä ö ü ß`. НЕ упрощать до ASCII. EN — без диакритики.
-- Технические поля под локаль: `<html lang>`, canonical + og:url → URL локали, og:locale (`en_US/es_ES/fr_FR/de_DE`), оба JSON-LD `inLanguage`, локализованная `articleSection`, `@id` = canonical локали. hreflang-блок — идентичен во всех (5 + x-default→en). FAQ Q&A совпадают в видимой `.faq` и в FAQPage JSON-LD.
+- Технические поля под локаль: `<html lang>`, canonical + og:url → URL локали, og:locale (`en_US/es_ES/fr_FR/de_DE`), оба JSON-LD `inLanguage`, локализованная `articleSection`, `@id` = canonical локали. hreflang-блок — по одной ссылке на локаль (5 + x-default→en), у каждой свой слаг. Не мучайся с точностью: `blog_chrome` на шаге 4 перепишет canonical/og:url/hreflang по `slugs.json` — но `@id` в JSON-LD он не трогает, его проверь сам. FAQ Q&A совпадают в видимой `.faq` и в FAQPage JSON-LD.
 - ⚠️ **В EN-версию добавь `<meta name="llms-note" content="..." />`** (сразу после `<meta name="description">`) — это evidence-строка статьи для `llms.txt`, по ней ИИ-поисковики решают, цитировать ли нас: 1–3 предложения по-английски с **именованными источниками (автор/год/журнал или институт) и конкретными числами** из статьи. Без двойных кавычек внутри (сломают атрибут). Если не впишешь — в `llms.txt` уйдёт `meta description`, это допустимый фолбэк, но слабее.
 
 ## 4. Пост-проходы (детерминированные)
@@ -64,6 +66,7 @@ Sitemap подхватит блог из index.json автоматически. 
 - ровно два `application/ld+json` в каждом; `<style>` присутствует; `class="tt"` (тема) и полная навигация присутствуют (их ставит blog_chrome);
 - ES/FR/DE содержат свою диакритику (напр. es grep `profesión`; fr `é`; de `für`/`ä`); EN без кириллицы;
 - `index.json` валидный JSON, новая статья с 5 локалями, у каждой непустые title/dek.
+- в `frontend/static/blog/slugs.json` есть запись новой статьи со всеми 5 локалями, и для каждой локали существует файл ровно с таким именем (`ls frontend/static/blog/<loc>/<slug>.html`);
 - `frontend/static/llms.txt` содержит строку новой статьи (`grep <slug> frontend/static/llms.txt`), а `blog_llms` завершился с кодом 0 и без `WARN` — иначе ИИ-поисковики не увидят статью в индексе.
 - **Анти-ИИ-гейт (§3bis A–C, самопроверка по RU-мастеру):** в теле вплетены **≥2 именованных источника** (автор/год/журнал или институт) — не только в блоке «Источники»; есть **≥1 якорный неочевидный факт/цитата**; **дек, TL;DR, первый абзац и pull-quote не повторяют один тезис**; нет серии триплетов подряд. Не выполнено — статья сквозит ИИ, переписать, НЕ публиковать.
 
@@ -75,7 +78,7 @@ Sitemap подхватит блог из index.json автоматически. 
 
 Только если валидация зелёная:
 ```
-git add frontend/static/blog frontend/static/llms.txt backend/scripts/blog_index.py
+git add frontend/static/blog frontend/static/llms.txt backend/scripts/blog_index.py   # blog/ включает slugs.json
 git commit -m "Journal: <заголовок статьи> (<slug>, 5 langs)"   # БЕЗ Co-Authored-By (публичный репо)
 git push origin main
 ```

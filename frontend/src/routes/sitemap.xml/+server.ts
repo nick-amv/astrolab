@@ -37,23 +37,33 @@ export const GET: RequestHandler = async ({ fetch, url }) => {
   // Journal — static HTML under /blog/ (ru flat, others /blog/<locale>/…). URLs
   // and per-locale hreflang come from the blog manifest so new articles appear
   // automatically. The manifest lives in the static dir, fetched same-origin.
-  const blogUrl = (loc: string, slug: string): string =>
-    loc === "ru" ? `${origin}/blog/${slug}.html` : `${origin}/blog/${loc}/${slug}.html`;
-  const blogAlternates = (slug: string): string =>
+  // Slugs are localized per locale, so the URL must come from the manifest
+  // entry itself — deriving it from the article id would emit the old
+  // transliterated paths, which now only exist as 301s.
+  type BlogArticle = { slug: string; i18n?: Record<string, { url?: string }> };
+  const blogUrl = (a: BlogArticle, loc: string): string | null => {
+    const path = a.i18n?.[loc]?.url;
+    return path ? `${origin}${path}` : null;
+  };
+  const blogAlternates = (a: BlogArticle): string =>
     locs
-      .map((l) => `<xhtml:link rel="alternate" hreflang="${l}" href="${blogUrl(l, slug)}"/>`)
+      .map((l) => {
+        const href = blogUrl(a, l);
+        return href ? `<xhtml:link rel="alternate" hreflang="${l}" href="${href}"/>` : "";
+      })
       .join("") +
-    `<xhtml:link rel="alternate" hreflang="x-default" href="${blogUrl("en", slug)}"/>`;
+    (blogUrl(a, "en")
+      ? `<xhtml:link rel="alternate" hreflang="x-default" href="${blogUrl(a, "en")}"/>`
+      : "");
   try {
     const bres = await fetch("/blog/index.json");
     if (bres.ok) {
-      const articles: { slug: string; i18n?: Record<string, unknown> }[] = await bres.json();
+      const articles: BlogArticle[] = await bres.json();
       entries.push(`  <url><loc>${origin}/blog/</loc></url>`);
       for (const a of articles) {
         for (const loc of locs) {
-          entries.push(
-            `  <url><loc>${blogUrl(loc, a.slug)}</loc>${blogAlternates(a.slug)}</url>`,
-          );
+          const href = blogUrl(a, loc);
+          if (href) entries.push(`  <url><loc>${href}</loc>${blogAlternates(a)}</url>`);
         }
       }
     }

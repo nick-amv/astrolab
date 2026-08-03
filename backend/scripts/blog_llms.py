@@ -32,6 +32,8 @@ import re
 import sys
 from pathlib import Path
 
+from scripts.blog_slugs import slug_for, url_for
+
 ROOT = Path(__file__).resolve().parents[2]
 BLOG = ROOT / "frontend" / "static" / "blog"
 LLMS = ROOT / "frontend" / "static" / "llms.txt"
@@ -60,8 +62,8 @@ def _lines() -> tuple[list[str], list[str]]:
     manifest = json.loads((BLOG / "index.json").read_text("utf-8"))
     lines, problems = [], []
     for art in manifest:
-        slug = art["slug"]
-        page = BLOG / "en" / f"{slug}.html"
+        slug = art["slug"]  # article id; the EN file has its own localized slug
+        page = BLOG / "en" / f"{slug_for(slug, 'en')}.html"
         if not page.exists():
             problems.append(f"{slug}: no EN version — not indexed in llms.txt")
             continue
@@ -71,7 +73,7 @@ def _lines() -> tuple[list[str], list[str]]:
         if not title or not note:
             problems.append(f"{slug}: missing EN title/note (og:title, llms-note or description)")
             continue
-        lines.append(f"- {title} — {HOST}/blog/en/{slug}.html — {note}")
+        lines.append(f"- {title} — {HOST}{url_for(slug, 'en')} — {note}")
     return lines, problems
 
 

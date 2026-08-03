@@ -1,6 +1,7 @@
 import type { Handle } from "@sveltejs/kit";
 import { paraglideMiddleware } from "$lib/paraglide/server";
 import { locales, baseLocale } from "$lib/paraglide/runtime";
+import blogSlugs from "../static/blog/slugs.json";
 
 // Pick the best supported locale from an Accept-Language header. English
 // browsers land on /en, everyone else on the default (/ru). Falls back to the
@@ -57,9 +58,31 @@ const handleParaglide: Handle = ({ event, resolve }) =>
     });
   });
 
+// Journal articles used to carry the Russian slug in every language
+// (/blog/fr/oshibki-pri-vybore-professii.html). They now have localized slugs,
+// so the old URLs — already indexed, cited in llms.txt and shared — must keep
+// resolving. A 301 (not 302) so search engines transfer the ranking rather than
+// keeping both. Static files are served before this hook runs, so only paths
+// that no longer exist on disk reach it.
+const SLUG_MAP: Record<string, Record<string, string>> = blogSlugs as never;
+
+function renamedArticle(pathname: string): string | null {
+  const m = pathname.match(/^\/blog\/([a-z]{2})\/([a-z0-9-]+)\.html$/);
+  if (!m) return null;
+  const [, loc, oldSlug] = m;
+  const localized = SLUG_MAP[oldSlug]?.[loc];
+  // only redirect when the requested name is the article id (the ru slug) and
+  // the locale actually has a different one
+  return localized && localized !== oldSlug ? `/blog/${loc}/${localized}.html` : null;
+}
+
 export const handle: Handle = ({ event, resolve }) => {
   if (event.url.pathname === "/") {
     return handleRoot({ event, resolve });
+  }
+  const moved = renamedArticle(event.url.pathname);
+  if (moved) {
+    return new Response(null, { status: 301, headers: { location: moved } });
   }
   return handleParaglide({ event, resolve });
 };

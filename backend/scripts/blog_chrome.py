@@ -19,6 +19,8 @@ from __future__ import annotations
 import re
 from pathlib import Path
 
+from scripts.blog_slugs import article_id_of, url_for
+
 BLOG = Path(__file__).resolve().parents[2] / "frontend" / "static" / "blog"
 # switcher display order: RU sits between FR and DE, not first (matches the app).
 LOCS = ("en", "es", "fr", "ru", "de")
@@ -89,13 +91,15 @@ _LANG_DD_CSS = (
 _LANG_JS = ('<script>document.addEventListener("click",function(e){var d=document.querySelector'
             '(".lang-dd[open]");if(d&&!d.contains(e.target))d.open=false},true)</script>')
 
+HOST = "https://astrolab.nikam.dev"
+
 _HEADER_RE = re.compile(r'<header class="nav">.*?</header>', re.S)
 _BOTTOM_THEME_RE = re.compile(r'<script>\s*try\{var t=localStorage\.getItem\("astrolab-theme"\).*?</script>', re.S)
 
 
-def _lang_switcher(slug: str, loc: str) -> str:
+def _lang_switcher(article_id: str, loc: str) -> str:
     def url(l: str) -> str:
-        return f"/blog/{slug}.html" if l == "ru" else f"/blog/{l}/{slug}.html"
+        return url_for(article_id, l)
     links = "".join(
         (f'<a class="on" href="{url(l)}" hreflang="{l}" aria-current="true">{LANG_NAMES[l]}</a>'
          if l == loc
@@ -110,7 +114,7 @@ def _lang_switcher(slug: str, loc: str) -> str:
     )
 
 
-def _header(slug: str, loc: str) -> str:
+def _header(article_id: str, loc: str) -> str:
     n = NAV[loc]
     return (
         '<header class="nav">\n'
@@ -123,7 +127,7 @@ def _header(slug: str, loc: str) -> str:
         # (a German article led to a Russian index).
         f'<a class="active" href="/blog/?lang={loc}">{n["journal"]}</a>\n'
         f'<a href="/{loc}/login">{n["login"]}</a>\n'
-        f'{_lang_switcher(slug, loc)}\n'
+        f'{_lang_switcher(article_id, loc)}\n'
         f'<button class="tt" type="button" aria-label="{n["theme"]}" onclick="{_TOGGLE}">{_MOON}</button>\n'
         f'<a class="cta" href="/{loc}/test">{n["test"]}</a>\n'
         '</nav>\n'
@@ -131,15 +135,52 @@ def _header(slug: str, loc: str) -> str:
     )
 
 
+def _link_integrity(html: str, article_id: str, loc: str) -> str:
+    """Point canonical / og:url / hreflang at the registry's URLs.
+
+    These live in the article's own <head>, so before the slug registry existed
+    they could only be as right as whoever wrote the file. Rewriting them here
+    means a renamed slug propagates everywhere on the next post-pass instead of
+    leaving a page that claims a URL it no longer has."""
+    canonical = f"{HOST}{url_for(article_id, loc)}"
+    html = re.sub(
+        r'<link rel="canonical" href="[^"]*"\s*/?>',
+        f'<link rel="canonical" href="{canonical}" />',
+        html,
+        count=1,
+    )
+    html = re.sub(
+        r'<meta property="og:url" content="[^"]*"\s*/?>',
+        f'<meta property="og:url" content="{canonical}" />',
+        html,
+        count=1,
+    )
+    for l in LOCS:
+        html = re.sub(
+            rf'<link rel="alternate" hreflang="{l}" href="[^"]*"\s*/?>',
+            f'<link rel="alternate" hreflang="{l}" href="{HOST}{url_for(article_id, l)}" />',
+            html,
+            count=1,
+        )
+    # x-default points at English, the widest-reach version
+    return re.sub(
+        r'<link rel="alternate" hreflang="x-default" href="[^"]*"\s*/?>',
+        f'<link rel="alternate" hreflang="x-default" href="{HOST}{url_for(article_id, "en")}" />',
+        html,
+        count=1,
+    )
+
+
 def _process(p: Path) -> str:
     html = p.read_text("utf-8")
     m = re.search(r'<html lang="([a-z]{2})"', html)
     loc = m.group(1) if m and m.group(1) in NAV else "ru"
-    slug = p.stem
+    article_id = article_id_of(p.stem, loc) or p.stem
 
     if not _HEADER_RE.search(html):
         return f"SKIP {p.name} (no <header class=nav>)"
-    html = _HEADER_RE.sub(lambda _: _header(slug, loc), html, count=1)
+    html = _HEADER_RE.sub(lambda _: _header(article_id, loc), html, count=1)
+    html = _link_integrity(html, article_id, loc)
 
     # before-paint theme script in <head> (after charset), once.
     if 'localStorage.getItem("theme")' not in html.split("</head>")[0]:
