@@ -69,8 +69,12 @@
       <a class="section" href={localizeHref("/method")}>{m.nav_method()}</a>
       <a class="section" href={localizeHref("/professions")}>{m.nav_catalog()}</a>
       <!-- Journal is served as static HTML at /blog/ (locale-aware client-side),
-           outside the SvelteKit locale routing, so it's a plain href. -->
-      <a class="section" href="/blog/" data-sveltekit-reload>{m.nav_journal()}</a>
+           outside the SvelteKit locale routing, so it's a plain href. ?lang hands
+           the site locale over explicitly: without it the blog can only guess
+           from the browser, so a German page led to a Russian journal. -->
+      <a class="section" href="/blog/?lang={getLocale()}" data-sveltekit-reload>
+        {m.nav_journal()}
+      </a>
       {#if data.user}
         <a class="section" href={localizeHref("/me")}>{m.nav_account()}</a>
       {:else}

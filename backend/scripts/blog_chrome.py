@@ -118,7 +118,10 @@ def _header(slug: str, loc: str) -> str:
         '<nav class="nav-right">\n'
         f'<a href="/{loc}/method">{n["method"]}</a>\n'
         f'<a href="/{loc}/professions">{n["prof"]}</a>\n'
-        f'<a class="active" href="/blog/">{n["journal"]}</a>\n'
+        # ?lang hands this article's locale to the Journal index, which lives
+        # outside the locale routing and would otherwise guess from the browser
+        # (a German article led to a Russian index).
+        f'<a class="active" href="/blog/?lang={loc}">{n["journal"]}</a>\n'
         f'<a href="/{loc}/login">{n["login"]}</a>\n'
         f'{_lang_switcher(slug, loc)}\n'
         f'<button class="tt" type="button" aria-label="{n["theme"]}" onclick="{_TOGGLE}">{_MOON}</button>\n'

@@ -77,7 +77,7 @@ footer a{color:var(--chip-ink);text-decoration:none;font-weight:600}
 <span class="nav-right">
 <a id="nmethod" href="/ru/method">Методика</a>
 <a id="nprof" href="/ru/professions">Профессии</a>
-<a class="active" href="/blog/">Журнал</a>
+<a class="active" id="njournal" href="/blog/">Журнал</a>
 <a id="nlogin" href="/ru/login">Войти</a>
 <details class="lang-dd" id="lang" translate="no">
 <summary aria-label="Язык / Language"><svg class="globe" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span class="lc" id="lc">EN</span><svg class="chev" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
@@ -105,11 +105,11 @@ footer a{color:var(--chip-ink);text-decoration:none;font-weight:600}
 
 <script>
 var NAVL={
-ru:{method:"Методика",prof:"Профессии",login:"Войти",theme:"Переключить тему"},
-en:{method:"Method",prof:"Professions",login:"Sign in",theme:"Toggle theme"},
-es:{method:"Método",prof:"Profesiones",login:"Entrar",theme:"Cambiar tema"},
-fr:{method:"Méthode",prof:"Métiers",login:"Se connecter",theme:"Changer de thème"},
-de:{method:"Methode",prof:"Berufe",login:"Anmelden",theme:"Design wechseln"}
+ru:{method:"Методика",prof:"Профессии",journal:"Журнал",login:"Войти",theme:"Переключить тему"},
+en:{method:"Method",prof:"Professions",journal:"Journal",login:"Sign in",theme:"Toggle theme"},
+es:{method:"Método",prof:"Profesiones",journal:"Revista",login:"Entrar",theme:"Cambiar tema"},
+fr:{method:"Méthode",prof:"Métiers",journal:"Journal",login:"Se connecter",theme:"Changer de thème"},
+de:{method:"Methode",prof:"Berufe",journal:"Journal",login:"Anmelden",theme:"Design wechseln"}
 };
 var UI={
 ru:{eyebrow:"Журнал",title:"О выборе профессии — честно и на данных",sub:"Как выбрать профессию, куда пойти учиться, как сменить карьеру и понять, что тебе подходит. Без гадания.",cta:"Пройти тест",more:"Читать →",read:"мин",empty:"Скоро здесь появятся статьи."},
@@ -128,12 +128,12 @@ var CAT={
 };
 var CAT_ORDER=["Выбор профессии","Поступление","Смена профессии","Профессии","Метод и самоопределение","Работа и карьера"];
 var ALLL={ru:"Все",en:"All",es:"Todos",fr:"Tous",de:"Alle"};
-function pickLocale(){try{var s=localStorage.getItem("astrolab-locale");if(s&&UI[s])return s;}catch(e){}var n=(navigator.language||"en").slice(0,2);return UI[n]?n:"en";}
+function pickLocale(){var q=(location.search.match(/[?&]lang=([a-z]{2})/)||[])[1];if(q&&UI[q]){try{localStorage.setItem("astrolab-locale",q);}catch(e){}return q;}try{var s=localStorage.getItem("astrolab-locale");if(s&&UI[s])return s;}catch(e){}var n=(navigator.language||"en").slice(0,2);return UI[n]?n:"en";}
 var loc=pickLocale();
 var filter="all";
 function catLabel(ru){if(loc==="ru")return ru;return (CAT[ru]&&CAT[ru][loc])||ru;}
 function apply(){var u=UI[loc];document.documentElement.lang=loc;document.getElementById("eyebrow").textContent=u.eyebrow;document.getElementById("title").textContent=u.title;document.getElementById("sub").textContent=u.sub;var cta=document.getElementById("cta");cta.textContent=u.cta;cta.href="/"+loc+"/test";document.querySelector(".brand").href="/"+loc;
-var nl=NAVL[loc];var nm=document.getElementById("nmethod");nm.textContent=nl.method;nm.href="/"+loc+"/method";var np=document.getElementById("nprof");np.textContent=nl.prof;np.href="/"+loc+"/professions";var ng=document.getElementById("nlogin");ng.textContent=nl.login;ng.href="/"+loc+"/login";document.getElementById("ntt").setAttribute("aria-label",nl.theme);
+var nl=NAVL[loc];var nm=document.getElementById("nmethod");nm.textContent=nl.method;nm.href="/"+loc+"/method";var np=document.getElementById("nprof");np.textContent=nl.prof;np.href="/"+loc+"/professions";var nj=document.getElementById("njournal");nj.textContent=nl.journal;var ng=document.getElementById("nlogin");ng.textContent=nl.login;ng.href="/"+loc+"/login";document.title=nl.journal+" — Astrolab";document.getElementById("ntt").setAttribute("aria-label",nl.theme);
 document.getElementById("lc").textContent=loc.toUpperCase();
 [].forEach.call(document.querySelectorAll("#lang button"),function(b){b.classList.toggle("on",b.dataset.l===loc);});}
 function renderFilters(){var all=window.__items||[];var counts={};all.forEach(function(a){counts[a.category]=(counts[a.category]||0)+1;});var box=document.getElementById("filters");box.innerHTML="";var mk=function(key,label,n){var b=document.createElement("button");b.className="pill";b.type="button";b.setAttribute("aria-pressed",String(filter===key));b.innerHTML=label+' <span class="n">'+n+'</span>';b.addEventListener("click",function(){filter=key;renderFilters();render();});box.appendChild(b);};mk("all",ALLL[loc]||ALLL.en,all.length);CAT_ORDER.forEach(function(c){if(counts[c])mk(c,catLabel(c),counts[c]);});}
