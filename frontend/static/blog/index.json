@@ -1,5 +1,38 @@
 [
   {
+    "slug": "podrostok-vybor-bez-davleniya",
+    "category": "Выбор профессии",
+    "read_min": 7,
+    "date": "2026-08-04",
+    "i18n": {
+      "ru": {
+        "title": "Как помочь подростку выбрать профессию — и не сделать это за него",
+        "dek": "По данным Wang (2023, n&nbsp;=&nbsp;743), гиперопека родителей отрицательно связана с уверенностью подростков в карьерных решениях (r&nbsp;=&nbsp;−0,31). Желание помочь — правильное. Форма этой помощи определяет, что ребёнок унесёт с собой: готовый ответ или навык выбирать.",
+        "url": "/blog/podrostok-vybor-bez-davleniya.html"
+      },
+      "en": {
+        "title": "How to Support a Teenager's Career Choice — Without Choosing for Them",
+        "dek": "Wang's 2023 study of 743 university students found that overparenting is negatively correlated with career decision self-efficacy (r&nbsp;=&nbsp;−.31). That's the counterintuitive part: the harder parents push, the less capable teenagers feel at deciding for themselves.",
+        "url": "/blog/en/supporting-teen-career-choice.html"
+      },
+      "es": {
+        "title": "Cómo ayudar al adolescente a elegir profesión — y no decidir en su lugar",
+        "dek": "Un estudio de Wang (2023, n&nbsp;=&nbsp;743) encontró que la sobreprotección parental correlaciona negativamente con la autoeficacia en las decisiones profesionales (r&nbsp;=&nbsp;−0,31). Querer ayudar es lo correcto. La forma en que se hace determina lo que el hijo se lleva: una respuesta lista o la habilidad de elegir.",
+        "url": "/blog/es/apoyar-adolescente-elegir-profesion.html"
+      },
+      "fr": {
+        "title": "Comment aider un adolescent à choisir son orientation — sans décider à sa place",
+        "dek": "L'étude de Wang (2023, n&nbsp;=&nbsp;743) révèle que la surprotection parentale corrèle négativement avec la capacité à prendre des décisions professionnelles (r&nbsp;=&nbsp;−0,31). Vouloir aider, c'est juste. La façon d'aider, c'est ce qui fait toute la différence.",
+        "url": "/blog/fr/aider-ado-choisir-sans-pression.html"
+      },
+      "de": {
+        "title": "Wie Eltern Jugendliche bei der Berufswahl begleiten — ohne zu entscheiden",
+        "dek": "Die Studie von Wang (2023, n&nbsp;=&nbsp;743) zeigt: Überbehütung durch Eltern korreliert negativ mit der Fähigkeit, berufliche Entscheidungen selbst zu treffen (r&nbsp;=&nbsp;−0,31). Das Anliegen, zu helfen, ist richtig. Wie man hilft, bestimmt, was das Kind mitnimmt: eine fertige Antwort oder die Fähigkeit zu wählen.",
+        "url": "/blog/de/teenager-berufswahl-begleiten.html"
+      }
+    }
+  },
+  {
     "slug": "oshibki-pri-vybore-professii",
     "category": "Выбор профессии",
     "read_min": 7,

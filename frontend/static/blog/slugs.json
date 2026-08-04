@@ -62,5 +62,12 @@
     "es": "como-elegir-profesion",
     "fr": "comment-choisir-un-metier",
     "de": "berufswahl-mit-methode"
+  },
+  "podrostok-vybor-bez-davleniya": {
+    "ru": "podrostok-vybor-bez-davleniya",
+    "en": "supporting-teen-career-choice",
+    "es": "apoyar-adolescente-elegir-profesion",
+    "fr": "aider-ado-choisir-sans-pression",
+    "de": "teenager-berufswahl-begleiten"
   }
 }
