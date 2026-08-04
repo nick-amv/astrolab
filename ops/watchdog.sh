@@ -41,9 +41,12 @@ esac
 LLMS=$(python3 - <<PY 2>/dev/null
 import json,re
 try:
-    arts=[a["slug"] for a in json.load(open("${BUILD}/blog/index.json"))]
+    arts=json.load(open("${BUILD}/blog/index.json"))
     txt=open("${BUILD}/llms.txt",encoding="utf-8").read()
-    missing=[s for s in arts if f"/blog/en/{s}.html" not in txt]
+    # Take the EN URL from the manifest rather than building it from the article
+    # id: slugs are localized now, so /blog/en/<id>.html stopped being an address
+    # (that assumption made this check cry wolf about all 10 articles at once).
+    missing=[a["slug"] for a in arts if a.get("i18n",{}).get("en",{}).get("url","\\0") not in txt]
     print("MISSING "+",".join(missing) if missing else "OK", len(arts))
 except Exception as e:
     print("ERR", str(e)[:60])
