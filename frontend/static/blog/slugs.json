@@ -69,5 +69,12 @@
     "es": "apoyar-adolescente-elegir-profesion",
     "fr": "aider-ado-choisir-sans-pression",
     "de": "teenager-berufswahl-begleiten"
+  },
+  "kak-vybrat-mezhdu-dvumya-professiyami": {
+    "ru": "kak-vybrat-mezhdu-dvumya-professiyami",
+    "en": "choosing-between-two-careers",
+    "es": "elegir-entre-dos-profesiones",
+    "fr": "choisir-entre-deux-metiers",
+    "de": "zwischen-zwei-berufen-waehlen"
   }
 }

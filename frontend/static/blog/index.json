@@ -1,5 +1,38 @@
 [
   {
+    "slug": "kak-vybrat-mezhdu-dvumya-professiyami",
+    "category": "Выбор профессии",
+    "read_min": 7,
+    "date": "2026-08-07",
+    "i18n": {
+      "ru": {
+        "title": "Как выбрать между двумя профессиями",
+        "dek": "В 2006 году Шина Айенгар, Рэйчел Уэллс и Барри Шварц опубликовали в Psychological Science результат, который озадачил: выпускники с «максималистским» подходом к поиску работы — те, кто дольше всех сравнивал варианты — получили стартовую зарплату на 20% выше сокурсников. И оказались значительно менее довольны своим выбором. Проблема не в вариантах. В стратегии.",
+        "url": "/blog/kak-vybrat-mezhdu-dvumya-professiyami.html"
+      },
+      "en": {
+        "title": "How to Choose Between Two Careers",
+        "dek": "In 2006, Sheena Iyengar, Rachel Wells and Barry Schwartz published a finding in Psychological Science that puzzled a lot of people: graduating students who approached job hunting as maximizers — comparing every option until the very end — landed starting salaries 20% higher than their less exhaustive peers. And felt noticeably worse about their choice. The problem isn't the options. It's the strategy.",
+        "url": "/blog/en/choosing-between-two-careers.html"
+      },
+      "es": {
+        "title": "Cómo elegir entre dos profesiones",
+        "dek": "En 2006, Sheena Iyengar, Rachel Wells y Barry Schwartz publicaron en Psychological Science un resultado que desconcertó a muchos: los graduados que buscaban la oferta perfecta — comparando todas las opciones hasta el final — consiguieron salarios iniciales un 20% más altos que sus compañeros menos exhaustivos. Y quedaron notablemente menos satisfechos con su elección. El problema no está en las opciones. Está en la estrategia.",
+        "url": "/blog/es/elegir-entre-dos-profesiones.html"
+      },
+      "fr": {
+        "title": "Comment choisir entre deux métiers",
+        "dek": "En 2006, Sheena Iyengar, Rachel Wells et Barry Schwartz ont publié dans Psychological Science un résultat qui a surpris beaucoup de monde : les diplômés qui cherchaient l'offre parfaite — en comparant toutes les options jusqu'au bout — ont obtenu des salaires de départ 20 % plus élevés que leurs camarades moins exhaustifs. Et se sont sentis nettement moins satisfaits de leur choix. Le problème n'est pas dans les options. Il est dans la stratégie.",
+        "url": "/blog/fr/choisir-entre-deux-metiers.html"
+      },
+      "de": {
+        "title": "Zwischen zwei Berufen wählen",
+        "dek": "2006 veröffentlichten Sheena Iyengar, Rachel Wells und Barry Schwartz in Psychological Science ein Ergebnis, das viele überraschte: Absolventen, die alle Optionen bis zum Ende verglichen — die sogenannten Maximierer — erzielten Einstiegsgehälter, die im Durchschnitt 20 % über denen ihrer weniger exhaustiven Kommilitonen lagen. Und sie waren mit ihrer Wahl deutlich unzufriedener. Das Problem liegt nicht in den Optionen. Es liegt in der Strategie.",
+        "url": "/blog/de/zwischen-zwei-berufen-waehlen.html"
+      }
+    }
+  },
+  {
     "slug": "podrostok-vybor-bez-davleniya",
     "category": "Выбор профессии",
     "read_min": 7,
