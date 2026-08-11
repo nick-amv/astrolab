@@ -1,5 +1,38 @@
 [
   {
+    "slug": "professii-budushchego",
+    "category": "Поступление",
+    "read_min": 7,
+    "date": "2026-08-11",
+    "i18n": {
+      "ru": {
+        "title": "Профессии будущего: что не устареет через 10 лет",
+        "dek": "В январе 2025 года Всемирный экономический форум опубликовал «Доклад о будущем рабочих мест»: к 2030-му появится 170 миллионов новых должностей и исчезнет 92 миллиона — одновременно. Вопрос теперь не «выживет ли моя профессия?», а «какие задачи внутри неё останутся человеческими?»",
+        "url": "/blog/professii-budushchego.html"
+      },
+      "en": {
+        "title": "Future-Proof Careers: What Won't Be Obsolete in 10 Years",
+        "dek": "In January 2025, the World Economic Forum published its Future of Jobs Report: 170 million new positions will be created by 2030 and 92 million will disappear — simultaneously. The question isn't \"will my career survive?\" It's which tasks inside it will remain human.",
+        "url": "/blog/en/future-proof-careers.html"
+      },
+      "es": {
+        "title": "Profesiones del futuro: qué no quedará obsoleto en 10 años",
+        "dek": "En enero de 2025, el Foro Económico Mundial publicó su Informe sobre el Futuro del Empleo: se crearán 170 millones de nuevos puestos antes de 2030 y desaparecerán 92 millones — al mismo tiempo. La pregunta no es «¿sobrevivirá mi profesión?». Es qué tareas dentro de ella seguirán siendo humanas.",
+        "url": "/blog/es/profesiones-del-futuro.html"
+      },
+      "fr": {
+        "title": "Métiers d'avenir : ce qui ne sera pas obsolète dans 10 ans",
+        "dek": "En janvier 2025, le Forum économique mondial a publié son rapport sur l'Avenir des Emplois : 170 millions de nouveaux postes seront créés d'ici 2030 et 92 millions disparaîtront — simultanément. La question n'est pas « mon métier survivra-t-il ? ». C'est : quelles tâches en son sein resteront humaines ?",
+        "url": "/blog/fr/metiers-d-avenir.html"
+      },
+      "de": {
+        "title": "Zukunftssichere Berufe: Was in 10 Jahren nicht veraltet sein wird",
+        "dek": "Im Januar 2025 veröffentlichte das Weltwirtschaftsforum seinen Future of Jobs Report: Bis 2030 entstehen 170 Millionen neue Stellen und 92 Millionen fallen weg — gleichzeitig. Die Frage ist nicht: «Überlebt mein Beruf?» Sondern: Welche Aufgaben darin bleiben menschlich?",
+        "url": "/blog/de/zukunftssichere-berufe.html"
+      }
+    }
+  },
+  {
     "slug": "kak-vybrat-mezhdu-dvumya-professiyami",
     "category": "Выбор профессии",
     "read_min": 7,
