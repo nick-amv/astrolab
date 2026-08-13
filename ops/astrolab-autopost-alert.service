@@ -3,4 +3,9 @@ Description=Astrolab autopost failure alert (Telegram)
 
 [Service]
 Type=oneshot
-ExecStart=/opt/astrolab-autopost/ops/notify-failure.sh
+Environment=HOME=/root
+# Through /bin/bash for the same reason as the autopost itself. On the school
+# this exact unit died of the very disease it was meant to report: same clone,
+# same missing exec bit, same 203/EXEC in the same second — so three weeks of
+# silence looked normal. An alarm must not share a failure mode with its subject.
+ExecStart=/bin/bash /opt/astrolab-autopost/ops/notify-failure.sh

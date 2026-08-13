@@ -6,5 +6,16 @@ OnFailure=astrolab-autopost-alert.service
 
 [Service]
 Type=oneshot
-ExecStart=/opt/astrolab-autopost/ops/run-autopost.sh
+Environment=HOME=/root
+# Launched through /bin/bash rather than as an executable file. The school's
+# autopost sat dead for three weeks (27.07-12.08) with status=203/EXEC because
+# its clone arrived without the exec bit — core.fileMode=false on the Windows
+# box means every new script is committed as 100644. Our bits happen to be set,
+# but one commit from that machine would kill this the same silent way.
+#
+# git pull lives here, not inside the script: while it was in run-autopost.sh,
+# any fix to the wrapper could only arrive through a run that the same fix had
+# to enable. That loop is what made the school outage unrecoverable on its own.
+ExecStartPre=-/usr/bin/git -C /opt/astrolab-autopost pull --ff-only
+ExecStart=/bin/bash /opt/astrolab-autopost/ops/run-autopost.sh
 TimeoutStartSec=3900

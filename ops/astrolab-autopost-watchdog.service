@@ -3,4 +3,6 @@ Description=Astrolab autopost watchdog (health check + self-heal + TG alert)
 
 [Service]
 Type=oneshot
-ExecStart=/opt/astrolab-autopost/ops/watchdog.sh
+Environment=HOME=/root
+ExecStartPre=-/usr/bin/git -C /opt/astrolab-autopost pull --ff-only
+ExecStart=/bin/bash /opt/astrolab-autopost/ops/watchdog.sh
