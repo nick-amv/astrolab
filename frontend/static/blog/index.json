@@ -1,5 +1,38 @@
 [
   {
+    "slug": "interes-ili-sposobnosti",
+    "category": "Метод и самоопределение",
+    "read_min": 7,
+    "date": "2026-08-14",
+    "i18n": {
+      "ru": {
+        "title": "Интерес или способности: с чего начинается выбор профессии",
+        "dek": "Два 12-летних исследования Hoff и коллег (Applied Psychology, 2022) — суммарно 1775 подростков — показали: интересы в юности предсказали доход и профессиональный статус через 12 лет. Не оценки, не тесты способностей. Разбираем, что это меняет в логике выбора.",
+        "url": "/blog/interes-ili-sposobnosti.html"
+      },
+      "en": {
+        "title": "Interest or Ability: Where Career Choice Actually Begins",
+        "dek": "Two 12-year longitudinal studies by Hoff, Chu, Einarsdóttir and colleagues (Applied Psychology, 2022) — 1775 adolescents in total — found that early interests predicted income and occupational prestige 12 years later. Not grades, not ability scores. Here is what that changes about the logic of choosing a career.",
+        "url": "/blog/en/interest-or-ability.html"
+      },
+      "es": {
+        "title": "¿Interés o habilidad?: por dónde empieza de verdad la elección profesional",
+        "dek": "Dos estudios longitudinales de 12 años de Hoff, Chu, Einarsdóttir y colegas (Applied Psychology, 2022) — 1775 adolescentes en total — mostraron que los intereses en la juventud predijeron los ingresos y el estatus profesional 12 años después. No las notas, no los tests de aptitud. Veamos qué cambia esto en la lógica de elegir una profesión.",
+        "url": "/blog/es/interes-o-habilidad.html"
+      },
+      "fr": {
+        "title": "Intérêt ou compétence : par où commence vraiment le choix de carrière",
+        "dek": "Deux études longitudinales de 12 ans de Hoff, Chu, Einarsdóttir et collègues (Applied Psychology, 2022) — 1775 adolescents au total — ont montré que les intérêts à l'adolescence ont prédit les revenus et le statut professionnel 12 ans plus tard. Pas les notes, pas les tests d'aptitude. Voici ce que cela change dans la façon d'aborder le choix d'un métier.",
+        "url": "/blog/fr/interet-ou-competence.html"
+      },
+      "de": {
+        "title": "Interesse oder Fähigkeit: wo die Berufswahl wirklich beginnt",
+        "dek": "Zwei 12-jährige Längsschnittstudien von Hoff, Chu, Einarsdóttir und Kollegen (Applied Psychology, 2022) — insgesamt 1775 Jugendliche — zeigten: Interessen aus der Jugendzeit sagten Einkommen und Berufsstatus 12 Jahre später voraus. Nicht Noten, nicht Fähigkeitstests. Was das für die Logik der Berufswahl bedeutet.",
+        "url": "/blog/de/interesse-oder-faehigkeit.html"
+      }
+    }
+  },
+  {
     "slug": "professii-budushchego",
     "category": "Поступление",
     "read_min": 7,

@@ -83,5 +83,12 @@
     "es": "elegir-entre-dos-profesiones",
     "fr": "choisir-entre-deux-metiers",
     "de": "zwischen-zwei-berufen-waehlen"
+  },
+  "interes-ili-sposobnosti": {
+    "ru": "interes-ili-sposobnosti",
+    "en": "interest-or-ability",
+    "es": "interes-o-habilidad",
+    "fr": "interet-ou-competence",
+    "de": "interesse-oder-faehigkeit"
   }
 }
