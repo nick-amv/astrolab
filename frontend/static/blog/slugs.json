@@ -90,5 +90,12 @@
     "es": "interes-o-habilidad",
     "fr": "interet-ou-competence",
     "de": "interesse-oder-faehigkeit"
+  },
+  "kariernyy-yakor": {
+    "ru": "kariernyy-yakor",
+    "en": "career-anchors",
+    "es": "anclas-de-carrera",
+    "fr": "ancres-de-carriere",
+    "de": "karriereanker"
   }
 }

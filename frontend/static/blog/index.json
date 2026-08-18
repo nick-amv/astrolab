@@ -1,5 +1,38 @@
 [
   {
+    "slug": "kariernyy-yakor",
+    "category": "Метод и самоопределение",
+    "read_min": 7,
+    "date": "2026-08-18",
+    "i18n": {
+      "ru": {
+        "title": "Карьерный якорь: от чего ты не откажешься",
+        "dek": "В 1960-х годах Эдгар Шейн из MIT Sloan School of Management начал следить за 44 выпускниками на протяжении двенадцати лет. Он ожидал увидеть разнообразие историй. Увидел закономерность: независимо от смены должностей и компаний, люди возвращались к одному типу работы — когда у них был выбор. Это наблюдение он назвал «карьерным якорем», и оно изменило способ думать о профессиональном выборе.",
+        "url": "/blog/kariernyy-yakor.html"
+      },
+      "en": {
+        "title": "Career Anchors: What You Won't Give Up",
+        "dek": "In the 1960s, Edgar Schein at MIT's Sloan School of Management began tracking 44 graduates over twelve years. He expected to find diverging paths. What he found instead was a pattern: regardless of job changes and company switches, people drifted back to the same type of work when given a real choice. He called this pull a career anchor — and it changed how we think about career decisions.",
+        "url": "/blog/en/career-anchors.html"
+      },
+      "es": {
+        "title": "Anclas de carrera: de qué no vas a renunciar",
+        "dek": "En los años sesenta, Edgar Schein de la MIT Sloan School of Management comenzó a seguir a 44 graduados durante doce años. Esperaba encontrar trayectorias divergentes. Encontró un patrón: con independencia de los cambios de empresa o de puesto, las personas volvían al mismo tipo de trabajo cuando tenían opción de elegir. A esa atracción la llamó ancla de carrera, y cambió la forma de pensar en las decisiones profesionales.",
+        "url": "/blog/es/anclas-de-carrera.html"
+      },
+      "fr": {
+        "title": "Ancres de carrière : à quoi tu ne renonceras pas",
+        "dek": "Dans les années 1960, Edgar Schein de la MIT Sloan School of Management a commencé à suivre 44 diplômés sur douze ans. Il s'attendait à des trajectoires divergentes. Il a trouvé un schéma : quels que soient les changements d'entreprise ou de poste, les gens revenaient au même type de travail quand ils avaient vraiment le choix. Il a appelé cette attraction une ancre de carrière — et elle a changé la façon de penser les choix professionnels.",
+        "url": "/blog/fr/ancres-de-carriere.html"
+      },
+      "de": {
+        "title": "Karriereanker: worauf du nicht verzichten wirst",
+        "dek": "In den 1960er Jahren begann Edgar Schein von der MIT Sloan School of Management, 44 Absolventen über zwölf Jahre zu begleiten. Er erwartete unterschiedliche Werdegänge. Was er fand, war ein Muster: Unabhängig von Arbeitgeberwechseln und Positionsveränderungen kehrten die Menschen zum selben Arbeitstyp zurück — wenn sie wirklich die Wahl hatten. Diese Anziehungskraft nannte er Karriereanker, und sie hat die Art verändert, wie wir über Berufsentscheidungen denken.",
+        "url": "/blog/de/karriereanker.html"
+      }
+    }
+  },
+  {
     "slug": "interes-ili-sposobnosti",
     "category": "Метод и самоопределение",
     "read_min": 7,
