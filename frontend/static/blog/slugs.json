@@ -97,5 +97,12 @@
     "es": "anclas-de-carrera",
     "fr": "ancres-de-carriere",
     "de": "karriereanker"
+  },
+  "perenosimye-navyki": {
+    "ru": "perenosimye-navyki",
+    "en": "transferable-skills",
+    "es": "habilidades-transferibles",
+    "fr": "competences-transferables",
+    "de": "uebertragbare-kompetenzen"
   }
 }

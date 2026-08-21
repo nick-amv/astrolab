@@ -1,5 +1,38 @@
 [
   {
+    "slug": "perenosimye-navyki",
+    "category": "Работа и карьера",
+    "read_min": 7,
+    "date": "2026-08-21",
+    "i18n": {
+      "ru": {
+        "title": "Переносимые навыки: что берёшь с собой при смене профессии",
+        "dek": "В 2022 году McKinsey изучил 77 стандартных карьерных переходов в США и обнаружил: в 70% из них главным переходящим активом оказались межличностные навыки, а не отраслевые знания. Это меняет то, как стоит думать о себе — особенно когда кажется, что ты уходишь в никуда.",
+        "url": "/blog/perenosimye-navyki.html"
+      },
+      "en": {
+        "title": "Transferable Skills: What You Take With You When Changing Careers",
+        "dek": "In 2022 McKinsey studied 77 standard career transition pathways in the United States and found that in 70% of them the primary transferable asset was interpersonal skills — not industry knowledge. That changes the way you should think about yourself, especially when it feels like you're heading into the unknown.",
+        "url": "/blog/en/transferable-skills.html"
+      },
+      "es": {
+        "title": "Habilidades transferibles: qué te llevas al cambiar de profesión",
+        "dek": "En 2022 McKinsey estudió 77 transiciones profesionales estándar en Estados Unidos y descubrió que en el 70% de los casos el activo principal que se transfería eran las habilidades interpersonales, no los conocimientos sectoriales. Eso cambia la manera de verte a ti mismo, sobre todo cuando parece que te adentras en lo desconocido.",
+        "url": "/blog/es/habilidades-transferibles.html"
+      },
+      "fr": {
+        "title": "Compétences transférables : ce que tu emportes quand tu changes de métier",
+        "dek": "En 2022, McKinsey a étudié 77 transitions professionnelles standard aux États-Unis et a constaté que dans 70 % des cas, l'atout principal qui se transférait était les compétences interpersonnelles, et non les connaissances sectorielles. Cela change la façon de se percevoir — surtout quand on a l'impression de s'aventurer en terrain inconnu.",
+        "url": "/blog/fr/competences-transferables.html"
+      },
+      "de": {
+        "title": "Übertragbare Kompetenzen: Was du beim Berufswechsel mitnimmst",
+        "dek": "2022 analysierte McKinsey 77 typische Berufsübergänge in den USA und stellte fest: In 70 % der Fälle war der wichtigste übertragbare Vorteil zwischenmenschliche Kompetenz — kein Fachwissen. Das verändert, wie man sich selbst betrachten sollte, besonders wenn es sich anfühlt, als würde man ins Unbekannte aufbrechen.",
+        "url": "/blog/de/uebertragbare-kompetenzen.html"
+      }
+    }
+  },
+  {
     "slug": "kariernyy-yakor",
     "category": "Метод и самоопределение",
     "read_min": 7,
