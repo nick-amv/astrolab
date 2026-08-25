@@ -1,5 +1,38 @@
 [
   {
+    "slug": "gap-year-posle-shkoly",
+    "category": "Поступление",
+    "read_min": 7,
+    "date": "2026-08-25",
+    "i18n": {
+      "ru": {
+        "title": "Gap year: пауза после школы — потеря времени или инвестиция?",
+        "dek": "Роберт Клагетт, бывший декан приёмной комиссии Миддлбери-колледжа, сравнил студентов, взявших год паузы, с теми, кто поступил сразу. GPA у первых оказался выше на 0,1–0,4 балла — и преимущество не сглаживалось к третьему курсу, а держалось все четыре года. Для большинства это сюрприз. Хорошая отправная точка для разговора о том, чего именно стоит бояться.",
+        "url": "/blog/gap-year-posle-shkoly.html"
+      },
+      "en": {
+        "title": "Gap Year After High School: Lost Time or Worthwhile Investment?",
+        "dek": "Robert Clagett, former Dean of Admissions at Middlebury College, tracked the academic records of students who took a gap year before enrolling. Their GPA was consistently 0.1 to 0.4 points higher than that of peers who came straight from high school — not just freshman year, but across all four years. Most people find that surprising. It's a good place to start.",
+        "url": "/blog/en/gap-year-after-school.html"
+      },
+      "es": {
+        "title": "Año sabático tras el bachillerato: ¿tiempo perdido o inversión?",
+        "dek": "Robert Clagett, exdecano de admisiones de Middlebury College, comparó los expedientes de estudiantes que habían tomado un año sabático con los de quienes ingresaron directamente. Los primeros sacaron notas entre 0,1 y 0,4 puntos más altas — y esa diferencia se mantuvo durante los cuatro años de carrera, no solo el primero. Para la mayoría, eso sorprende. Y es un buen punto de partida.",
+        "url": "/blog/es/ano-sabatico-bachillerato.html"
+      },
+      "fr": {
+        "title": "Année de césure après le bac : temps perdu ou vrai investissement ?",
+        "dek": "Robert Clagett, ancien doyen des admissions du Middlebury College, a comparé les dossiers des étudiants ayant pris une année de pause avec ceux qui s'étaient inscrits directement. Les premiers obtenaient des moyennes supérieures de 0,1 à 0,4 point — et cet écart se maintenait sur les quatre années de licence, pas seulement en première année. La plupart des gens trouvent ça surprenant. C'est un bon point de départ.",
+        "url": "/blog/fr/annee-de-cesure-bac.html"
+      },
+      "de": {
+        "title": "Gap Year nach dem Abitur: verlorene Zeit oder sinnvolle Investition?",
+        "dek": "Robert Clagett, ehemaliger Zulassungsdekan am Middlebury College, verglich die Studienleistungen von Studierenden mit und ohne Gap Year: Die erste Gruppe erzielte im Schnitt 0,1 bis 0,4 Notenpunkte mehr — und dieser Vorsprung blieb über alle vier Studienjahre bestehen. Für die meisten ist das überraschend. Ein guter Ausgangspunkt für die eigentliche Frage.",
+        "url": "/blog/de/gap-year-nach-abitur.html"
+      }
+    }
+  },
+  {
     "slug": "perenosimye-navyki",
     "category": "Работа и карьера",
     "read_min": 7,

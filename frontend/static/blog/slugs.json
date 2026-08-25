@@ -1,5 +1,12 @@
 {
   "_comment": "Per-locale article slugs. The key is the article id (= the Russian slug, which is also the ru URL). A localized URL is /blog/<locale>/<slug>.html, and /blog/<slug>.html for ru. Read by backend/scripts/blog_chrome.py (canonical, hreflang, language switcher), blog_index.py (manifest URLs) and frontend/src/hooks.server.ts (301s from the old transliterated URLs). Keep slugs ASCII, lowercase, hyphenated, no diacritics — a URL is copied, typed and logged far more often than it is read.",
+  "gap-year-posle-shkoly": {
+    "ru": "gap-year-posle-shkoly",
+    "en": "gap-year-after-school",
+    "es": "ano-sabatico-bachillerato",
+    "fr": "annee-de-cesure-bac",
+    "de": "gap-year-nach-abitur"
+  },
   "professii-budushchego": {
     "ru": "professii-budushchego",
     "en": "future-proof-careers",
