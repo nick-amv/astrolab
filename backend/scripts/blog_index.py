@@ -25,6 +25,7 @@ LOCALES = ("ru", "en", "es", "fr", "de")
 
 # newest first. category = canonical RU label (one of the 6 from CONTENT-AGENT).
 ARTICLES = [
+    {"slug": "ne-znayu-kem-stat", "category": "Метод и самоопределение", "read_min": 7, "date": "2026-08-28"},
     {"slug": "gap-year-posle-shkoly", "category": "Поступление", "read_min": 7, "date": "2026-08-25"},
     {"slug": "perenosimye-navyki", "category": "Работа и карьера", "read_min": 7, "date": "2026-08-21"},
     {"slug": "kariernyy-yakor", "category": "Метод и самоопределение", "read_min": 7, "date": "2026-08-18"},

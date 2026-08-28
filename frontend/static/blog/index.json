@@ -1,5 +1,38 @@
 [
   {
+    "slug": "ne-znayu-kem-stat",
+    "category": "Метод и самоопределение",
+    "read_min": 7,
+    "date": "2026-08-28",
+    "i18n": {
+      "ru": {
+        "title": "Не знаешь, кем хочешь стать: это не тупик",
+        "dek": "В мае 2025-го ОЭСР опубликовала доклад по данным 690 000 подростков из 81 страны: 39% пятнадцатилетних не имеют чётких карьерных ожиданий — вдвое больше, чем в 2018 году. Это не кризис поколения, а структурная проблема с тремя корнями. И у каждого корня своё решение.",
+        "url": "/blog/ne-znayu-kem-stat.html"
+      },
+      "en": {
+        "title": "When You Don't Know What Career You Want",
+        "dek": "In May 2025, the OECD published a report based on 690,000 teenagers across 81 countries: 39% of 15-year-olds have no clear career expectations — twice the share from 2018. That's not a generation in crisis. It's a structural problem with three distinct roots, and each one calls for a different response.",
+        "url": "/blog/en/when-you-dont-know-what-career.html"
+      },
+      "es": {
+        "title": "Sin idea de profesión: ¿por dónde empezar?",
+        "dek": "En mayo de 2025, la OCDE publicó un informe basado en datos de 690 000 adolescentes de 81 países: el 39% de los jóvenes de 15 años no tiene expectativas profesionales claras, el doble que hace una década. No es una crisis generacional, sino un problema estructural con tres causas distintas. Y cada una tiene su propia solución.",
+        "url": "/blog/es/sin-idea-de-profesion.html"
+      },
+      "fr": {
+        "title": "Aucune idée de métier : par où commencer ?",
+        "dek": "En mai 2025, l'OCDE a publié un rapport sur 690 000 adolescents dans 81 pays : 39 % des jeunes de 15 ans n'ont pas d'attentes professionnelles claires, soit deux fois plus qu'il y a dix ans. Ce n'est pas une crise générationnelle, c'est un problème structurel avec trois causes distinctes. Et chacune appelle une réponse différente.",
+        "url": "/blog/fr/sans-idee-de-metier.html"
+      },
+      "de": {
+        "title": "Keine Berufsidee: ein guter Ausgangspunkt",
+        "dek": "Im Mai 2025 veröffentlichte die OECD einen Bericht über 690 000 Jugendliche aus 81 Ländern: 39 % der 15-Jährigen haben keine klaren Berufsvorstellungen — doppelt so viele wie vor zehn Jahren. Das ist keine Generationenkrise, sondern ein strukturelles Problem mit drei unterschiedlichen Ursachen. Und jede braucht eine andere Antwort.",
+        "url": "/blog/de/keine-berufsidee.html"
+      }
+    }
+  },
+  {
     "slug": "gap-year-posle-shkoly",
     "category": "Поступление",
     "read_min": 7,
