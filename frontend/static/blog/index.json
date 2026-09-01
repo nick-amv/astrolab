@@ -1,5 +1,38 @@
 [
   {
+    "slug": "pervoe-sobesedovanie",
+    "category": "Работа и карьера",
+    "read_min": 7,
+    "date": "2026-09-01",
+    "i18n": {
+      "ru": {
+        "title": "Первое собеседование: что работодатель проверяет на самом деле",
+        "dek": "В 1992 году Налини Амбади и Роберт Розенталь опубликовали в Psychological Bulletin мета-анализ: наблюдатель делает значимый вывод о незнакомом человеке по 6-секундному видеофрагменту без звука — и эти суждения предсказывают оценки месяцы спустя. На собеседовании тот же механизм. Но работает он не против тебя — если понимать, что именно измеряют.",
+        "url": "/blog/pervoe-sobesedovanie.html"
+      },
+      "en": {
+        "title": "Your First Job Interview: What Employers Are Actually Checking",
+        "dek": "In 1992, Nalini Ambady and Robert Rosenthal published a meta-analysis in Psychological Bulletin: observers form a statistically meaningful judgment about a stranger from a 6-second silent video clip — and those judgments predict evaluations months later. The same mechanism runs in job interviews. But it doesn't work against you — if you understand what's actually being measured.",
+        "url": "/blog/en/first-job-interview.html"
+      },
+      "es": {
+        "title": "Tu primera entrevista: qué comprueba el empleador de verdad",
+        "dek": "En 1992, Nalini Ambady y Robert Rosenthal publicaron un metaanálisis en Psychological Bulletin: un observador forma un juicio estadísticamente significativo sobre un desconocido a partir de un vídeo silencioso de 6 segundos, y ese juicio predice evaluaciones meses después. El mismo mecanismo actúa en las entrevistas de trabajo. Pero no funciona en tu contra si entiendes qué se está midiendo.",
+        "url": "/blog/es/primera-entrevista.html"
+      },
+      "fr": {
+        "title": "Ton premier entretien : ce que l'employeur vérifie vraiment",
+        "dek": "En 1992, Nalini Ambady et Robert Rosenthal ont publié une méta-analyse dans Psychological Bulletin : un observateur forme un jugement statistiquement significatif sur un inconnu à partir d'une vidéo silencieuse de 6 secondes — et ce jugement prédit les évaluations des mois plus tard. Le même mécanisme joue en entretien. Mais il ne joue pas contre toi — si tu comprends ce qu'on mesure vraiment.",
+        "url": "/blog/fr/premier-entretien.html"
+      },
+      "de": {
+        "title": "Das erste Vorstellungsgespräch: Was Arbeitgeber wirklich prüfen",
+        "dek": "1992 veröffentlichten Nalini Ambady und Robert Rosenthal eine Metaanalyse im Psychological Bulletin: Ein Beobachter bildet ein statistisch bedeutsames Urteil über einen Unbekannten aus einem 6-sekündigen Stummvideo — und dieses Urteil sagt Bewertungen Monate später voraus. Derselbe Mechanismus läuft im Vorstellungsgespräch. Er arbeitet aber nicht gegen dich — wenn du verstehst, was wirklich gemessen wird.",
+        "url": "/blog/de/erstes-vorstellungsgespraech.html"
+      }
+    }
+  },
+  {
     "slug": "ne-znayu-kem-stat",
     "category": "Метод и самоопределение",
     "read_min": 7,
