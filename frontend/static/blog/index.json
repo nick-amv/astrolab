@@ -1,5 +1,38 @@
 [
   {
+    "slug": "strakh-smeny-professii",
+    "category": "Смена профессии",
+    "read_min": 7,
+    "date": "2026-09-04",
+    "i18n": {
+      "ru": {
+        "title": "Страх перед сменой профессии: откуда он берётся",
+        "dek": "В 1988 году Уильям Самуэльсон и Ричард Зекхаузер опубликовали в Journal of Risk and Uncertainty эксперимент с 486 студентами Гарварда и Бостонского университета: когда в условии задачи присутствовал вариант «статус-кво», люди выбирали его непропорционально часто — даже если другой вариант был объективно лучше. Это называется предпочтением статус-кво, и тот же механизм стоит за страхом сменить профессию.",
+        "url": "/blog/strakh-smeny-professii.html"
+      },
+      "en": {
+        "title": "Fear of Changing Careers: Where It Really Comes From",
+        "dek": "In 1988, William Samuelson and Richard Zeckhauser published an experiment in the Journal of Risk and Uncertainty involving 486 students from Harvard and Boston University: when a \"status quo\" option was present in a decision problem, people chose it disproportionately often — even when another option was objectively better. This is status quo bias, and the same mechanism drives the fear of changing careers.",
+        "url": "/blog/en/fear-of-career-change.html"
+      },
+      "es": {
+        "title": "Miedo al cambio de profesión: de dónde viene",
+        "dek": "En 1988, William Samuelson y Richard Zeckhauser publicaron en el Journal of Risk and Uncertainty un experimento con 486 estudiantes de Harvard y de la Universidad de Boston: cuando el enunciado incluía una opción de «statu quo», los participantes la elegían de forma desproporcionada, incluso cuando otra opción era objetivamente mejor. Eso se llama sesgo del statu quo, y el mismo mecanismo impulsa el miedo a cambiar de profesión.",
+        "url": "/blog/es/miedo-al-cambio-de-profesion.html"
+      },
+      "fr": {
+        "title": "Peur de changer de métier : d'où vient-elle vraiment",
+        "dek": "En 1988, William Samuelson et Richard Zeckhauser ont publié dans le Journal of Risk and Uncertainty une expérience menée auprès de 486 étudiants de Harvard et de l'Université de Boston : lorsqu'une option « statu quo » était présente dans un problème de décision, les participants la choisissaient de façon disproportionnée — même si une autre option était objectivement meilleure. C'est le biais du statu quo, et ce même mécanisme est à l'œuvre dans la peur de changer de métier.",
+        "url": "/blog/fr/peur-de-changer-de-metier.html"
+      },
+      "de": {
+        "title": "Angst vor dem Berufswechsel: woher sie wirklich kommt",
+        "dek": "1988 veröffentlichten William Samuelson und Richard Zeckhauser im Journal of Risk and Uncertainty ein Experiment mit 486 Studierenden der Harvard University und der Boston University: Wenn eine Entscheidungsaufgabe eine „Status-quo\"-Option enthielt, wählten die Teilnehmenden diese unverhältnismäßig häufig — selbst wenn eine andere Option objektiv besser war. Das nennt sich Status-quo-Bias, und derselbe Mechanismus steckt hinter der Angst vor einem Berufswechsel.",
+        "url": "/blog/de/angst-vor-dem-berufswechsel.html"
+      }
+    }
+  },
+  {
     "slug": "pervoe-sobesedovanie",
     "category": "Работа и карьера",
     "read_min": 7,
